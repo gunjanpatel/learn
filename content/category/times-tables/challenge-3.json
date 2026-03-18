@@ -1,0 +1,115 @@
+{
+  "id": "times-tables-ch3",
+  "nameGu": "10× Table — Power of Ten! 🔟",
+  "nameEn": "10 Times Table",
+  "icon": "🔟",
+  "descGu": "10 ના પહાડા! Zero add કરો!",
+  "descEn": "10 times table — just add a zero!",
+  "xpReward": 65,
+  "trophy": {
+    "icon": "🔟",
+    "nameGu": "10x Master",
+    "nameEn": "10x Master"
+  },
+  "teacherGuide": {
+    "conceptGu": "10× = easiest table! Always add 0. 10× connects to decimal system, money (10 paise, 10 rupees), metric system. Computer: 10-base numbers vs binary.",
+    "conceptEn": "10x table: just add a zero. Foundation of decimal system, metric units.",
+    "storyGu": "'Money: 1 ten-rupee note = 10 coins. 5 notes = 50 coins! 10× = money math! Also: 10 fingers × 10 = 100!'",
+    "scriptGu": "'Magic trick! Any number × 10 = same number with 0 at end! 7×10=70, 13×10=130! Show!'",
+    "vocab": [
+      {
+        "gu": "Decimal = 10-base system",
+        "en": "Decimal system"
+      },
+      {
+        "gu": "Place value = position value",
+        "en": "Place value"
+      },
+      {
+        "gu": "Zero = 0 add at end",
+        "en": "Add zero"
+      }
+    ],
+    "tipsGu": "💡 Money counting: stack of 10 coins = 1 ten. 5 stacks = 50. Physical money! Also rupee notes × 10."
+  },
+  "questions": [
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 1",
+      "textGu": "10 × 2 = ?",
+      "textEn": "10 × 2 = ?",
+      "options": [
+        12,
+        20,
+        22,
+        10
+      ],
+      "answer": 1,
+      "hintGu": "2 with 0 = 20!",
+      "hintEn": "Just add a zero: 20!"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2",
+      "textGu": "10 × 5 = ?",
+      "textEn": "10 × 5 = ?",
+      "options": [
+        15,
+        45,
+        50,
+        55
+      ],
+      "answer": 2,
+      "hintGu": "5 with 0 = 50!",
+      "hintEn": "5 with a zero = 50!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3",
+      "textGu": "10 × 7 = ?",
+      "textEn": "10 × 7 = ?",
+      "answer": 70,
+      "hintGu": "7 + 0 = 70!",
+      "hintEn": "Just add zero: 70!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 4",
+      "textGu": "10 × 9 = ?",
+      "textEn": "10 × 9 = ?",
+      "answer": 90,
+      "hintGu": "9 + 0 = 90!",
+      "hintEn": "9 with a zero = 90!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 5",
+      "textGu": "10 × 12 = ?",
+      "textEn": "10 × 12 = ?",
+      "answer": 120,
+      "hintGu": "12 + 0 = 120!",
+      "hintEn": "12 with a zero = 120!"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL 6 · MISSING",
+      "textGu": "10 × ___ = 80",
+      "textEn": "10 × ___ = 80",
+      "partA": 10,
+      "total": 80,
+      "answer": 8,
+      "hintGu": "80 ÷ 10 = 8",
+      "hintEn": "Remove the zero: 8!",
+      "op": "×"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 7 · MONEY",
+      "textGu": "💰 7 ten-rupee notes. Total rupees = ?",
+      "textEn": "7 ten-rupee notes. Total amount?",
+      "answer": 70,
+      "hintGu": "7 × 10 = 70 rupees",
+      "hintEn": "7 × 10 = 70 rupees"
+    }
+  ]
+}

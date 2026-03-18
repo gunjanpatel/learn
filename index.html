@@ -1166,10 +1166,15 @@ function renderQ(){
 
   // ── MISSING NUMBER ──
   else if(q.type==='missing-number'){
-    const sub = q.subtract;
+    // support +, −, ×, ÷ via q.op field (fallback to q.subtract for old JSONs)
+    const opSym = q.op==='×'?'×' : q.op==='÷'?'÷' : q.subtract?'−' : '+';
+    // The visual equation is self-explanatory — suppress duplicate text lines
+    const hdrClear = `<div class="ql" style="color:${col}">${q.level||''}</div>
+    <div class="qt-gu" style="font-size:.85rem;opacity:.6">${q.textGu}</div>`;
+    h = hdrClear;
     h+=`<div class="missing-wrap">
       <div class="missing-part">${q.partA}</div>
-      <div class="missing-part">${sub?'−':'+'}</div>
+      <div class="missing-part">${opSym}</div>
       <div class="missing-blank">?</div>
       <div class="missing-part">=</div>
       <div class="missing-part">${q.total}</div>
@@ -1362,38 +1367,80 @@ function checkInput(ans){
   }
 }
 function checkTap(correct,chosen){
-  if(answered)return; answered=true;
-  document.querySelectorAll('.opt').forEach((b,i)=>{
-    if(i===correct)b.classList.add('correct');
-    else if(i===chosen)b.classList.add('wrong');
-    b.onclick=null;
-  });
+  if(answered)return;
   const q=questions[qIdx];
   const correctVal = q.options?.[correct] ?? correct;
-  showFB(chosen===correct, chosen===correct ? randOK() : String(correctVal));
+  if(chosen===correct){
+    // Correct — lock all and show result
+    answered=true;
+    document.querySelectorAll('.opt').forEach((b,i)=>{
+      if(i===correct)b.classList.add('correct');
+      b.onclick=null;
+    });
+    showFB(true, randOK());
+  } else {
+    // Wrong — show which was wrong, then let showFB decide if retry or game over
+    const btns = document.querySelectorAll('.opt');
+    btns[chosen]?.classList.add('wrong');
+    const willRetry = attemptsLeft > 1; // showFB will decrement
+    showFB(false, String(correctVal));
+    if(willRetry){
+      // Reset wrong highlight after short delay so they can try again
+      setTimeout(()=>{ btns[chosen]?.classList.remove('wrong'); }, 600);
+    } else {
+      // No more attempts — lock all and highlight correct
+      btns.forEach((b,i)=>{ if(i===correct)b.classList.add('correct'); b.onclick=null; });
+    }
+  }
 }
 function checkMCQ(correct,chosen){
-  if(answered)return; answered=true;
-  document.querySelectorAll('.opt').forEach((b,i)=>{
-    if(i===correct)b.classList.add('correct');
-    else if(i===chosen)b.classList.add('wrong');
-    b.onclick=null;
-  });
+  if(answered)return;
   const q=questions[qIdx];
   const correctText = q.options?.[correct]?.gu || correct;
-  showFB(chosen===correct, chosen===correct ? randOK() : correctText);
+  if(chosen===correct){
+    answered=true;
+    document.querySelectorAll('.opt').forEach((b,i)=>{
+      if(i===correct)b.classList.add('correct');
+      b.onclick=null;
+    });
+    showFB(true, randOK());
+  } else {
+    const btns = document.querySelectorAll('.opt');
+    btns[chosen]?.classList.add('wrong');
+    const willRetry = attemptsLeft > 1;
+    showFB(false, correctText);
+    if(willRetry){
+      setTimeout(()=>{ btns[chosen]?.classList.remove('wrong'); }, 600);
+    } else {
+      btns.forEach((b,i)=>{ if(i===correct)b.classList.add('correct'); b.onclick=null; });
+    }
+  }
 }
 function checkGate(correct,chosen,label){
-  if(answered)return; answered=true;
-  const go=document.getElementById('gOut');
-  if(go) go.textContent=label;
-  document.querySelectorAll('.opt').forEach((b,i)=>{
-    if(i===correct)b.classList.add('correct');
-    else if(i===chosen)b.classList.add('wrong');
-    b.onclick=null;
-  });
+  if(answered)return;
   const gCorrectVal = questions[qIdx].options?.[correct]?.gu || correct;
-  showFB(chosen===correct, chosen===correct ? randOK() : String(gCorrectVal));
+  if(chosen===correct){
+    answered=true;
+    const go=document.getElementById('gOut');
+    if(go) go.textContent=label;
+    document.querySelectorAll('.opt').forEach((b,i)=>{
+      if(i===correct)b.classList.add('correct');
+      b.onclick=null;
+    });
+    showFB(true, randOK());
+  } else {
+    const btns = document.querySelectorAll('.opt');
+    btns[chosen]?.classList.add('wrong');
+    const willRetry = attemptsLeft > 1;
+    showFB(false, String(gCorrectVal));
+    if(willRetry){
+      setTimeout(()=>{ btns[chosen]?.classList.remove('wrong'); }, 600);
+    } else {
+      const go=document.getElementById('gOut');
+      if(go) go.textContent=label;
+      btns.forEach((b,i)=>{ if(i===correct)b.classList.add('correct'); b.onclick=null; });
+    }
+  }
 }
 function toggleEnc(i){
   if(!window._encBits) window._encBits=[0,0,0,0];
