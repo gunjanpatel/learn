@@ -42,7 +42,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 .name-btn{margin-left:auto;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:5px 10px;color:var(--muted);font-size:.68rem;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap}
 
 /* ── SECTION ── */
-.section-wrap{padding:0 14px}
+.section-wrap{padding:0 14px 4px}
 .section-head{display:flex;align-items:center;gap:10px;padding:18px 0 10px}
 .section-icon{font-size:1.4rem}
 .section-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800}
@@ -52,7 +52,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 
 /* ── CATEGORY CARDS ── */
 .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
-.cat-card{background:var(--card);border:2px solid var(--border);border-radius:20px;padding:16px 12px;text-align:center;cursor:pointer;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;user-select:none}
+.cat-card{background:var(--card);border:2px solid var(--border);border-radius:20px;padding:16px 12px;text-align:center;cursor:pointer;position:relative;min-height:130px;transition:transform .18s,box-shadow .18s,border-color .18s;user-select:none}
 .cat-card:active{transform:scale(.94)}
 .cat-card.locked{opacity:.4;cursor:not-allowed}
 .cat-icon{font-size:2.2rem;margin-bottom:6px}
@@ -136,10 +136,10 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 .tap-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red);color:var(--red)}
 
 /* ── INPUT ── */
-.input-wrap{display:flex;gap:8px;width:100%;max-width:320px;margin-top:6px}
-.ans-inp{flex:1;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:16px;color:var(--text);font-family:'Fredoka One',cursive;font-size:2rem;text-align:center;outline:none;transition:border-color .2s}
+.input-wrap{display:flex;gap:8px;width:100%;max-width:300px;margin-top:8px;align-items:stretch}
+.ans-inp{flex:1;min-width:0;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:14px 10px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.8rem;text-align:center;outline:none;transition:border-color .2s;-webkit-appearance:none}
 .ans-inp:focus{border-color:var(--blue)}
-.go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 16px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer;transition:transform .15s}
+.go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 20px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;transition:transform .15s;flex-shrink:0}
 .go-btn:active{transform:scale(.93)}
 
 /* ── MISSING NUMBER ── */
@@ -318,6 +318,72 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 .attempt-dot{width:12px;height:12px;border-radius:50%;background:var(--yellow);transition:background .3s}
 .attempt-dot.used{background:rgba(255,255,255,.15)}
 .fb.warning{background:rgba(255,166,87,.12);border:2px solid var(--orange);color:var(--orange)}
+
+/* ── STREAK CELEBRATION ── */
+.streak-modal{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);backdrop-filter:blur(6px)}
+.streak-modal.show{display:flex}
+.streak-box{background:var(--card);border:2px solid var(--orange);border-radius:28px;padding:36px 30px;text-align:center;max-width:320px;animation:bounce .5s ease}
+.streak-fire{font-size:5rem;margin-bottom:10px}
+.streak-title{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--orange);margin-bottom:8px}
+.streak-sub{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.streak-ok{background:linear-gradient(135deg,var(--orange),var(--yellow));border:none;border-radius:14px;padding:13px 32px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;width:100%}
+
+/* ── WRONG REVIEW ── */
+.review-screen{display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px 80px;flex:1;overflow-y:auto}
+.review-screen.show{display:flex}
+.review-title{font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--red);margin-bottom:6px;text-align:center}
+.review-sub{font-family:'Noto Sans Gujarati',sans-serif;font-size:.85rem;color:var(--muted);margin-bottom:20px;text-align:center}
+.review-card{background:var(--card);border:2px solid rgba(248,81,73,.3);border-radius:18px;padding:18px 20px;width:100%;max-width:480px;margin-bottom:12px}
+.review-q{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:8px}
+.review-ans{display:flex;gap:12px;align-items:center}
+.review-wrong{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--red);text-decoration:line-through;opacity:.6}
+.review-right{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--green)}
+.review-arrow{color:var(--muted);font-size:1rem}
+.review-done{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:14px 32px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;margin-top:8px;width:100%;max-width:480px}
+
+/* ── PIN LOCK ── */
+.pin-overlay{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);backdrop-filter:blur(8px)}
+.pin-overlay.show{display:flex}
+.pin-box{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:28px 24px;text-align:center;width:100%;max-width:300px}
+.pin-title{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800;margin-bottom:4px}
+.pin-sub{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);margin-bottom:18px}
+.pin-dots{display:flex;gap:12px;justify-content:center;margin-bottom:20px}
+.pin-dot{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.15);transition:background .2s}
+.pin-dot.filled{background:var(--purple)}
+.pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pin-btn{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px;font-family:'Fredoka One',cursive;font-size:1.4rem;cursor:pointer;transition:all .15s;color:var(--text)}
+.pin-btn:active{transform:scale(.92);background:var(--purple)}
+.pin-error{color:var(--red);font-family:'Nunito',sans-serif;font-size:.78rem;margin-top:8px;min-height:20px}
+
+/* ── NOTEBOOK / PROGRESS ── */
+.notebook-screen{display:none;flex:1;overflow-y:auto;padding:16px 14px 90px}
+.notebook-screen.active{display:block}
+.nb-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0 0 12px;font-family:'Nunito',sans-serif;display:flex;align-items:center;gap:4px}
+.nb-section{margin-bottom:24px}
+.nb-head{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.xp-history{display:flex;align-items:flex-end;gap:6px;height:80px;padding:0 4px}
+.xp-bar-day{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
+.xp-bar-fill{width:100%;border-radius:4px 4px 0 0;background:var(--blue);min-height:2px;transition:height .5s ease}
+.xp-bar-lbl{font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700}
+.nb-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nb-stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center}
+.nb-stat-val{font-family:'Fredoka One',cursive;font-size:2rem;margin-bottom:4px}
+.nb-stat-lbl{font-family:'Noto Sans Gujarati',sans-serif;font-size:.75rem;color:var(--muted)}
+.nb-trophy-grid{display:flex;flex-wrap:wrap;gap:10px}
+.nb-trophy{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px;flex:1;min-width:140px}
+.nb-trophy-icon{font-size:1.8rem}
+.nb-trophy-name{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:800;color:var(--text)}
+.nb-trophy.locked{opacity:.3}
+
+/* ── RANDOM CHALLENGE BTN ── */
+.random-btn{background:linear-gradient(135deg,rgba(255,166,87,.15),rgba(248,81,73,.1));border:2px solid rgba(255,166,87,.3);border-radius:20px;padding:16px;margin:0 14px 14px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .2s}
+.random-btn:active{transform:scale(.97)}
+.random-icon{font-size:2rem;flex-shrink:0}
+.random-text-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:800;color:var(--orange)}
+.random-text-en{font-family:'Nunito',sans-serif;font-size:.7rem;color:var(--muted)}
+
+/* ── AUDIO FEEDBACK ── */
+/* (generated via Web Audio API — no CSS needed) */
 </style>
 </head>
 <body>
@@ -328,6 +394,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
     <span id="logoTxt">Yuval's Lab</span>
     <span>🔬 COMPUTER SCIENTIST</span>
   </div>
+  <button onclick="openNotebook()" style="background:rgba(255,255,255,.07);border:1px solid var(--border);border-radius:10px;padding:6px 10px;color:var(--muted);font-size:.75rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;flex-shrink:0">📓</button>
   <div class="xp-col">
     <div class="xp-track"><div class="xp-fill" id="xpFill"></div></div>
     <div class="xp-row"><span id="xpLbl">0 XP</span><span id="lvlLbl">Lv 1</span></div>
@@ -352,6 +419,14 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
     <div class="trophy-row" id="trophyRow"></div>
   </div>
 
+  <button class="random-btn" onclick="launchRandom()">
+    <div class="random-icon">🎲</div>
+    <div>
+      <div class="random-text-gu">Random Challenge! મને surprise કરો!</div>
+      <div class="random-text-en">Pick a random unmastered challenge for me</div>
+    </div>
+    <div style="margin-left:auto;font-size:1.5rem">→</div>
+  </button>
   <div id="sectionsWrap"></div>
 </div>
 
@@ -397,10 +472,10 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 </div>
 
 <!-- TEACHER FAB -->
-<button class="t-fab" onclick="openTeacher()" id="tFab">📖</button>
+<button class="t-fab" onclick="requirePIN('teacher')" id="tFab">📖</button>
 
 <!-- SETTINGS FAB -->
-<button class="s-fab" onclick="openSettings()">⚙️</button>
+<button class="s-fab" onclick="requirePIN('settings')">⚙️</button>
 
 <!-- SETTINGS OVERLAY -->
 <div class="s-overlay" id="sOverlay">
@@ -416,10 +491,10 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
           <span class="s-label-en">Font Size</span>
         </div>
         <div class="fs-btns">
-          <button class="fs-btn" data-fs="0.85" onclick="setFS(0.85)">A</button>
-          <button class="fs-btn" data-fs="1" onclick="setFS(1)">A</button>
-          <button class="fs-btn active" data-fs="1.2" onclick="setFS(1.2)" style="font-size:1.1rem">A</button>
-          <button class="fs-btn" data-fs="1.4" onclick="setFS(1.4)" style="font-size:1.3rem">A</button>
+          <button class="fs-btn" data-fs="0.9" onclick="setFS(0.9)" style="font-size:.75rem">A</button>
+          <button class="fs-btn active" data-fs="1.0" onclick="setFS(1.0)" style="font-size:.9rem">A</button>
+          <button class="fs-btn" data-fs="1.15" onclick="setFS(1.15)" style="font-size:1.05rem">A</button>
+          <button class="fs-btn" data-fs="1.3" onclick="setFS(1.3)" style="font-size:1.2rem">A</button>
         </div>
       </div>
       <div class="s-row">
@@ -440,6 +515,12 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
         </div>
         <button style="background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:6px 12px;color:var(--blue);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800" onclick="checkVoices()">🔍 Check</button>
       </div>
+      <div class="s-row" style="margin-bottom:10px">
+        <div class="s-label">🔐 Change PIN
+          <span class="s-label-en">Default is 1234</span>
+        </div>
+        <button style="background:rgba(188,140,255,.1);border:1px solid rgba(188,140,255,.3);border-radius:8px;padding:6px 12px;color:var(--purple);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800" onclick="changePIN()">Change</button>
+      </div>
       <button class="s-reset" onclick="resetSettings()">🔄 Reset to defaults</button>
     </div>
   </div>
@@ -457,6 +538,70 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
       <button class="t-close" onclick="closeTeacher()">✕</button>
     </div>
     <div class="t-body" id="tBody"></div>
+  </div>
+</div>
+
+<!-- NOTEBOOK SCREEN -->
+<div class="notebook-screen screen" id="notebookScreen">
+  <button class="nb-back" onclick="closeNotebook()">← પાછા / Back</button>
+  <div class="nb-section">
+    <div class="nb-head">📊 XP History — Last 7 Days</div>
+    <div class="xp-history" id="xpHistory"></div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-head">🏅 Stats</div>
+    <div class="nb-stat-grid" id="nbStats"></div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-head">🏆 Trophies</div>
+    <div class="nb-trophy-grid" id="nbTrophies"></div>
+  </div>
+</div>
+
+<!-- STREAK MODAL -->
+<div class="streak-modal" id="streakModal">
+  <div class="streak-box">
+    <div class="streak-fire">🔥</div>
+    <div class="streak-title" id="streakTitle">7 Day Streak!</div>
+    <div class="streak-sub" id="streakSub">Yuval, તું 7 દિવસ consecutive રમ્યો!<br>That's incredible dedication! 🚀</div>
+    <button class="streak-ok" onclick="closeStreakModal()">Let's go! 🎉</button>
+  </div>
+</div>
+
+<!-- REVIEW SCREEN (inside game) -->
+<div class="review-screen" id="reviewScreen">
+  <div class="review-title">❌ → ✅ Review Time!</div>
+  <div class="review-sub" id="reviewSub">આ ખોટા હતા — let's review:</div>
+  <div id="reviewList"></div>
+  <button class="review-done" onclick="finishReview()">Done! Home →</button>
+</div>
+
+<!-- PIN OVERLAY -->
+<div class="pin-overlay" id="pinOverlay">
+  <div class="pin-box">
+    <div class="pin-title" id="pinTitle">🔐 Teacher Mode</div>
+    <div class="pin-sub" id="pinSub">4-digit PIN દાખલ કરો</div>
+    <div class="pin-dots" id="pinDots">
+      <div class="pin-dot" id="pd0"></div>
+      <div class="pin-dot" id="pd1"></div>
+      <div class="pin-dot" id="pd2"></div>
+      <div class="pin-dot" id="pd3"></div>
+    </div>
+    <div class="pin-grid">
+      <button class="pin-btn" onclick="pinTap('1')">1</button>
+      <button class="pin-btn" onclick="pinTap('2')">2</button>
+      <button class="pin-btn" onclick="pinTap('3')">3</button>
+      <button class="pin-btn" onclick="pinTap('4')">4</button>
+      <button class="pin-btn" onclick="pinTap('5')">5</button>
+      <button class="pin-btn" onclick="pinTap('6')">6</button>
+      <button class="pin-btn" onclick="pinTap('7')">7</button>
+      <button class="pin-btn" onclick="pinTap('8')">8</button>
+      <button class="pin-btn" onclick="pinTap('9')">9</button>
+      <button class="pin-btn" onclick="pinClear()" style="font-size:1rem">⌫</button>
+      <button class="pin-btn" onclick="pinTap('0')">0</button>
+      <button class="pin-btn" onclick="closePinOverlay()" style="font-size:.8rem;color:var(--muted)">✕</button>
+    </div>
+    <div class="pin-error" id="pinError"></div>
   </div>
 </div>
 
@@ -486,7 +631,7 @@ const S = {
   getTrophies(){ try{return JSON.parse(localStorage.getItem('yl2_trophies')||'[]')}catch{return[]} },
   addTrophy(t){ const tr=this.getTrophies(); if(!tr.find(x=>x.nameEn===t.nameEn)){tr.push(t);localStorage.setItem('yl2_trophies',JSON.stringify(tr))} },
   // Settings
-  get fs(){ return parseFloat(localStorage.getItem('yl2_fs')||1.15) },
+  get fs(){ return parseFloat(localStorage.getItem('yl2_fs')||1.0) },
   set fs(v){ localStorage.setItem('yl2_fs',v) },
   get autoSpeak(){ return localStorage.getItem('yl2_autoSpeak')!=='false' },
   set autoSpeak(v){ localStorage.setItem('yl2_autoSpeak',v) },
@@ -518,6 +663,229 @@ let speedIdx = 0;
 let speedScore = 0;
 
 // ══════════════════════════════════════
+//  AUDIO FEEDBACK (Web Audio API — no files)
+// ══════════════════════════════════════
+let _audioCtx = null;
+function getAudioCtx(){ if(!_audioCtx) try{ _audioCtx = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){} return _audioCtx; }
+function playTone(freq, dur, type='sine', vol=0.3){
+  const ctx = getAudioCtx(); if(!ctx) return;
+  const o = ctx.createOscillator();
+  const g = ctx.createGain();
+  o.connect(g); g.connect(ctx.destination);
+  o.type = type; o.frequency.value = freq;
+  g.gain.setValueAtTime(vol, ctx.currentTime);
+  g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+  o.start(); o.stop(ctx.currentTime + dur);
+}
+function playCorrect(){ playTone(523,0.1); setTimeout(()=>playTone(659,0.1),100); setTimeout(()=>playTone(784,0.2),200); }
+function playWrong(){ playTone(200,0.3,'sawtooth',0.2); }
+function playLevelUp(){ [523,587,659,698,784].forEach((f,i)=>setTimeout(()=>playTone(f,0.15),i*80)); }
+
+// ══════════════════════════════════════
+//  STREAK SYSTEM
+// ══════════════════════════════════════
+function checkStreak(){
+  const today = new Date().toDateString();
+  const last = localStorage.getItem('yl2_lastDay') || '';
+  const yesterday = new Date(Date.now()-86400000).toDateString();
+  if(last === today) return; // already played today
+  if(last === yesterday){
+    S.streak++;
+    // XP bonus for streaks
+    if(S.streak >= 3) S.xp += S.streak * 5;
+  } else if(last !== today) {
+    S.streak = 1; // reset if gap
+  }
+  localStorage.setItem('yl2_lastDay', today);
+  // Record XP for this day
+  recordDayXP();
+  // Show celebration at milestone streaks
+  if([3,7,14,21,30].includes(S.streak)) showStreakModal(S.streak);
+}
+function showStreakModal(days){
+  const msgs = {
+    3: ['3 દિવસ! 🔥','Yuval, 3 consecutive days! Great start!'],
+    7: ['7 Days! 🚀','એક week! You played every single day!'],
+    14: ['2 Weeks! 🏆','14 days straight! You are unstoppable!'],
+    21: ['21 Days! 🌟','3 weeks! Habit fully formed! 💪'],
+    30: ['1 Month! 👑','30 DAYS! Yuval you are a LEGEND!'],
+  };
+  const [title, sub] = msgs[days] || [days+' Days!','Amazing streak!'];
+  document.getElementById('streakTitle').textContent = title;
+  document.getElementById('streakSub').textContent = sub;
+  document.getElementById('streakModal').classList.add('show');
+  spawnConfetti(80); playLevelUp();
+}
+function closeStreakModal(){ document.getElementById('streakModal').classList.remove('show'); }
+
+// XP history (last 7 days)
+function recordDayXP(){
+  const today = new Date().toDateString();
+  const hist = JSON.parse(localStorage.getItem('yl2_xphist')||'{}');
+  hist[today] = (hist[today]||0) + 1; // mark day active
+  localStorage.setItem('yl2_xphist', JSON.stringify(hist));
+}
+function recordXPEarned(amt){
+  const today = new Date().toDateString();
+  const hist = JSON.parse(localStorage.getItem('yl2_xphist')||'{}');
+  hist[today] = (hist[today]||0) + amt;
+  localStorage.setItem('yl2_xphist', JSON.stringify(hist));
+}
+
+// ══════════════════════════════════════
+//  WRONG ANSWERS TRACKER
+// ══════════════════════════════════════
+let wrongAnswers = []; // [{q, wrongVal, correctVal}]
+function trackWrong(q, wrongVal, correctVal){
+  // Only store unique questions
+  if(!wrongAnswers.find(w=>w.q.textGu===q.textGu))
+    wrongAnswers.push({q, wrongVal, correctVal});
+}
+function showReviewScreen(){
+  if(!wrongAnswers.length){ goHome(); return; }
+  document.getElementById('gBody').style.display='none';
+  document.getElementById('completeScreen').className='complete';
+  const rs = document.getElementById('reviewScreen');
+  rs.classList.add('show');
+  document.getElementById('reviewSub').textContent =
+    wrongAnswers.length + ' questions ખોટા હતા — review karo!';
+  const list = document.getElementById('reviewList');
+  list.innerHTML = wrongAnswers.map(w=>`
+    <div class="review-card">
+      <div class="review-q">${w.q.textGu}</div>
+      <div class="review-q" style="font-family:'Nunito',sans-serif;font-size:.75rem;opacity:.6">${w.q.textEn||''}</div>
+      <div class="review-ans">
+        <div class="review-wrong">${w.wrongVal}</div>
+        <div class="review-arrow">→</div>
+        <div class="review-right">✓ ${w.correctVal}</div>
+      </div>
+    </div>`).join('');
+}
+function finishReview(){
+  document.getElementById('reviewScreen').classList.remove('show');
+  goHome();
+}
+
+// ══════════════════════════════════════
+//  PIN SYSTEM
+// ══════════════════════════════════════
+const DEFAULT_PIN = '1234';
+let _pinBuffer = '';
+let _pinCallback = null;
+function requirePIN(action){
+  const savedPIN = localStorage.getItem('yl2_pin') || DEFAULT_PIN;
+  _pinBuffer = '';
+  _pinCallback = action;
+  document.getElementById('pinError').textContent = '';
+  updatePinDots();
+  document.getElementById('pinOverlay').classList.add('show');
+}
+function pinTap(d){
+  if(_pinBuffer.length >= 4) return;
+  _pinBuffer += d;
+  updatePinDots();
+  if(_pinBuffer.length === 4) setTimeout(checkPIN, 200);
+}
+function pinClear(){ _pinBuffer = _pinBuffer.slice(0,-1); updatePinDots(); }
+function updatePinDots(){
+  for(let i=0;i<4;i++){
+    const d=document.getElementById('pd'+i);
+    if(d) d.className='pin-dot'+(_pinBuffer.length>i?' filled':'');
+  }
+}
+function checkPIN(){
+  const saved = localStorage.getItem('yl2_pin') || DEFAULT_PIN;
+  if(_pinBuffer === saved){
+    document.getElementById('pinOverlay').classList.remove('show');
+    if(_pinCallback === 'teacher') openTeacher();
+    else if(_pinCallback === 'settings') openSettings();
+    else if(typeof _pinCallback === 'function') _pinCallback();
+    _pinCallback = null;
+  } else {
+    document.getElementById('pinError').textContent = '❌ Wrong PIN! Try again.';
+    _pinBuffer = '';
+    updatePinDots();
+    playWrong();
+  }
+}
+function closePinOverlay(){ document.getElementById('pinOverlay').classList.remove('show'); _pinCallback=null; }
+
+// ══════════════════════════════════════
+//  NOTEBOOK
+// ══════════════════════════════════════
+function openNotebook(){
+  showScreen('notebookScreen');
+  renderNotebook();
+}
+function closeNotebook(){ showScreen('homeScreen'); renderHome(); }
+function renderNotebook(){
+  // XP history chart
+  const hist = JSON.parse(localStorage.getItem('yl2_xphist')||'{}');
+  const days = [];
+  for(let i=6;i>=0;i--){
+    const d = new Date(Date.now()-i*86400000);
+    const key = d.toDateString();
+    const lbl = d.toLocaleDateString('en',{weekday:'short'});
+    days.push({key, lbl, xp: hist[key]||0});
+  }
+  const maxXP = Math.max(...days.map(d=>d.xp), 1);
+  document.getElementById('xpHistory').innerHTML = days.map(d=>{
+    const h = Math.round((d.xp/maxXP)*70)+4;
+    const active = d.xp > 0;
+    return `<div class="xp-bar-day">
+      <div style="font-size:.6rem;color:${active?'var(--yellow)':'var(--muted)'};font-family:'Fredoka One',cursive">${d.xp||''}</div>
+      <div class="xp-bar-fill" style="height:${h}px;background:${active?'var(--blue)':'rgba(255,255,255,.07)'}"></div>
+      <div class="xp-bar-lbl">${d.lbl}</div>
+    </div>`;
+  }).join('');
+  // Stats
+  const totalCh = registry ? registry.sections.reduce((s,sec)=>s+sec.categories.reduce((s2,c)=>s2+c.challenges.length,0),0) : 0;
+  const doneCh = registry ? registry.sections.reduce((s,sec)=>s+sec.categories.reduce((s2,cat)=>
+    s2+cat.challenges.filter(ch=>S.getStars(challengeData[`content/category/${cat.id}/${ch}.json`]?.id||'')>0).length,0),0) : 0;
+  document.getElementById('nbStats').innerHTML = `
+    <div class="nb-stat"><div class="nb-stat-val" style="color:var(--yellow)">${S.xp}</div><div class="nb-stat-lbl">Total XP</div></div>
+    <div class="nb-stat"><div class="nb-stat-val" style="color:var(--orange)">🔥${S.streak}</div><div class="nb-stat-lbl">Day Streak</div></div>
+    <div class="nb-stat"><div class="nb-stat-val" style="color:var(--green)">${doneCh}</div><div class="nb-stat-lbl">Challenges Done</div></div>
+    <div class="nb-stat"><div class="nb-stat-val" style="color:var(--blue)">${Math.floor(S.xp/300)+1}</div><div class="nb-stat-lbl">Level</div></div>`;
+  // Trophies
+  const earned = S.getTrophies();
+  const allT = [];
+  if(registry) registry.sections.forEach(s=>s.categories.forEach(cat=>cat.challenges.forEach(ch=>{
+    const d=challengeData[`content/category/${cat.id}/${ch}.json`];
+    if(d?.trophy) allT.push({...d.trophy, earned: !!earned.find(e=>e.nameEn===d.trophy.nameEn)});
+  })));
+  document.getElementById('nbTrophies').innerHTML = allT.map(t=>`
+    <div class="nb-trophy ${t.earned?'':'locked'}">
+      <div class="nb-trophy-icon">${t.icon}</div>
+      <div class="nb-trophy-name">${t.nameGu}<br><span style="opacity:.5;font-size:.65rem">${t.nameEn}</span></div>
+    </div>`).join('') || '<div style="color:var(--muted);font-family:\'Noto Sans Gujarati\',sans-serif;font-size:.85rem">Complete challenges to earn trophies!</div>';
+}
+
+// ══════════════════════════════════════
+//  RANDOM CHALLENGE LAUNCHER
+// ══════════════════════════════════════
+function launchRandom(){
+  if(!registry) return;
+  // Collect all unmastered challenges (stars < 4)
+  const candidates = [];
+  registry.sections.forEach(sec => sec.categories.forEach(cat => {
+    cat.challenges.forEach(ch => {
+      const path = `content/category/${cat.id}/${ch}.json`;
+      const d = challengeData[path];
+      if(d && S.getStars(d.id) < 4) candidates.push({path, cat});
+    });
+  }));
+  if(!candidates.length){
+    showToast('🏆 બધા challenges master! All mastered!');
+    return;
+  }
+  const pick = candidates[Math.floor(Math.random()*candidates.length)];
+  currentCat = pick.cat;
+  startChallenge(pick.path);
+  playTone(440,0.1); setTimeout(()=>playTone(554,0.1),100);
+}
+
+// ══════════════════════════════════════
 //  BOOT
 // ══════════════════════════════════════
 async function boot(){
@@ -527,6 +895,8 @@ async function boot(){
   initVoices();
   updateTopbar();
   updateWelcome();
+  // Check daily streak
+  checkStreak();
   try {
     const r = await fetch('content/registry.json');
     registry = await r.json();
@@ -695,7 +1065,7 @@ function backToHome(){
 function startChallenge(path){
   currentChallenge = challengeData[path];
   questions = currentChallenge.questions;
-  qIdx=0; score=0; answered=false;
+  qIdx=0; score=0; answered=false; wrongAnswers=[];
 
   document.getElementById('gTitleGu').textContent = currentChallenge.nameGu;
   document.getElementById('gTitleEn').textContent = currentChallenge.nameEn;
@@ -1191,7 +1561,8 @@ function showFB(ok, ansOrMsg){
     fb.innerHTML = `<span class="fb-gu">${ansOrMsg}</span>`;
     nb.className = 'nxt-btn show';
     nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
-    score++; S.xp += 20; S.streak++; updateTopbar(); spawnConfetti();
+    score++; S.xp += 20; S.streak++; updateTopbar(); spawnConfetti(); playCorrect();
+    recordXPEarned(20);
     updateAttemptDots();
 
   } else {
@@ -1205,11 +1576,13 @@ function showFB(ok, ansOrMsg){
     if(attemptsLeft > 0){
       // First wrong — warn, clear input, keep going
       fb.className = 'fb show warning';
+      const hintDisplay = (hintEn && hintEn !== hint) ? `${hint} — ${hintEn}` : hint;
       fb.innerHTML = `⚠️ ફરી try કરો! — Try again!
-        <span class="fb-en">${hint} ${hintEn}</span>`;
+        <span class="fb-en">${hintDisplay}</span>`;
       // Clear input and refocus — don't lock them out
       const inp = document.querySelector('.ans-inp');
       if(inp){ inp.value = ''; inp.disabled = false; setTimeout(()=>inp.focus(), 100); }
+      playWrong();
       // answered stays false — they can try again
     } else {
       // Second wrong — show correct answer, next button
@@ -1219,7 +1592,9 @@ function showFB(ok, ansOrMsg){
         <span class="fb-en">Answer is ${ansOrMsg}. ${hintEn}</span>`;
       nb.className = 'nxt-btn show';
       nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
-      S.streak = 0; updateTopbar();
+      S.streak = 0; updateTopbar(); playWrong();
+      // Track for review
+      trackWrong(q, '?', ansOrMsg);
       // Disable input so they can't keep typing
       const inp = document.querySelector('.ans-inp');
       if(inp) inp.disabled = true;
@@ -1299,10 +1674,12 @@ function showScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('gameScreen').style.display='none';
   document.getElementById('gameScreen').classList.remove('active');
+  document.getElementById('reviewScreen').classList.remove('show');
   if(id==='gameScreen'){
     document.getElementById('gameScreen').style.display='flex';
   } else {
-    document.getElementById(id).classList.add('active');
+    const el=document.getElementById(id);
+    if(el) el.classList.add('active');
   }
 }
 
@@ -1514,7 +1891,7 @@ function applyFS(v, save){
   document.documentElement.style.setProperty('--fs', v);
   // update active button
   document.querySelectorAll('.fs-btn').forEach(b=>{
-    b.classList.toggle('active', parseFloat(b.dataset.fs)===v);
+    b.classList.toggle('active', Math.abs(parseFloat(b.dataset.fs)-v)<0.01);
   });
   if(save) S.fs=v;
 }
@@ -1530,13 +1907,20 @@ function toggleSpeakEn(){
   if(el) el.className='s-toggle'+(S.speakEn?' on':'');
 }
 function resetSettings(){
-  S.fs=1.15; S.autoSpeak=true; S.speakEn=true;
-  applyFS(1.15, false);
+  S.fs=1.0; S.autoSpeak=true; S.speakEn=true;
+  applyFS(1.0, false);
   const at=document.getElementById('autoSpeakToggle');
   const et=document.getElementById('speakEnToggle');
   if(at) at.className='s-toggle on';
   if(et) et.className='s-toggle on';
   showToast('Settings reset ✓');
+}
+function changePIN(){
+  const np = prompt('New 4-digit PIN (current default: 1234):');
+  if(!np) return;
+  if(!/^\d{4}$/.test(np)){ showToast('❌ Must be exactly 4 digits!'); return; }
+  localStorage.setItem('yl2_pin', np);
+  showToast('✅ PIN changed!');
 }
 async function checkVoices(){
   const el = document.getElementById('voiceStatus');
