@@ -1,0 +1,31 @@
+{
+  "id": "addition-challenge-4",
+  "nameGu": "સરવાળો — Random Practice 🎲",
+  "nameEn": "Addition Random Practice",
+  "icon": "🎲",
+  "descGu": "દર વખત નવા સવાલ! 1-20 random addition.",
+  "descEn": "New questions every time! Random 1-20 addition.",
+  "xpReward": 80,
+  "trophy": {"icon": "🎯", "nameGu": "Random Champion", "nameEn": "Random Champion"},
+  "teacherGuide": {
+    "conceptGu": "Random practice = fluency build. દર session નવા numbers — brain ને pattern memorize નહીં, actually calculate કરવું પડે. આ real mental maths strength!",
+    "conceptEn": "Random practice prevents pattern memorisation — builds real calculation fluency.",
+    "storyGu": "'Yuval, computer ને random numbers generate કરવા આવડે — and so do you now! દર round different — like real life!'",
+    "scriptGu": "'Ready? New numbers every time! No cheating by remembering — fresh brain every question!'",
+    "vocab": [
+      {"gu": "Random = અટકળ / unpredictable", "en": "Random"},
+      {"gu": "Practice = અભ્યાસ", "en": "Practice"}
+    ],
+    "tipsGu": "💡 Time him casually — 'last time 8 seconds, now?' Personal bests motivate!"
+  },
+  "questions": [
+    {"type": "random-math", "level": "ROUND 1", "textGu": "...", "textEn": "...", "op": "+", "min": 1, "max": 10, "hintGu": "Fingers use karo!", "hintEn": "Use fingers!"},
+    {"type": "random-math", "level": "ROUND 2", "textGu": "...", "textEn": "...", "op": "+", "min": 1, "max": 10, "hintGu": "Count up!", "hintEn": "Count up from the bigger number!"},
+    {"type": "random-math", "level": "ROUND 3", "textGu": "...", "textEn": "...", "op": "+", "min": 5, "max": 15, "hintGu": "10 ઉમેરો first!", "hintEn": "Add to 10 first!"},
+    {"type": "random-math", "level": "ROUND 4", "textGu": "...", "textEn": "...", "op": "+", "min": 5, "max": 15, "hintGu": "Slowly count!", "hintEn": "Count carefully!"},
+    {"type": "random-math", "level": "ROUND 5 🔥", "textGu": "...", "textEn": "...", "op": "+", "min": 8, "max": 20, "hintGu": "Tough one! Think!", "hintEn": "Bigger numbers — take your time!"},
+    {"type": "random-math", "level": "ROUND 6 🔥", "textGu": "...", "textEn": "...", "op": "+", "min": 8, "max": 20, "hintGu": "Almost there!", "hintEn": "You've got this!"},
+    {"type": "random-math", "level": "ROUND 7 ⚡", "textGu": "...", "textEn": "...", "op": "+", "min": 10, "max": 20, "hintGu": "10+? = easy!", "hintEn": "Start from 10!"},
+    {"type": "random-math", "level": "ROUND 8 ⚡", "textGu": "...", "textEn": "...", "op": "+", "min": 10, "max": 20, "hintGu": "Last stretch!", "hintEn": "Final rounds!"}
+  ]
+}

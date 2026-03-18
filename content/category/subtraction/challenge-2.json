@@ -1,0 +1,29 @@
+{
+  "id": "subtraction-challenge-2",
+  "nameGu": "બાદબાકી — Random Practice 🎲",
+  "nameEn": "Subtraction Random Practice",
+  "icon": "🎲",
+  "descGu": "દર વખત નવા સવાલ! Random subtraction.",
+  "descEn": "New questions every time! Random subtraction.",
+  "xpReward": 80,
+  "trophy": {"icon": "➖", "nameGu": "Subtraction Star", "nameEn": "Subtraction Star"},
+  "teacherGuide": {
+    "conceptGu": "Random subtraction practice. Bigger minus smaller — always positive result. Count back mentally.",
+    "conceptEn": "Random subtraction — always positive results.",
+    "storyGu": "'Count back like rocket countdown: 10,9,8... subtract means going backwards!'",
+    "scriptGu": "'Start from bigger number, count backwards!'",
+    "vocab": [
+      {"gu": "Countdown = ઉલ્ટી ગણતરી", "en": "Count back"},
+      {"gu": "Difference = તફાવત", "en": "Difference"}
+    ],
+    "tipsGu": "💡 Number line — jump backwards to subtract!"
+  },
+  "questions": [
+    {"type": "random-math", "level": "ROUND 1", "textGu": "...", "textEn": "...", "op": "-", "min": 1, "max": 10, "hintGu": "Count back!", "hintEn": "Count backwards!"},
+    {"type": "random-math", "level": "ROUND 2", "textGu": "...", "textEn": "...", "op": "-", "min": 1, "max": 10, "hintGu": "Fingers!", "hintEn": "Use fingers to count back!"},
+    {"type": "random-math", "level": "ROUND 3", "textGu": "...", "textEn": "...", "op": "-", "min": 3, "max": 15, "hintGu": "Bigger minus smaller!", "hintEn": "Bigger minus smaller!"},
+    {"type": "random-math", "level": "ROUND 4", "textGu": "...", "textEn": "...", "op": "-", "min": 5, "max": 15, "hintGu": "Count back slowly!", "hintEn": "Count back carefully!"},
+    {"type": "random-math", "level": "ROUND 5 🔥", "textGu": "...", "textEn": "...", "op": "-", "min": 5, "max": 20, "hintGu": "Take your time!", "hintEn": "Think it through!"},
+    {"type": "random-math", "level": "ROUND 6 🔥", "textGu": "...", "textEn": "...", "op": "-", "min": 8, "max": 20, "hintGu": "Almost done!", "hintEn": "Nearly there!"}
+  ]
+}

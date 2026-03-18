@@ -13,7 +13,12 @@
           "nameEn": "Addition",
           "icon": "➕",
           "colorRGB": "255,107,107",
-          "challenges": ["challenge-1", "challenge-2", "challenge-3"]
+          "challenges": [
+            "challenge-1",
+            "challenge-2",
+            "challenge-3",
+            "challenge-4"
+          ]
         },
         {
           "id": "subtraction",
@@ -21,7 +26,10 @@
           "nameEn": "Subtraction",
           "icon": "➖",
           "colorRGB": "255,166,87",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1",
+            "challenge-2"
+          ]
         },
         {
           "id": "multiplication",
@@ -29,7 +37,10 @@
           "nameEn": "Multiplication",
           "icon": "✖️",
           "colorRGB": "63,185,80",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1",
+            "challenge-2"
+          ]
         },
         {
           "id": "division",
@@ -37,7 +48,9 @@
           "nameEn": "Division",
           "icon": "➗",
           "colorRGB": "57,208,216",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1"
+          ]
         }
       ]
     },
@@ -54,7 +67,10 @@
           "nameEn": "Binary World",
           "icon": "💡",
           "colorRGB": "88,166,255",
-          "challenges": ["challenge-1", "challenge-2"]
+          "challenges": [
+            "challenge-1",
+            "challenge-2"
+          ]
         },
         {
           "id": "logic-gates",
@@ -62,7 +78,9 @@
           "nameEn": "Logic Gates",
           "icon": "⚡",
           "colorRGB": "63,185,80",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1"
+          ]
         },
         {
           "id": "pattern-lab",
@@ -70,7 +88,9 @@
           "nameEn": "Pattern Lab",
           "icon": "🔮",
           "colorRGB": "188,140,255",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1"
+          ]
         },
         {
           "id": "algo-hq",
@@ -78,7 +98,9 @@
           "nameEn": "Algorithm HQ",
           "icon": "🔀",
           "colorRGB": "247,120,186",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1"
+          ]
         },
         {
           "id": "data-detective",
@@ -86,7 +108,9 @@
           "nameEn": "Data Detective",
           "icon": "📊",
           "colorRGB": "57,208,216",
-          "challenges": ["challenge-1"]
+          "challenges": [
+            "challenge-1"
+          ]
         }
       ]
     }

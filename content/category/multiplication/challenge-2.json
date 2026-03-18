@@ -1,0 +1,29 @@
+{
+  "id": "multiplication-challenge-2",
+  "nameGu": "ગુણાકાર — Times Tables 🎲",
+  "nameEn": "Multiplication Random Practice",
+  "icon": "⭐",
+  "descGu": "Random times tables! 1-5 tables practice.",
+  "descEn": "Random multiplication — 1 to 5 times tables!",
+  "xpReward": 90,
+  "trophy": {"icon": "✖️", "nameGu": "Times Table Hero", "nameEn": "Times Table Hero"},
+  "teacherGuide": {
+    "conceptGu": "Times tables 1-5 random. UNO connection: 3 players × 4 cards = 12. Repeated addition = multiplication shortcut.",
+    "conceptEn": "Random multiplication facts — 1 to 5 times tables.",
+    "storyGu": "'UNO: 4 players, each gets 5 cards. Total? 4×5=20! Count groups!'",
+    "scriptGu": "'Think of groups! 3×4 = three groups of four = 4+4+4!'",
+    "vocab": [
+      {"gu": "Times table = પહાડા", "en": "Times table"},
+      {"gu": "Groups = ટોળી", "en": "Groups"}
+    ],
+    "tipsGu": "💡 Chant times tables together — 2,4,6,8... rhythm helps memory!"
+  },
+  "questions": [
+    {"type": "random-math", "level": "ROUND 1 · 1-2x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 2, "hintGu": "Double it!", "hintEn": "Double the number!"},
+    {"type": "random-math", "level": "ROUND 2 · 1-3x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 3, "hintGu": "Add groups!", "hintEn": "Add the groups!"},
+    {"type": "random-math", "level": "ROUND 3 · 1-4x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 4, "hintGu": "Count groups!", "hintEn": "Count the groups!"},
+    {"type": "random-math", "level": "ROUND 4 · 1-5x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 5, "hintGu": "Groups of 5!", "hintEn": "Think in groups!"},
+    {"type": "random-math", "level": "ROUND 5 🔥 · 1-5x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 5, "hintGu": "Add same number!", "hintEn": "Repeated addition!"},
+    {"type": "random-math", "level": "ROUND 6 🔥 · 1-5x", "textGu": "...", "textEn": "...", "op": "×", "maxFactor": 5, "hintGu": "Almost master!", "hintEn": "Nearly there!"}
+  ]
+}

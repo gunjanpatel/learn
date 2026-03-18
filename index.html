@@ -11,8 +11,10 @@
   --text:#f0f6fc;--muted:#8b949e;
   --blue:#58a6ff;--green:#3fb950;--yellow:#f0c040;
   --red:#f85149;--purple:#bc8cff;--orange:#ffa657;--teal:#39d0d8;--pink:#f778ba;
+  --fs:1;
 }
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:calc(16px * var(--fs));}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text)}
 body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-direction:column}
 
@@ -101,8 +103,8 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 .q-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:20px 16px;width:100%;max-width:560px;margin-bottom:14px;animation:fadeUp .35s cubic-bezier(.34,1.56,.64,1)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 .ql{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;font-family:'Nunito',sans-serif;opacity:.5;margin-bottom:8px}
-.qt-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.05rem;font-weight:700;line-height:1.6;margin-bottom:3px}
-.qt-en{font-family:'Nunito',sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.qt-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.2rem;font-weight:700;line-height:1.7;margin-bottom:3px}
+.qt-en{font-family:'Nunito',sans-serif;font-size:.88rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
 
 /* ── EMOJI COUNT ── */
 .emoji-groups-wrap{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}
@@ -128,14 +130,14 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 
 /* ── TAP OPTIONS ── */
 .tap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:480px}
-.tap-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:16px 10px;font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--text);cursor:pointer;text-align:center;transition:all .15s;user-select:none}
+.tap-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:18px 10px;font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--text);cursor:pointer;text-align:center;transition:all .15s}
 .tap-btn:active{transform:scale(.94)}
 .tap-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green);color:var(--green)}
 .tap-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red);color:var(--red)}
 
 /* ── INPUT ── */
 .input-wrap{display:flex;gap:8px;width:100%;max-width:320px;margin-top:6px}
-.ans-inp{flex:1;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:14px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.7rem;text-align:center;outline:none;transition:border-color .2s}
+.ans-inp{flex:1;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:16px;color:var(--text);font-family:'Fredoka One',cursive;font-size:2rem;text-align:center;outline:none;transition:border-color .2s}
 .ans-inp:focus{border-color:var(--blue)}
 .go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 16px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer;transition:transform .15s}
 .go-btn:active{transform:scale(.93)}
@@ -193,7 +195,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 .mcq-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:500px}
 .mcq-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:14px 10px;color:var(--text);cursor:pointer;transition:all .15s;text-align:center;user-select:none}
 .mcq-btn:active{transform:scale(.94)}
-.mcq-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.88rem;font-weight:700;line-height:1.4}
+.mcq-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:700;line-height:1.5}
 .mcq-en{font-family:'Nunito',sans-serif;font-size:.62rem;color:var(--muted);margin-top:2px}
 .mcq-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green)}
 .mcq-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red)}
@@ -284,6 +286,38 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 @keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 
 @media(max-width:360px){.cat-grid{grid-template-columns:1fr 1fr}.tap-grid{grid-template-columns:1fr 1fr}}
+
+/* ── SETTINGS ── */
+.s-fab{position:fixed;bottom:22px;left:16px;width:50px;height:50px;border-radius:50%;background:var(--card2);border:2px solid var(--border);color:var(--muted);font-size:1.3rem;cursor:pointer;z-index:100;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.s-fab:active{transform:scale(.88)}
+.s-overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column}
+.s-overlay.show{display:flex}
+.s-backdrop{flex:1;background:rgba(0,0,0,.65);backdrop-filter:blur(3px)}
+.s-panel{background:var(--card);border-top:2px solid var(--border);border-radius:24px 24px 0 0;padding:0;max-height:60vh;display:flex;flex-direction:column;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
+.s-ph{display:flex;align-items:center;padding:16px 18px;gap:10px;border-bottom:1px solid var(--border)}
+.s-ptitle{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800;flex:1}
+.s-close{background:rgba(255,255,255,.07);border:none;color:var(--text);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:1rem}
+.s-body{padding:20px 18px 30px;overflow-y:auto}
+.s-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.s-label{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:700;flex:1}
+.s-label-en{font-family:'Nunito',sans-serif;font-size:.65rem;color:var(--muted);display:block;margin-top:2px}
+.fs-btns{display:flex;gap:8px}
+.fs-btn{width:44px;height:44px;border-radius:12px;background:var(--card2);border:2px solid var(--border);color:var(--text);font-family:'Fredoka One',cursive;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.fs-btn.active{background:var(--blue);border-color:var(--blue);color:white}
+.s-toggle{width:52px;height:28px;border-radius:50px;background:var(--card2);border:2px solid var(--border);cursor:pointer;position:relative;transition:background .2s}
+.s-toggle.on{background:var(--green);border-color:var(--green)}
+.s-toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:white;transition:transform .2s}
+.s-toggle.on::after{transform:translateX(24px)}
+.s-reset{background:rgba(248,81,73,.1);border:2px solid rgba(248,81,73,.3);border-radius:12px;padding:10px 18px;color:var(--red);font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;width:100%;margin-top:6px}
+
+/* ── SPEECH + ATTEMPTS ── */
+.speak-btn{background:rgba(88,166,255,.12);border:2px solid rgba(88,166,255,.25);border-radius:50px;padding:8px 16px;color:var(--blue);font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;margin:0 auto 10px;transition:all .2s}
+.speak-btn:active{transform:scale(.94)}
+.speak-btn.speaking{background:rgba(88,166,255,.25);border-color:var(--blue);animation:pulse .8s ease infinite}
+.attempts-row{display:flex;gap:6px;justify-content:center;margin-bottom:10px}
+.attempt-dot{width:12px;height:12px;border-radius:50%;background:var(--yellow);transition:background .3s}
+.attempt-dot.used{background:rgba(255,255,255,.15)}
+.fb.warning{background:rgba(255,166,87,.12);border:2px solid var(--orange);color:var(--orange)}
 </style>
 </head>
 <body>
@@ -309,7 +343,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
       <div class="welcome-gu" id="wGu">નમસ્તે, Yuval!</div>
       <div class="welcome-en" id="wEn">Hello Yuval! Ready to learn?</div>
     </div>
-    <button class="name-btn" onclick="showNameModal()">✏️ નામ</button>
+    <button class="name-btn" onclick="showNameModal()">✏️ નામ - Add Your Name</button>
   </div>
 
   <!-- Trophy shelf -->
@@ -347,9 +381,14 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
       <div class="g-title-gu" id="gTitleGu"></div>
       <div class="g-title-en" id="gTitleEn"></div>
     </div>
+    <button class="speak-btn" id="replaySpeakBtn" onclick="speakCurrent()" title="Read aloud">🔊</button>
     <div class="g-dots" id="gDots"></div>
   </div>
   <div class="g-body" id="gBody">
+    <div class="attempts-row" id="attemptsRow">
+      <div class="attempt-dot" id="att0"></div>
+      <div class="attempt-dot" id="att1"></div>
+    </div>
     <div class="q-card" id="qCard"></div>
     <div class="fb" id="fb"></div>
     <button class="nxt-btn" id="nxtBtn" onclick="nextQ()"></button>
@@ -359,6 +398,46 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
 
 <!-- TEACHER FAB -->
 <button class="t-fab" onclick="openTeacher()" id="tFab">📖</button>
+
+<!-- SETTINGS FAB -->
+<button class="s-fab" onclick="openSettings()">⚙️</button>
+
+<!-- SETTINGS OVERLAY -->
+<div class="s-overlay" id="sOverlay">
+  <div class="s-backdrop" onclick="closeSettings()"></div>
+  <div class="s-panel">
+    <div class="s-ph">
+      <div class="s-ptitle">⚙️ સેટિંગ્સ — Settings</div>
+      <button class="s-close" onclick="closeSettings()">✕</button>
+    </div>
+    <div class="s-body">
+      <div class="s-row">
+        <div class="s-label">અક્ષર નો size
+          <span class="s-label-en">Font Size</span>
+        </div>
+        <div class="fs-btns">
+          <button class="fs-btn" data-fs="0.85" onclick="setFS(0.85)">A</button>
+          <button class="fs-btn" data-fs="1" onclick="setFS(1)">A</button>
+          <button class="fs-btn active" data-fs="1.2" onclick="setFS(1.2)" style="font-size:1.1rem">A</button>
+          <button class="fs-btn" data-fs="1.4" onclick="setFS(1.4)" style="font-size:1.3rem">A</button>
+        </div>
+      </div>
+      <div class="s-row">
+        <div class="s-label">🔊 Auto-speak question
+          <span class="s-label-en">Read question aloud automatically</span>
+        </div>
+        <div class="s-toggle on" id="autoSpeakToggle" onclick="toggleAutoSpeak()"></div>
+      </div>
+      <div class="s-row">
+        <div class="s-label">🇬🇧 Speak English too
+          <span class="s-label-en">Read English text after Gujarati</span>
+        </div>
+        <div class="s-toggle on" id="speakEnToggle" onclick="toggleSpeakEn()"></div>
+      </div>
+      <button class="s-reset" onclick="resetSettings()">🔄 Reset to defaults</button>
+    </div>
+  </div>
+</div>
 
 <!-- TEACHER OVERLAY -->
 <div class="t-overlay" id="tOverlay">
@@ -400,7 +479,18 @@ const S = {
   setStars(cid,v){ const cur=this.getStars(cid); if(v>cur) localStorage.setItem('yl2_s_'+cid,v) },
   getTrophies(){ try{return JSON.parse(localStorage.getItem('yl2_trophies')||'[]')}catch{return[]} },
   addTrophy(t){ const tr=this.getTrophies(); if(!tr.find(x=>x.nameEn===t.nameEn)){tr.push(t);localStorage.setItem('yl2_trophies',JSON.stringify(tr))} },
+  // Settings
+  get fs(){ return parseFloat(localStorage.getItem('yl2_fs')||1.15) },
+  set fs(v){ localStorage.setItem('yl2_fs',v) },
+  get autoSpeak(){ return localStorage.getItem('yl2_autoSpeak')!=='false' },
+  set autoSpeak(v){ localStorage.setItem('yl2_autoSpeak',v) },
+  get speakEn(){ return localStorage.getItem('yl2_speakEn')!=='false' },
+  set speakEn(v){ localStorage.setItem('yl2_speakEn',v) },
 };
+
+// ── ATTEMPTS ──
+let attemptsLeft = 2;
+let currentQText = {gu:'', en:''};
 
 let registry = null;
 let challengeData = {};  // path → data
@@ -425,6 +515,8 @@ let speedScore = 0;
 //  BOOT
 // ══════════════════════════════════════
 async function boot(){
+  // Apply saved font scale immediately
+  applyFS(S.fs, false);
   updateTopbar();
   updateWelcome();
   try {
@@ -616,6 +708,17 @@ function updateDots(){
     const d=document.getElementById('gd'+i);
     if(d) d.className='gdot'+(i<qIdx?' done':i===qIdx?' cur':'');
   });
+  // update attempt dots
+  const a0=document.getElementById('att0');
+  const a1=document.getElementById('att1');
+  if(a0) a0.className='attempt-dot'+(attemptsLeft<2?' used':'');
+  if(a1) a1.className='attempt-dot'+(attemptsLeft<1?' used':'');
+}
+function updateAttemptDots(){
+  const a0=document.getElementById('att0');
+  const a1=document.getElementById('att1');
+  if(a0) a0.className='attempt-dot'+(attemptsLeft<2?' used':'');
+  if(a1) a1.className='attempt-dot'+(attemptsLeft<1?' used':'');
 }
 function exitGame(){
   clearSpeedTimer();
@@ -627,8 +730,11 @@ function exitGame(){
 // ══════════════════════════════════════
 function renderQ(){
   answered=false; dragSelected=[]; vsortSelected=null; vsortSlots=[];
+  attemptsLeft=2;
   clearSpeedTimer();
   const q=questions[qIdx];
+  // For random-math, generate fresh questions each time
+  if(q.type==='random-math') generateRandomMath(q);
   const card=document.getElementById('qCard');
   document.getElementById('fb').className='fb';
   document.getElementById('nxtBtn').className='nxt-btn';
@@ -850,6 +956,17 @@ function renderQ(){
     h+='</div>';
   }
 
+  // ── RANDOM MATH ──
+  else if(q.type==='random-math'){
+    const rm=q._generated||{a:3,b:4,op:'+'};
+    const opSym={'+':{gu:'વત્તા',en:'plus'},'-':{gu:'ઓછા',en:'minus'},'×':{gu:'ગુણ',en:'times'}}[rm.op]||{gu:'',en:''};
+    h+=`<div style="text-align:center;margin:20px 0">
+      <div style="font-family:'Fredoka One',cursive;font-size:3.5rem;color:var(--text);letter-spacing:4px">${rm.a} ${rm.op} ${rm.b}</div>
+      <div style="font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;color:var(--muted);margin-top:8px">${rm.a} ${opSym.gu} ${rm.b} = ?</div>
+    </div>`;
+    h+=inputHtml(rm.answer);
+  }
+
   // ── SPEED ROUND ──
   else if(q.type==='speed-round'){
     speedIdx=0; speedScore=0; speedTimeLeft=q.timeLimit||60;
@@ -869,6 +986,11 @@ function renderQ(){
   if(ai) ai.addEventListener('keydown',e=>{ if(e.key==='Enter') card.querySelector('.go-btn')?.click(); });
   const si = card.querySelector('#spInp');
   if(si){ si.addEventListener('keydown',e=>{ if(e.key==='Enter') checkSpeedAnswer(q); }); si.focus(); }
+  // store current text for speech
+  currentQText = {gu: q.textGu||'', en: q.textEn||''};
+  updateAttemptDots();
+  // auto-speak if enabled
+  if(S.autoSpeak && q.type!=='speed-round') setTimeout(()=>speakCurrent(), 400);
 }
 
 function inputHtml(ans){
@@ -1039,14 +1161,37 @@ function hintMsg(){
   return `<span class="fb-gu">${q.hintGu||'ફરી try!'}</span>`+(q.hintEn?`<span class="fb-en">${q.hintEn}</span>`:'');
 }
 function showFB(ok,msg){
-  const fb=document.getElementById('fb');
-  fb.className='fb show '+(ok?'ok':'bad');
-  fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
-  const nb=document.getElementById('nxtBtn');
-  nb.className='nxt-btn show';
-  nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
-  if(ok){ score++; S.xp+=20; S.streak++; updateTopbar(); spawnConfetti(); }
-  else { S.streak=0; updateTopbar(); }
+  if(ok){
+    // Correct!
+    const fb=document.getElementById('fb');
+    fb.className='fb show ok';
+    fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
+    const nb=document.getElementById('nxtBtn');
+    nb.className='nxt-btn show';
+    nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
+    score++; S.xp+=20; S.streak++; updateTopbar(); spawnConfetti();
+    updateAttemptDots();
+  } else {
+    attemptsLeft--;
+    updateAttemptDots();
+    if(attemptsLeft>0){
+      // First wrong — gentle warning, keep trying
+      const fb=document.getElementById('fb');
+      fb.className='fb show warning';
+      fb.innerHTML=`<span class="fb-gu">⚠️ ફરી try કરો! Try again!<br><span style="font-size:.85em;opacity:.8">${hintMsg()}</span></span>`;
+      // Don't show next button — let them try again
+      answered=false; // re-enable answering
+    } else {
+      // Second wrong — show answer and move on
+      const fb=document.getElementById('fb');
+      fb.className='fb show bad';
+      fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
+      const nb=document.getElementById('nxtBtn');
+      nb.className='nxt-btn show';
+      nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
+      S.streak=0; updateTopbar();
+    }
+  }
 }
 function nextQ(){
   clearSpeedTimer();
@@ -1156,6 +1301,115 @@ function spawnConfetti(n=16){
     el.style.cssText=`left:${Math.random()*100}vw;background:${c[~~(Math.random()*c.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.3}s;border-radius:${Math.random()>.5?'50%':'2px'}`;
     document.body.appendChild(el); setTimeout(()=>el.remove(),3200);
   },i*22);
+}
+
+// ══════════════════════════════════════
+//  RANDOM MATH GENERATOR
+// ══════════════════════════════════════
+function generateRandomMath(q){
+  const op = q.op || '+';
+  const min = q.min || 1;
+  const max = q.max || 20;
+  let a, b, answer;
+  if(op==='+'){
+    a = Math.floor(Math.random()*(max-min))+min;
+    b = Math.floor(Math.random()*(max-a-min+1))+min;
+    if(a+b>max){ b=max-a; }
+    answer = a+b;
+  } else if(op==='-'){
+    a = Math.floor(Math.random()*(max-min))+min+2;
+    b = Math.floor(Math.random()*(a-1))+1;
+    answer = a-b;
+  } else if(op==='×'){
+    const maxF = q.maxFactor||5;
+    a = Math.floor(Math.random()*maxF)+1;
+    b = Math.floor(Math.random()*maxF)+1;
+    answer = a*b;
+  }
+  q._generated = {a, b, op, answer};
+  q.answer = answer;
+  q.textGu = `${a} ${op} ${b} = ?`;
+  q.textEn = `What is ${a} ${op} ${b}?`;
+}
+
+// ══════════════════════════════════════
+//  SPEECH
+// ══════════════════════════════════════
+let _speaking = false;
+function speakCurrent(){
+  if(!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  const btn = document.getElementById('replaySpeakBtn');
+  const texts = [];
+  if(currentQText.gu) texts.push({text: currentQText.gu, lang:'gu-IN'});
+  if(S.speakEn && currentQText.en) texts.push({text: currentQText.en, lang:'en-GB'});
+  if(!texts.length) return;
+  if(btn) btn.classList.add('speaking');
+  let i=0;
+  function speakNext(){
+    if(i>=texts.length){ if(btn) btn.classList.remove('speaking'); return; }
+    const utt = new SpeechSynthesisUtterance(texts[i].text);
+    utt.lang = texts[i].lang;
+    utt.rate = 0.85;
+    utt.pitch = 1.1;
+    // Try to find matching voice
+    const voices = speechSynthesis.getVoices();
+    const match = voices.find(v=>v.lang.startsWith(texts[i].lang.split('-')[0]));
+    if(match) utt.voice = match;
+    utt.onend = ()=>{ i++; setTimeout(speakNext, 300); };
+    utt.onerror = ()=>{ i++; speakNext(); };
+    speechSynthesis.speak(utt);
+  }
+  // iOS Safari needs voices loaded
+  if(speechSynthesis.getVoices().length===0){
+    speechSynthesis.onvoiceschanged = ()=>{ speakNext(); };
+  } else { speakNext(); }
+}
+
+// ══════════════════════════════════════
+//  SETTINGS
+// ══════════════════════════════════════
+function openSettings(){
+  document.getElementById('sOverlay').classList.add('show');
+  // Sync UI to current settings
+  applyFS(S.fs, false);
+  const at=document.getElementById('autoSpeakToggle');
+  const et=document.getElementById('speakEnToggle');
+  if(at) at.className='s-toggle'+(S.autoSpeak?' on':'');
+  if(et) et.className='s-toggle'+(S.speakEn?' on':'');
+}
+function closeSettings(){ document.getElementById('sOverlay').classList.remove('show'); }
+function setFS(v){
+  S.fs=v;
+  applyFS(v, true);
+}
+function applyFS(v, save){
+  document.documentElement.style.setProperty('--fs', v);
+  // update active button
+  document.querySelectorAll('.fs-btn').forEach(b=>{
+    b.classList.toggle('active', parseFloat(b.dataset.fs)===v);
+  });
+  if(save) S.fs=v;
+}
+function toggleAutoSpeak(){
+  S.autoSpeak = !S.autoSpeak;
+  const el=document.getElementById('autoSpeakToggle');
+  if(el) el.className='s-toggle'+(S.autoSpeak?' on':'');
+  if(!S.autoSpeak) speechSynthesis?.cancel();
+}
+function toggleSpeakEn(){
+  S.speakEn = !S.speakEn;
+  const el=document.getElementById('speakEnToggle');
+  if(el) el.className='s-toggle'+(S.speakEn?' on':'');
+}
+function resetSettings(){
+  S.fs=1.15; S.autoSpeak=true; S.speakEn=true;
+  applyFS(1.15, false);
+  const at=document.getElementById('autoSpeakToggle');
+  const et=document.getElementById('speakEnToggle');
+  if(at) at.className='s-toggle on';
+  if(et) et.className='s-toggle on';
+  showToast('Settings reset ✓');
 }
 
 // ══════════════════════════════════════
