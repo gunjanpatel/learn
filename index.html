@@ -1003,7 +1003,7 @@ function renderQ(){
 
 function inputHtml(ans){
   return `<div class="input-wrap">
-    <input class="ans-inp" type="number" inputmode="numeric" placeholder="?">
+    <input class="ans-inp" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off">
     <button class="go-btn" onclick="checkInput(${ans})">✓</button>
   </div>`;
 }
@@ -1014,10 +1014,14 @@ function inputHtml(ans){
 function checkInput(ans){
   if(answered)return;
   const el=document.querySelector('.ans-inp');
-  if(!el||el.value==='')return;
-  const v=parseInt(el.value); el.disabled=true; answered=true;
-  showFB(v===ans,v===ans?randOK():`${questions[qIdx].hintGu||''}`+
-    (questions[qIdx].hintEn?`<span class="fb-en">${questions[qIdx].hintEn}</span>`:''));
+  if(!el||el.value.trim()==='')return;
+  const v=parseInt(el.value.trim());
+  if(v===ans){
+    el.disabled=true; answered=true;
+    showFB(true, randOK());
+  } else {
+    showFB(false, ans);
+  }
 }
 function checkTap(correct,chosen){
   if(answered)return; answered=true;
@@ -1026,7 +1030,9 @@ function checkTap(correct,chosen){
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
   });
-  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+  const q=questions[qIdx];
+  const correctVal = q.options?.[correct] ?? correct;
+  showFB(chosen===correct, chosen===correct ? randOK() : String(correctVal));
 }
 function checkMCQ(correct,chosen){
   if(answered)return; answered=true;
@@ -1035,7 +1041,9 @@ function checkMCQ(correct,chosen){
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
   });
-  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+  const q=questions[qIdx];
+  const correctText = q.options?.[correct]?.gu || correct;
+  showFB(chosen===correct, chosen===correct ? randOK() : correctText);
 }
 function checkGate(correct,chosen,label){
   if(answered)return; answered=true;
@@ -1046,7 +1054,8 @@ function checkGate(correct,chosen,label){
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
   });
-  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+  const gCorrectVal = questions[qIdx].options?.[correct]?.gu || correct;
+  showFB(chosen===correct, chosen===correct ? randOK() : String(gCorrectVal));
 }
 function toggleEnc(i){
   if(!window._encBits) window._encBits=[0,0,0,0];
@@ -1165,39 +1174,55 @@ function clearSpeedTimer(){ if(speedTimer){clearInterval(speedTimer);speedTimer=
 const _okMsgs=['🎉 શાબ્બાશ! Perfect!','⚡ Brilliant! Computer scientist!','🚀 Exactly right!','🧠 Fantastic brain!','🔥 On fire! Keep going!'];
 function randOK(){ return _okMsgs[~~(Math.random()*_okMsgs.length)]; }
 function hintMsg(){
+  // kept for vsort/dragsum/gate which call it directly
   const q=questions[qIdx];
-  return `<span class="fb-gu">${q.hintGu||'ફરી try!'}</span>`+(q.hintEn?`<span class="fb-en">${q.hintEn}</span>`:'');
+  const h = q.hintGu||'ફરી try!';
+  const he = q.hintEn||'';
+  return h + (he ? ' — '+he : '');
 }
-function showFB(ok,msg){
+function showFB(ok, ansOrMsg){
+  const fb = document.getElementById('fb');
+  const nb = document.getElementById('nxtBtn');
+
   if(ok){
-    // Correct!
-    const fb=document.getElementById('fb');
-    fb.className='fb show ok';
-    fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
-    const nb=document.getElementById('nxtBtn');
-    nb.className='nxt-btn show';
-    nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
-    score++; S.xp+=20; S.streak++; updateTopbar(); spawnConfetti();
+    // ── CORRECT ──
+    answered = true;
+    fb.className = 'fb show ok';
+    fb.innerHTML = `<span class="fb-gu">${ansOrMsg}</span>`;
+    nb.className = 'nxt-btn show';
+    nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
+    score++; S.xp += 20; S.streak++; updateTopbar(); spawnConfetti();
     updateAttemptDots();
+
   } else {
+    // ── WRONG ──
     attemptsLeft--;
     updateAttemptDots();
-    if(attemptsLeft>0){
-      // First wrong — gentle warning, keep trying
-      const fb=document.getElementById('fb');
-      fb.className='fb show warning';
-      fb.innerHTML=`<span class="fb-gu">⚠️ ફરી try કરો! Try again!<br><span style="font-size:.85em;opacity:.8">${hintMsg()}</span></span>`;
-      // Don't show next button — let them try again
-      answered=false; // re-enable answering
+    const q = questions[qIdx];
+    const hint = q.hintGu || '';
+    const hintEn = q.hintEn || '';
+
+    if(attemptsLeft > 0){
+      // First wrong — warn, clear input, keep going
+      fb.className = 'fb show warning';
+      fb.innerHTML = `⚠️ ફરી try કરો! — Try again!
+        <span class="fb-en">${hint} ${hintEn}</span>`;
+      // Clear input and refocus — don't lock them out
+      const inp = document.querySelector('.ans-inp');
+      if(inp){ inp.value = ''; inp.disabled = false; setTimeout(()=>inp.focus(), 100); }
+      // answered stays false — they can try again
     } else {
-      // Second wrong — show answer and move on
-      const fb=document.getElementById('fb');
-      fb.className='fb show bad';
-      fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
-      const nb=document.getElementById('nxtBtn');
-      nb.className='nxt-btn show';
-      nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
-      S.streak=0; updateTopbar();
+      // Second wrong — show correct answer, next button
+      answered = true;
+      fb.className = 'fb show bad';
+      fb.innerHTML = `❌ જવાબ છે: <strong>${ansOrMsg}</strong>
+        <span class="fb-en">Answer is ${ansOrMsg}. ${hintEn}</span>`;
+      nb.className = 'nxt-btn show';
+      nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
+      S.streak = 0; updateTopbar();
+      // Disable input so they can't keep typing
+      const inp = document.querySelector('.ans-inp');
+      if(inp) inp.disabled = true;
     }
   }
 }
