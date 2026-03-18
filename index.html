@@ -434,6 +434,12 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
         </div>
         <div class="s-toggle on" id="speakEnToggle" onclick="toggleSpeakEn()"></div>
       </div>
+      <div class="s-row" style="margin-bottom:8px">
+        <div class="s-label" style="font-size:.75rem">
+          <span id="voiceStatus" style="color:var(--muted);font-family:'Nunito',sans-serif">Checking voices...</span>
+        </div>
+        <button style="background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:6px 12px;color:var(--blue);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800" onclick="checkVoices()">🔍 Check</button>
+      </div>
       <button class="s-reset" onclick="resetSettings()">🔄 Reset to defaults</button>
     </div>
   </div>
@@ -517,6 +523,8 @@ let speedScore = 0;
 async function boot(){
   // Apply saved font scale immediately
   applyFS(S.fs, false);
+  // Pre-warm speech synthesis voices (critical for iOS Safari)
+  initVoices();
   updateTopbar();
   updateWelcome();
   try {
@@ -1335,49 +1343,124 @@ function generateRandomMath(q){
 // ══════════════════════════════════════
 //  SPEECH
 // ══════════════════════════════════════
-let _speaking = false;
-function speakCurrent(){
+let _voicesReady = false;
+let _pendingSpeak = null;
+
+// Pre-load voices as soon as possible (needed for iOS Safari)
+function initVoices(){
   if(!window.speechSynthesis) return;
+  const v = speechSynthesis.getVoices();
+  if(v.length > 0){ _voicesReady = true; return; }
+  speechSynthesis.onvoiceschanged = () => {
+    _voicesReady = true;
+    if(_pendingSpeak){ _pendingSpeak(); _pendingSpeak=null; }
+  };
+}
+
+function getBestVoice(lang){
+  const voices = speechSynthesis.getVoices();
+  if(!voices.length) return null;
+  const langCode = lang.split('-')[0].toLowerCase();
+  // Exact match first
+  let v = voices.find(x => x.lang.toLowerCase() === lang.toLowerCase());
+  if(v) return v;
+  // Partial match (same language, any region)
+  v = voices.find(x => x.lang.toLowerCase().startsWith(langCode));
+  if(v) return v;
+  // For Gujarati fallback: try Hindi (hi-IN) which most iOS/Android have
+  if(langCode === 'gu'){
+    v = voices.find(x => x.lang.toLowerCase().startsWith('hi'));
+    if(v) return v;
+  }
+  // Last resort: any English voice
+  v = voices.find(x => x.lang.toLowerCase().startsWith('en'));
+  return v || null;
+}
+
+function speakCurrent(){
+  if(!window.speechSynthesis){ showToast('🔇 Speech not supported on this browser'); return; }
   speechSynthesis.cancel();
   const btn = document.getElementById('replaySpeakBtn');
-  const texts = [];
-  if(currentQText.gu) texts.push({text: currentQText.gu, lang:'gu-IN'});
-  if(S.speakEn && currentQText.en) texts.push({text: currentQText.en, lang:'en-GB'});
-  if(!texts.length) return;
-  if(btn) btn.classList.add('speaking');
-  let i=0;
-  function speakNext(){
-    if(i>=texts.length){ if(btn) btn.classList.remove('speaking'); return; }
-    const utt = new SpeechSynthesisUtterance(texts[i].text);
-    utt.lang = texts[i].lang;
-    utt.rate = 0.85;
-    utt.pitch = 1.1;
-    // Try to find matching voice
-    const voices = speechSynthesis.getVoices();
-    const match = voices.find(v=>v.lang.startsWith(texts[i].lang.split('-')[0]));
-    if(match) utt.voice = match;
-    utt.onend = ()=>{ i++; setTimeout(speakNext, 300); };
-    utt.onerror = ()=>{ i++; speakNext(); };
-    speechSynthesis.speak(utt);
+
+  // Build speak queue:
+  // Always speak English (reliable). Speak Gujarati only if voice found.
+  const voices = speechSynthesis.getVoices();
+  const guVoice = getBestVoice('gu-IN');
+  const enVoice = getBestVoice('en-GB');
+
+  const queue = [];
+  // Gujarati: only if device actually has gu or hi voice
+  if(currentQText.gu && guVoice && guVoice.lang.toLowerCase().startsWith('gu')){
+    queue.push({text: currentQText.gu, voice: guVoice, rate: 0.5});
   }
-  // iOS Safari needs voices loaded
-  if(speechSynthesis.getVoices().length===0){
-    speechSynthesis.onvoiceschanged = ()=>{ speakNext(); };
-  } else { speakNext(); }
+  // English: always speak as primary or fallback
+  if(currentQText.en){
+    // If no Gujarati voice, speak Gujarati text in English voice as fallback
+    if(currentQText.gu && !queue.length){
+      // Skip Gujarati text if no Gujarati voice — just speak English
+    }
+    if(S.speakEn || !queue.length){
+      queue.push({text: currentQText.en, voice: enVoice, rate: 0.5});
+    }
+  }
+  // Safety: if still empty, just speak English text
+  if(!queue.length && currentQText.en){
+    queue.push({text: currentQText.en, voice: enVoice, rate: 0.5});
+  }
+  if(!queue.length){ showToast('🔇 No text to speak'); return; }
+
+  if(btn) btn.classList.add('speaking');
+  let i = 0;
+
+  function speakNext(){
+    if(i >= queue.length){
+      if(btn) btn.classList.remove('speaking');
+      return;
+    }
+    const item = queue[i];
+    const utt = new SpeechSynthesisUtterance(item.text);
+    utt.rate = item.rate || 0.85;
+    utt.pitch = 1.05;
+    utt.volume = 1;
+    if(item.voice) utt.voice = item.voice;
+    utt.onend = () => { i++; setTimeout(speakNext, 350); };
+    utt.onerror = (e) => {
+      console.warn('Speech error:', e.error);
+      i++;
+      speakNext();
+    };
+    try {
+      speechSynthesis.speak(utt);
+      // iOS Safari workaround: sometimes hangs — kick it
+      setTimeout(() => {
+        if(speechSynthesis.speaking && !speechSynthesis.pending){
+          speechSynthesis.resume();
+        }
+      }, 100);
+    } catch(e) {
+      i++; speakNext();
+    }
+  }
+
+  if(!_voicesReady || speechSynthesis.getVoices().length === 0){
+    _pendingSpeak = speakNext;
+    // Force voices load on iOS (requires user gesture already happened)
+    const dummy = new SpeechSynthesisUtterance('');
+    speechSynthesis.speak(dummy);
+    speechSynthesis.cancel();
+    setTimeout(() => {
+      _voicesReady = true;
+      speakNext();
+    }, 200);
+  } else {
+    speakNext();
+  }
 }
 
 // ══════════════════════════════════════
 //  SETTINGS
 // ══════════════════════════════════════
-function openSettings(){
-  document.getElementById('sOverlay').classList.add('show');
-  // Sync UI to current settings
-  applyFS(S.fs, false);
-  const at=document.getElementById('autoSpeakToggle');
-  const et=document.getElementById('speakEnToggle');
-  if(at) at.className='s-toggle'+(S.autoSpeak?' on':'');
-  if(et) et.className='s-toggle'+(S.speakEn?' on':'');
-}
+
 function closeSettings(){ document.getElementById('sOverlay').classList.remove('show'); }
 function setFS(v){
   S.fs=v;
@@ -1410,6 +1493,33 @@ function resetSettings(){
   if(at) at.className='s-toggle on';
   if(et) et.className='s-toggle on';
   showToast('Settings reset ✓');
+}
+function checkVoices(){
+  const el = document.getElementById('voiceStatus');
+  if(!window.speechSynthesis){ if(el) el.textContent='❌ Speech not supported'; return; }
+  const voices = speechSynthesis.getVoices();
+  if(!voices.length){ if(el) el.textContent='⏳ No voices loaded yet — tap again'; return; }
+  const gu = voices.filter(v=>v.lang.toLowerCase().startsWith('gu'));
+  const hi = voices.filter(v=>v.lang.toLowerCase().startsWith('hi'));
+  const en = voices.filter(v=>v.lang.toLowerCase().startsWith('en'));
+  const parts = [];
+  if(gu.length) parts.push('✅ Gujarati ('+gu.length+')');
+  else if(hi.length) parts.push('🟡 Hindi fallback ('+hi.length+')');
+  else parts.push('❌ No Gujarati/Hindi voice');
+  parts.push('🔊 English ('+en.length+')');
+  if(el) el.textContent = parts.join(' · ');
+  // Also show total
+  if(el) el.title = voices.map(v=>v.lang+' '+v.name).join(', ');
+}
+function openSettings(){
+  document.getElementById('sOverlay').classList.add('show');
+  applyFS(S.fs, false);
+  const at=document.getElementById('autoSpeakToggle');
+  const et=document.getElementById('speakEnToggle');
+  if(at) at.className='s-toggle'+(S.autoSpeak?' on':'');
+  if(et) et.className='s-toggle'+(S.speakEn?' on':'');
+  // Auto-check voices when settings opens
+  setTimeout(checkVoices, 300);
 }
 
 // ══════════════════════════════════════
