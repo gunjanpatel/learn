@@ -1,0 +1,78 @@
+{
+  "id": "binary-challenge-1",
+  "nameGu": "Binary — Basics 💡",
+  "nameEn": "Binary Basics",
+  "icon": "💡",
+  "descGu": "ON/OFF — Computer ની ભાષા!",
+  "descEn": "ON and OFF — the computer's only language!",
+  "xpReward": 60,
+  "trophy": {"icon": "💡", "nameGu": "Bit Beginner", "nameEn": "Bit Beginner"},
+  "teacherGuide": {
+    "conceptGu": "Binary = base-2. Computer transistors = ON(1) or OFF(0). Bedtime story reinforce: electricity = switch. Each bit = position value (1,2,4,8). Right to left doubles.",
+    "conceptEn": "Binary is base-2. Each bit position doubles in value left to right.",
+    "storyGu": "'4 bulbs — right bulb = 1, next = 2, next = 4, next = 8. ON karo 1 + 2 = 3. Computer exactly same! Phone number, photo, music — all stored as ON/OFF bulbs!'",
+    "scriptGu": "'Ready for secret code? 0101 = ? 4+1=5! Only computer scientists know this!'",
+    "vocab": [
+      {"gu": "Bit = 1 switch", "en": "Bit"},
+      {"gu": "ON = 1 = electricity", "en": "Binary 1"},
+      {"gu": "OFF = 0 = no electricity", "en": "Binary 0"},
+      {"gu": "Binary = બે-base number", "en": "Binary"}
+    ],
+    "tipsGu": "💡 Light switches demo! 4 switches, assign values 8,4,2,1. Flip and calculate together physically!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1",
+      "textGu": "Computer ફક્ત ___ સમજે.",
+      "textEn": "A computer only understands ___.",
+      "options": [
+        {"gu": "A to Z letters", "en": "Letters"},
+        {"gu": "1 to 10", "en": "1 to 10"},
+        {"gu": "ફક્ત 1 અને 0", "en": "Only 1 and 0"},
+        {"gu": "Colors", "en": "Colors"}
+      ],
+      "answer": 2,
+      "hintGu": "Electricity ON=1, OFF=0. ફક્ત બે!",
+      "hintEn": "Electricity is only ON(1) or OFF(0)!"
+    },
+    {
+      "type": "binary-decode",
+      "level": "LEVEL 2 · DECODE",
+      "textGu": "Binary 0011 = decimal?",
+      "textEn": "Binary 0011 = what decimal number?",
+      "bits": [0,0,1,1],
+      "answer": 3,
+      "hintGu": "2 + 1 = 3",
+      "hintEn": "Bits worth 2 and 1 are ON. 2+1=3"
+    },
+    {
+      "type": "binary-decode",
+      "level": "LEVEL 2 · DECODE",
+      "textGu": "Binary 0101 = decimal?",
+      "textEn": "Binary 0101 = decimal?",
+      "bits": [0,1,0,1],
+      "answer": 5,
+      "hintGu": "4 + 1 = 5",
+      "hintEn": "Bits worth 4 and 1 are ON. 4+1=5"
+    },
+    {
+      "type": "binary-encode",
+      "level": "LEVEL 3 · ENCODE",
+      "textGu": "Number 6 binary માં બનાવો!",
+      "textEn": "Make number 6 in binary!",
+      "target": 6,
+      "hintGu": "6 = 4+2. 4-box AND 2-box ON!",
+      "hintEn": "6 = 4+2. Turn on those two boxes!"
+    },
+    {
+      "type": "binary-encode",
+      "level": "LEVEL 4 · ENCODE",
+      "textGu": "Yuval ની age = 7. Binary?",
+      "textEn": "Yuval's age 7 — make it in binary!",
+      "target": 7,
+      "hintGu": "7 = 4+2+1. ત્રણ boxes ON!",
+      "hintEn": "7 = 4+2+1!"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "data-detective-challenge-1",
+  "nameGu": "Data Detective — Basics 📊",
+  "nameEn": "Data Detective Basics",
+  "icon": "📊",
+  "descGu": "Data ના clues ઓળખો! AI ઠીક આ કરે.",
+  "descEn": "Find clues in data — just like AI!",
+  "xpReward": 65,
+  "trophy": {"icon": "🔍", "nameGu": "Data Detective", "nameEn": "Data Detective"},
+  "teacherGuide": {
+    "conceptGu": "Data = information numbers. Average = sum ÷ count. Correlation = linked things. AI = pattern in data find.",
+    "storyGu": "'Yuval game scores: 8,9,7,10,6. Average = 40÷5=8. Computer leaderboard same math!'",
+    "scriptGu": "'Data = clues! Detective clues ભેગા → case solve. AI data ભેગા → pattern find → future predict!'",
+    "vocab": [
+      {"gu": "Data = numbers/information", "en": "Data"},
+      {"gu": "Average = middle value", "en": "Average"},
+      {"gu": "Pattern = hidden rule", "en": "Pattern"},
+      {"gu": "Predict = future guess", "en": "Predict"}
+    ],
+    "tipsGu": "💡 Yuval game scores track! Average calculate together. YouTube history — AI tracked your pattern!"
+  },
+  "questions": [
+    {
+      "type": "data-bars",
+      "level": "LEVEL 1 · READ CHART",
+      "textGu": "Highest score ક્યો friend?",
+      "textEn": "Which friend has the highest score?",
+      "data": [
+        {"val": 7, "lbl": "Ali"},
+        {"val": 9, "lbl": "Mia"},
+        {"val": 5, "lbl": "Lev"},
+        {"val": 10, "lbl": "Yuval"},
+        {"val": 8, "lbl": "Sara"}
+      ],
+      "options": [
+        {"gu": "Ali — 7", "en": "Ali"},
+        {"gu": "Mia — 9", "en": "Mia"},
+        {"gu": "Yuval — 10 🏆", "en": "Yuval"},
+        {"gu": "Sara — 8", "en": "Sara"}
+      ],
+      "answer": 2,
+      "hintGu": "Tallest bar = highest! Yuval = 10!",
+      "hintEn": "Tallest bar wins!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 2 · AVERAGE",
+      "textGu": "Scores 4 and 6. ઉમેરો ÷ 2 = ?",
+      "textEn": "Scores 4 and 6. Add ÷ 2 = average?",
+      "answer": 5,
+      "hintGu": "4+6=10, 10÷2=5",
+      "hintEn": "4+6=10, then 10÷2=5"
+    },
+    {
+      "type": "data-bars",
+      "level": "LEVEL 3 · COMPARE",
+      "textGu": "Most rain ક્યો month?",
+      "textEn": "Which month had most rain?",
+      "data": [
+        {"val": 3, "lbl": "Jan"},
+        {"val": 8, "lbl": "Feb"},
+        {"val": 12, "lbl": "Mar"},
+        {"val": 6, "lbl": "Apr"}
+      ],
+      "options": [
+        {"gu": "January — 3", "en": "January"},
+        {"gu": "February — 8", "en": "February"},
+        {"gu": "March — 12 🌧️", "en": "March"},
+        {"gu": "April — 6", "en": "April"}
+      ],
+      "answer": 2,
+      "hintGu": "Tallest = most rain! March!",
+      "hintEn": "March has the tallest bar!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · PATTERN",
+      "textGu": "Rain → umbrella sales UP. આ ___.",
+      "textEn": "Rain → umbrella sales go up. This is a ___.",
+      "options": [
+        {"gu": "Accident", "en": "Accident"},
+        {"gu": "Pattern / Correlation", "en": "Pattern"},
+        {"gu": "Mistake", "en": "Mistake"},
+        {"gu": "Magic", "en": "Magic"}
+      ],
+      "answer": 1,
+      "hintGu": "Linked things = Pattern!",
+      "hintEn": "Linked things = correlation!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · AI LEARNS",
+      "textGu": "AI: 1000 🐱 + 1000 🐶 photos → learns to ___",
+      "textEn": "AI sees 1000 cat + 1000 dog photos → learns to ___",
+      "options": [
+        {"gu": "Photos delete", "en": "Delete"},
+        {"gu": "Cat/Dog ઓળખે — Training!", "en": "Recognise — Training!"},
+        {"gu": "Sleep 😴", "en": "Sleep"},
+        {"gu": "Random guess", "en": "Guess"}
+      ],
+      "answer": 1,
+      "hintGu": "AI trains on data — pattern find!",
+      "hintEn": "AI trains on data — that's Machine Learning!"
+    }
+  ]
+}

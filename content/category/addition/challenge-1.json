@@ -1,0 +1,107 @@
+{
+  "id": "addition-challenge-1",
+  "nameGu": "સરવાળો — શરૂઆત",
+  "nameEn": "Addition Basics",
+  "icon": "🍎",
+  "descGu": "Objects ઉમેરીને count કરો!",
+  "descEn": "Add objects and count!",
+  "xpReward": 50,
+  "trophy": {"icon": "🥉", "nameGu": "Bronze Adder", "nameEn": "Bronze Adder"},
+  "teacherGuide": {
+    "conceptGu": "સરવાળો = બે groups ભેગા કરવા. Objects touch કરીને count કરાવો — abstract numbers પહેલા concrete objects જ સમજ.",
+    "conceptEn": "Addition = combining two groups.",
+    "storyGu": "'Yuval, ધારો robot ના 3 batteries left. Friend robot 4 batteries આપે. Total? ભેગા ગણો — 1,2,3,4,5,6,7! Robot fly to moon!'",
+    "scriptGu": "'જો આ 🍎🍎🍎 — 3 apples. હવે 🍎🍎 — 2 more apples. ભેગા કરો — total કેટલા?'",
+    "vocab": [
+      {"gu": "સરવાળો = ઉમેરવું", "en": "Addition"},
+      {"gu": "+ = plus / ઉમેરો", "en": "Plus"},
+      {"gu": "= equals / બરાબર", "en": "Equals"},
+      {"gu": "Total = કુલ", "en": "Total"}
+    ],
+    "tipsGu": "💡 Fingers use = totally fine! Objects ગણો. UNO cards ઉમેરો. Fun keep કરો!"
+  },
+  "questions": [
+    {
+      "type": "emoji-count",
+      "level": "LEVEL 1 · COUNT & ADD",
+      "textGu": "બધા ઉમેરો — total કેટલા?",
+      "textEn": "Count them all — how many total?",
+      "groupA": {"emoji": "🍎", "count": 3},
+      "groupB": {"emoji": "🍎", "count": 2},
+      "answer": 5,
+      "hintGu": "3 + 2 = 5",
+      "hintEn": "3 + 2 = 5"
+    },
+    {
+      "type": "emoji-count",
+      "level": "LEVEL 1 · COUNT & ADD",
+      "textGu": "Stars ભેગા — total?",
+      "textEn": "Stars together — total?",
+      "groupA": {"emoji": "⭐", "count": 4},
+      "groupB": {"emoji": "⭐", "count": 3},
+      "answer": 7,
+      "hintGu": "4 + 3 = 7",
+      "hintEn": "4 + 3 = 7"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2 · PICK THE ANSWER",
+      "textGu": "2 + 3 = ?",
+      "textEn": "2 + 3 = ?",
+      "options": [4, 5, 6, 7],
+      "answer": 1,
+      "hintGu": "2 + 3 = 5",
+      "hintEn": "2 + 3 = 5"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2 · PICK THE ANSWER",
+      "textGu": "6 + 1 = ?",
+      "textEn": "6 + 1 = ?",
+      "options": [5, 6, 7, 8],
+      "answer": 2,
+      "hintGu": "6 + 1 = 7",
+      "hintEn": "6 + 1 = 7"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3 · TYPE THE ANSWER",
+      "textGu": "4 + 4 = ?",
+      "textEn": "4 + 4 = ?",
+      "answer": 8,
+      "hintGu": "4 + 4 = 8",
+      "hintEn": "4 + 4 = 8"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL 4 · MISSING NUMBER",
+      "textGu": "3 + ___ = 7. Blank માં શું?",
+      "textEn": "3 + ___ = 7. What goes in the blank?",
+      "partA": 3,
+      "total": 7,
+      "answer": 4,
+      "hintGu": "7 - 3 = 4",
+      "hintEn": "7 minus 3 = 4"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 5 · STORY",
+      "textGu": "🚀 Rocket ને 5 astronauts હતા. 3 more jumped in. કેટલા total?",
+      "textEn": "Rocket had 5 astronauts. 3 more jumped in. How many total?",
+      "answer": 8,
+      "hintGu": "5 + 3 = 8",
+      "hintEn": "5 + 3 = 8"
+    },
+    {
+      "type": "drag-sum",
+      "level": "LEVEL 6 · DRAG & MAKE",
+      "textGu": "Numbers drag કરો — sum 9 બનાવો!",
+      "textEn": "Drag two numbers that add up to 9!",
+      "numbers": [2, 3, 4, 5, 6, 7],
+      "target": 9,
+      "solutions": [[2,7],[3,6],[4,5]],
+      "hintGu": "4 + 5 = 9, or 3 + 6 = 9!",
+      "hintEn": "Try 4+5 or 3+6!"
+    }
+  ]
+}

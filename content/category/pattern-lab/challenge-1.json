@@ -1,0 +1,84 @@
+{
+  "id": "pattern-lab-challenge-1",
+  "nameGu": "Pattern Lab — Basics 🔮",
+  "nameEn": "Pattern Lab Basics",
+  "icon": "🔮",
+  "descGu": "Rule શોધો! AI exactly આ જ કરે.",
+  "descEn": "Find the rule — just like AI does!",
+  "xpReward": 60,
+  "trophy": {"icon": "🔮", "nameGu": "Pattern Finder", "nameEn": "Pattern Finder"},
+  "teacherGuide": {
+    "conceptGu": "Pattern recognition = ML નો heart. AI examples study → rule find → predict. Variables (x) = unknowns = coding backbone.",
+    "storyGu": "'Chess rice story: 1,2,4,8,16... Rule = double! Box 64 = trillion grains! Simple rule = huge power!'",
+    "scriptGu": "'2,4,6,8 — rule? +2! Computer pattern ઓળખે. YouTube suggestions = pattern!'",
+    "vocab": [
+      {"gu": "Pattern = Rule / નિયમ", "en": "Pattern"},
+      {"gu": "Variable x = mystery number", "en": "Variable"},
+      {"gu": "Sequence = ક્રમ", "en": "Sequence"},
+      {"gu": "Predict = ભવિષ્ય ધારવું", "en": "Predict"}
+    ],
+    "tipsGu": "💡 UNO: 4+4+4 = loop pattern! Birthday: 5,6,7,__ = +1/year!"
+  },
+  "questions": [
+    {
+      "type": "pattern",
+      "level": "LEVEL 1",
+      "textGu": "Rule શોધો — next?",
+      "textEn": "Find the rule — what comes next?",
+      "sequence": [2,4,6,8,"?"],
+      "answer": 10,
+      "hintGu": "+2 every time! 8+2=10",
+      "hintEn": "Add 2 each time"
+    },
+    {
+      "type": "pattern",
+      "level": "LEVEL 2 · CHESS STORY",
+      "textGu": "Chess rice — double every box. Next?",
+      "textEn": "Chess rice story — doubling. Next?",
+      "sequence": [1,2,4,8,"?"],
+      "answer": 16,
+      "hintGu": "Double! 8×2=16",
+      "hintEn": "Double each time. 8×2=16"
+    },
+    {
+      "type": "pattern",
+      "level": "LEVEL 3",
+      "textGu": "Count by 5s — next?",
+      "textEn": "Counting by 5s — next?",
+      "sequence": [5,10,15,20,"?"],
+      "answer": 25,
+      "hintGu": "+5! 20+5=25",
+      "hintEn": "Add 5 each time"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · ALGEBRA",
+      "textGu": "Mystery box: x + 3 = 7. x = ?",
+      "textEn": "Mystery number x + 3 = 7. x = ?",
+      "options": [
+        {"gu": "3", "en": "3"},
+        {"gu": "4", "en": "4"},
+        {"gu": "5", "en": "5"},
+        {"gu": "7", "en": "7"}
+      ],
+      "answer": 1,
+      "hintGu": "4+3=7 ✓ x=4!",
+      "hintEn": "4+3=7 so x=4!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · AI",
+      "textGu": "AI _____ ઓળખીને learn કરે.",
+      "textEn": "AI learns by finding _____ in data.",
+      "options": [
+        {"gu": "Colours", "en": "Colours"},
+        {"gu": "Patterns / નિયમો", "en": "Patterns"},
+        {"gu": "Random guesses", "en": "Random guesses"},
+        {"gu": "Passwords", "en": "Passwords"}
+      ],
+      "answer": 1,
+      "hintGu": "AI = pattern finding machine!",
+      "hintEn": "AI finds patterns — just like you did!"
+    }
+  ]
+}

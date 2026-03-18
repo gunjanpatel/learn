@@ -1,0 +1,88 @@
+{
+  "id": "subtraction-challenge-1",
+  "nameGu": "બાદબાકી — શરૂઆત",
+  "nameEn": "Subtraction Basics",
+  "icon": "🍪",
+  "descGu": "લઈ જવું = બાદ! Objects ઘટાડો.",
+  "descEn": "Taking away = subtract!",
+  "xpReward": 50,
+  "trophy": {"icon": "🔵", "nameGu": "Subtractor", "nameEn": "Subtractor"},
+  "teacherGuide": {
+    "conceptGu": "બાદબાકી = ઘટાડવું. 'Eat', 'take away', 'fly away', 'break' — same concept. Objects remove visually કરાવો.",
+    "conceptEn": "Subtraction = taking away. Use real objects first.",
+    "storyGu": "'Dragon ના 7 coins. Wolf 3 coins ચોરી ગયો! કેટલા બચ્યા? Count the remaining!'",
+    "scriptGu": "'7 cookies હતી. 3 ખાઈ. Scratch them out — કેટલી બચી?'",
+    "vocab": [
+      {"gu": "બાદ = minus / ઘટાડ", "en": "Subtract / Minus"},
+      {"gu": "- = minus sign", "en": "Minus"},
+      {"gu": "Remaining = બચેલું", "en": "Remaining / Left"}
+    ],
+    "tipsGu": "💡 Draw 7 dots, cross out 3 — count remaining. Physical crossing = brain connection!"
+  },
+  "questions": [
+    {
+      "type": "emoji-remove",
+      "level": "LEVEL 1 · TAKE AWAY",
+      "textGu": "🍪🍪🍪🍪🍪 — 2 ખાઈ ગયા. કેટલી બચી?",
+      "textEn": "5 cookies — ate 2. How many left?",
+      "total": 5,
+      "remove": 2,
+      "emoji": "🍪",
+      "answer": 3,
+      "hintGu": "5 - 2 = 3",
+      "hintEn": "5 - 2 = 3"
+    },
+    {
+      "type": "emoji-remove",
+      "level": "LEVEL 1 · TAKE AWAY",
+      "textGu": "8 stars — 3 flew away. કેટલા બચ્યા?",
+      "textEn": "8 stars — 3 flew away. How many left?",
+      "total": 8,
+      "remove": 3,
+      "emoji": "⭐",
+      "answer": 5,
+      "hintGu": "8 - 3 = 5",
+      "hintEn": "8 - 3 = 5"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2",
+      "textGu": "9 - 4 = ?",
+      "textEn": "9 - 4 = ?",
+      "options": [3, 4, 5, 6],
+      "answer": 2,
+      "hintGu": "9 - 4 = 5",
+      "hintEn": "9 - 4 = 5"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3",
+      "textGu": "10 - 6 = ?",
+      "textEn": "10 - 6 = ?",
+      "answer": 4,
+      "hintGu": "10 - 6 = 4",
+      "hintEn": "10 - 6 = 4"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 4 · STORY",
+      "textGu": "🐉 Dragon ના 9 coins. Wolf 4 ચોરી ગયો. કેટલા બચ્યા?",
+      "textEn": "Dragon had 9 coins. Wolf stole 4. How many left?",
+      "answer": 5,
+      "hintGu": "9 - 4 = 5",
+      "hintEn": "9 - 4 = 5"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL 5 · MISSING",
+      "textGu": "8 - ___ = 3",
+      "textEn": "8 - ___ = 3",
+      "partA": 8,
+      "total": 3,
+      "subtract": true,
+      "answer": 5,
+      "hintGu": "8 - 5 = 3",
+      "hintEn": "8 - 5 = 3"
+    }
+  ]
+}

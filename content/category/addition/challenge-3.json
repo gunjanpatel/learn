@@ -1,0 +1,85 @@
+{
+  "id": "addition-challenge-3",
+  "nameGu": "સરવાળો — મોટા Numbers 🚀",
+  "nameEn": "Addition — Big Numbers",
+  "icon": "🚀",
+  "descGu": "20 સુધીના numbers! Real life stories!",
+  "descEn": "Numbers up to 20! Real life stories!",
+  "xpReward": 100,
+  "trophy": {"icon": "🥇", "nameGu": "Gold Adder", "nameEn": "Gold Adder"},
+  "teacherGuide": {
+    "conceptGu": "20 સુધી addition. Two-digit thinking. Chess board story, UNO scores, real life contexts use કરો.",
+    "conceptEn": "Addition up to 20 with real-world contexts.",
+    "storyGu": "'Yuval, UNO game score! Round 1: 12 points. Round 2: 8 points. Total score? Computer leaderboard exactly same calculation!'",
+    "scriptGu": "'Big numbers same way — just more steps. Fingers, paper, anything OK!'",
+    "vocab": [
+      {"gu": "Double digits = બે આંકડા", "en": "Double digits"},
+      {"gu": "Score = ગણતરી", "en": "Score"},
+      {"gu": "Total = કુલ સરવાળો", "en": "Total"}
+    ],
+    "tipsGu": "💡 UNO score sheet use કરો real practice! 10+7 = 10 fingers + 7 more count."
+  },
+  "questions": [
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 1",
+      "textGu": "10 + 5 = ?",
+      "textEn": "10 + 5 = ?",
+      "options": [13, 14, 15, 16],
+      "answer": 2,
+      "hintGu": "10 + 5 = 15",
+      "hintEn": "10 + 5 = 15"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 2",
+      "textGu": "12 + 7 = ?",
+      "textEn": "12 + 7 = ?",
+      "answer": 19,
+      "hintGu": "12 + 7 = 19",
+      "hintEn": "12 + 7 = 19"
+    },
+    {
+      "type": "drag-sum",
+      "level": "LEVEL 3 · DRAG",
+      "textGu": "Drag numbers — sum 20 બનાવો!",
+      "textEn": "Drag two numbers that add up to 20!",
+      "numbers": [8, 9, 10, 11, 12, 13],
+      "target": 20,
+      "solutions": [[8,12],[9,11]],
+      "hintGu": "9 + 11 = 20 or 8 + 12 = 20",
+      "hintEn": "Try 9+11 or 8+12!"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 4 · STORY",
+      "textGu": "🎮 UNO Round 1: Yuval 13 points. Round 2: 6 points. Total?",
+      "textEn": "UNO Round 1: 13 points. Round 2: 6 points. Total score?",
+      "answer": 19,
+      "hintGu": "13 + 6 = 19",
+      "hintEn": "13 + 6 = 19"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL 5 · MISSING",
+      "textGu": "___ + 8 = 20",
+      "textEn": "___ + 8 = 20",
+      "partA": 8,
+      "total": 20,
+      "answer": 12,
+      "hintGu": "20 - 8 = 12",
+      "hintEn": "20 minus 8 = 12"
+    },
+    {
+      "type": "emoji-count",
+      "level": "LEVEL 6 · COUNT BIG",
+      "textGu": "Rockets count — total?",
+      "textEn": "Count rockets — total?",
+      "groupA": {"emoji": "🚀", "count": 9},
+      "groupB": {"emoji": "🛸", "count": 8},
+      "answer": 17,
+      "hintGu": "9 + 8 = 17",
+      "hintEn": "9 + 8 = 17"
+    }
+  ]
+}

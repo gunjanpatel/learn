@@ -1,0 +1,87 @@
+{
+  "id": "multiplication-challenge-1",
+  "nameGu": "ગુણાકાર — Groups!",
+  "nameEn": "Multiplication — Groups",
+  "icon": "🧱",
+  "descGu": "Same groups ઉમેરવા = ગુણાકાર! LEGO style!",
+  "descEn": "Adding same groups = multiplication!",
+  "xpReward": 75,
+  "trophy": {"icon": "⭐", "nameGu": "Multiplier", "nameEn": "Multiplier"},
+  "teacherGuide": {
+    "conceptGu": "ગુણાકાર = same number ઘણી times ઉમેરવું. 3×4 = 4+4+4. UNO cards stack (Yuval already does this!). LEGO rows = perfect visual. Loop concept = 3 times add 4.",
+    "conceptEn": "Multiplication is repeated addition. 3×4 = 4+4+4.",
+    "storyGu": "'Yuval, UNO game — 3 players get 4 cards each. Total cards? 4+4+4 = 12! That is 3×4=12! ગુણાકાર = shortcut for adding same number again again!'",
+    "scriptGu": "'LEGO: 3 rows, each row 4 bricks. Total? Count: 4,8,12! Or 3×4=12. Same answer, faster!'",
+    "vocab": [
+      {"gu": "ગુણાકાર = multiply", "en": "Multiplication"},
+      {"gu": "× = times / ગુણ", "en": "Times"},
+      {"gu": "Groups = ટોળી", "en": "Groups"},
+      {"gu": "Rows = હરોળ", "en": "Rows"}
+    ],
+    "tipsGu": "💡 Always show physical objects first! 3 cups × 4 coins each. Count total. THEN show 3×4. Connection = aha moment!"
+  },
+  "questions": [
+    {
+      "type": "emoji-groups",
+      "level": "LEVEL 1 · SEE THE GROUPS",
+      "textGu": "3 groups × 2 each = ?",
+      "textEn": "3 groups of 2 — how many total?",
+      "groups": 3,
+      "perGroup": 2,
+      "emoji": "🧱",
+      "answer": 6,
+      "hintGu": "2+2+2 = 6",
+      "hintEn": "2+2+2 = 6"
+    },
+    {
+      "type": "emoji-groups",
+      "level": "LEVEL 1 · SEE THE GROUPS",
+      "textGu": "4 groups × 3 each = ?",
+      "textEn": "4 groups of 3 — total?",
+      "groups": 4,
+      "perGroup": 3,
+      "emoji": "⭐",
+      "answer": 12,
+      "hintGu": "3+3+3+3 = 12",
+      "hintEn": "3+3+3+3 = 12"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2",
+      "textGu": "2 × 5 = ?",
+      "textEn": "2 × 5 = ?",
+      "options": [8, 9, 10, 11],
+      "answer": 2,
+      "hintGu": "5 + 5 = 10",
+      "hintEn": "5 + 5 = 10"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2",
+      "textGu": "3 × 4 = ? (UNO cards!)",
+      "textEn": "3 × 4 = ? (3 players, 4 cards each!)",
+      "options": [10, 11, 12, 13],
+      "answer": 2,
+      "hintGu": "4+4+4 = 12",
+      "hintEn": "4+4+4 = 12"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3",
+      "textGu": "5 × 2 = ?",
+      "textEn": "5 × 2 = ?",
+      "answer": 10,
+      "hintGu": "2+2+2+2+2 = 10",
+      "hintEn": "2+2+2+2+2 = 10"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 4 · STORY",
+      "textGu": "🚌 Bus ની 2 sides — each side 4 wheels. Total wheels?",
+      "textEn": "Bus has 2 sides — 4 wheels each side. Total wheels?",
+      "answer": 8,
+      "hintGu": "2 × 4 = 8",
+      "hintEn": "2 × 4 = 8"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "addition-challenge-2",
+  "nameGu": "સરવાળો — Speed Round ⚡",
+  "nameEn": "Addition Speed Round",
+  "icon": "⚡",
+  "descGu": "ઝડપથી જવાબ આપો! Timer ચાલે!",
+  "descEn": "Answer fast! Timer is running!",
+  "xpReward": 75,
+  "trophy": {"icon": "🥈", "nameGu": "Silver Adder", "nameEn": "Silver Adder"},
+  "teacherGuide": {
+    "conceptGu": "Speed round = fluency build. ઝડપ = confidence. Numbers 10-20 range. Adaptive — સારો perform = harder numbers. Struggle = easier.",
+    "conceptEn": "Speed builds fluency. Adaptive difficulty tracks performance.",
+    "storyGu": "'Yuval, robot calculator ની speed test! Computer 1 second માં million additions — taru brain ped ni speed?!'",
+    "scriptGu": "'Ready? Timer start! ઝડપ important છે — brain ko train karo!'",
+    "vocab": [
+      {"gu": "ઝડપ = speed", "en": "Speed"},
+      {"gu": "Timer = clock", "en": "Timer"},
+      {"gu": "Score = marks", "en": "Score"}
+    ],
+    "tipsGu": "💡 First time slow is fine! Track personal best. Celebrate improvement not perfection!"
+  },
+  "questions": [
+    {
+      "type": "speed-round",
+      "level": "SPEED ROUND ⚡",
+      "textGu": "10 સવાલ — ઝડપથી! Timer: 60 seconds",
+      "textEn": "10 questions — as fast as you can! Timer: 60 seconds",
+      "timeLimit": 60,
+      "sums": [
+        {"a": 5, "b": 3, "answer": 8},
+        {"a": 7, "b": 2, "answer": 9},
+        {"a": 4, "b": 6, "answer": 10},
+        {"a": 8, "b": 3, "answer": 11},
+        {"a": 6, "b": 5, "answer": 11},
+        {"a": 9, "b": 2, "answer": 11},
+        {"a": 7, "b": 4, "answer": 11},
+        {"a": 8, "b": 4, "answer": 12},
+        {"a": 6, "b": 7, "answer": 13},
+        {"a": 9, "b": 4, "answer": 13}
+      ],
+      "hintGu": "Fingers use OK! ઝડપ later આવશે.",
+      "hintEn": "Use fingers if needed — speed comes with practice!"
+    },
+    {
+      "type": "emoji-count",
+      "level": "LEVEL · BIGGER NUMBERS",
+      "textGu": "Cars count — total?",
+      "textEn": "Count the cars — total?",
+      "groupA": {"emoji": "🚗", "count": 7},
+      "groupB": {"emoji": "🚕", "count": 5},
+      "answer": 12,
+      "hintGu": "7 + 5 = 12",
+      "hintEn": "7 + 5 = 12"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL · TEEN NUMBERS",
+      "textGu": "8 + 7 = ?",
+      "textEn": "8 + 7 = ?",
+      "options": [13, 14, 15, 16],
+      "answer": 2,
+      "hintGu": "8 + 7 = 15",
+      "hintEn": "8 + 7 = 15"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL · MISSING",
+      "textGu": "9 + ___ = 15",
+      "textEn": "9 + ___ = 15",
+      "partA": 9,
+      "total": 15,
+      "answer": 6,
+      "hintGu": "15 - 9 = 6",
+      "hintEn": "15 minus 9 = 6"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL · STORY",
+      "textGu": "🤖 Robot ના 8 gears ઉજવ્યા. 6 more found. Total gears?",
+      "textEn": "Robot had 8 gears. Found 6 more. Total gears?",
+      "answer": 14,
+      "hintGu": "8 + 6 = 14",
+      "hintEn": "8 + 6 = 14"
+    }
+  ]
+}

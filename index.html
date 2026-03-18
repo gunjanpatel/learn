@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Yuval's Lab 🔬</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@700;800&family=Noto+Sans+Gujarati:wght@400;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117;--card:#161b22;--card2:#1f2937;--border:rgba(255,255,255,0.07);
+  --text:#f0f6fc;--muted:#8b949e;
+  --blue:#58a6ff;--green:#3fb950;--yellow:#f0c040;
+  --red:#f85149;--purple:#bc8cff;--orange:#ffa657;--teal:#39d0d8;--pink:#f778ba;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text)}
+body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-direction:column}
+
+/* ── TOPBAR ── */
+.topbar{display:flex;align-items:center;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--border);gap:10px;flex-shrink:0;z-index:50}
+.logo{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--blue);cursor:pointer;flex-shrink:0}
+.logo span{font-size:.6rem;display:block;color:var(--muted);letter-spacing:1px;font-family:'Nunito',sans-serif}
+.xp-col{flex:1;margin:0 8px}
+.xp-track{background:rgba(255,255,255,.07);border-radius:50px;height:7px;overflow:hidden}
+.xp-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--purple));border-radius:50px;transition:width .7s cubic-bezier(.34,1.56,.64,1)}
+.xp-row{display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);font-weight:700;font-family:'Nunito',sans-serif;margin-top:2px}
+.streak-badge{font-size:.82rem;font-weight:800;color:var(--orange);font-family:'Nunito',sans-serif;flex-shrink:0}
+
+/* ── SCREENS ── */
+.screen{flex:1;overflow-y:auto;display:none;padding:0 0 90px}
+.screen.active{display:block}
+#gameScreen{display:none;flex-direction:column;overflow:hidden}
+#gameScreen.active{display:flex}
+
+/* ── HOME ── */
+.welcome-strip{background:linear-gradient(135deg,rgba(88,166,255,.1),rgba(188,140,255,.08));border-bottom:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.welcome-avatar{font-size:2rem}
+.welcome-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:700}
+.welcome-en{font-size:.7rem;color:var(--muted);font-family:'Nunito',sans-serif}
+.name-btn{margin-left:auto;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:5px 10px;color:var(--muted);font-size:.68rem;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap}
+
+/* ── SECTION ── */
+.section-wrap{padding:0 14px}
+.section-head{display:flex;align-items:center;gap:10px;padding:18px 0 10px}
+.section-icon{font-size:1.4rem}
+.section-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800}
+.section-name-en{font-family:'Fredoka One',cursive;font-size:.7rem;opacity:.4;margin-left:2px}
+.section-line{flex:1;height:1px;background:var(--border)}
+.section-progress{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:800}
+
+/* ── CATEGORY CARDS ── */
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
+.cat-card{background:var(--card);border:2px solid var(--border);border-radius:20px;padding:16px 12px;text-align:center;cursor:pointer;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;user-select:none}
+.cat-card:active{transform:scale(.94)}
+.cat-card.locked{opacity:.4;cursor:not-allowed}
+.cat-icon{font-size:2.2rem;margin-bottom:6px}
+.cat-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.92rem;font-weight:800;line-height:1.3}
+.cat-name-en{font-family:'Fredoka One',cursive;font-size:.65rem;opacity:.4;margin-bottom:5px}
+.cat-prog-bar{height:4px;background:rgba(255,255,255,.08);border-radius:4px;margin:6px 0 4px;overflow:hidden}
+.cat-prog-fill{height:100%;border-radius:4px;transition:width .5s ease}
+.cat-prog-label{font-size:.6rem;color:var(--muted);font-family:'Nunito',sans-serif}
+.lock-icon{position:absolute;top:8px;right:10px;font-size:.9rem;opacity:.5}
+
+/* ── TROPHY SHELF ── */
+.trophy-shelf{background:var(--card);border-radius:16px;padding:12px 16px;margin:14px 14px 0;border:1px solid var(--border)}
+.trophy-head{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:800;font-family:'Nunito',sans-serif;margin-bottom:8px}
+.trophy-row{display:flex;flex-wrap:wrap;gap:8px}
+.trophy-item{font-size:1.5rem;opacity:.25;transition:opacity .3s}
+.trophy-item.earned{opacity:1}
+
+/* ── CHALLENGE LIST SCREEN ── */
+#challengeScreen{padding:0 14px 90px}
+.ch-header{padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:14px}
+.ch-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0;font-family:'Nunito',sans-serif;display:flex;align-items:center;gap:4px;margin-bottom:10px}
+.ch-title-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.2rem;font-weight:800}
+.ch-title-en{font-family:'Fredoka One',cursive;font-size:.75rem;opacity:.4}
+.ch-card{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .18s,transform .18s;position:relative;overflow:hidden}
+.ch-card:active{transform:scale(.97)}
+.ch-card.locked{opacity:.4;cursor:not-allowed}
+.ch-num{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.1rem;flex-shrink:0}
+.ch-info{flex:1}
+.ch-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:800;margin-bottom:2px}
+.ch-name-en{font-family:'Nunito',sans-serif;font-size:.65rem;color:var(--muted)}
+.ch-stars{font-size:.85rem;letter-spacing:1px}
+.ch-xp{font-family:'Fredoka One',cursive;font-size:.8rem;color:var(--yellow);margin-top:2px}
+.ch-lock{font-size:1.1rem}
+
+/* ── GAME HEADER ── */
+.g-header{display:flex;align-items:center;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--border);gap:10px;flex-shrink:0}
+.g-back{background:rgba(255,255,255,.07);border:none;color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center}
+.g-titles{flex:1}
+.g-title-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:800}
+.g-title-en{font-family:'Nunito',sans-serif;font-size:.62rem;opacity:.4}
+.g-dots{display:flex;gap:4px}
+.gdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1);transition:background .3s}
+.gdot.done{background:var(--green)}
+.gdot.cur{background:var(--yellow);box-shadow:0 0 6px var(--yellow)}
+
+/* ── QUESTION AREA ── */
+.g-body{flex:1;overflow-y:auto;padding:16px 14px 100px;display:flex;flex-direction:column;align-items:center}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:20px 16px;width:100%;max-width:560px;margin-bottom:14px;animation:fadeUp .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.ql{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;font-family:'Nunito',sans-serif;opacity:.5;margin-bottom:8px}
+.qt-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.05rem;font-weight:700;line-height:1.6;margin-bottom:3px}
+.qt-en{font-family:'Nunito',sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
+
+/* ── EMOJI COUNT ── */
+.emoji-groups-wrap{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.emoji-group{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;max-width:140px}
+.eg-emoji{font-size:1.6rem;line-height:1}
+.plus-sign{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--green)}
+.equals-sign{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--yellow)}
+.result-box{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--yellow)}
+
+/* ── EMOJI REMOVE ── */
+.emoji-remove-wrap{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0;padding:12px;background:var(--card2);border-radius:14px}
+.er-emoji{font-size:1.8rem;transition:opacity .3s,transform .3s}
+.er-emoji.removed{opacity:.15;transform:scale(.7)}
+
+/* ── SHARE VISUAL ── */
+.share-wrap{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.share-group{background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:4px;min-width:70px;justify-content:center}
+.share-label{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;text-align:center;margin-top:4px;font-weight:700}
+
+/* ── EMOJI GROUPS (multiplication) ── */
+.mult-groups{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.mult-group{background:var(--card2);border:2px dashed var(--border);border-radius:14px;padding:10px;display:flex;flex-wrap:wrap;gap:3px;justify-content:center;min-width:60px}
+
+/* ── TAP OPTIONS ── */
+.tap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:480px}
+.tap-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:16px 10px;font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--text);cursor:pointer;text-align:center;transition:all .15s;user-select:none}
+.tap-btn:active{transform:scale(.94)}
+.tap-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green);color:var(--green)}
+.tap-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red);color:var(--red)}
+
+/* ── INPUT ── */
+.input-wrap{display:flex;gap:8px;width:100%;max-width:320px;margin-top:6px}
+.ans-inp{flex:1;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:14px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.7rem;text-align:center;outline:none;transition:border-color .2s}
+.ans-inp:focus{border-color:var(--blue)}
+.go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 16px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer;transition:transform .15s}
+.go-btn:active{transform:scale(.93)}
+
+/* ── MISSING NUMBER ── */
+.missing-wrap{display:flex;align-items:center;gap:8px;justify-content:center;margin:12px 0;flex-wrap:wrap}
+.missing-part{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--text)}
+.missing-blank{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--yellow)}
+
+/* ── DRAG SUM ── */
+.drag-pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+.drag-num{width:52px;height:52px;background:var(--card2);border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.4rem;cursor:pointer;transition:all .2s;user-select:none}
+.drag-num.selected{border-color:var(--blue);background:rgba(88,166,255,.15);color:var(--blue)}
+.drag-num.used{opacity:.25;pointer-events:none}
+.drag-slots{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px 0}
+.drag-slot{width:56px;height:56px;border:3px dashed rgba(255,255,255,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--muted)}
+.drag-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.1);color:var(--text)}
+.drag-target{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--yellow);text-align:center;margin:4px 0}
+
+/* ── VISUAL SORT ── */
+.vsort-pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+.vsort-card{width:72px;height:72px;background:var(--card2);border:2px solid var(--border);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:all .15s}
+.vsort-card:active{transform:scale(.9)}
+.vsort-card.selected{border-color:var(--yellow);background:rgba(240,192,64,.12)}
+.vsort-card.placed{opacity:.25;pointer-events:none}
+.vsort-icon{font-size:2rem}
+.vsort-label{font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;margin-top:2px;text-align:center}
+.vsort-slots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:10px;border:2px dashed rgba(255,255,255,.1);border-radius:16px;min-height:88px;align-items:center;margin:8px 0}
+.vsort-slot{width:72px;height:72px;border:2px dashed rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.02)}
+.vsort-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.08)}
+.slot-num{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700}
+
+/* ── BINARY ── */
+.binary-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.bit{width:58px;height:58px;border-radius:14px;border:3px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;user-select:none;background:var(--card2)}
+.bit.on{background:var(--blue);border-color:var(--blue);box-shadow:0 0 18px rgba(88,166,255,.5)}
+.bit-v{font-family:'Fredoka One',cursive;font-size:1.4rem}
+.bit-p{font-size:.52rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;margin-top:2px}
+.bit.on .bit-p{color:rgba(255,255,255,.7)}
+.encode-total{text-align:center;font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--yellow);margin:4px 0}
+
+/* ── LOGIC GATE ── */
+.gate-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.gate-in{width:58px;height:58px;border-radius:14px;border:3px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card2);transition:all .15s}
+.gate-in.on{background:var(--green);border-color:var(--green);box-shadow:0 0 16px rgba(63,185,80,.4)}
+.gi-v{font-family:'Fredoka One',cursive;font-size:1.5rem}
+.gi-l{font-size:.5rem;color:rgba(255,255,255,.5);font-family:'Nunito',sans-serif;font-weight:700}
+.gate-sym{background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:8px 14px;font-family:'Fredoka One',cursive;font-size:1rem;color:var(--yellow)}
+.gate-arr{font-size:1.2rem;color:var(--muted)}
+.gate-out{width:58px;height:58px;border-radius:14px;border:3px solid var(--purple);background:rgba(188,140,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.go-v{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--purple)}
+.go-l{font-size:.5rem;color:var(--purple);opacity:.6;font-family:'Nunito',sans-serif;font-weight:700}
+
+/* ── MCQ ── */
+.mcq-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:500px}
+.mcq-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:14px 10px;color:var(--text);cursor:pointer;transition:all .15s;text-align:center;user-select:none}
+.mcq-btn:active{transform:scale(.94)}
+.mcq-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.88rem;font-weight:700;line-height:1.4}
+.mcq-en{font-family:'Nunito',sans-serif;font-size:.62rem;color:var(--muted);margin-top:2px}
+.mcq-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green)}
+.mcq-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red)}
+
+/* ── DATA BARS ── */
+.bar-chart{display:flex;align-items:flex-end;gap:8px;height:120px;justify-content:center;margin:12px 0;padding:0 6px}
+.bar-col{display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar{width:36px;border-radius:6px 6px 0 0;min-height:4px;transition:height .5s cubic-bezier(.34,1.56,.64,1)}
+.bar-lbl{font-size:.6rem;color:var(--muted);font-weight:700;font-family:'Nunito',sans-serif}
+.bar-num{font-size:.65rem;font-weight:800;font-family:'Fredoka One',cursive}
+
+/* ── SPEED ROUND ── */
+.speed-wrap{width:100%;max-width:420px;text-align:center}
+.speed-timer{font-family:'Fredoka One',cursive;font-size:2.5rem;color:var(--yellow);margin-bottom:8px;transition:color .3s}
+.speed-timer.urgent{color:var(--red);animation:pulse .5s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.speed-sum{font-family:'Fredoka One',cursive;font-size:2.5rem;margin:12px 0;color:var(--text)}
+.speed-inp{width:120px;background:var(--card2);border:3px solid var(--border);border-radius:14px;padding:12px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.8rem;text-align:center;outline:none;margin:0 auto;display:block;transition:border-color .2s}
+.speed-inp:focus{border-color:var(--blue)}
+.speed-score{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--muted);margin-top:8px}
+.speed-correct{color:var(--green);animation:fadeUp .3s ease}
+.speed-wrong{color:var(--red);animation:fadeUp .3s ease}
+
+/* ── FEEDBACK ── */
+.fb{width:100%;max-width:520px;border-radius:16px;padding:13px 16px;font-weight:700;font-size:.86rem;line-height:1.6;display:none;animation:fadeUp .3s ease}
+.fb.show{display:block}
+.fb.ok{background:rgba(63,185,80,.12);border:2px solid var(--green);color:var(--green)}
+.fb.bad{background:rgba(248,81,73,.12);border:2px solid var(--red);color:var(--red)}
+.fb-gu{font-family:'Noto Sans Gujarati',sans-serif}
+.fb-en{font-family:'Nunito',sans-serif;font-size:.72rem;opacity:.7;display:block;margin-top:3px}
+
+.nxt-btn{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:13px 28px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer;display:none;width:100%;max-width:520px;margin-top:12px;transition:transform .15s}
+.nxt-btn.show{display:block}
+.nxt-btn:active{transform:scale(.97)}
+
+/* ── COMPLETE ── */
+.complete{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 20px;flex:1}
+.complete.show{display:flex}
+.c-big{font-size:4.5rem;margin-bottom:12px;animation:bounce .6s ease}
+@keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.c-stars{font-size:2rem;letter-spacing:4px;margin-bottom:6px}
+.c-msg-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.92rem;color:var(--muted);max-width:320px;line-height:1.7;margin-bottom:4px}
+.c-msg-en{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);max-width:320px;line-height:1.6;margin-bottom:16px;opacity:.6}
+.c-trophy{background:rgba(240,192,64,.12);border:2px solid var(--yellow);border-radius:16px;padding:12px 24px;font-size:1.8rem;margin-bottom:6px}
+.c-trophy-name{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--yellow);margin-bottom:14px}
+.c-xp{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--yellow);margin-bottom:18px}
+.c-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.c-btn{border:none;border-radius:14px;padding:12px 24px;font-family:'Fredoka One',cursive;font-size:.95rem;cursor:pointer;transition:transform .15s}
+.c-btn:active{transform:scale(.95)}
+.c-btn.primary{background:linear-gradient(135deg,var(--blue),var(--purple));color:white}
+.c-btn.secondary{background:var(--card2);color:var(--text);border:2px solid var(--border)}
+
+/* ── TEACHER OVERLAY ── */
+.t-fab{position:fixed;bottom:22px;right:16px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;color:white;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 18px rgba(188,140,255,.4);z-index:100;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.t-fab:active{transform:scale(.88)}
+.t-overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column}
+.t-overlay.show{display:flex}
+.t-backdrop{flex:1;background:rgba(0,0,0,.65);backdrop-filter:blur(3px)}
+.t-panel{background:var(--card);border-top:2px solid var(--purple);border-radius:24px 24px 0 0;max-height:78vh;display:flex;flex-direction:column;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:none}}
+.t-ph{display:flex;align-items:center;padding:14px 16px 0;gap:10px}
+.t-ptitle{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:800;color:var(--purple);flex:1}
+.t-ptitle-en{font-family:'Fredoka One',cursive;font-size:.62rem;opacity:.35}
+.t-close{background:rgba(255,255,255,.07);border:none;color:var(--text);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:.9rem}
+.t-body{overflow-y:auto;padding:12px 16px 28px}
+.t-sec{margin-bottom:16px}
+.t-sec-h{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--yellow);font-family:'Nunito',sans-serif;margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.t-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.88rem;line-height:1.8;color:var(--text)}
+.t-story{background:rgba(240,192,64,.07);border:1px solid rgba(240,192,64,.18);border-radius:12px;padding:12px 14px;margin-top:6px}
+.t-script{background:rgba(88,166,255,.07);border:1px solid rgba(88,166,255,.18);border-radius:12px;padding:12px 14px;margin-top:6px}
+.t-vocab{display:flex;flex-wrap:wrap;gap:7px;margin-top:7px}
+.t-voc{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:6px 11px}
+.t-voc-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.78rem;font-weight:700;display:block;line-height:1.4}
+.t-voc-en{font-family:'Nunito',sans-serif;font-size:.6rem;color:var(--muted)}
+
+/* ── NAME MODAL ── */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:26px 22px;width:100%;max-width:320px;text-align:center}
+.modal-tgu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.05rem;font-weight:800;margin-bottom:3px}
+.modal-ten{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);margin-bottom:16px}
+.modal-inp{width:100%;background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:13px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.3rem;text-align:center;outline:none;margin-bottom:12px}
+.modal-inp:focus{border-color:var(--blue)}
+.modal-save{width:100%;background:var(--blue);border:none;border-radius:12px;padding:12px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer}
+
+/* ── CONFETTI ── */
+.confetti-piece{position:fixed;width:8px;height:8px;border-radius:2px;animation:fall 2.5s ease-in forwards;pointer-events:none;z-index:999}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+
+@media(max-width:360px){.cat-grid{grid-template-columns:1fr 1fr}.tap-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="logo" onclick="showNameModal()">
+    <span id="logoTxt">Yuval's Lab</span>
+    <span>🔬 COMPUTER SCIENTIST</span>
+  </div>
+  <div class="xp-col">
+    <div class="xp-track"><div class="xp-fill" id="xpFill"></div></div>
+    <div class="xp-row"><span id="xpLbl">0 XP</span><span id="lvlLbl">Lv 1</span></div>
+  </div>
+  <div class="streak-badge" id="streakBadge">🔥0</div>
+</div>
+
+<!-- HOME SCREEN -->
+<div class="screen active" id="homeScreen">
+  <div class="welcome-strip">
+    <div class="welcome-avatar">🚀</div>
+    <div>
+      <div class="welcome-gu" id="wGu">નમસ્તે, Yuval!</div>
+      <div class="welcome-en" id="wEn">Hello Yuval! Ready to learn?</div>
+    </div>
+    <button class="name-btn" onclick="showNameModal()">✏️ નામ</button>
+  </div>
+
+  <!-- Trophy shelf -->
+  <div class="trophy-shelf">
+    <div class="trophy-head">🏆 ટ્રોફી કેબિનેટ — Trophy Cabinet</div>
+    <div class="trophy-row" id="trophyRow"></div>
+  </div>
+
+  <div id="sectionsWrap"></div>
+</div>
+
+<!-- CHALLENGE LIST SCREEN -->
+<div class="screen" id="challengeScreen">
+  <div class="section-wrap">
+    <div class="ch-header">
+      <button class="ch-back" onclick="backToHome()">← પાછા જાઓ / Back</button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span id="chCatIcon" style="font-size:2rem"></span>
+        <div>
+          <div class="ch-title-gu" id="chTitleGu"></div>
+          <div class="ch-title-en" id="chTitleEn"></div>
+        </div>
+      </div>
+      <div class="cat-prog-bar" style="margin-top:10px"><div class="cat-prog-fill" id="chProgFill"></div></div>
+    </div>
+    <div id="challengeList"></div>
+  </div>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="gameScreen">
+  <div class="g-header">
+    <button class="g-back" onclick="exitGame()">←</button>
+    <div class="g-titles">
+      <div class="g-title-gu" id="gTitleGu"></div>
+      <div class="g-title-en" id="gTitleEn"></div>
+    </div>
+    <div class="g-dots" id="gDots"></div>
+  </div>
+  <div class="g-body" id="gBody">
+    <div class="q-card" id="qCard"></div>
+    <div class="fb" id="fb"></div>
+    <button class="nxt-btn" id="nxtBtn" onclick="nextQ()"></button>
+  </div>
+  <div class="complete" id="completeScreen"></div>
+</div>
+
+<!-- TEACHER FAB -->
+<button class="t-fab" onclick="openTeacher()" id="tFab">📖</button>
+
+<!-- TEACHER OVERLAY -->
+<div class="t-overlay" id="tOverlay">
+  <div class="t-backdrop" onclick="closeTeacher()"></div>
+  <div class="t-panel">
+    <div class="t-ph">
+      <div>
+        <div class="t-ptitle">📖 શિક્ષક માર્ગદર્શિકા</div>
+        <div class="t-ptitle-en">Teacher Guide — Gujarati</div>
+      </div>
+      <button class="t-close" onclick="closeTeacher()">✕</button>
+    </div>
+    <div class="t-body" id="tBody"></div>
+  </div>
+</div>
+
+<!-- NAME MODAL -->
+<div class="modal" id="nameModal" onclick="e=>e.target===this&&this.classList.remove('show')">
+  <div class="modal-box">
+    <div class="modal-tgu">નામ બદલો 🎉</div>
+    <div class="modal-ten">Change name — saved on this device</div>
+    <input class="modal-inp" id="nameInp" placeholder="Yuval" maxlength="20">
+    <button class="modal-save" onclick="saveName()">સાચવો ✓</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════
+const S = {
+  get name(){ return localStorage.getItem('yl2_name')||'Yuval' },
+  set name(v){ localStorage.setItem('yl2_name',v) },
+  get xp(){ return parseInt(localStorage.getItem('yl2_xp')||0) },
+  set xp(v){ localStorage.setItem('yl2_xp',v) },
+  get streak(){ return parseInt(localStorage.getItem('yl2_streak')||0) },
+  set streak(v){ localStorage.setItem('yl2_streak',v) },
+  getStars(cid){ return parseInt(localStorage.getItem('yl2_s_'+cid)||0) },
+  setStars(cid,v){ const cur=this.getStars(cid); if(v>cur) localStorage.setItem('yl2_s_'+cid,v) },
+  getTrophies(){ try{return JSON.parse(localStorage.getItem('yl2_trophies')||'[]')}catch{return[]} },
+  addTrophy(t){ const tr=this.getTrophies(); if(!tr.find(x=>x.nameEn===t.nameEn)){tr.push(t);localStorage.setItem('yl2_trophies',JSON.stringify(tr))} },
+};
+
+let registry = null;
+let challengeData = {};  // path → data
+let currentCat = null;
+let currentChallenge = null;
+let questions = [];
+let qIdx = 0;
+let score = 0;
+let answered = false;
+// drag-sum state
+let dragSelected = [];
+// vsort state
+let vsortSelected = null;
+let vsortSlots = [];
+// speed round
+let speedTimer = null;
+let speedTimeLeft = 0;
+let speedIdx = 0;
+let speedScore = 0;
+
+// ══════════════════════════════════════
+//  BOOT
+// ══════════════════════════════════════
+async function boot(){
+  updateTopbar();
+  updateWelcome();
+  try {
+    const r = await fetch('content/registry.json');
+    registry = await r.json();
+    await preloadChallenges();
+    renderHome();
+  } catch(e) {
+    document.getElementById('sectionsWrap').innerHTML =
+      '<div style="padding:30px;text-align:center;color:var(--muted);font-family:\'Noto Sans Gujarati\',sans-serif">⚠️ content/registry.json મળ્યો નહીં.<br><span style="font-family:\'Nunito\',sans-serif;font-size:.8rem">Deploy to GitHub Pages and the content/ folder will work.</span></div>';
+  }
+}
+
+async function preloadChallenges(){
+  const fetches = [];
+  registry.sections.forEach(sec => {
+    sec.categories.forEach(cat => {
+      cat.challenges.forEach(ch => {
+        const path = `content/category/${cat.id}/${ch}.json`;
+        fetches.push(
+          fetch(path).then(r=>r.json()).then(d=>{ challengeData[path]=d; }).catch(()=>{})
+        );
+      });
+    });
+  });
+  await Promise.allSettled(fetches);
+}
+
+// ══════════════════════════════════════
+//  TOPBAR / WELCOME
+// ══════════════════════════════════════
+function updateTopbar(){
+  const lv = Math.floor(S.xp/300)+1;
+  const pct = (S.xp%300)/300*100;
+  document.getElementById('xpFill').style.width = pct+'%';
+  document.getElementById('xpLbl').textContent = S.xp+' XP';
+  document.getElementById('lvlLbl').textContent = 'Lv '+lv;
+  document.getElementById('streakBadge').textContent = '🔥'+S.streak;
+  document.getElementById('logoTxt').textContent = S.name+"'s Lab";
+}
+function updateWelcome(){
+  document.getElementById('wGu').textContent = `નમસ્તે, ${S.name}! 👋`;
+  document.getElementById('wEn').textContent = `Hello ${S.name}! Ready to learn?`;
+}
+
+// ══════════════════════════════════════
+//  HOME
+// ══════════════════════════════════════
+function renderHome(){
+  renderTrophies();
+  const wrap = document.getElementById('sectionsWrap');
+  wrap.innerHTML = '';
+  registry.sections.forEach(sec => {
+    const totalCh = sec.categories.reduce((s,c)=>s+c.challenges.length,0);
+    const doneCh = sec.categories.reduce((s,c)=>s+c.challenges.filter(ch=>{
+      const path=`content/category/${c.id}/${ch}.json`;
+      return S.getStars(challengeData[path]?.id||'')>0;
+    }).length,0);
+    const pct = totalCh>0?Math.round(doneCh/totalCh*100):0;
+
+    let html = `<div class="section-wrap">
+      <div class="section-head">
+        <span class="section-icon">${sec.icon}</span>
+        <span class="section-name-gu">${sec.nameGu}</span>
+        <span class="section-name-en">${sec.nameEn}</span>
+        <div class="section-line"></div>
+        <span class="section-progress">${pct}%</span>
+      </div>
+      <div class="cat-grid">`;
+
+    sec.categories.forEach((cat,ci) => {
+      const chCount = cat.challenges.length;
+      const chDone = cat.challenges.filter(ch=>{
+        const path=`content/category/${cat.id}/${ch}.json`;
+        return S.getStars(challengeData[path]?.id||'')>0;
+      }).length;
+      const cpct = chCount>0?Math.round(chDone/chCount*100):0;
+      const color = `rgb(${cat.colorRGB})`;
+      html += `<div class="cat-card" style="border-color:rgba(${cat.colorRGB},.25)"
+        onmouseenter="this.style.borderColor='rgb(${cat.colorRGB})';this.style.boxShadow='0 0 24px rgba(${cat.colorRGB},.2)'"
+        onmouseleave="this.style.borderColor='rgba(${cat.colorRGB},.25)';this.style.boxShadow='none'"
+        onclick="openCategory('${sec.id}','${cat.id}')">
+        <div class="cat-icon">${cat.icon}</div>
+        <div class="cat-name-gu" style="color:${color}">${cat.nameGu}</div>
+        <div class="cat-name-en">${cat.nameEn}</div>
+        <div class="cat-prog-bar"><div class="cat-prog-fill" style="width:${cpct}%;background:${color}"></div></div>
+        <div class="cat-prog-label">${chDone}/${chCount} challenges</div>
+      </div>`;
+    });
+
+    html += '</div></div>';
+    wrap.innerHTML += html;
+  });
+}
+
+function renderTrophies(){
+  const trophies = S.getTrophies();
+  const allTrophies = [];
+  if(registry) registry.sections.forEach(s=>s.categories.forEach(c=>c.challenges.forEach(ch=>{
+    const path=`content/category/${c.id}/${ch}.json`;
+    if(challengeData[path]?.trophy) allTrophies.push(challengeData[path].trophy);
+  })));
+  const row = document.getElementById('trophyRow');
+  if(!allTrophies.length){ row.innerHTML='<span style="font-size:.75rem;color:var(--muted);font-family:\'Nunito\',sans-serif">Complete challenges to earn trophies! 🏆</span>'; return; }
+  row.innerHTML = allTrophies.map(t=>{
+    const earned = trophies.find(x=>x.nameEn===t.nameEn);
+    return `<span class="trophy-item ${earned?'earned':''}" title="${t.nameEn}">${t.icon}</span>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+//  CATEGORY → CHALLENGE LIST
+// ══════════════════════════════════════
+function openCategory(secId, catId){
+  const sec = registry.sections.find(s=>s.id===secId);
+  const cat = sec.categories.find(c=>c.id===catId);
+  currentCat = cat;
+
+  document.getElementById('chCatIcon').textContent = cat.icon;
+  document.getElementById('chTitleGu').textContent = cat.nameGu;
+  document.getElementById('chTitleEn').textContent = cat.nameEn;
+
+  const chDone = cat.challenges.filter(ch=>S.getStars(challengeData[`content/category/${cat.id}/${ch}.json`]?.id||'')>0).length;
+  const pct = Math.round(chDone/cat.challenges.length*100);
+  document.getElementById('chProgFill').style.width = pct+'%';
+  document.getElementById('chProgFill').style.background = `rgb(${cat.colorRGB})`;
+
+  const list = document.getElementById('challengeList');
+  list.innerHTML = '';
+  const color = `rgb(${cat.colorRGB})`;
+
+  cat.challenges.forEach((chId, i) => {
+    const path = `content/category/${cat.id}/${chId}.json`;
+    const ch = challengeData[path];
+    if(!ch){ return; }
+    const stars = S.getStars(ch.id);
+    const prevPath = i>0?`content/category/${cat.id}/${cat.challenges[i-1]}.json`:null;
+    const prevStars = prevPath ? S.getStars(challengeData[prevPath]?.id||'') : 1;
+    const locked = i>0 && prevStars<1;
+    const starStr = stars>0?'★'.repeat(stars)+'☆'.repeat(5-stars):'☆☆☆☆☆';
+
+    list.innerHTML += `<div class="ch-card ${locked?'locked':''}" style="border-color:${locked?'var(--border)':'rgba('+cat.colorRGB+',.3)'}"
+      onclick="${locked?'showLockedMsg()':'startChallenge(\''+path+'\')'}">
+      <div class="ch-num" style="background:rgba(${cat.colorRGB},.15);color:${color}">${locked?'🔒':ch.icon}</div>
+      <div class="ch-info">
+        <div class="ch-name-gu">${ch.nameGu}</div>
+        <div class="ch-name-en">${ch.nameEn}</div>
+        <div class="ch-stars" style="color:${color}">${starStr}</div>
+      </div>
+      <div class="ch-xp">+${ch.xpReward} XP</div>
+    </div>`;
+  });
+
+  showScreen('challengeScreen');
+}
+
+function showLockedMsg(){
+  showToast('🔒 આ challenge lock છે! પહેલાની complete કરો.');
+}
+function backToHome(){
+  showScreen('homeScreen');
+  renderHome();
+}
+
+// ══════════════════════════════════════
+//  START CHALLENGE
+// ══════════════════════════════════════
+function startChallenge(path){
+  currentChallenge = challengeData[path];
+  questions = currentChallenge.questions;
+  qIdx=0; score=0; answered=false;
+
+  document.getElementById('gTitleGu').textContent = currentChallenge.nameGu;
+  document.getElementById('gTitleEn').textContent = currentChallenge.nameEn;
+
+  buildDots();
+  showScreen('gameScreen');
+  document.getElementById('gBody').style.display='flex';
+  document.getElementById('completeScreen').className='complete';
+  renderQ();
+}
+
+function buildDots(){
+  document.getElementById('gDots').innerHTML =
+    questions.map((_,i)=>`<div class="gdot" id="gd${i}"></div>`).join('');
+}
+function updateDots(){
+  questions.forEach((_,i)=>{
+    const d=document.getElementById('gd'+i);
+    if(d) d.className='gdot'+(i<qIdx?' done':i===qIdx?' cur':'');
+  });
+}
+function exitGame(){
+  clearSpeedTimer();
+  showScreen('challengeScreen');
+}
+
+// ══════════════════════════════════════
+//  RENDER QUESTION
+// ══════════════════════════════════════
+function renderQ(){
+  answered=false; dragSelected=[]; vsortSelected=null; vsortSlots=[];
+  clearSpeedTimer();
+  const q=questions[qIdx];
+  const card=document.getElementById('qCard');
+  document.getElementById('fb').className='fb';
+  document.getElementById('nxtBtn').className='nxt-btn';
+  card.style.animation='none'; void card.offsetWidth; card.style.animation='';
+  updateDots();
+
+  const col=`rgb(${currentCat?.colorRGB||'88,166,255'})`;
+  let h=`<div class="ql" style="color:${col}">${q.level||''}</div>
+    <div class="qt-gu">${q.textGu}</div>
+    <div class="qt-en">${q.textEn||''}</div>`;
+
+  // ── EMOJI COUNT (addition/multiplication visual) ──
+  if(q.type==='emoji-count'){
+    const emA=Array(q.groupA.count).fill(q.groupA.emoji).map(e=>`<span class="eg-emoji">${e}</span>`).join('');
+    const emB=Array(q.groupB.count).fill(q.groupB.emoji||q.groupA.emoji).map(e=>`<span class="eg-emoji">${e}</span>`).join('');
+    h+=`<div class="emoji-groups-wrap">
+      <div class="emoji-group">${emA}</div>
+      <div class="plus-sign">+</div>
+      <div class="emoji-group">${emB}</div>
+      <div class="equals-sign">=</div>
+      <div class="result-box">?</div>
+    </div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── EMOJI REMOVE (subtraction) ──
+  else if(q.type==='emoji-remove'){
+    const emojis=Array(q.total).fill(q.emoji).map((e,i)=>
+      `<span class="er-emoji${i>=q.total-q.remove?' removed':''}">${e}</span>`).join('');
+    h+=`<div class="emoji-remove-wrap">${emojis}</div>`;
+    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} - ${q.remove} = ?</div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── SHARE VISUAL (division) ──
+  else if(q.type==='share-visual'){
+    const perGroup=q.answer;
+    let groups='';
+    for(let g=0;g<q.groups;g++){
+      const items=Array(perGroup).fill(q.emoji).map(e=>`<span style="font-size:1.4rem">${e}</span>`).join('');
+      groups+=`<div class="share-group">${items}<div class="share-label">Friend ${g+1}</div></div>`;
+    }
+    h+=`<div class="share-wrap">${groups}</div>`;
+    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} ÷ ${q.groups} = each gets?</div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── EMOJI GROUPS (multiplication) ──
+  else if(q.type==='emoji-groups'){
+    let gs='';
+    for(let g=0;g<q.groups;g++){
+      const items=Array(q.perGroup).fill(q.emoji).map(e=>`<span style="font-size:1.5rem">${e}</span>`).join('');
+      gs+=`<div class="mult-group">${items}</div>`;
+    }
+    h+=`<div class="mult-groups">${gs}</div>`;
+    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.groups} groups × ${q.perGroup} = ?</div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── TAP ANSWER ──
+  else if(q.type==='tap-answer'){
+    h+=`<div class="tap-grid">`;
+    q.options.forEach((o,i)=>{
+      h+=`<div class="tap-btn" onclick="checkTap(${q.answer},${i})">${o}</div>`;
+    });
+    h+='</div>';
+  }
+
+  // ── MCQ ──
+  else if(q.type==='mcq'){
+    h+=`<div class="mcq-grid">`;
+    q.options.forEach((o,i)=>{
+      h+=`<div class="mcq-btn" onclick="checkMCQ(${q.answer},${i})">
+        <div class="mcq-gu">${o.gu}</div>
+        <div class="mcq-en">${o.en||''}</div>
+      </div>`;
+    });
+    h+='</div>';
+  }
+
+  // ── INPUT ──
+  else if(q.type==='input'){
+    h+=inputHtml(q.answer);
+  }
+
+  // ── MISSING NUMBER ──
+  else if(q.type==='missing-number'){
+    const sub = q.subtract;
+    h+=`<div class="missing-wrap">
+      <div class="missing-part">${q.partA}</div>
+      <div class="missing-part">${sub?'−':'+'}</div>
+      <div class="missing-blank">?</div>
+      <div class="missing-part">=</div>
+      <div class="missing-part">${q.total}</div>
+    </div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── DRAG SUM ──
+  else if(q.type==='drag-sum'){
+    h+=`<div class="drag-target">Target: <span style="color:var(--yellow);font-family:'Fredoka One',cursive;font-size:1.4rem">${q.target}</span></div>`;
+    h+=`<div class="drag-slots">
+      <div class="drag-slot" id="dslot0">?</div>
+      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem">+</div>
+      <div class="drag-slot" id="dslot1">?</div>
+      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem">=</div>
+      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--yellow)">${q.target}</div>
+    </div>`;
+    h+=`<div class="drag-pool">`;
+    q.numbers.forEach((n,i)=>{
+      h+=`<div class="drag-num" id="dnum${i}" onclick="selectDragNum(${n},${i})">${n}</div>`;
+    });
+    h+=`</div>`;
+    h+=`<button class="go-btn" style="margin:8px auto;display:block" onclick="checkDragSum(${JSON.stringify(q.solutions)},${q.target})">✓ Check</button>`;
+  }
+
+  // ── STORY PROBLEM ──
+  else if(q.type==='story-problem'){
+    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${q.textGu}</div>`;
+    h+=`<div style="font-family:'Nunito',sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:8px">${q.textEn}</div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── VISUAL SORT ──
+  else if(q.type==='visual-sort'){
+    vsortSlots=new Array(q.steps.length).fill(null);
+    const shuffled=[...q.steps].sort(()=>Math.random()-.5);
+    h+=`<div class="vsort-pool" id="vsortPool">`;
+    shuffled.forEach((s,i)=>{
+      const origIdx=q.steps.findIndex(x=>x.labelGu===s.labelGu);
+      h+=`<div class="vsort-card" id="vsc${i}" data-orig="${origIdx}" onclick="vsortTap(${i})">
+        <div class="vsort-icon">${s.icon}</div>
+        <div class="vsort-label">${s.labelGu}</div>
+      </div>`;
+    });
+    h+='</div>';
+    h+=`<div class="vsort-slots" id="vsortSlots">`;
+    q.steps.forEach((_,i)=>{
+      h+=`<div class="vsort-slot" id="vslot${i}"><div class="slot-num">${i+1}</div></div>`;
+    });
+    h+=`</div>`;
+    h+=`<button class="go-btn" style="margin:6px auto;display:block" onclick="checkVsort()">✓ Check</button>`;
+  }
+
+  // ── BINARY DECODE ──
+  else if(q.type==='binary-decode'){
+    const pos=[8,4,2,1];
+    h+=`<div class="binary-row">`;
+    q.bits.forEach((b,i)=>{
+      h+=`<div class="bit${b?' on':''}" id="bi${i}">
+        <div class="bit-v">${b}</div>
+        <div class="bit-p">${pos[i]}</div>
+      </div>`;
+    });
+    h+=`</div>`;
+    h+=inputHtml(q.answer);
+  }
+
+  // ── BINARY ENCODE ──
+  else if(q.type==='binary-encode'){
+    window._encBits=[0,0,0,0];
+    const pos=[8,4,2,1];
+    window._encPos=pos;
+    h+=`<div class="encode-total">= <span id="encVal">0</span></div>`;
+    h+=`<div class="binary-row">`;
+    pos.forEach((p,i)=>{
+      h+=`<div class="bit" id="eb${i}" onclick="toggleEnc(${i})">
+        <div class="bit-v" id="ebv${i}">0</div>
+        <div class="bit-p">${p}</div>
+      </div>`;
+    });
+    h+=`</div>`;
+    h+=`<button class="go-btn" style="margin:8px auto;display:block" onclick="checkEnc(${q.target??q.answer})">✓ Check</button>`;
+  }
+
+  // ── LOGIC GATE ──
+  else if(q.type==='logic-gate'){
+    h+=`<div class="gate-row">
+      <div class="gate-in${q.inputA?' on':''}">
+        <div class="gi-v">${q.inputA}</div><div class="gi-l">Input A</div>
+      </div>
+      <div class="gate-sym">${q.gate}</div>
+      <div class="gate-in${q.inputB?' on':''}">
+        <div class="gi-v">${q.inputB}</div><div class="gi-l">Input B</div>
+      </div>
+      <div class="gate-arr">→</div>
+      <div class="gate-out">
+        <div class="go-v" id="gOut">?</div><div class="go-l">Output</div>
+      </div>
+    </div>`;
+    h+=`<div class="tap-grid">`;
+    q.options.forEach((o,i)=>{
+      h+=`<div class="tap-btn" onclick="checkGate(${q.answer},${i},'${o.gu}')">${o.gu}</div>`;
+    });
+    h+='</div>';
+  }
+
+  // ── DATA BARS ──
+  else if(q.type==='data-bars'){
+    const mx=Math.max(...q.data.map(d=>d.val));
+    const cols=['var(--blue)','var(--green)','var(--yellow)','var(--red)','var(--purple)','var(--orange)'];
+    h+=`<div class="bar-chart">`;
+    q.data.forEach((d,i)=>{
+      const ht=Math.round((d.val/mx)*110);
+      h+=`<div class="bar-col">
+        <div class="bar-num" style="color:${cols[i]}">${d.val}</div>
+        <div class="bar" style="height:${ht}px;background:${cols[i]}"></div>
+        <div class="bar-lbl">${d.lbl}</div>
+      </div>`;
+    });
+    h+=`</div>`;
+    h+=`<div class="mcq-grid">`;
+    q.options.forEach((o,i)=>{
+      h+=`<div class="mcq-btn" onclick="checkMCQ(${q.answer},${i})">
+        <div class="mcq-gu">${o.gu}</div>
+        <div class="mcq-en">${o.en||''}</div>
+      </div>`;
+    });
+    h+='</div>';
+  }
+
+  // ── SPEED ROUND ──
+  else if(q.type==='speed-round'){
+    speedIdx=0; speedScore=0; speedTimeLeft=q.timeLimit||60;
+    h+=`<div class="speed-wrap">
+      <div class="speed-timer" id="spTimer">${speedTimeLeft}s</div>
+      <div class="speed-sum" id="spSum">${q.sums[0].a} + ${q.sums[0].b} = ?</div>
+      <input class="speed-inp" id="spInp" type="number" inputmode="numeric" autofocus>
+      <div class="speed-score" id="spScore">✓ 0 / ${q.sums.length}</div>
+    </div>`;
+    // start timer after render
+    setTimeout(startSpeedRound, 100);
+  }
+
+  card.innerHTML = h;
+  // attach input enter key
+  const ai = card.querySelector('.ans-inp');
+  if(ai) ai.addEventListener('keydown',e=>{ if(e.key==='Enter') card.querySelector('.go-btn')?.click(); });
+  const si = card.querySelector('#spInp');
+  if(si){ si.addEventListener('keydown',e=>{ if(e.key==='Enter') checkSpeedAnswer(q); }); si.focus(); }
+}
+
+function inputHtml(ans){
+  return `<div class="input-wrap">
+    <input class="ans-inp" type="number" inputmode="numeric" placeholder="?">
+    <button class="go-btn" onclick="checkInput(${ans})">✓</button>
+  </div>`;
+}
+
+// ══════════════════════════════════════
+//  ANSWER CHECKS
+// ══════════════════════════════════════
+function checkInput(ans){
+  if(answered)return;
+  const el=document.querySelector('.ans-inp');
+  if(!el||el.value==='')return;
+  const v=parseInt(el.value); el.disabled=true; answered=true;
+  showFB(v===ans,v===ans?randOK():`${questions[qIdx].hintGu||''}`+
+    (questions[qIdx].hintEn?`<span class="fb-en">${questions[qIdx].hintEn}</span>`:''));
+}
+function checkTap(correct,chosen){
+  if(answered)return; answered=true;
+  document.querySelectorAll('.tap-btn').forEach((b,i)=>{
+    if(i===correct)b.classList.add('correct');
+    else if(i===chosen)b.classList.add('wrong');
+    b.onclick=null;
+  });
+  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+}
+function checkMCQ(correct,chosen){
+  if(answered)return; answered=true;
+  document.querySelectorAll('.mcq-btn').forEach((b,i)=>{
+    if(i===correct)b.classList.add('correct');
+    else if(i===chosen)b.classList.add('wrong');
+    b.onclick=null;
+  });
+  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+}
+function checkGate(correct,chosen,label){
+  if(answered)return; answered=true;
+  const go=document.getElementById('gOut');
+  if(go) go.textContent=label;
+  document.querySelectorAll('.tap-btn').forEach((b,i)=>{
+    if(i===correct)b.classList.add('correct');
+    else if(i===chosen)b.classList.add('wrong');
+    b.onclick=null;
+  });
+  showFB(chosen===correct, chosen===correct?randOK():hintMsg());
+}
+function toggleEnc(i){
+  if(!window._encBits) window._encBits=[0,0,0,0];
+  window._encBits[i]^=1;
+  const bit=window._encBits[i];
+  const box=document.getElementById('eb'+i);
+  if(box) box.className='bit'+(bit?' on':'');
+  const vEl=document.getElementById('ebv'+i);
+  if(vEl) vEl.textContent=bit;
+  const total=window._encBits[0]*8+window._encBits[1]*4+window._encBits[2]*2+window._encBits[3]*1;
+  const valEl=document.getElementById('encVal');
+  if(valEl) valEl.textContent=total;
+}
+function checkEnc(target){
+  if(answered)return;
+  const pos=[8,4,2,1];
+  const bits=window._encBits||[0,0,0,0];
+  const total=bits[0]*pos[0]+bits[1]*pos[1]+bits[2]*pos[2]+bits[3]*pos[3];
+  answered=true;
+  const ok=(total===target);
+  showFB(ok, ok ? randOK() : hintMsg());
+  window._encBits=[0,0,0,0];
+}
+function selectDragNum(val,idx){
+  if(answered)return;
+  if(dragSelected.length<2){
+    const el=document.getElementById('dnum'+idx);
+    if(el.classList.contains('used'))return;
+    dragSelected.push({val,idx});
+    el.classList.add('selected');
+    if(dragSelected.length===1){
+      document.getElementById('dslot0').textContent=val;
+      document.getElementById('dslot0').classList.add('filled');
+    } else {
+      document.getElementById('dslot1').textContent=val;
+      document.getElementById('dslot1').classList.add('filled');
+    }
+  }
+}
+function checkDragSum(solutions,target){
+  if(answered)return;
+  if(dragSelected.length<2){ showToast('2 numbers select કરો!'); return; }
+  const [a,b]=[dragSelected[0].val,dragSelected[1].val];
+  const ok=solutions.some(s=>(s[0]===a&&s[1]===b)||(s[0]===b&&s[1]===a));
+  answered=true;
+  showFB(ok,ok?randOK():hintMsg());
+}
+function vsortTap(cardIdx){
+  if(answered)return;
+  const card=document.getElementById('vsc'+cardIdx);
+  if(card.classList.contains('placed'))return;
+  if(vsortSelected!==null) document.getElementById('vsc'+vsortSelected)?.classList.remove('selected');
+  vsortSelected=cardIdx;
+  card.classList.add('selected');
+  // auto place in next empty slot
+  const q=questions[qIdx];
+  for(let i=0;i<q.steps.length;i++){
+    if(vsortSlots[i]===null||vsortSlots[i]===undefined){
+      const origIdx=parseInt(card.dataset.orig);
+      vsortSlots[i]=origIdx;
+      const slot=document.getElementById('vslot'+i);
+      const step=q.steps[origIdx];
+      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;text-align:center">${step.labelGu}</div>`;
+      slot.classList.add('filled');
+      card.classList.add('placed','selected');
+      vsortSelected=null;
+      return;
+    }
+  }
+}
+function checkVsort(){
+  if(answered)return;
+  const q=questions[qIdx];
+  const filled=vsortSlots.filter(v=>v!==null&&v!==undefined);
+  if(filled.length<q.steps.length){ showToast('બધા cards place કરો!'); return; }
+  const ok=JSON.stringify(vsortSlots)===JSON.stringify(q.correctOrder);
+  answered=true;
+  showFB(ok,ok?randOK():hintMsg());
+}
+
+// ── SPEED ROUND ──
+function startSpeedRound(){
+  const q=questions[qIdx];
+  speedTimer=setInterval(()=>{
+    speedTimeLeft--;
+    const el=document.getElementById('spTimer');
+    if(el){ el.textContent=speedTimeLeft+'s'; if(speedTimeLeft<=10)el.classList.add('urgent'); }
+    if(speedTimeLeft<=0){ clearInterval(speedTimer); finishSpeed(q); }
+  },1000);
+}
+function checkSpeedAnswer(q){
+  const inp=document.getElementById('spInp');
+  if(!inp)return;
+  const v=parseInt(inp.value);
+  const sum=q.sums[speedIdx];
+  if(v===sum.answer){ speedScore++; }
+  speedIdx++;
+  inp.value='';
+  if(speedIdx>=q.sums.length){ clearInterval(speedTimer); finishSpeed(q); return; }
+  const sumEl=document.getElementById('spSum');
+  if(sumEl) sumEl.textContent=`${q.sums[speedIdx].a} + ${q.sums[speedIdx].b} = ?`;
+  const scEl=document.getElementById('spScore');
+  if(scEl) scEl.textContent=`✓ ${speedScore} / ${q.sums.length}`;
+}
+function finishSpeed(q){
+  clearInterval(speedTimer);
+  answered=true;
+  const ok=speedScore>=Math.ceil(q.sums.length*.6);
+  showFB(ok,`${speedScore}/${q.sums.length} correct! ${ok?'🎉 Great!':'Keep practising!'}`);
+}
+function clearSpeedTimer(){ if(speedTimer){clearInterval(speedTimer);speedTimer=null;} }
+
+// ══════════════════════════════════════
+//  FEEDBACK + NEXT
+// ══════════════════════════════════════
+const _okMsgs=['🎉 શાબ્બાશ! Perfect!','⚡ Brilliant! Computer scientist!','🚀 Exactly right!','🧠 Fantastic brain!','🔥 On fire! Keep going!'];
+function randOK(){ return _okMsgs[~~(Math.random()*_okMsgs.length)]; }
+function hintMsg(){
+  const q=questions[qIdx];
+  return `<span class="fb-gu">${q.hintGu||'ફરી try!'}</span>`+(q.hintEn?`<span class="fb-en">${q.hintEn}</span>`:'');
+}
+function showFB(ok,msg){
+  const fb=document.getElementById('fb');
+  fb.className='fb show '+(ok?'ok':'bad');
+  fb.innerHTML=`<span class="fb-gu">${msg}</span>`;
+  const nb=document.getElementById('nxtBtn');
+  nb.className='nxt-btn show';
+  nb.textContent=qIdx<questions.length-1?'આગળ → Next →':'🏆 Finish!';
+  if(ok){ score++; S.xp+=20; S.streak++; updateTopbar(); spawnConfetti(); }
+  else { S.streak=0; updateTopbar(); }
+}
+function nextQ(){
+  clearSpeedTimer();
+  qIdx++;
+  if(qIdx>=questions.length){ showComplete(); return; }
+  renderQ();
+  document.getElementById('fb').className='fb';
+  document.getElementById('nxtBtn').className='nxt-btn';
+}
+
+// ══════════════════════════════════════
+//  COMPLETE
+// ══════════════════════════════════════
+function showComplete(){
+  const ch=currentChallenge;
+  const stars=Math.min(5,Math.round((score/questions.length)*5));
+  S.setStars(ch.id,stars);
+  const xpEarned=ch.xpReward+(stars*10);
+  S.xp+=xpEarned; updateTopbar();
+  if(stars>=3 && ch.trophy) S.addTrophy(ch.trophy);
+
+  document.getElementById('gBody').style.display='none';
+  const cs=document.getElementById('completeScreen');
+  cs.className='complete show';
+  cs.innerHTML=`
+    <div class="c-big">${ch.icon}</div>
+    <div class="c-stars" style="color:rgb(${currentCat?.colorRGB||'88,166,255'})">${'★'.repeat(stars)+'☆'.repeat(5-stars)}</div>
+    <div class="c-msg-gu">${ch.nameGu} — complete!</div>
+    <div class="c-msg-en">${ch.nameEn} complete! ${score}/${questions.length} correct.</div>
+    ${stars>=3&&ch.trophy?`<div class="c-trophy">${ch.trophy.icon}</div><div class="c-trophy-name">${ch.trophy.nameGu} Trophy earned!</div>`:''}
+    <div class="c-xp">+${xpEarned} XP</div>
+    <div class="c-btns">
+      <button class="c-btn secondary" onclick="exitGame()">← Back</button>
+      <button class="c-btn primary" onclick="replayChallenge()">🔄 Again</button>
+    </div>`;
+  spawnConfetti(60);
+}
+function replayChallenge(){
+  qIdx=0; score=0; answered=false;
+  document.getElementById('gBody').style.display='flex';
+  document.getElementById('completeScreen').className='complete';
+  buildDots(); renderQ();
+}
+
+// ══════════════════════════════════════
+//  TEACHER GUIDE
+// ══════════════════════════════════════
+function openTeacher(){
+  document.getElementById('tOverlay').classList.add('show');
+  const body=document.getElementById('tBody');
+  const guide=currentChallenge?.teacherGuide;
+  if(!guide){
+    body.innerHTML=`<div style="font-family:'Noto Sans Gujarati',sans-serif;color:var(--muted);padding:20px;text-align:center;line-height:1.8">
+      📚 Challenge ખોલ્યા પછી teacher guide આવશે.<br>
+      <span style="font-family:'Nunito',sans-serif;font-size:.75rem">Open a challenge first to see its guide.</span></div>`;
+    return;
+  }
+  let h='';
+  if(guide.conceptGu) h+=`<div class="t-sec"><div class="t-sec-h">🧠 વિષય શું છે?</div><div class="t-gu">${guide.conceptGu}</div></div>`;
+  if(guide.storyGu) h+=`<div class="t-sec"><div class="t-sec-h">📖 Yuval ને વાર્તા</div><div class="t-story"><div class="t-gu">${guide.storyGu}</div></div></div>`;
+  if(guide.scriptGu) h+=`<div class="t-sec"><div class="t-sec-h">💬 આ કહો</div><div class="t-script"><div class="t-gu">${guide.scriptGu}</div></div></div>`;
+  if(guide.vocab) h+=`<div class="t-sec"><div class="t-sec-h">📝 શબ્દો</div><div class="t-vocab">${guide.vocab.map(v=>`<div class="t-voc"><span class="t-voc-gu">${v.gu}</span><span class="t-voc-en">${v.en}</span></div>`).join('')}</div></div>`;
+  if(guide.tipsGu) h+=`<div class="t-sec"><div class="t-sec-h">💡 ટિપ્સ</div><div class="t-gu">${guide.tipsGu}</div></div>`;
+  body.innerHTML=h;
+}
+function closeTeacher(){ document.getElementById('tOverlay').classList.remove('show'); }
+
+// ══════════════════════════════════════
+//  SCREEN MANAGER
+// ══════════════════════════════════════
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('gameScreen').style.display='none';
+  document.getElementById('gameScreen').classList.remove('active');
+  if(id==='gameScreen'){
+    document.getElementById('gameScreen').style.display='flex';
+  } else {
+    document.getElementById(id).classList.add('active');
+  }
+}
+
+// ══════════════════════════════════════
+//  NAME MODAL
+// ══════════════════════════════════════
+function showNameModal(){ document.getElementById('nameInp').value=S.name; document.getElementById('nameModal').classList.add('show'); }
+function saveName(){ S.name=document.getElementById('nameInp').value.trim()||'Yuval'; updateTopbar(); updateWelcome(); document.getElementById('nameModal').classList.remove('show'); }
+document.getElementById('nameModal').addEventListener('click',e=>{ if(e.target===document.getElementById('nameModal')) document.getElementById('nameModal').classList.remove('show'); });
+
+// ══════════════════════════════════════
+//  TOAST
+// ══════════════════════════════════════
+function showToast(msg){
+  const t=document.createElement('div');
+  t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:10px 18px;font-size:.82rem;color:var(--text);z-index:500;font-family:\'Noto Sans Gujarati\',sans-serif;white-space:nowrap';
+  t.textContent=msg; document.body.appendChild(t);
+  setTimeout(()=>t.remove(),2000);
+}
+
+// ══════════════════════════════════════
+//  CONFETTI
+// ══════════════════════════════════════
+function spawnConfetti(n=16){
+  const c=['#58a6ff','#3fb950','#f0c040','#f85149','#bc8cff','#ffa657'];
+  for(let i=0;i<n;i++) setTimeout(()=>{
+    const el=document.createElement('div');
+    el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;background:${c[~~(Math.random()*c.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.3}s;border-radius:${Math.random()>.5?'50%':'2px'}`;
+    document.body.appendChild(el); setTimeout(()=>el.remove(),3200);
+  },i*22);
+}
+
+// ══════════════════════════════════════
+//  BOOT
+// ══════════════════════════════════════
+boot();
+</script>
+</body>
+</html>

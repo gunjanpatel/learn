@@ -1,0 +1,87 @@
+{
+  "id": "logic-gates-challenge-1",
+  "nameGu": "Logic Gates — Basics ⚡",
+  "nameEn": "Logic Gates Basics",
+  "icon": "⚡",
+  "descGu": "AND, OR, NOT — computer ના decision makers!",
+  "descEn": "How computers make decisions!",
+  "xpReward": 60,
+  "trophy": {"icon": "⚡", "nameGu": "Gate Keeper", "nameEn": "Gate Keeper"},
+  "teacherGuide": {
+    "conceptGu": "Logic gate = decision maker circuit. AND = બંને true. OR = ઓછામાં ઓછું એક. NOT = flip. CPU = billions of gates!",
+    "storyGu": "'Phone unlock: face match AND correct angle — AND gate! Door: password OR fingerprint — OR gate!'",
+    "scriptGu": "'Yuval, school bag ready? Book inside AND pencil inside? BOTH = yes = AND gate!'",
+    "vocab": [
+      {"gu": "AND = બંને TRUE", "en": "AND gate"},
+      {"gu": "OR = ઓછામાં ઓછું એક", "en": "OR gate"},
+      {"gu": "NOT = ઉલટું flip", "en": "NOT gate"},
+      {"gu": "Output = result", "en": "Output"}
+    ],
+    "tipsGu": "💡 TV on: power AND remote = AND gate! Torch: press OR shake = OR gate!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · AND GATE",
+      "textGu": "AND gate: output 1 ત્યારે જ — ___",
+      "textEn": "AND gate outputs 1 only when ___",
+      "options": [
+        {"gu": "ફક્ત A = 1", "en": "Only A is 1"},
+        {"gu": "ફક્ત B = 1", "en": "Only B is 1"},
+        {"gu": "A AND B બંને = 1", "en": "BOTH A and B = 1"},
+        {"gu": "બંને = 0", "en": "Both = 0"}
+      ],
+      "answer": 2,
+      "hintGu": "AND = BOTH! Book AND pencil — બંને જ!",
+      "hintEn": "AND means BOTH must be true!"
+    },
+    {
+      "type": "logic-gate",
+      "level": "LEVEL 2 · AND GATE",
+      "textGu": "A=1, B=1. AND output?",
+      "textEn": "A=1, B=1. AND output?",
+      "gate": "AND", "inputA": 1, "inputB": 1,
+      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "answer": 1,
+      "hintGu": "1 AND 1 = 1!",
+      "hintEn": "Both are 1, so AND = 1"
+    },
+    {
+      "type": "logic-gate",
+      "level": "LEVEL 3 · AND GATE",
+      "textGu": "A=1, B=0. AND output?",
+      "textEn": "A=1, B=0. AND output?",
+      "gate": "AND", "inputA": 1, "inputB": 0,
+      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "answer": 0,
+      "hintGu": "B=0! AND ને BOTH ON જ જોઈએ!",
+      "hintEn": "B is 0 so AND = 0"
+    },
+    {
+      "type": "logic-gate",
+      "level": "LEVEL 4 · OR GATE",
+      "textGu": "OR gate: A=0, B=1. Output?",
+      "textEn": "OR gate: A=0, B=1. Output?",
+      "gate": "OR", "inputA": 0, "inputB": 1,
+      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "answer": 1,
+      "hintGu": "OR = at least one! B=1 = output 1!",
+      "hintEn": "OR needs at least one = 1"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · NOT GATE",
+      "textGu": "NOT gate: input=1. Output=?",
+      "textEn": "NOT gate flips it. Input=1, output=?",
+      "options": [
+        {"gu": "1 (same)", "en": "Still 1"},
+        {"gu": "0 (ઉલટું!)", "en": "0 — flipped!"},
+        {"gu": "2", "en": "2"},
+        {"gu": "Nothing", "en": "Nothing"}
+      ],
+      "answer": 1,
+      "hintGu": "NOT = flip! 1→0, 0→1",
+      "hintEn": "NOT flips it. 1 becomes 0!"
+    }
+  ]
+}

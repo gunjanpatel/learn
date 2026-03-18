@@ -1,0 +1,94 @@
+{
+  "sections": [
+    {
+      "id": "maths",
+      "nameGu": "ગણિત",
+      "nameEn": "Mathematics",
+      "icon": "🔢",
+      "colorRGB": "240,192,64",
+      "categories": [
+        {
+          "id": "addition",
+          "nameGu": "સરવાળો",
+          "nameEn": "Addition",
+          "icon": "➕",
+          "colorRGB": "255,107,107",
+          "challenges": ["challenge-1", "challenge-2", "challenge-3"]
+        },
+        {
+          "id": "subtraction",
+          "nameGu": "બાદબાકી",
+          "nameEn": "Subtraction",
+          "icon": "➖",
+          "colorRGB": "255,166,87",
+          "challenges": ["challenge-1"]
+        },
+        {
+          "id": "multiplication",
+          "nameGu": "ગુણાકાર",
+          "nameEn": "Multiplication",
+          "icon": "✖️",
+          "colorRGB": "63,185,80",
+          "challenges": ["challenge-1"]
+        },
+        {
+          "id": "division",
+          "nameGu": "ભાગાકાર",
+          "nameEn": "Division",
+          "icon": "➗",
+          "colorRGB": "57,208,216",
+          "challenges": ["challenge-1"]
+        }
+      ]
+    },
+    {
+      "id": "cs",
+      "nameGu": "Computer Science",
+      "nameEn": "Computer Science",
+      "icon": "💻",
+      "colorRGB": "88,166,255",
+      "categories": [
+        {
+          "id": "binary-world",
+          "nameGu": "Binary World",
+          "nameEn": "Binary World",
+          "icon": "💡",
+          "colorRGB": "88,166,255",
+          "challenges": ["challenge-1", "challenge-2"]
+        },
+        {
+          "id": "logic-gates",
+          "nameGu": "Logic Gates",
+          "nameEn": "Logic Gates",
+          "icon": "⚡",
+          "colorRGB": "63,185,80",
+          "challenges": ["challenge-1"]
+        },
+        {
+          "id": "pattern-lab",
+          "nameGu": "Pattern Lab",
+          "nameEn": "Pattern Lab",
+          "icon": "🔮",
+          "colorRGB": "188,140,255",
+          "challenges": ["challenge-1"]
+        },
+        {
+          "id": "algo-hq",
+          "nameGu": "Algorithm HQ",
+          "nameEn": "Algorithm HQ",
+          "icon": "🔀",
+          "colorRGB": "247,120,186",
+          "challenges": ["challenge-1"]
+        },
+        {
+          "id": "data-detective",
+          "nameGu": "Data Detective",
+          "nameEn": "Data Detective",
+          "icon": "📊",
+          "colorRGB": "57,208,216",
+          "challenges": ["challenge-1"]
+        }
+      ]
+    }
+  ]
+}

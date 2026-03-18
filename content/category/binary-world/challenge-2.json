@@ -1,0 +1,77 @@
+{
+  "id": "binary-challenge-2",
+  "nameGu": "Binary — Advanced 🔥",
+  "nameEn": "Binary Advanced",
+  "icon": "🔥",
+  "descGu": "Bigger numbers! Real computer thinking!",
+  "descEn": "Bigger binary numbers — like a real computer!",
+  "xpReward": 90,
+  "trophy": {"icon": "🖥️", "nameGu": "Bit Master", "nameEn": "Bit Master"},
+  "teacherGuide": {
+    "conceptGu": "Advanced binary — bigger values. 8-bit thinking intro. Real computers use 8, 16, 32, 64 bits. Show connection: 8 bits = 1 byte = smallest unit of computer memory.",
+    "conceptEn": "8-bit numbers, intro to bytes. Connect to real computer memory.",
+    "storyGu": "'Yuval, computer memory = billions of bits! 8 bits = 1 byte. 1 photo = millions of bytes! Chess story: doubling — 64 squares = 64 bits is huge number!'",
+    "scriptGu": "'Big numbers same way — more boxes, more power. 10000 in binary = 16! Computer thinks fast because bits flip in nanoseconds!'",
+    "vocab": [
+      {"gu": "Byte = 8 bits ભેગા", "en": "Byte"},
+      {"gu": "Memory = bits stored", "en": "Memory"},
+      {"gu": "Flip = ON→OFF change", "en": "Flip"}
+    ],
+    "tipsGu": "💡 Count something big — how many bits needed? Age 7 = 3 bits. Age 100 needs 7 bits!"
+  },
+  "questions": [
+    {
+      "type": "binary-decode",
+      "level": "LEVEL 1",
+      "textGu": "1010 = ?",
+      "textEn": "Binary 1010 = decimal?",
+      "bits": [1,0,1,0],
+      "answer": 10,
+      "hintGu": "8 + 2 = 10",
+      "hintEn": "8 + 2 = 10"
+    },
+    {
+      "type": "binary-decode",
+      "level": "LEVEL 2",
+      "textGu": "1100 = ?",
+      "textEn": "Binary 1100 = decimal?",
+      "bits": [1,1,0,0],
+      "answer": 12,
+      "hintGu": "8 + 4 = 12",
+      "hintEn": "8 + 4 = 12"
+    },
+    {
+      "type": "binary-encode",
+      "level": "LEVEL 3",
+      "textGu": "Number 10 binary માં!",
+      "textEn": "Make 10 in binary!",
+      "target": 10,
+      "hintGu": "10 = 8+2",
+      "hintEn": "10 = 8+2"
+    },
+    {
+      "type": "binary-encode",
+      "level": "LEVEL 4",
+      "textGu": "Number 15 binary માં! (Max 4-bit!)",
+      "textEn": "Make 15 in binary — maximum 4-bit number!",
+      "target": 15,
+      "hintGu": "15 = 8+4+2+1. All 4 boxes ON!",
+      "hintEn": "15 = 8+4+2+1. All boxes ON!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · THINK",
+      "textGu": "8 bits ભેગા = ___",
+      "textEn": "8 bits together = ___",
+      "options": [
+        {"gu": "1 Pixel", "en": "1 Pixel"},
+        {"gu": "1 Byte — memory unit!", "en": "1 Byte"},
+        {"gu": "1 Photo", "en": "1 Photo"},
+        {"gu": "1 Second", "en": "1 Second"}
+      ],
+      "answer": 1,
+      "hintGu": "8 bits = 1 Byte — smallest memory unit!",
+      "hintEn": "8 bits = 1 Byte — the building block of all computer memory!"
+    }
+  ]
+}

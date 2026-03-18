@@ -1,0 +1,77 @@
+{
+  "id": "division-challenge-1",
+  "nameGu": "ભાગાકાર — Share કરો!",
+  "nameEn": "Division — Share Fairly",
+  "icon": "🍕",
+  "descGu": "Fair share = ભાગાકાર! Pizza split!",
+  "descEn": "Sharing fairly = division!",
+  "xpReward": 75,
+  "trophy": {"icon": "🍕", "nameGu": "Fair Sharer", "nameEn": "Fair Sharer"},
+  "teacherGuide": {
+    "conceptGu": "ભાગાકાર = fair share. 12 cookies, 3 friends — each gets? Groups બનાવો physically. ÷ = split into equal groups. Multiplication reverse!",
+    "conceptEn": "Division is sharing equally / splitting into groups. It's the reverse of multiplication.",
+    "storyGu": "'Pizza 8 slices — 4 friends share equally. Each gets? 8÷4=2. Robot distribute coins equally — same!'",
+    "scriptGu": "'12 LEGO bricks — 3 friends. Each friend same number. Deal out one by one — count each pile!'",
+    "vocab": [
+      {"gu": "ભાગ = share / divide", "en": "Divide"},
+      {"gu": "÷ = division sign", "en": "Divide sign"},
+      {"gu": "Equal = સરખું", "en": "Equal"},
+      {"gu": "Each = પ્રત્યેક", "en": "Each"}
+    ],
+    "tipsGu": "💡 Physical objects deal out — cards, coins, LEGO. See the equal groups. Then connect to ÷ symbol."
+  },
+  "questions": [
+    {
+      "type": "share-visual",
+      "level": "LEVEL 1 · SHARE",
+      "textGu": "6 apples — 2 friends — each gets?",
+      "textEn": "6 apples shared between 2 friends — each gets?",
+      "total": 6,
+      "groups": 2,
+      "emoji": "🍎",
+      "answer": 3,
+      "hintGu": "6 ÷ 2 = 3",
+      "hintEn": "6 ÷ 2 = 3"
+    },
+    {
+      "type": "share-visual",
+      "level": "LEVEL 1 · SHARE",
+      "textGu": "8 🍕 slices — 4 friends — each gets?",
+      "textEn": "8 pizza slices — 4 friends — each gets?",
+      "total": 8,
+      "groups": 4,
+      "emoji": "🍕",
+      "answer": 2,
+      "hintGu": "8 ÷ 4 = 2",
+      "hintEn": "8 ÷ 4 = 2"
+    },
+    {
+      "type": "tap-answer",
+      "level": "LEVEL 2",
+      "textGu": "10 ÷ 2 = ?",
+      "textEn": "10 ÷ 2 = ?",
+      "options": [3, 4, 5, 6],
+      "answer": 2,
+      "hintGu": "10 ÷ 2 = 5",
+      "hintEn": "10 ÷ 2 = 5"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3",
+      "textGu": "12 ÷ 3 = ?",
+      "textEn": "12 ÷ 3 = ?",
+      "answer": 4,
+      "hintGu": "12 ÷ 3 = 4",
+      "hintEn": "12 ÷ 3 = 4"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 4 · STORY",
+      "textGu": "🤖 Robot ના 15 batteries — 3 robots share equally. Each gets?",
+      "textEn": "15 batteries shared equally between 3 robots. Each gets?",
+      "answer": 5,
+      "hintGu": "15 ÷ 3 = 5",
+      "hintEn": "15 ÷ 3 = 5"
+    }
+  ]
+}

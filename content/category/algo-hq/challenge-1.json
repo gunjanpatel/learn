@@ -1,0 +1,99 @@
+{
+  "id": "algo-hq-challenge-1",
+  "nameGu": "Algorithm HQ — Steps! 🔀",
+  "nameEn": "Algorithm HQ Basics",
+  "icon": "🔀",
+  "descGu": "Steps ક્રમ માં! Robot ઠીક આ રીતે think કરે.",
+  "descEn": "Steps in order — how every robot thinks!",
+  "xpReward": 65,
+  "trophy": {"icon": "🤖", "nameGu": "Algorithm Ace", "nameEn": "Algorithm Ace"},
+  "teacherGuide": {
+    "conceptGu": "Algorithm = exact steps in order. Sequence + loop + condition = every program. Order ખોટો = crash!",
+    "storyGu": "'Pizza recipe ઉલટી — cheese first, dough after = disaster! Computer algorithm ઉલટો = crash!'",
+    "scriptGu": "'Minecraft house: floor → walls → roof → door. ઉલટું — roof without walls impossible!'",
+    "vocab": [
+      {"gu": "Algorithm = steps recipe", "en": "Algorithm"},
+      {"gu": "Sequence = ક્રમ", "en": "Sequence"},
+      {"gu": "Loop = repeat", "en": "Loop"},
+      {"gu": "Bug = ખોટો step", "en": "Bug"}
+    ],
+    "tipsGu": "💡 Morning routine draw — wake→brush→eat→school. Mix up for fun — 'School first?!' 😂"
+  },
+  "questions": [
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 1 · SANDWICH",
+      "textGu": "Sandwich steps ક્રમ!",
+      "textEn": "Put sandwich steps in order!",
+      "steps": [
+        {"icon": "🍞", "labelGu": "Bread", "labelEn": "Bread"},
+        {"icon": "🥬", "labelGu": "Filling", "labelEn": "Filling"},
+        {"icon": "🍞", "labelGu": "Top", "labelEn": "Top"},
+        {"icon": "😋", "labelGu": "Eat!", "labelEn": "Eat!"}
+      ],
+      "correctOrder": [0,1,2,3],
+      "hintGu": "Bread → Filling → Top → Eat!",
+      "hintEn": "Bread first, then filling, then top, then eat!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 2 · MORNING",
+      "textGu": "સવારની routine!",
+      "textEn": "Morning routine order!",
+      "steps": [
+        {"icon": "😴", "labelGu": "ઉઠો", "labelEn": "Wake"},
+        {"icon": "🪥", "labelGu": "Brush", "labelEn": "Brush"},
+        {"icon": "🍳", "labelGu": "Breakfast", "labelEn": "Eat"},
+        {"icon": "🎒", "labelGu": "School", "labelEn": "School"}
+      ],
+      "correctOrder": [0,1,2,3],
+      "hintGu": "Wake → Brush → Eat → School!",
+      "hintEn": "Wake up first!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 3 · ROBOT",
+      "textGu": "Cleaning robot algorithm!",
+      "textEn": "Robot cleaning steps!",
+      "steps": [
+        {"icon": "🔍", "labelGu": "Scan", "labelEn": "Scan"},
+        {"icon": "🎯", "labelGu": "Find dirt", "labelEn": "Find"},
+        {"icon": "🧹", "labelGu": "Clean!", "labelEn": "Clean"},
+        {"icon": "🏠", "labelGu": "Home", "labelEn": "Home"}
+      ],
+      "correctOrder": [0,1,2,3],
+      "hintGu": "Scan → Find → Clean → Home!",
+      "hintEn": "Scan first, then find, clean, go home!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · IF/THEN",
+      "textGu": "Robot obstacle જુએ. IF obstacle THEN ___?",
+      "textEn": "IF obstacle THEN ___?",
+      "options": [
+        {"gu": "ઝડપ વધારો", "en": "Speed up"},
+        {"gu": "Stop & Turn", "en": "Stop and turn"},
+        {"gu": "Sleep 😴", "en": "Sleep"},
+        {"gu": "Ignore", "en": "Ignore"}
+      ],
+      "answer": 1,
+      "hintGu": "IF obstacle THEN stop and turn!",
+      "hintEn": "Stop and turn to avoid it!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · LOOP",
+      "textGu": "Robot 5 rooms clean. Same steps 5 times = ___",
+      "textEn": "Same steps repeated 5 times = ___",
+      "options": [
+        {"gu": "Story", "en": "Story"},
+        {"gu": "Loop — repeat!", "en": "Loop"},
+        {"gu": "Password", "en": "Password"},
+        {"gu": "Binary", "en": "Binary"}
+      ],
+      "answer": 1,
+      "hintGu": "Loop = repeat same action!",
+      "hintEn": "A loop repeats the same steps!"
+    }
+  ]
+}
