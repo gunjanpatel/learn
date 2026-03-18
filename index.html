@@ -6,384 +6,399 @@
 <title>Yuval's Lab 🔬</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@700;800&family=Noto+Sans+Gujarati:wght@400;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <style>
+/* ════════════════════════════════════════
+   CSS VARIABLES
+════════════════════════════════════════ */
 :root{
-  --bg:#0d1117;--card:#161b22;--card2:#1f2937;--border:rgba(255,255,255,0.07);
+  --bg:#0d1117;--card:#161b22;--card2:#1f2937;
+  --border:rgba(255,255,255,0.07);
   --text:#f0f6fc;--muted:#8b949e;
   --blue:#58a6ff;--green:#3fb950;--yellow:#f0c040;
-  --red:#f85149;--purple:#bc8cff;--orange:#ffa657;--teal:#39d0d8;--pink:#f778ba;
+  --red:#f85149;--purple:#bc8cff;--orange:#ffa657;--teal:#39d0d8;
+  --font-gu:'Noto Sans Gujarati',sans-serif;
+  --font-num:'Fredoka One',cursive;
+  --font-en:'Nunito',sans-serif;
   --fs:1;
+  --r8:8px;--r10:10px;--r12:12px;--r14:14px;--r16:16px;--r20:20px;
 }
-html{font-size:calc(16px * var(--fs));}
+html{font-size:calc(16px * var(--fs))}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text)}
-body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-direction:column}
+body{font-family:var(--font-gu);display:flex;flex-direction:column}
 
-/* ── TOPBAR ── */
+/* ════════════════════════════════════════
+   UTILITY CLASSES (replaces repetition)
+════════════════════════════════════════ */
+.flex{display:flex}.flex-col{flex-direction:column}.flex-center{align-items:center;justify-content:center}
+.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.flex-wrap{flex-wrap:wrap}
+.gap-4{gap:4px}.gap-6{gap:6px}.gap-8{gap:8px}.gap-10{gap:10px}.gap-12{gap:12px}.gap-14{gap:14px}
+.w-full{width:100%}.h-full{height:100%}.text-center{text-align:center}
+.font-num{font-family:var(--font-num)}.font-en{font-family:var(--font-en)}
+.fw-700{font-weight:700}.fw-800{font-weight:800}
+.text-muted{color:var(--muted)}.text-blue{color:var(--blue)}.text-yellow{color:var(--yellow)}
+.text-green{color:var(--green)}.text-red{color:var(--red)}.text-purple{color:var(--purple)}
+.bg-card{background:var(--card)}.bg-card2{background:var(--card2)}
+.border-std{border:1px solid var(--border)}.border-2{border:2px solid var(--border)}
+.rounded-sm{border-radius:var(--r8)}.rounded{border-radius:var(--r12)}.rounded-lg{border-radius:var(--r16)}.rounded-xl{border-radius:var(--r20)}
+.p-screen{padding:0 14px}.overflow-y{overflow-y:auto}
+.cursor{cursor:pointer}.transition{transition:all .15s}
+.screen{flex:1;overflow-y:auto;display:none;padding:0 0 90px}
+.screen.active{display:block}
+.hidden{display:none}
+
+/* ════════════════════════════════════════
+   TOPBAR
+════════════════════════════════════════ */
 .topbar{display:flex;align-items:center;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--border);gap:10px;flex-shrink:0;z-index:50}
-.logo{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--blue);cursor:pointer;flex-shrink:0}
-.logo span{font-size:.6rem;display:block;color:var(--muted);letter-spacing:1px;font-family:'Nunito',sans-serif}
+.logo{font-family:var(--font-num);font-size:1.1rem;color:var(--blue);cursor:pointer;flex-shrink:0}
+.logo span{font-size:.6rem;display:block;color:var(--muted);letter-spacing:1px;font-family:var(--font-en)}
 .xp-col{flex:1;margin:0 8px}
 .xp-track{background:rgba(255,255,255,.07);border-radius:50px;height:7px;overflow:hidden}
 .xp-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--purple));border-radius:50px;transition:width .7s cubic-bezier(.34,1.56,.64,1)}
-.xp-row{display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);font-weight:700;font-family:'Nunito',sans-serif;margin-top:2px}
-.streak-badge{font-size:.82rem;font-weight:800;color:var(--orange);font-family:'Nunito',sans-serif;flex-shrink:0}
+.xp-row{display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);font-weight:700;font-family:var(--font-en);margin-top:2px}
+.streak-badge{font-size:.82rem;font-weight:800;color:var(--orange);font-family:var(--font-en);flex-shrink:0}
 
-/* ── SCREENS ── */
-.screen{flex:1;overflow-y:auto;display:none;padding:0 0 90px}
-.screen.active{display:block}
-#gameScreen{display:none;flex-direction:column;overflow:hidden}
-#gameScreen.active{display:flex}
-
-/* ── HOME ── */
+/* ════════════════════════════════════════
+   HOME
+════════════════════════════════════════ */
 .welcome-strip{background:linear-gradient(135deg,rgba(88,166,255,.1),rgba(188,140,255,.08));border-bottom:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:12px}
 .welcome-avatar{font-size:2rem}
-.welcome-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:700}
-.welcome-en{font-size:.7rem;color:var(--muted);font-family:'Nunito',sans-serif}
-.name-btn{margin-left:auto;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:5px 10px;color:var(--muted);font-size:.68rem;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap}
-
-/* ── SECTION ── */
-.section-wrap{padding:0 14px 4px}
-.section-head{display:flex;align-items:center;gap:10px;padding:18px 0 10px}
-.section-icon{font-size:1.4rem}
-.section-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800}
-.section-name-en{font-family:'Fredoka One',cursive;font-size:.7rem;opacity:.4;margin-left:2px}
-.section-line{flex:1;height:1px;background:var(--border)}
-.section-progress{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:800}
-
-/* ── CATEGORY CARDS ── */
-.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
-.cat-card{background:var(--card);border:2px solid var(--border);border-radius:20px;padding:16px 12px;text-align:center;cursor:pointer;position:relative;min-height:130px;transition:transform .18s,box-shadow .18s,border-color .18s;user-select:none}
-.cat-card:active{transform:scale(.94)}
-.cat-card.locked{opacity:.4;cursor:not-allowed}
-.cat-icon{font-size:2.2rem;margin-bottom:6px}
-.cat-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.92rem;font-weight:800;line-height:1.3}
-.cat-name-en{font-family:'Fredoka One',cursive;font-size:.65rem;opacity:.4;margin-bottom:5px}
-.cat-prog-bar{height:4px;background:rgba(255,255,255,.08);border-radius:4px;margin:6px 0 4px;overflow:hidden}
-.cat-prog-fill{height:100%;border-radius:4px;transition:width .5s ease}
-.cat-prog-label{font-size:.6rem;color:var(--muted);font-family:'Nunito',sans-serif}
-.lock-icon{position:absolute;top:8px;right:10px;font-size:.9rem;opacity:.5}
-
-/* ── TROPHY SHELF ── */
-.trophy-shelf{background:var(--card);border-radius:16px;padding:12px 16px;margin:14px 14px 0;border:1px solid var(--border)}
-.trophy-head{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:800;font-family:'Nunito',sans-serif;margin-bottom:8px}
+.welcome-gu{font-size:.95rem;font-weight:700}
+.welcome-en{font-size:.7rem;color:var(--muted);font-family:var(--font-en)}
+.name-btn{margin-left:auto;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:5px 10px;color:var(--muted);font-size:.68rem;cursor:pointer;font-family:var(--font-en);white-space:nowrap}
+.trophy-shelf{background:var(--card);border-radius:16px;padding:12px 16px;margin:12px 14px 0;border:1px solid var(--border)}
+.trophy-head{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:800;font-family:var(--font-en);margin-bottom:8px}
 .trophy-row{display:flex;flex-wrap:wrap;gap:8px}
 .trophy-item{font-size:1.5rem;opacity:.25;transition:opacity .3s}
 .trophy-item.earned{opacity:1}
+.section-wrap{padding:0 14px 4px}
+.section-head{display:flex;align-items:center;gap:8px;padding:14px 0 8px}
+.section-icon{font-size:1.4rem}
+.section-name-gu{font-size:1rem;font-weight:800}
+.section-name-en{font-family:var(--font-num);font-size:.7rem;opacity:.4;margin-left:2px}
+.section-line{flex:1;height:1px;background:var(--border)}
+.section-progress{font-size:.65rem;color:var(--muted);font-family:var(--font-en);font-weight:800}
 
-/* ── CHALLENGE LIST SCREEN ── */
+/* ════════════════════════════════════════
+   CATEGORY CARDS
+════════════════════════════════════════ */
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.cat-card{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:14px 10px 12px;text-align:center;cursor:pointer;position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;transition:transform .18s,box-shadow .18s,border-color .18s}
+.cat-card:active{transform:scale(.94)}
+.cat-card.locked{opacity:.4;cursor:not-allowed}
+.cat-icon{font-size:1.9rem;line-height:1}
+.cat-name-gu{font-size:.82rem;font-weight:800;line-height:1.3}
+.cat-name-en{font-family:var(--font-num);font-size:.6rem;opacity:.4}
+.cat-prog-bar{height:3px;background:rgba(255,255,255,.08);border-radius:4px;width:100%;margin:4px 0 2px;overflow:hidden}
+.cat-prog-fill{height:100%;border-radius:4px;transition:width .5s ease}
+.cat-prog-label{font-size:.58rem;color:var(--muted);font-family:var(--font-en)}
+
+/* ════════════════════════════════════════
+   CHALLENGE LIST
+════════════════════════════════════════ */
 #challengeScreen{padding:0 14px 90px}
 .ch-header{padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:14px}
-.ch-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0;font-family:'Nunito',sans-serif;display:flex;align-items:center;gap:4px;margin-bottom:10px}
-.ch-title-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.2rem;font-weight:800}
-.ch-title-en{font-family:'Fredoka One',cursive;font-size:.75rem;opacity:.4}
-.ch-card{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .18s,transform .18s;position:relative;overflow:hidden}
+.ch-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0;font-family:var(--font-en);display:flex;align-items:center;gap:4px;margin-bottom:10px}
+.ch-title-gu{font-size:1.2rem;font-weight:800}
+.ch-title-en{font-family:var(--font-num);font-size:.75rem;opacity:.4}
+.ch-card{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .18s,transform .18s;position:relative}
 .ch-card:active{transform:scale(.97)}
 .ch-card.locked{opacity:.4;cursor:not-allowed}
-.ch-num{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.1rem;flex-shrink:0}
+.ch-num{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.1rem;flex-shrink:0}
 .ch-info{flex:1}
-.ch-name-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:800;margin-bottom:2px}
-.ch-name-en{font-family:'Nunito',sans-serif;font-size:.65rem;color:var(--muted)}
+.ch-name-gu{font-size:.9rem;font-weight:800;margin-bottom:2px}
+.ch-name-en{font-family:var(--font-en);font-size:.65rem;color:var(--muted)}
 .ch-stars{font-size:.85rem;letter-spacing:1px}
-.ch-xp{font-family:'Fredoka One',cursive;font-size:.8rem;color:var(--yellow);margin-top:2px}
-.ch-lock{font-size:1.1rem}
+.ch-xp{font-family:var(--font-num);font-size:.8rem;color:var(--yellow);margin-top:2px}
 
-/* ── GAME HEADER ── */
+/* ════════════════════════════════════════
+   GAME SCREEN
+════════════════════════════════════════ */
+#gameScreen{display:none;flex-direction:column;overflow:hidden}
+#gameScreen.active{display:flex}
 .g-header{display:flex;align-items:center;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--border);gap:10px;flex-shrink:0}
 .g-back{background:rgba(255,255,255,.07);border:none;color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center}
 .g-titles{flex:1}
-.g-title-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:800}
-.g-title-en{font-family:'Nunito',sans-serif;font-size:.62rem;opacity:.4}
+.g-title-gu{font-size:.9rem;font-weight:800}
+.g-title-en{font-family:var(--font-en);font-size:.62rem;opacity:.4}
 .g-dots{display:flex;gap:4px}
 .gdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1);transition:background .3s}
 .gdot.done{background:var(--green)}
 .gdot.cur{background:var(--yellow);box-shadow:0 0 6px var(--yellow)}
-
-/* ── QUESTION AREA ── */
 .g-body{flex:1;overflow-y:auto;padding:16px 14px 100px;display:flex;flex-direction:column;align-items:center}
 .q-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:20px 16px;width:100%;max-width:560px;margin-bottom:14px;animation:fadeUp .35s cubic-bezier(.34,1.56,.64,1)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
-.ql{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;font-family:'Nunito',sans-serif;opacity:.5;margin-bottom:8px}
-.qt-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.2rem;font-weight:700;line-height:1.7;margin-bottom:3px}
-.qt-en{font-family:'Nunito',sans-serif;font-size:.88rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.ql{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;font-family:var(--font-en);opacity:.5;margin-bottom:8px}
+.qt-gu{font-size:1.2rem;font-weight:700;line-height:1.7;margin-bottom:3px}
+.qt-en{font-family:var(--font-en);font-size:.88rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
 
-/* ── EMOJI COUNT ── */
+/* ════════════════════════════════════════
+   QUESTION TYPES
+════════════════════════════════════════ */
+/* shared visual box */
+.vis-box{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+/* emoji count */
 .emoji-groups-wrap{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}
-.emoji-group{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;max-width:140px}
+.plus-sign{font-family:var(--font-num);font-size:2rem;color:var(--green)}
+.equals-sign{font-family:var(--font-num);font-size:2rem;color:var(--yellow)}
+.result-box{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.6rem;color:var(--yellow)}
 .eg-emoji{font-size:1.6rem;line-height:1}
-.plus-sign{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--green)}
-.equals-sign{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--yellow)}
-.result-box{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--yellow)}
-
-/* ── EMOJI REMOVE ── */
+/* emoji remove */
 .emoji-remove-wrap{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0;padding:12px;background:var(--card2);border-radius:14px}
 .er-emoji{font-size:1.8rem;transition:opacity .3s,transform .3s}
 .er-emoji.removed{opacity:.15;transform:scale(.7)}
-
-/* ── SHARE VISUAL ── */
+/* share visual */
 .share-wrap{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}
 .share-group{background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:4px;min-width:70px;justify-content:center}
-.share-label{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;text-align:center;margin-top:4px;font-weight:700}
-
-/* ── EMOJI GROUPS (multiplication) ── */
+.share-label{font-size:.65rem;color:var(--muted);font-family:var(--font-en);text-align:center;margin-top:4px;font-weight:700}
+/* multiplication groups */
 .mult-groups{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:12px 0}
 .mult-group{background:var(--card2);border:2px dashed var(--border);border-radius:14px;padding:10px;display:flex;flex-wrap:wrap;gap:3px;justify-content:center;min-width:60px}
-
-/* ── TAP OPTIONS ── */
-.tap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:480px}
-.tap-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:18px 10px;font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--text);cursor:pointer;text-align:center;transition:all .15s}
-.tap-btn:active{transform:scale(.94)}
-.tap-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green);color:var(--green)}
-.tap-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red);color:var(--red)}
-
-/* ── INPUT ── */
+/* tap / mcq options — shared */
+.opts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:500px}
+.opt{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:16px 10px;color:var(--text);cursor:pointer;transition:all .15s;text-align:center}
+.opt:active{transform:scale(.94)}
+.opt.correct{background:rgba(63,185,80,.2);border-color:var(--green)}
+.opt.wrong{background:rgba(248,81,73,.2);border-color:var(--red)}
+.opt-num{font-family:var(--font-num);font-size:1.7rem}
+.opt-gu{font-size:.95rem;font-weight:700;line-height:1.5}
+.opt-en{font-family:var(--font-en);font-size:.62rem;color:var(--muted);margin-top:2px}
+/* input */
 .input-wrap{display:flex;gap:8px;width:100%;max-width:300px;margin-top:8px;align-items:stretch}
-.ans-inp{flex:1;min-width:0;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:14px 10px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.8rem;text-align:center;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.ans-inp{flex:1;min-width:0;background:var(--card2);border:2px solid var(--border);border-radius:14px;padding:14px 10px;color:var(--text);font-family:var(--font-num);font-size:1.8rem;text-align:center;outline:none;transition:border-color .2s;-webkit-appearance:none}
 .ans-inp:focus{border-color:var(--blue)}
-.go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 20px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;transition:transform .15s;flex-shrink:0}
-.go-btn:active{transform:scale(.93)}
-
-/* ── MISSING NUMBER ── */
+.go-btn{background:var(--blue);border:none;border-radius:14px;padding:14px 20px;color:white;font-family:var(--font-num);font-size:1.1rem;cursor:pointer;transition:transform .15s;flex-shrink:0}
+.go-btn:active{transform:scale(.95)}
+/* missing number */
 .missing-wrap{display:flex;align-items:center;gap:8px;justify-content:center;margin:12px 0;flex-wrap:wrap}
-.missing-part{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--text)}
-.missing-blank{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--yellow)}
-
-/* ── DRAG SUM ── */
+.missing-part{font-family:var(--font-num);font-size:2rem}
+.missing-blank{width:56px;height:56px;border:3px dashed var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.8rem;color:var(--yellow)}
+/* drag sum */
 .drag-pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
-.drag-num{width:52px;height:52px;background:var(--card2);border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.4rem;cursor:pointer;transition:all .2s;user-select:none}
+.drag-num{width:52px;height:52px;background:var(--card2);border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.4rem;cursor:pointer;transition:all .2s}
 .drag-num.selected{border-color:var(--blue);background:rgba(88,166,255,.15);color:var(--blue)}
 .drag-num.used{opacity:.25;pointer-events:none}
 .drag-slots{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px 0}
-.drag-slot{width:56px;height:56px;border:3px dashed rgba(255,255,255,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--muted)}
+.drag-slot{width:56px;height:56px;border:3px dashed rgba(255,255,255,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.6rem;color:var(--muted)}
 .drag-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.1);color:var(--text)}
-.drag-target{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--yellow);text-align:center;margin:4px 0}
-
-/* ── VISUAL SORT ── */
+.drag-target{font-family:var(--font-num);font-size:1.2rem;color:var(--yellow);text-align:center;margin:4px 0}
+/* visual sort */
 .vsort-pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
-.vsort-card{width:72px;height:72px;background:var(--card2);border:2px solid var(--border);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:all .15s}
+.vsort-card{width:72px;height:72px;background:var(--card2);border:2px solid var(--border);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
 .vsort-card:active{transform:scale(.9)}
 .vsort-card.selected{border-color:var(--yellow);background:rgba(240,192,64,.12)}
 .vsort-card.placed{opacity:.25;pointer-events:none}
 .vsort-icon{font-size:2rem}
-.vsort-label{font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;margin-top:2px;text-align:center}
+.vsort-label{font-size:.55rem;color:var(--muted);font-family:var(--font-en);font-weight:700;margin-top:2px;text-align:center}
 .vsort-slots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:10px;border:2px dashed rgba(255,255,255,.1);border-radius:16px;min-height:88px;align-items:center;margin:8px 0}
 .vsort-slot{width:72px;height:72px;border:2px dashed rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.02)}
 .vsort-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.08)}
-.slot-num{font-size:.65rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700}
-
-/* ── BINARY ── */
+.slot-num{font-size:.65rem;color:var(--muted);font-family:var(--font-en);font-weight:700}
+/* binary */
 .binary-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}
-.bit{width:58px;height:58px;border-radius:14px;border:3px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;user-select:none;background:var(--card2)}
+.bit{width:58px;height:58px;border-radius:14px;border:3px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;background:var(--card2)}
 .bit.on{background:var(--blue);border-color:var(--blue);box-shadow:0 0 18px rgba(88,166,255,.5)}
-.bit-v{font-family:'Fredoka One',cursive;font-size:1.4rem}
-.bit-p{font-size:.52rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;margin-top:2px}
+.bit-v{font-family:var(--font-num);font-size:1.4rem}
+.bit-p{font-size:.52rem;color:var(--muted);font-family:var(--font-en);font-weight:700;margin-top:2px}
 .bit.on .bit-p{color:rgba(255,255,255,.7)}
-.encode-total{text-align:center;font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--yellow);margin:4px 0}
-
-/* ── LOGIC GATE ── */
+.encode-total{text-align:center;font-family:var(--font-num);font-size:1.1rem;color:var(--yellow);margin:4px 0}
+/* logic gate */
 .gate-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
 .gate-in{width:58px;height:58px;border-radius:14px;border:3px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card2);transition:all .15s}
 .gate-in.on{background:var(--green);border-color:var(--green);box-shadow:0 0 16px rgba(63,185,80,.4)}
-.gi-v{font-family:'Fredoka One',cursive;font-size:1.5rem}
-.gi-l{font-size:.5rem;color:rgba(255,255,255,.5);font-family:'Nunito',sans-serif;font-weight:700}
-.gate-sym{background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:8px 14px;font-family:'Fredoka One',cursive;font-size:1rem;color:var(--yellow)}
+.gi-v{font-family:var(--font-num);font-size:1.5rem}
+.gi-l{font-size:.5rem;color:rgba(255,255,255,.5);font-family:var(--font-en);font-weight:700}
+.gate-sym{background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:8px 14px;font-family:var(--font-num);font-size:1rem;color:var(--yellow)}
 .gate-arr{font-size:1.2rem;color:var(--muted)}
 .gate-out{width:58px;height:58px;border-radius:14px;border:3px solid var(--purple);background:rgba(188,140,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.go-v{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--purple)}
-.go-l{font-size:.5rem;color:var(--purple);opacity:.6;font-family:'Nunito',sans-serif;font-weight:700}
-
-/* ── MCQ ── */
-.mcq-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:500px}
-.mcq-btn{background:var(--card2);border:2px solid var(--border);border-radius:16px;padding:14px 10px;color:var(--text);cursor:pointer;transition:all .15s;text-align:center;user-select:none}
-.mcq-btn:active{transform:scale(.94)}
-.mcq-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:700;line-height:1.5}
-.mcq-en{font-family:'Nunito',sans-serif;font-size:.62rem;color:var(--muted);margin-top:2px}
-.mcq-btn.correct{background:rgba(63,185,80,.2);border-color:var(--green)}
-.mcq-btn.wrong{background:rgba(248,81,73,.2);border-color:var(--red)}
-
-/* ── DATA BARS ── */
+.go-v{font-family:var(--font-num);font-size:1.5rem;color:var(--purple)}
+.go-l{font-size:.5rem;color:rgba(188,140,255,.6);font-family:var(--font-en);font-weight:700}
+/* pattern */
+.visual-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.vis-card{width:60px;height:60px;background:var(--card2);border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:1.4rem}
+.vis-card.unknown{border:2px dashed var(--yellow);background:rgba(240,192,64,.08);color:var(--yellow);font-size:1.8rem}
+/* data bars */
 .bar-chart{display:flex;align-items:flex-end;gap:8px;height:120px;justify-content:center;margin:12px 0;padding:0 6px}
 .bar-col{display:flex;flex-direction:column;align-items:center;gap:4px}
 .bar{width:36px;border-radius:6px 6px 0 0;min-height:4px;transition:height .5s cubic-bezier(.34,1.56,.64,1)}
-.bar-lbl{font-size:.6rem;color:var(--muted);font-weight:700;font-family:'Nunito',sans-serif}
-.bar-num{font-size:.65rem;font-weight:800;font-family:'Fredoka One',cursive}
-
-/* ── SPEED ROUND ── */
+.bar-lbl{font-size:.6rem;color:var(--muted);font-weight:700;font-family:var(--font-en)}
+.bar-num{font-size:.65rem;font-weight:800;font-family:var(--font-num)}
+/* speed round */
 .speed-wrap{width:100%;max-width:420px;text-align:center}
-.speed-timer{font-family:'Fredoka One',cursive;font-size:2.5rem;color:var(--yellow);margin-bottom:8px;transition:color .3s}
+.speed-timer{font-family:var(--font-num);font-size:2.5rem;color:var(--yellow);margin-bottom:8px;transition:color .3s}
 .speed-timer.urgent{color:var(--red);animation:pulse .5s ease infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.speed-sum{font-family:'Fredoka One',cursive;font-size:2.5rem;margin:12px 0;color:var(--text)}
-.speed-inp{width:120px;background:var(--card2);border:3px solid var(--border);border-radius:14px;padding:12px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.8rem;text-align:center;outline:none;margin:0 auto;display:block;transition:border-color .2s}
+.speed-sum{font-family:var(--font-num);font-size:2.5rem;margin:12px 0}
+.speed-inp{width:120px;background:var(--card2);border:3px solid var(--border);border-radius:14px;padding:12px;color:var(--text);font-family:var(--font-num);font-size:1.8rem;text-align:center;outline:none;margin:0 auto;display:block;transition:border-color .2s}
 .speed-inp:focus{border-color:var(--blue)}
-.speed-score{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--muted);margin-top:8px}
-.speed-correct{color:var(--green);animation:fadeUp .3s ease}
-.speed-wrong{color:var(--red);animation:fadeUp .3s ease}
+.speed-score{font-family:var(--font-num);font-size:1rem;color:var(--muted);margin-top:8px}
 
-/* ── FEEDBACK ── */
-.fb{width:100%;max-width:520px;border-radius:16px;padding:13px 16px;font-weight:700;font-size:.86rem;line-height:1.6;display:none;animation:fadeUp .3s ease}
+/* ════════════════════════════════════════
+   FEEDBACK + NEXT
+════════════════════════════════════════ */
+.fb{width:100%;max-width:520px;border-radius:16px;padding:13px 16px;font-weight:700;font-size:.9rem;line-height:1.6;display:none;animation:fadeUp .3s ease}
 .fb.show{display:block}
 .fb.ok{background:rgba(63,185,80,.12);border:2px solid var(--green);color:var(--green)}
 .fb.bad{background:rgba(248,81,73,.12);border:2px solid var(--red);color:var(--red)}
-.fb-gu{font-family:'Noto Sans Gujarati',sans-serif}
-.fb-en{font-family:'Nunito',sans-serif;font-size:.72rem;opacity:.7;display:block;margin-top:3px}
-
-.nxt-btn{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:13px 28px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer;display:none;width:100%;max-width:520px;margin-top:12px;transition:transform .15s}
+.fb.warning{background:rgba(255,166,87,.12);border:2px solid var(--orange);color:var(--orange)}
+.fb-en{font-family:var(--font-en);font-size:.75rem;opacity:.75;display:block;margin-top:3px}
+.nxt-btn{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:13px 28px;color:white;font-family:var(--font-num);font-size:1rem;cursor:pointer;display:none;width:100%;max-width:520px;margin-top:12px;transition:transform .15s}
 .nxt-btn.show{display:block}
 .nxt-btn:active{transform:scale(.97)}
 
-/* ── COMPLETE ── */
+/* ════════════════════════════════════════
+   ATTEMPTS DOTS
+════════════════════════════════════════ */
+.attempts-row{display:flex;gap:6px;justify-content:center;margin-bottom:10px}
+.attempt-dot{width:12px;height:12px;border-radius:50%;background:var(--yellow);transition:background .3s}
+.attempt-dot.used{background:rgba(255,255,255,.15)}
+
+/* ════════════════════════════════════════
+   COMPLETE
+════════════════════════════════════════ */
 .complete{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 20px;flex:1}
 .complete.show{display:flex}
 .c-big{font-size:4.5rem;margin-bottom:12px;animation:bounce .6s ease}
 @keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
 .c-stars{font-size:2rem;letter-spacing:4px;margin-bottom:6px}
-.c-msg-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.92rem;color:var(--muted);max-width:320px;line-height:1.7;margin-bottom:4px}
-.c-msg-en{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);max-width:320px;line-height:1.6;margin-bottom:16px;opacity:.6}
+.c-msg-gu{font-size:.92rem;color:var(--muted);max-width:320px;line-height:1.7;margin-bottom:4px}
+.c-msg-en{font-family:var(--font-en);font-size:.72rem;color:var(--muted);max-width:320px;line-height:1.6;margin-bottom:16px;opacity:.6}
 .c-trophy{background:rgba(240,192,64,.12);border:2px solid var(--yellow);border-radius:16px;padding:12px 24px;font-size:1.8rem;margin-bottom:6px}
-.c-trophy-name{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--yellow);margin-bottom:14px}
-.c-xp{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--yellow);margin-bottom:18px}
+.c-trophy-name{font-family:var(--font-num);font-size:1rem;color:var(--yellow);margin-bottom:14px}
+.c-xp{font-family:var(--font-num);font-size:1.3rem;color:var(--yellow);margin-bottom:18px}
 .c-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.c-btn{border:none;border-radius:14px;padding:12px 24px;font-family:'Fredoka One',cursive;font-size:.95rem;cursor:pointer;transition:transform .15s}
+.c-btn{border:none;border-radius:14px;padding:12px 24px;font-family:var(--font-num);font-size:.95rem;cursor:pointer;transition:transform .15s}
 .c-btn:active{transform:scale(.95)}
 .c-btn.primary{background:linear-gradient(135deg,var(--blue),var(--purple));color:white}
 .c-btn.secondary{background:var(--card2);color:var(--text);border:2px solid var(--border)}
 
-/* ── TEACHER OVERLAY ── */
+/* ════════════════════════════════════════
+   SPEAK BUTTON
+════════════════════════════════════════ */
+.speak-btn{background:rgba(88,166,255,.12);border:2px solid rgba(88,166,255,.25);border-radius:50px;padding:7px 14px;color:var(--blue);font-family:var(--font-en);font-size:.82rem;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .2s;white-space:nowrap;max-width:220px;overflow:hidden}
+.speak-btn:active{transform:scale(.94)}
+.speak-btn.speaking{background:rgba(88,166,255,.25);border-color:var(--blue);animation:pulse .8s ease infinite}
+
+/* ════════════════════════════════════════
+   TEACHER GUIDE
+════════════════════════════════════════ */
 .t-fab{position:fixed;bottom:22px;right:16px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;color:white;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 18px rgba(188,140,255,.4);z-index:100;display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .t-fab:active{transform:scale(.88)}
 .t-overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column}
 .t-overlay.show{display:flex}
 .t-backdrop{flex:1;background:rgba(0,0,0,.65);backdrop-filter:blur(3px)}
-.t-panel{background:var(--card);border-top:2px solid var(--purple);border-radius:24px 24px 0 0;max-height:78vh;display:flex;flex-direction:column;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
+.t-panel{background:var(--card);border-top:2px solid var(--purple);border-radius:24px 24px 0 0;max-height:78vh;display:flex;flex-direction:column}
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:none}}
+.t-panel{animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
 .t-ph{display:flex;align-items:center;padding:14px 16px 0;gap:10px}
-.t-ptitle{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:800;color:var(--purple);flex:1}
-.t-ptitle-en{font-family:'Fredoka One',cursive;font-size:.62rem;opacity:.35}
+.t-ptitle{font-size:.95rem;font-weight:800;color:var(--purple);flex:1}
+.t-ptitle-en{font-family:var(--font-num);font-size:.62rem;opacity:.35}
 .t-close{background:rgba(255,255,255,.07);border:none;color:var(--text);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:.9rem}
 .t-body{overflow-y:auto;padding:12px 16px 28px}
 .t-sec{margin-bottom:16px}
-.t-sec-h{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--yellow);font-family:'Nunito',sans-serif;margin-bottom:7px;display:flex;align-items:center;gap:5px}
-.t-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.88rem;line-height:1.8;color:var(--text)}
+.t-sec-h{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--yellow);font-family:var(--font-en);margin-bottom:7px}
+.t-gu{font-size:.9rem;line-height:1.8}
 .t-story{background:rgba(240,192,64,.07);border:1px solid rgba(240,192,64,.18);border-radius:12px;padding:12px 14px;margin-top:6px}
 .t-script{background:rgba(88,166,255,.07);border:1px solid rgba(88,166,255,.18);border-radius:12px;padding:12px 14px;margin-top:6px}
 .t-vocab{display:flex;flex-wrap:wrap;gap:7px;margin-top:7px}
 .t-voc{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:6px 11px}
-.t-voc-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.78rem;font-weight:700;display:block;line-height:1.4}
-.t-voc-en{font-family:'Nunito',sans-serif;font-size:.6rem;color:var(--muted)}
+.t-voc-gu{font-size:.78rem;font-weight:700;display:block;line-height:1.4}
+.t-voc-en{font-family:var(--font-en);font-size:.6rem;color:var(--muted)}
 
-/* ── NAME MODAL ── */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
-.modal.show{display:flex}
-.modal-box{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:26px 22px;width:100%;max-width:320px;text-align:center}
-.modal-tgu{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.05rem;font-weight:800;margin-bottom:3px}
-.modal-ten{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);margin-bottom:16px}
-.modal-inp{width:100%;background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:13px;color:var(--text);font-family:'Fredoka One',cursive;font-size:1.3rem;text-align:center;outline:none;margin-bottom:12px}
-.modal-inp:focus{border-color:var(--blue)}
-.modal-save{width:100%;background:var(--blue);border:none;border-radius:12px;padding:12px;color:white;font-family:'Fredoka One',cursive;font-size:1rem;cursor:pointer}
-
-/* ── CONFETTI ── */
-.confetti-piece{position:fixed;width:8px;height:8px;border-radius:2px;animation:fall 2.5s ease-in forwards;pointer-events:none;z-index:999}
-@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
-
-@media(max-width:360px){.cat-grid{grid-template-columns:1fr 1fr}.tap-grid{grid-template-columns:1fr 1fr}}
-
-/* ── SETTINGS ── */
-.s-fab{position:fixed;bottom:22px;left:16px;width:50px;height:50px;border-radius:50%;background:var(--card2);border:2px solid var(--border);color:var(--muted);font-size:1.3rem;cursor:pointer;z-index:100;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+/* ════════════════════════════════════════
+   SETTINGS
+════════════════════════════════════════ */
+.s-fab{position:fixed;bottom:22px;left:16px;width:50px;height:50px;border-radius:50%;background:var(--card2);border:2px solid var(--border);color:var(--muted);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s;z-index:100}
 .s-fab:active{transform:scale(.88)}
 .s-overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column}
 .s-overlay.show{display:flex}
 .s-backdrop{flex:1;background:rgba(0,0,0,.65);backdrop-filter:blur(3px)}
-.s-panel{background:var(--card);border-top:2px solid var(--border);border-radius:24px 24px 0 0;padding:0;max-height:60vh;display:flex;flex-direction:column;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
+.s-panel{background:var(--card);border-top:2px solid var(--border);border-radius:24px 24px 0 0;max-height:60vh;display:flex;flex-direction:column;animation:slideUp .3s cubic-bezier(.34,1.56,.64,1)}
 .s-ph{display:flex;align-items:center;padding:16px 18px;gap:10px;border-bottom:1px solid var(--border)}
-.s-ptitle{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800;flex:1}
+.s-ptitle{font-size:1rem;font-weight:800;flex:1}
 .s-close{background:rgba(255,255,255,.07);border:none;color:var(--text);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:1rem}
 .s-body{padding:20px 18px 30px;overflow-y:auto}
 .s-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.s-label{font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;font-weight:700;flex:1}
-.s-label-en{font-family:'Nunito',sans-serif;font-size:.65rem;color:var(--muted);display:block;margin-top:2px}
+.s-label{font-size:.9rem;font-weight:700;flex:1}
+.s-label-en{font-family:var(--font-en);font-size:.65rem;color:var(--muted);display:block;margin-top:2px}
 .fs-btns{display:flex;gap:8px}
-.fs-btn{width:44px;height:44px;border-radius:12px;background:var(--card2);border:2px solid var(--border);color:var(--text);font-family:'Fredoka One',cursive;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.fs-btn{width:44px;height:44px;border-radius:12px;background:var(--card2);border:2px solid var(--border);color:var(--text);font-family:var(--font-num);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
 .fs-btn.active{background:var(--blue);border-color:var(--blue);color:white}
 .s-toggle{width:52px;height:28px;border-radius:50px;background:var(--card2);border:2px solid var(--border);cursor:pointer;position:relative;transition:background .2s}
 .s-toggle.on{background:var(--green);border-color:var(--green)}
 .s-toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:white;transition:transform .2s}
 .s-toggle.on::after{transform:translateX(24px)}
-.s-reset{background:rgba(248,81,73,.1);border:2px solid rgba(248,81,73,.3);border-radius:12px;padding:10px 18px;color:var(--red);font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;width:100%;margin-top:6px}
+.s-reset{background:rgba(248,81,73,.1);border:2px solid rgba(248,81,73,.3);border-radius:12px;padding:10px 18px;color:var(--red);font-family:var(--font-en);font-size:.82rem;font-weight:800;cursor:pointer;width:100%;margin-top:6px}
 
-/* ── SPEECH + ATTEMPTS ── */
-.speak-btn{background:rgba(88,166,255,.12);border:2px solid rgba(88,166,255,.25);border-radius:50px;padding:7px 14px;color:var(--blue);font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .2s;white-space:nowrap;max-width:220px;overflow:hidden}
-.speak-btn:active{transform:scale(.94)}
-.speak-btn.speaking{background:rgba(88,166,255,.25);border-color:var(--blue);animation:pulse .8s ease infinite}
-.attempts-row{display:flex;gap:6px;justify-content:center;margin-bottom:10px}
-.attempt-dot{width:12px;height:12px;border-radius:50%;background:var(--yellow);transition:background .3s}
-.attempt-dot.used{background:rgba(255,255,255,.15)}
-.fb.warning{background:rgba(255,166,87,.12);border:2px solid var(--orange);color:var(--orange)}
-
-/* ── STREAK CELEBRATION ── */
-.streak-modal{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);backdrop-filter:blur(6px)}
-.streak-modal.show{display:flex}
+/* ════════════════════════════════════════
+   STREAK / MODALS
+════════════════════════════════════════ */
+.streak-modal,.pin-overlay,.modal{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);padding:20px}
+.streak-modal.show,.pin-overlay.show,.modal.show{display:flex}
 .streak-box{background:var(--card);border:2px solid var(--orange);border-radius:28px;padding:36px 30px;text-align:center;max-width:320px;animation:bounce .5s ease}
 .streak-fire{font-size:5rem;margin-bottom:10px}
-.streak-title{font-family:'Fredoka One',cursive;font-size:2rem;color:var(--orange);margin-bottom:8px}
-.streak-sub{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
-.streak-ok{background:linear-gradient(135deg,var(--orange),var(--yellow));border:none;border-radius:14px;padding:13px 32px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;width:100%}
+.streak-title{font-family:var(--font-num);font-size:2rem;color:var(--orange);margin-bottom:8px}
+.streak-sub{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.streak-ok{background:linear-gradient(135deg,var(--orange),var(--yellow));border:none;border-radius:14px;padding:13px 32px;color:white;font-family:var(--font-num);font-size:1.1rem;cursor:pointer;width:100%}
 
-/* ── WRONG REVIEW ── */
+/* ════════════════════════════════════════
+   REVIEW SCREEN
+════════════════════════════════════════ */
 .review-screen{display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px 80px;flex:1;overflow-y:auto}
 .review-screen.show{display:flex}
-.review-title{font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--red);margin-bottom:6px;text-align:center}
-.review-sub{font-family:'Noto Sans Gujarati',sans-serif;font-size:.85rem;color:var(--muted);margin-bottom:20px;text-align:center}
+.review-title{font-family:var(--font-num);font-size:1.6rem;color:var(--red);margin-bottom:6px;text-align:center}
+.review-sub{font-size:.85rem;color:var(--muted);margin-bottom:20px;text-align:center}
 .review-card{background:var(--card);border:2px solid rgba(248,81,73,.3);border-radius:18px;padding:18px 20px;width:100%;max-width:480px;margin-bottom:12px}
-.review-q{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:8px}
+.review-q{font-size:.95rem;font-weight:700;margin-bottom:8px}
 .review-ans{display:flex;gap:12px;align-items:center}
-.review-wrong{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--red);text-decoration:line-through;opacity:.6}
-.review-right{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--green)}
-.review-arrow{color:var(--muted);font-size:1rem}
-.review-done{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:14px 32px;color:white;font-family:'Fredoka One',cursive;font-size:1.1rem;cursor:pointer;margin-top:8px;width:100%;max-width:480px}
+.review-wrong{font-family:var(--font-num);font-size:1.3rem;color:var(--red);text-decoration:line-through;opacity:.6}
+.review-right{font-family:var(--font-num);font-size:1.3rem;color:var(--green)}
+.review-done{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;border-radius:16px;padding:14px 32px;color:white;font-family:var(--font-num);font-size:1.1rem;cursor:pointer;margin-top:8px;width:100%;max-width:480px}
 
-/* ── PIN LOCK ── */
-.pin-overlay{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);backdrop-filter:blur(8px)}
-.pin-overlay.show{display:flex}
-.pin-box{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:28px 24px;text-align:center;width:100%;max-width:300px}
-.pin-title{font-family:'Noto Sans Gujarati',sans-serif;font-size:1rem;font-weight:800;margin-bottom:4px}
-.pin-sub{font-family:'Nunito',sans-serif;font-size:.72rem;color:var(--muted);margin-bottom:18px}
+/* ════════════════════════════════════════
+   PIN
+════════════════════════════════════════ */
+.pin-box,.modal-box{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:26px 22px;width:100%;max-width:300px;text-align:center}
+.pin-title,.modal-tgu{font-size:1.05rem;font-weight:800;margin-bottom:3px}
+.pin-sub,.modal-ten{font-family:var(--font-en);font-size:.72rem;color:var(--muted);margin-bottom:16px}
 .pin-dots{display:flex;gap:12px;justify-content:center;margin-bottom:20px}
 .pin-dot{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.15);transition:background .2s}
 .pin-dot.filled{background:var(--purple)}
 .pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.pin-btn{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px;font-family:'Fredoka One',cursive;font-size:1.4rem;cursor:pointer;transition:all .15s;color:var(--text)}
+.pin-btn{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px;font-family:var(--font-num);font-size:1.4rem;cursor:pointer;transition:all .15s;color:var(--text)}
 .pin-btn:active{transform:scale(.92);background:var(--purple)}
-.pin-error{color:var(--red);font-family:'Nunito',sans-serif;font-size:.78rem;margin-top:8px;min-height:20px}
+.pin-error{color:var(--red);font-family:var(--font-en);font-size:.78rem;margin-top:8px;min-height:20px}
+.modal-inp{width:100%;background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:13px;color:var(--text);font-family:var(--font-num);font-size:1.3rem;text-align:center;outline:none;margin-bottom:12px}
+.modal-inp:focus{border-color:var(--blue)}
+.modal-save{width:100%;background:var(--blue);border:none;border-radius:12px;padding:12px;color:white;font-family:var(--font-num);font-size:1rem;cursor:pointer}
 
-/* ── NOTEBOOK / PROGRESS ── */
+/* ════════════════════════════════════════
+   NOTEBOOK
+════════════════════════════════════════ */
 .notebook-screen{display:none;flex:1;overflow-y:auto;padding:16px 14px 90px}
 .notebook-screen.active{display:block}
-.nb-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0 0 12px;font-family:'Nunito',sans-serif;display:flex;align-items:center;gap:4px}
+.nb-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:0 0 12px;font-family:var(--font-en);display:flex;align-items:center;gap:4px}
 .nb-section{margin-bottom:24px}
-.nb-head{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.nb-head{font-family:var(--font-num);font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .xp-history{display:flex;align-items:flex-end;gap:6px;height:80px;padding:0 4px}
 .xp-bar-day{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
 .xp-bar-fill{width:100%;border-radius:4px 4px 0 0;background:var(--blue);min-height:2px;transition:height .5s ease}
-.xp-bar-lbl{font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700}
+.xp-bar-lbl{font-size:.55rem;color:var(--muted);font-family:var(--font-en);font-weight:700}
 .nb-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .nb-stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center}
-.nb-stat-val{font-family:'Fredoka One',cursive;font-size:2rem;margin-bottom:4px}
-.nb-stat-lbl{font-family:'Noto Sans Gujarati',sans-serif;font-size:.75rem;color:var(--muted)}
+.nb-stat-val{font-family:var(--font-num);font-size:2rem;margin-bottom:4px}
+.nb-stat-lbl{font-size:.75rem;color:var(--muted)}
 .nb-trophy-grid{display:flex;flex-wrap:wrap;gap:10px}
 .nb-trophy{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px;flex:1;min-width:140px}
 .nb-trophy-icon{font-size:1.8rem}
-.nb-trophy-name{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:800;color:var(--text)}
+.nb-trophy-name{font-family:var(--font-en);font-size:.75rem;font-weight:800}
 .nb-trophy.locked{opacity:.3}
 
-/* ── RANDOM CHALLENGE BTN ── */
-.random-btn{background:linear-gradient(135deg,rgba(255,166,87,.15),rgba(248,81,73,.1));border:2px solid rgba(255,166,87,.3);border-radius:20px;padding:16px;margin:0 14px 14px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .2s}
-.random-btn:active{transform:scale(.97)}
-.random-icon{font-size:2rem;flex-shrink:0}
-.random-text-gu{font-family:'Noto Sans Gujarati',sans-serif;font-size:.95rem;font-weight:800;color:var(--orange)}
-.random-text-en{font-family:'Nunito',sans-serif;font-size:.7rem;color:var(--muted)}
-
-/* ── AUDIO FEEDBACK ── */
-/* (generated via Web Audio API — no CSS needed) */
+/* ════════════════════════════════════════
+   CONFETTI
+════════════════════════════════════════ */
+.confetti-piece{position:fixed;width:8px;height:8px;border-radius:2px;animation:fall 2.5s ease-in forwards;pointer-events:none;z-index:999}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 </style>
 </head>
 <body>
@@ -394,7 +409,7 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
     <span id="logoTxt">Yuval's Lab</span>
     <span>🔬 COMPUTER SCIENTIST</span>
   </div>
-  <button onclick="openNotebook()" style="background:rgba(255,255,255,.07);border:1px solid var(--border);border-radius:10px;padding:6px 10px;color:var(--muted);font-size:.75rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;flex-shrink:0">📓</button>
+  <button onclick="openNotebook()" style="background:rgba(255,255,255,.07);border:1px solid var(--border);border-radius:10px;padding:6px 10px;color:var(--muted);font-size:.75rem;cursor:pointer;font-family:var(--font-en);font-weight:800;flex-shrink:0">📓</button>
   <div class="xp-col">
     <div class="xp-track"><div class="xp-fill" id="xpFill"></div></div>
     <div class="xp-row"><span id="xpLbl">0 XP</span><span id="lvlLbl">Lv 1</span></div>
@@ -419,14 +434,6 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
     <div class="trophy-row" id="trophyRow"></div>
   </div>
 
-  <button class="random-btn" onclick="launchRandom()">
-    <div class="random-icon">🎲</div>
-    <div>
-      <div class="random-text-gu">Random Challenge! મને surprise કરો!</div>
-      <div class="random-text-en">Pick a random unmastered challenge for me</div>
-    </div>
-    <div style="margin-left:auto;font-size:1.5rem">→</div>
-  </button>
   <div id="sectionsWrap"></div>
 </div>
 
@@ -511,15 +518,15 @@ body{font-family:'Noto Sans Gujarati','Baloo 2',sans-serif;display:flex;flex-dir
       </div>
       <div class="s-row" style="margin-bottom:8px">
         <div class="s-label" style="font-size:.75rem">
-          <span id="voiceStatus" style="color:var(--muted);font-family:'Nunito',sans-serif">Checking voices...</span>
+          <span id="voiceStatus" style="color:var(--muted);font-family:var(--font-en)">Checking voices...</span>
         </div>
-        <button style="background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:6px 12px;color:var(--blue);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800" onclick="checkVoices()">🔍 Check</button>
+        <button style="background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:6px 12px;color:var(--blue);font-size:.72rem;cursor:pointer;font-family:var(--font-en);font-weight:800" onclick="checkVoices()">🔍 Check</button>
       </div>
       <div class="s-row" style="margin-bottom:10px">
         <div class="s-label">🔐 Change PIN
           <span class="s-label-en">Default is 1234</span>
         </div>
-        <button style="background:rgba(188,140,255,.1);border:1px solid rgba(188,140,255,.3);border-radius:8px;padding:6px 12px;color:var(--purple);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800" onclick="changePIN()">Change</button>
+        <button style="background:rgba(188,140,255,.1);border:1px solid rgba(188,140,255,.3);border-radius:8px;padding:6px 12px;color:var(--purple);font-size:.72rem;cursor:pointer;font-family:var(--font-en);font-weight:800" onclick="changePIN()">Change</button>
       </div>
       <button class="s-reset" onclick="resetSettings()">🔄 Reset to defaults</button>
     </div>
@@ -753,7 +760,7 @@ function showReviewScreen(){
   list.innerHTML = wrongAnswers.map(w=>`
     <div class="review-card">
       <div class="review-q">${w.q.textGu}</div>
-      <div class="review-q" style="font-family:'Nunito',sans-serif;font-size:.75rem;opacity:.6">${w.q.textEn||''}</div>
+      <div class="review-q" style="font-family:var(--font-en);font-size:.75rem;opacity:.6">${w.q.textEn||''}</div>
       <div class="review-ans">
         <div class="review-wrong">${w.wrongVal}</div>
         <div class="review-arrow">→</div>
@@ -833,7 +840,7 @@ function renderNotebook(){
     const h = Math.round((d.xp/maxXP)*70)+4;
     const active = d.xp > 0;
     return `<div class="xp-bar-day">
-      <div style="font-size:.6rem;color:${active?'var(--yellow)':'var(--muted)'};font-family:'Fredoka One',cursive">${d.xp||''}</div>
+      <div style="font-size:.6rem;color:${active?'var(--yellow)':'var(--muted)'};font-family:var(--font-num)">${d.xp||''}</div>
       <div class="xp-bar-fill" style="height:${h}px;background:${active?'var(--blue)':'rgba(255,255,255,.07)'}"></div>
       <div class="xp-bar-lbl">${d.lbl}</div>
     </div>`;
@@ -858,32 +865,10 @@ function renderNotebook(){
     <div class="nb-trophy ${t.earned?'':'locked'}">
       <div class="nb-trophy-icon">${t.icon}</div>
       <div class="nb-trophy-name">${t.nameGu}<br><span style="opacity:.5;font-size:.65rem">${t.nameEn}</span></div>
-    </div>`).join('') || '<div style="color:var(--muted);font-family:\'Noto Sans Gujarati\',sans-serif;font-size:.85rem">Complete challenges to earn trophies!</div>';
+    </div>`).join('') || '<div style="color:var(--muted);font-size:.85rem">Complete challenges to earn trophies!</div>';
 }
 
-// ══════════════════════════════════════
-//  RANDOM CHALLENGE LAUNCHER
-// ══════════════════════════════════════
-function launchRandom(){
-  if(!registry) return;
-  // Collect all unmastered challenges (stars < 4)
-  const candidates = [];
-  registry.sections.forEach(sec => sec.categories.forEach(cat => {
-    cat.challenges.forEach(ch => {
-      const path = `content/category/${cat.id}/${ch}.json`;
-      const d = challengeData[path];
-      if(d && S.getStars(d.id) < 4) candidates.push({path, cat});
-    });
-  }));
-  if(!candidates.length){
-    showToast('🏆 બધા challenges master! All mastered!');
-    return;
-  }
-  const pick = candidates[Math.floor(Math.random()*candidates.length)];
-  currentCat = pick.cat;
-  startChallenge(pick.path);
-  playTone(440,0.1); setTimeout(()=>playTone(554,0.1),100);
-}
+
 
 // ══════════════════════════════════════
 //  BOOT
@@ -1143,7 +1128,7 @@ function renderQ(){
     const emojis=Array(q.total).fill(q.emoji).map((e,i)=>
       `<span class="er-emoji${i>=q.total-q.remove?' removed':''}">${e}</span>`).join('');
     h+=`<div class="emoji-remove-wrap">${emojis}</div>`;
-    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} - ${q.remove} = ?</div>`;
+    h+=`<div style="text-align:center;font-family:var(--font-en);font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} - ${q.remove} = ?</div>`;
     h+=inputHtml(q.answer);
   }
 
@@ -1156,7 +1141,7 @@ function renderQ(){
       groups+=`<div class="share-group">${items}<div class="share-label">Friend ${g+1}</div></div>`;
     }
     h+=`<div class="share-wrap">${groups}</div>`;
-    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} ÷ ${q.groups} = each gets?</div>`;
+    h+=`<div style="text-align:center;font-family:var(--font-en);font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.total} ÷ ${q.groups} = each gets?</div>`;
     h+=inputHtml(q.answer);
   }
 
@@ -1168,7 +1153,7 @@ function renderQ(){
       gs+=`<div class="mult-group">${items}</div>`;
     }
     h+=`<div class="mult-groups">${gs}</div>`;
-    h+=`<div style="text-align:center;font-family:'Nunito',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.groups} groups × ${q.perGroup} = ?</div>`;
+    h+=`<div style="text-align:center;font-family:var(--font-en);font-size:.8rem;color:var(--muted);margin-bottom:8px">${q.groups} groups × ${q.perGroup} = ?</div>`;
     h+=inputHtml(q.answer);
   }
 
@@ -1176,7 +1161,7 @@ function renderQ(){
   else if(q.type==='tap-answer'){
     h+=`<div class="tap-grid">`;
     q.options.forEach((o,i)=>{
-      h+=`<div class="tap-btn" onclick="checkTap(${q.answer},${i})">${o}</div>`;
+      h+=`<div class="opt" onclick="checkTap(${q.answer},${i})"><span class="opt-num">${o}</span></div>`;
     });
     h+='</div>';
   }
@@ -1185,9 +1170,9 @@ function renderQ(){
   else if(q.type==='mcq'){
     h+=`<div class="mcq-grid">`;
     q.options.forEach((o,i)=>{
-      h+=`<div class="mcq-btn" onclick="checkMCQ(${q.answer},${i})">
-        <div class="mcq-gu">${o.gu}</div>
-        <div class="mcq-en">${o.en||''}</div>
+      h+=`<div class="opt" onclick="checkMCQ(${q.answer},${i})">
+        <div class="opt-gu">${o.gu}</div>
+        <div class="opt-en">${o.en||''}</div>
       </div>`;
     });
     h+='</div>';
@@ -1213,13 +1198,13 @@ function renderQ(){
 
   // ── DRAG SUM ──
   else if(q.type==='drag-sum'){
-    h+=`<div class="drag-target">Target: <span style="color:var(--yellow);font-family:'Fredoka One',cursive;font-size:1.4rem">${q.target}</span></div>`;
+    h+=`<div class="drag-target">Target: <span style="color:var(--yellow);font-family:var(--font-num);font-size:1.4rem">${q.target}</span></div>`;
     h+=`<div class="drag-slots">
       <div class="drag-slot" id="dslot0">?</div>
-      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem">+</div>
+      <div class="missing-part" style="font-family:var(--font-num);font-size:1.8rem">+</div>
       <div class="drag-slot" id="dslot1">?</div>
-      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem">=</div>
-      <div class="missing-part" style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--yellow)">${q.target}</div>
+      <div class="missing-part" style="font-family:var(--font-num);font-size:1.8rem">=</div>
+      <div class="missing-part" style="font-family:var(--font-num);font-size:1.8rem;color:var(--yellow)">${q.target}</div>
     </div>`;
     h+=`<div class="drag-pool">`;
     q.numbers.forEach((n,i)=>{
@@ -1231,8 +1216,8 @@ function renderQ(){
 
   // ── STORY PROBLEM ──
   else if(q.type==='story-problem'){
-    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${q.textGu}</div>`;
-    h+=`<div style="font-family:'Nunito',sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:8px">${q.textEn}</div>`;
+    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${q.textGu}</div>`;
+    h+=`<div style="font-family:var(--font-en);font-size:.75rem;color:var(--muted);margin-bottom:8px">${q.textEn}</div>`;
     h+=inputHtml(q.answer);
   }
 
@@ -1305,7 +1290,7 @@ function renderQ(){
     </div>`;
     h+=`<div class="tap-grid">`;
     q.options.forEach((o,i)=>{
-      h+=`<div class="tap-btn" onclick="checkGate(${q.answer},${i},'${o.gu}')">${o.gu}</div>`;
+      h+=`<div class="opt" onclick="checkGate(${q.answer},${i},'${o.gu}')">${o.gu}</div>`;
     });
     h+='</div>';
   }
@@ -1326,9 +1311,9 @@ function renderQ(){
     h+=`</div>`;
     h+=`<div class="mcq-grid">`;
     q.options.forEach((o,i)=>{
-      h+=`<div class="mcq-btn" onclick="checkMCQ(${q.answer},${i})">
-        <div class="mcq-gu">${o.gu}</div>
-        <div class="mcq-en">${o.en||''}</div>
+      h+=`<div class="opt" onclick="checkMCQ(${q.answer},${i})">
+        <div class="opt-gu">${o.gu}</div>
+        <div class="opt-en">${o.en||''}</div>
       </div>`;
     });
     h+='</div>';
@@ -1339,8 +1324,8 @@ function renderQ(){
     const rm=q._generated||{a:3,b:4,op:'+'};
     const opSym={'+':{gu:'વત્તા',en:'plus'},'-':{gu:'ઓછા',en:'minus'},'×':{gu:'ગુણ',en:'times'}}[rm.op]||{gu:'',en:''};
     h+=`<div style="text-align:center;margin:20px 0">
-      <div style="font-family:'Fredoka One',cursive;font-size:3.5rem;color:var(--text);letter-spacing:4px">${rm.a} ${rm.op} ${rm.b}</div>
-      <div style="font-family:'Noto Sans Gujarati',sans-serif;font-size:.9rem;color:var(--muted);margin-top:8px">${rm.a} ${opSym.gu} ${rm.b} = ?</div>
+      <div style="font-family:var(--font-num);font-size:3.5rem;color:var(--text);letter-spacing:4px">${rm.a} ${rm.op} ${rm.b}</div>
+      <div style="font-size:.9rem;color:var(--muted);margin-top:8px">${rm.a} ${opSym.gu} ${rm.b} = ?</div>
     </div>`;
     h+=inputHtml(rm.answer);
   }
@@ -1395,7 +1380,7 @@ function checkInput(ans){
 }
 function checkTap(correct,chosen){
   if(answered)return; answered=true;
-  document.querySelectorAll('.tap-btn').forEach((b,i)=>{
+  document.querySelectorAll('.opt').forEach((b,i)=>{
     if(i===correct)b.classList.add('correct');
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
@@ -1406,7 +1391,7 @@ function checkTap(correct,chosen){
 }
 function checkMCQ(correct,chosen){
   if(answered)return; answered=true;
-  document.querySelectorAll('.mcq-btn').forEach((b,i)=>{
+  document.querySelectorAll('.opt').forEach((b,i)=>{
     if(i===correct)b.classList.add('correct');
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
@@ -1419,7 +1404,7 @@ function checkGate(correct,chosen,label){
   if(answered)return; answered=true;
   const go=document.getElementById('gOut');
   if(go) go.textContent=label;
-  document.querySelectorAll('.tap-btn').forEach((b,i)=>{
+  document.querySelectorAll('.opt').forEach((b,i)=>{
     if(i===correct)b.classList.add('correct');
     else if(i===chosen)b.classList.add('wrong');
     b.onclick=null;
@@ -1488,7 +1473,7 @@ function vsortTap(cardIdx){
       vsortSlots[i]=origIdx;
       const slot=document.getElementById('vslot'+i);
       const step=q.steps[origIdx];
-      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:700;text-align:center">${step.labelGu}</div>`;
+      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:var(--font-en);font-weight:700;text-align:center">${step.labelGu}</div>`;
       slot.classList.add('filled');
       card.classList.add('placed','selected');
       vsortSelected=null;
@@ -1652,9 +1637,9 @@ function openTeacher(){
   const body=document.getElementById('tBody');
   const guide=currentChallenge?.teacherGuide;
   if(!guide){
-    body.innerHTML=`<div style="font-family:'Noto Sans Gujarati',sans-serif;color:var(--muted);padding:20px;text-align:center;line-height:1.8">
+    body.innerHTML=`<div style="color:var(--muted);padding:20px;text-align:center;line-height:1.8">
       📚 Challenge ખોલ્યા પછી teacher guide આવશે.<br>
-      <span style="font-family:'Nunito',sans-serif;font-size:.75rem">Open a challenge first to see its guide.</span></div>`;
+      <span style="font-family:var(--font-en);font-size:.75rem">Open a challenge first to see its guide.</span></div>`;
     return;
   }
   let h='';
