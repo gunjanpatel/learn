@@ -1,0 +1,110 @@
+{
+  "id": "coordinates-ch1",
+  "nameGu": "Coordinates — Map Grid 🗺️",
+  "nameEn": "Coordinates — Map Grid",
+  "icon": "🗺️",
+  "descGu": "X અને Y — robot ને direction આપો!",
+  "descEn": "X and Y — give the robot directions!",
+  "xpReward": 75,
+  "trophy": {"icon": "🗺️", "nameGu": "Grid Navigator", "nameEn": "Grid Navigator"},
+  "teacherGuide": {
+    "conceptGu": "Coordinates = location address. X = horizontal (right/left), Y = vertical (up/down). (x,y) format. Every pixel on screen has coordinates! Robot move, game character, Google Maps — all use coordinates.",
+    "conceptEn": "x,y coordinates — horizontal then vertical. Foundation for all 2D graphics, games, maps.",
+    "storyGu": "'Minecraft block place! F3 key = shows XYZ coordinates. Game character at (5,3) = 5 right, 3 up. Robot navigation = coordinates!'",
+    "scriptGu": "'Draw grid on paper! Bottom-left = (0,0). Right = X increases. Up = Y increases. Mark a treasure at (3,4)!'",
+    "vocab": [
+      {"gu": "X = આડો / horizontal", "en": "X axis"},
+      {"gu": "Y = ઊભો / vertical", "en": "Y axis"},
+      {"gu": "Grid = ચોક્ઠા / squares", "en": "Grid"},
+      {"gu": "Origin = શરૂઆત / (0,0)", "en": "Origin"},
+      {"gu": "Plot = mark કરવું", "en": "Plot"}
+    ],
+    "tipsGu": "💡 Battleship game = coordinates! Chess board = coordinates with letters. Minecraft F3 = show real coordinates!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · WHAT IS X?",
+      "textGu": "Coordinate (x,y) — x = ___?",
+      "textEn": "In coordinate (x,y) — what does x tell us?",
+      "options": [
+        {"gu": "ઊભો / up-down", "en": "Up-down position"},
+        {"gu": "આડો / left-right", "en": "Left-right position"},
+        {"gu": "Colour", "en": "Colour"},
+        {"gu": "Size", "en": "Size"}
+      ],
+      "answer": 1,
+      "hintGu": "X = horizontal = left-right!",
+      "hintEn": "X = across = left-right position!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · READ COORDINATE",
+      "textGu": "Point (3, 5) — X value = ?",
+      "textEn": "At point (3, 5) — what is the X value?",
+      "options": [
+        {"gu": "5", "en": "5"},
+        {"gu": "3", "en": "3"},
+        {"gu": "8", "en": "8"},
+        {"gu": "0", "en": "0"}
+      ],
+      "answer": 1,
+      "hintGu": "(x, y) — first number = X = 3!",
+      "hintEn": "First number in (x,y) is X = 3!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 3 · READ Y",
+      "textGu": "Point (2, 7) — Y value = ?",
+      "textEn": "At point (2, 7) — what is the Y value?",
+      "options": [
+        {"gu": "2", "en": "2"},
+        {"gu": "9", "en": "9"},
+        {"gu": "7", "en": "7"},
+        {"gu": "0", "en": "0"}
+      ],
+      "answer": 2,
+      "hintGu": "(x, y) — second number = Y = 7!",
+      "hintEn": "Second number in (x,y) is Y = 7!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · ORIGIN",
+      "textGu": "Grid ની centre / start point = ?",
+      "textEn": "The starting point of a grid is called?",
+      "options": [
+        {"gu": "(1, 1)", "en": "(1,1)"},
+        {"gu": "(0, 0) — Origin", "en": "(0,0) Origin"},
+        {"gu": "(5, 5)", "en": "(5,5)"},
+        {"gu": "(10, 10)", "en": "(10,10)"}
+      ],
+      "answer": 1,
+      "hintGu": "Origin = (0,0) — starting point!",
+      "hintEn": "Origin is always (0,0)!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · REAL WORLD",
+      "textGu": "Robot (0,0) પર છે. 4 right, 3 up જાય. New position?",
+      "textEn": "Robot starts at (0,0). Moves 4 right, 3 up. Where is it?",
+      "options": [
+        {"gu": "(3, 4)", "en": "(3,4)"},
+        {"gu": "(4, 3)", "en": "(4,3)"},
+        {"gu": "(7, 0)", "en": "(7,0)"},
+        {"gu": "(0, 7)", "en": "(0,7)"}
+      ],
+      "answer": 1,
+      "hintGu": "4 right = X=4, 3 up = Y=3 → (4,3)!",
+      "hintEn": "Right = X, Up = Y → (4,3)!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 6 · CALCULATE",
+      "textGu": "Robot (2,3) પર. 5 more right જાય. New X = ?",
+      "textEn": "Robot is at (2,3). Moves 5 more right. What is the new X?",
+      "answer": 7,
+      "hintGu": "2 + 5 = 7. X = 7!",
+      "hintEn": "X was 2, add 5 more = 7!"
+    }
+  ]
+}

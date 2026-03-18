@@ -1,0 +1,33 @@
+{
+  "id": "times-tables-ch1",
+  "nameGu": "2× Table — Double Power! ✌️",
+  "nameEn": "2 Times Table",
+  "icon": "✌️",
+  "descGu": "2 ના પહાડા! Double everything!",
+  "descEn": "The 2 times table — doubling is powerful!",
+  "xpReward": 65,
+  "trophy": {"icon": "✌️", "nameGu": "2x Champion", "nameEn": "2x Champion"},
+  "teacherGuide": {
+    "conceptGu": "2× table = doubling. Binary connection: 2,4,8,16,32... Chess rice story! Computer memory doubles: 1KB, 2KB, 4KB, 8KB. Doubling = computer science foundation.",
+    "conceptEn": "2x table = doubling. Connects to binary, computer memory, exponential growth.",
+    "storyGu": "'Chess rice! 1,2,4,8,16,32... 2× table = chess doubling pattern! Computer memory: 1GB, 2GB, 4GB, 8GB — always doubling!'",
+    "scriptGu": "'Clap pattern: 2,4,6,8,10 — hands UP on even numbers! Count by 2s = 2× table!'",
+    "vocab": [
+      {"gu": "Double = બમણું", "en": "Double"},
+      {"gu": "Times table = પહાડો", "en": "Times table"},
+      {"gu": "Even numbers = જોડ", "en": "Even numbers"},
+      {"gu": "Multiply = ગુણ", "en": "Multiply"}
+    ],
+    "tipsGu": "💡 Chant together: 2,4,6,8,10,12,14,16,18,20! Count by 2s on fingers — 10 fingers = 20!"
+  },
+  "questions": [
+    {"type": "tap-answer", "level": "LEVEL 1", "textGu": "2 × 1 = ?", "textEn": "2 × 1 = ?", "options": [1,2,3,4], "answer": 1, "hintGu": "2 × 1 = 2", "hintEn": "2 × 1 = 2"},
+    {"type": "tap-answer", "level": "LEVEL 2", "textGu": "2 × 3 = ?", "textEn": "2 × 3 = ?", "options": [4,5,6,7], "answer": 2, "hintGu": "2+2+2 = 6", "hintEn": "2+2+2 = 6"},
+    {"type": "tap-answer", "level": "LEVEL 3", "textGu": "2 × 5 = ?", "textEn": "2 × 5 = ?", "options": [8,9,10,11], "answer": 2, "hintGu": "Count by 2s five times!", "hintEn": "2+2+2+2+2 = 10"},
+    {"type": "input", "level": "LEVEL 4", "textGu": "2 × 7 = ?", "textEn": "2 × 7 = ?", "answer": 14, "hintGu": "2×6=12, 2×7=12+2=14", "hintEn": "2×6=12 then add 2 more"},
+    {"type": "input", "level": "LEVEL 5", "textGu": "2 × 9 = ?", "textEn": "2 × 9 = ?", "answer": 18, "hintGu": "2×8=16, +2=18", "hintEn": "2×8=16, +2=18"},
+    {"type": "missing-number", "level": "LEVEL 6 · MISSING", "textGu": "2 × ___ = 12", "textEn": "2 × ___ = 12", "partA": 2, "total": 12, "answer": 6, "hintGu": "12 ÷ 2 = 6", "hintEn": "12 ÷ 2 = 6"},
+    {"type": "story-problem", "level": "LEVEL 7 · STORY", "textGu": "🚌 2 buses, each has 8 wheels. Total wheels = ?", "textEn": "2 buses, 8 wheels each. Total wheels?", "answer": 16, "hintGu": "2 × 8 = 16", "hintEn": "2 × 8 = 16"},
+    {"type": "random-math", "level": "SPEED · 2× DRILL ⚡", "textGu": "2 × ___ = ?", "textEn": "2 times table drill!", "op": "×", "maxFactor": 2, "fixedA": 2, "hintGu": "Double it!", "hintEn": "Just double!"}
+  ]
+}

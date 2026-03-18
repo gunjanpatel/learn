@@ -51,6 +51,39 @@
           "challenges": [
             "challenge-1"
           ]
+        },
+        {
+          "id": "fractions",
+          "nameGu": "અપૂર્ણાંક",
+          "nameEn": "Fractions",
+          "icon": "½",
+          "colorRGB": "247,120,186",
+          "challenges": [
+            "challenge-1",
+            "challenge-2"
+          ]
+        },
+        {
+          "id": "times-tables",
+          "nameGu": "પહાડા",
+          "nameEn": "Times Tables",
+          "icon": "✖️",
+          "colorRGB": "63,185,80",
+          "challenges": [
+            "challenge-1",
+            "challenge-2",
+            "challenge-3"
+          ]
+        },
+        {
+          "id": "negative-numbers",
+          "nameGu": "Negative Numbers",
+          "nameEn": "Negative Numbers",
+          "icon": "🌡️",
+          "colorRGB": "57,208,216",
+          "challenges": [
+            "challenge-1"
+          ]
         }
       ]
     },
@@ -110,6 +143,37 @@
           "colorRGB": "57,208,216",
           "challenges": [
             "challenge-1"
+          ]
+        },
+        {
+          "id": "scratch-concepts",
+          "nameGu": "Scratch Coding",
+          "nameEn": "Scratch Coding",
+          "icon": "🐱",
+          "colorRGB": "255,107,107",
+          "challenges": [
+            "challenge-1"
+          ]
+        },
+        {
+          "id": "coordinates",
+          "nameGu": "Coordinates",
+          "nameEn": "Coordinates",
+          "icon": "🗺️",
+          "colorRGB": "240,192,64",
+          "challenges": [
+            "challenge-1"
+          ]
+        },
+        {
+          "id": "python-intro",
+          "nameGu": "Python",
+          "nameEn": "Python",
+          "icon": "🐍",
+          "colorRGB": "63,185,80",
+          "challenges": [
+            "challenge-1",
+            "challenge-2"
           ]
         }
       ]

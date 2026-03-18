@@ -1358,7 +1358,7 @@ function renderQ(){
 
 function inputHtml(ans){
   return `<div class="input-wrap">
-    <input class="ans-inp" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="?" autocomplete="off">
+    <input class="ans-inp" type="text" inputmode="numeric" pattern="-?[0-9]*" placeholder="?" autocomplete="off">
     <button class="go-btn" onclick="checkInput(${ans})">✓</button>
   </div>`;
 }
@@ -1370,7 +1370,9 @@ function checkInput(ans){
   if(answered)return;
   const el=document.querySelector('.ans-inp');
   if(!el||el.value.trim()==='')return;
-  const v=parseInt(el.value.trim());
+  // allow negative number input (e.g. -4)
+  const raw=el.value.trim();
+  const v=parseInt(raw);
   if(v===ans){
     el.disabled=true; answered=true;
     showFB(true, randOK());
@@ -1705,26 +1707,41 @@ function generateRandomMath(q){
   const op = q.op || '+';
   const min = q.min || 1;
   const max = q.max || 20;
-  let a, b, answer;
+  let a, b, answer, displayText;
+
   if(op==='+'){
     a = Math.floor(Math.random()*(max-min))+min;
     b = Math.floor(Math.random()*(max-a-min+1))+min;
     if(a+b>max){ b=max-a; }
     answer = a+b;
+    displayText = `${a} + ${b}`;
   } else if(op==='-'){
     a = Math.floor(Math.random()*(max-min))+min+2;
     b = Math.floor(Math.random()*(a-1))+1;
     answer = a-b;
+    displayText = `${a} − ${b}`;
   } else if(op==='×'){
     const maxF = q.maxFactor||5;
-    a = Math.floor(Math.random()*maxF)+1;
+    const fixedA = q.fixedA||null;
+    a = fixedA || Math.floor(Math.random()*maxF)+1;
     b = Math.floor(Math.random()*maxF)+1;
     answer = a*b;
+    displayText = `${a} × ${b}`;
+  } else if(op==='half'){
+    // Pick a random even number in range
+    const evenMin = Math.ceil((q.min||2)/2)*2;
+    const evenMax = Math.floor((q.max||20)/2)*2;
+    const evenCount = (evenMax-evenMin)/2+1;
+    a = evenMin + Math.floor(Math.random()*evenCount)*2;
+    b = null;
+    answer = a/2;
+    displayText = `½ of ${a}`;
   }
+
   q._generated = {a, b, op, answer};
   q.answer = answer;
-  q.textGu = `${a} ${op} ${b} = ?`;
-  q.textEn = `What is ${a} ${op} ${b}?`;
+  q.textGu = `${displayText} = ?`;
+  q.textEn = `What is ${displayText}?`;
 }
 
 // ══════════════════════════════════════

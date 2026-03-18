@@ -1,0 +1,30 @@
+{
+  "id": "fractions-ch2",
+  "nameGu": "અપૂર્ણાંક — Half Practice 🎲",
+  "nameEn": "Fractions — Half Random Practice",
+  "icon": "🎲",
+  "descGu": "Random numbers ના half! Practice makes perfect.",
+  "descEn": "Find half of random even numbers!",
+  "xpReward": 80,
+  "trophy": {"icon": "✂️", "nameGu": "Half Master", "nameEn": "Half Master"},
+  "teacherGuide": {
+    "conceptGu": "Half of even numbers practice. Pattern: half = ÷2. Even numbers only — no remainders. Later: odd number halves (fractions).",
+    "conceptEn": "Halving even numbers — builds division intuition.",
+    "storyGu": "'Computer screen half! 1920px wide display — half = 960px each side. Coding always uses halves!'",
+    "scriptGu": "'Half = divide by 2! Quick mental trick: 20 → 10, 16 → 8, 14 → 7!'",
+    "vocab": [
+      {"gu": "Halve = half કરવું", "en": "Halve"},
+      {"gu": "Even number = જોડ સંખ્યા", "en": "Even number"},
+      {"gu": "Divide by 2 = 2 થી ભાગ", "en": "Divide by 2"}
+    ],
+    "tipsGu": "💡 Even numbers only! 2,4,6,8,10,12,14,16,18,20. Pattern practice."
+  },
+  "questions": [
+    {"type": "random-math", "level": "ROUND 1", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 2, "max": 10, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"},
+    {"type": "random-math", "level": "ROUND 2", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 2, "max": 10, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"},
+    {"type": "random-math", "level": "ROUND 3", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 4, "max": 16, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"},
+    {"type": "random-math", "level": "ROUND 4", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 4, "max": 20, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"},
+    {"type": "random-math", "level": "ROUND 5 🔥", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 10, "max": 20, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"},
+    {"type": "random-math", "level": "ROUND 6 🔥", "textGu": "Half of ___?", "textEn": "Half of this number?", "op": "half", "min": 10, "max": 20, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!"}
+  ]
+}

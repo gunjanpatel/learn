@@ -1,0 +1,31 @@
+{
+  "id": "times-tables-ch2",
+  "nameGu": "5× Table — High Five! 🖐️",
+  "nameEn": "5 Times Table",
+  "icon": "🖐️",
+  "descGu": "5 ના પહાડા! Hands and clocks!",
+  "descEn": "5 times table — clocks and hands!",
+  "xpReward": 65,
+  "trophy": {"icon": "🖐️", "nameGu": "5x Champion", "nameEn": "5x Champion"},
+  "teacherGuide": {
+    "conceptGu": "5× table = count by 5s. Always ends in 0 or 5. Clock connection: 5min marks. One hand = 5 fingers. Easy pattern to remember!",
+    "conceptEn": "5x always ends in 0 or 5. Clock minutes use 5x table.",
+    "storyGu": "'Clock: 1 hour mark = 5 minutes! 2 marks = 10 minutes! 12 marks × 5 = 60 minutes = 1 hour! 5× table = clock math!'",
+    "scriptGu": "'High five! One hand = 5. Two hands = 10. Three children = 15 fingers! Count by 5s!'",
+    "vocab": [
+      {"gu": "Pattern = 0 or 5 end", "en": "Ends in 0 or 5"},
+      {"gu": "Clock minutes = 5×", "en": "Clock connection"},
+      {"gu": "Count by 5s = 5,10,15...", "en": "Skip counting by 5"}
+    ],
+    "tipsGu": "💡 Clock face practice: point to each number, multiply by 5. Always right!"
+  },
+  "questions": [
+    {"type": "tap-answer", "level": "LEVEL 1", "textGu": "5 × 2 = ?", "textEn": "5 × 2 = ?", "options": [8,10,12,15], "answer": 1, "hintGu": "5+5=10", "hintEn": "5+5=10"},
+    {"type": "tap-answer", "level": "LEVEL 2", "textGu": "5 × 4 = ?", "textEn": "5 × 4 = ?", "options": [15,18,20,25], "answer": 2, "hintGu": "5,10,15,20", "hintEn": "Count: 5,10,15,20"},
+    {"type": "input", "level": "LEVEL 3", "textGu": "5 × 6 = ?", "textEn": "5 × 6 = ?", "answer": 30, "hintGu": "5,10,15,20,25,30", "hintEn": "Count by 5s six times"},
+    {"type": "input", "level": "LEVEL 4", "textGu": "5 × 8 = ?", "textEn": "5 × 8 = ?", "answer": 40, "hintGu": "5×7=35, +5=40", "hintEn": "5×7=35, add 5 more"},
+    {"type": "missing-number", "level": "LEVEL 5 · MISSING", "textGu": "5 × ___ = 25", "textEn": "5 × ___ = 25", "partA": 5, "total": 25, "answer": 5, "hintGu": "25 ÷ 5 = 5", "hintEn": "25 ÷ 5 = 5"},
+    {"type": "story-problem", "level": "LEVEL 6 · CLOCK", "textGu": "🕐 Clock ના 6 marks. Each = 5 min. Total minutes = ?", "textEn": "Clock: 6 marks × 5 minutes each. Total minutes?", "answer": 30, "hintGu": "6 × 5 = 30", "hintEn": "6 × 5 = 30 minutes"},
+    {"type": "random-math", "level": "SPEED · 5× DRILL ⚡", "textGu": "5 × ___ = ?", "textEn": "5 times table drill!", "op": "×", "maxFactor": 5, "fixedA": 5, "hintGu": "Count by 5s!", "hintEn": "Count by 5s!"}
+  ]
+}

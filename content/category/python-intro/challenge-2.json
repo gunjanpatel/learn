@@ -1,0 +1,117 @@
+{
+  "id": "python-ch2",
+  "nameGu": "Python — Loops & If! 🔁",
+  "nameEn": "Python — Loops & Conditions",
+  "icon": "🔁",
+  "descGu": "for loop, if/else — real Python!",
+  "descEn": "for loops and if/else — real Python power!",
+  "xpReward": 100,
+  "trophy": {"icon": "⚙️", "nameGu": "Python Looper", "nameEn": "Python Looper"},
+  "teacherGuide": {
+    "conceptGu": "for loop = same action repeat. if/else = decision. range(5) = 0,1,2,3,4. Indentation = Python rule — spaces matter! Loop + condition = AI algorithm foundation.",
+    "conceptEn": "for loop iterates, if/else decides. Indentation is Python syntax. These two concepts power almost all programs.",
+    "storyGu": "'for i in range(5): print(i) = 0,1,2,3,4 print! Loop 5 times! Robot clean 5 rooms = for loop! if score > 10: print(\"Winner!\") = game logic!'",
+    "scriptGu": "'Try in replit: for i in range(3): print(\"Hello Yuval!\") — watch Hello print 3 times! Magic!'",
+    "vocab": [
+      {"gu": "for loop = repeat", "en": "for loop"},
+      {"gu": "range() = number sequence", "en": "range()"},
+      {"gu": "if = condition / IF", "en": "if statement"},
+      {"gu": "else = otherwise / ELSE", "en": "else"},
+      {"gu": "indent = spaces = important!", "en": "Indentation"},
+      {"gu": "i = loop variable", "en": "Loop variable"}
+    ],
+    "tipsGu": "💡 replit.com — type for loop together! See output 3 times = wow moment! Indentation with TAB key — show it matters!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · FOR LOOP",
+      "textGu": "for i in range(3): — loop _____ times run?",
+      "textEn": "How many times does: for i in range(3) run?",
+      "options": [
+        {"gu": "1", "en": "1"},
+        {"gu": "2", "en": "2"},
+        {"gu": "3", "en": "3"},
+        {"gu": "4", "en": "4"}
+      ],
+      "answer": 2,
+      "hintGu": "range(3) = 0,1,2 — 3 times!",
+      "hintEn": "range(3) gives 0,1,2 — that's 3 times!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · RANGE",
+      "textGu": "range(5) = ?",
+      "textEn": "What numbers does range(5) produce?",
+      "options": [
+        {"gu": "1,2,3,4,5", "en": "1,2,3,4,5"},
+        {"gu": "0,1,2,3,4", "en": "0,1,2,3,4"},
+        {"gu": "0,1,2,3,4,5", "en": "0,1,2,3,4,5"},
+        {"gu": "5,4,3,2,1", "en": "5,4,3,2,1"}
+      ],
+      "answer": 1,
+      "hintGu": "range(5) = 0 થી start, 5 BEFORE stop! 0,1,2,3,4",
+      "hintEn": "range(5) starts at 0, stops before 5!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 3 · IF STATEMENT",
+      "textGu": "if score > 10: print(\"Win!\") — score=8, output?",
+      "textEn": "if score > 10: print(\"Win!\"). If score=8, what prints?",
+      "options": [
+        {"gu": "Win!", "en": "Win!"},
+        {"gu": "Nothing prints", "en": "Nothing prints"},
+        {"gu": "8", "en": "8"},
+        {"gu": "Error", "en": "Error"}
+      ],
+      "answer": 1,
+      "hintGu": "8 > 10? No! So if block skip — nothing prints!",
+      "hintEn": "8 is NOT greater than 10, so condition is False — nothing prints!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · IF/ELSE",
+      "textGu": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=7, output?",
+      "textEn": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=7?",
+      "options": [
+        {"gu": "Adult", "en": "Adult"},
+        {"gu": "Child", "en": "Child"},
+        {"gu": "7", "en": "7"},
+        {"gu": "Nothing", "en": "Nothing"}
+      ],
+      "answer": 1,
+      "hintGu": "7 >= 18? No! So ELSE runs: Child!",
+      "hintEn": "7 is NOT >= 18, so else runs: Child!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · LOOP + PRINT",
+      "textGu": "for i in range(3): print(\"Hi!\") — total output lines?",
+      "textEn": "for i in range(3): print(\"Hi!\"). How many lines print?",
+      "options": [
+        {"gu": "1", "en": "1"},
+        {"gu": "2", "en": "2"},
+        {"gu": "3", "en": "3"},
+        {"gu": "0", "en": "0"}
+      ],
+      "answer": 2,
+      "hintGu": "range(3) = 3 times! Hi! Hi! Hi!",
+      "hintEn": "Loop runs 3 times: Hi! Hi! Hi!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 6 · AI CONNECTION",
+      "textGu": "AI training = data ઉપર loop. 1000 images train = ?",
+      "textEn": "AI training loops over data. Training on 1000 images uses a ___?",
+      "options": [
+        {"gu": "if statement", "en": "if statement"},
+        {"gu": "for loop — 1000 times!", "en": "for loop — 1000 times!"},
+        {"gu": "print()", "en": "print()"},
+        {"gu": "Variable", "en": "Variable"}
+      ],
+      "answer": 1,
+      "hintGu": "for image in dataset: train! Loop over all images = AI training!",
+      "hintEn": "for loop over all training data — that's how AI learns!"
+    }
+  ]
+}

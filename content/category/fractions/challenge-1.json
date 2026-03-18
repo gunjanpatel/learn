@@ -1,0 +1,97 @@
+{
+  "id": "fractions-ch1",
+  "nameGu": "અપૂર્ણાંક — Half & Quarter 🍕",
+  "nameEn": "Fractions — Half & Quarter",
+  "icon": "½",
+  "descGu": "Pizza ના ટુકડા! Half, quarter શીખો.",
+  "descEn": "Slice the pizza! Learn half and quarter.",
+  "xpReward": 70,
+  "trophy": {"icon": "🍕", "nameGu": "Fraction Finder", "nameEn": "Fraction Finder"},
+  "teacherGuide": {
+    "conceptGu": "અપૂર્ણાંક = whole ના ભાગ. Half (½) = 2 equal pieces, 1 લો. Quarter (¼) = 4 equal pieces, 1 લો. Equal size = most important concept. Pizza, chocolate bar, paper fold — physical demonstration essential.",
+    "conceptEn": "Fractions = equal parts of a whole. Half=1/2, Quarter=1/4. Equal size is key.",
+    "storyGu": "'Yuval, pizza ના 2 equal slices — તમે 1 લો = half! 4 equal slices — 1 લો = quarter! Computer graphics, screen divide — same fraction math use!'",
+    "scriptGu": "'Paper fold! Half fold = 2 equal parts. Fold again = 4 equal parts = quarters. Open and see the lines!'",
+    "vocab": [
+      {"gu": "Half = અડધો / ½", "en": "Half"},
+      {"gu": "Quarter = ચોથો ભાગ / ¼", "en": "Quarter"},
+      {"gu": "Whole = આખો / 1", "en": "Whole"},
+      {"gu": "Equal parts = સરખા ભાગ", "en": "Equal parts"}
+    ],
+    "tipsGu": "💡 Chocolate bar break in half — count squares each side same? Paper fold and unfold — see equal parts. Apple cut! Physical = best."
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · WHAT IS HALF?",
+      "textGu": "Pizza ના 2 equal pieces — 1 piece = ?",
+      "textEn": "Pizza cut into 2 equal pieces. Take 1 piece = ?",
+      "options": [
+        {"gu": "આખો / Whole", "en": "Whole"},
+        {"gu": "Half / અડધો ½", "en": "Half ½"},
+        {"gu": "Quarter / ¼", "en": "Quarter ¼"},
+        {"gu": "Nothing", "en": "Nothing"}
+      ],
+      "answer": 1,
+      "hintGu": "2 equal pieces માંથી 1 = Half!",
+      "hintEn": "1 out of 2 equal pieces = Half!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · WHAT IS QUARTER?",
+      "textGu": "Chocolate 4 equal pieces — 1 piece = ?",
+      "textEn": "Chocolate bar cut into 4 equal pieces. Take 1 = ?",
+      "options": [
+        {"gu": "Half ½", "en": "Half"},
+        {"gu": "Quarter ¼", "en": "Quarter ¼"},
+        {"gu": "Three-quarters ¾", "en": "Three-quarters"},
+        {"gu": "Whole", "en": "Whole"}
+      ],
+      "answer": 1,
+      "hintGu": "4 equal pieces માંથી 1 = Quarter ¼!",
+      "hintEn": "1 out of 4 equal pieces = Quarter!"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 3 · HALF OF A NUMBER",
+      "textGu": "8 ના half = ?",
+      "textEn": "What is half of 8?",
+      "answer": 4,
+      "hintGu": "8 ÷ 2 = 4",
+      "hintEn": "8 divided by 2 = 4"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 4 · HALF OF A NUMBER",
+      "textGu": "10 ના half = ?",
+      "textEn": "What is half of 10?",
+      "answer": 5,
+      "hintGu": "10 ÷ 2 = 5",
+      "hintEn": "10 ÷ 2 = 5"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · THREE-QUARTERS",
+      "textGu": "4 slices — 3 slices ખાધા. ક્યો fraction?",
+      "textEn": "Pizza has 4 slices. You eat 3. What fraction did you eat?",
+      "options": [
+        {"gu": "Half ½", "en": "Half"},
+        {"gu": "Quarter ¼", "en": "Quarter"},
+        {"gu": "Three-quarters ¾", "en": "Three-quarters ¾"},
+        {"gu": "Whole", "en": "Whole"}
+      ],
+      "answer": 2,
+      "hintGu": "4 માંથી 3 = Three-quarters ¾!",
+      "hintEn": "3 out of 4 = Three-quarters!"
+    },
+    {
+      "type": "story-problem",
+      "level": "LEVEL 6 · STORY",
+      "textGu": "🍫 Yuval ના 12 chocolates. Half friend ને આપ્યા. Yuval પાસે કેટલા?",
+      "textEn": "Yuval has 12 chocolates. Gives half to friend. How many does Yuval keep?",
+      "answer": 6,
+      "hintGu": "Half of 12 = 6",
+      "hintEn": "12 ÷ 2 = 6"
+    }
+  ]
+}

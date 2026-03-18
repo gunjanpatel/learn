@@ -1,0 +1,117 @@
+{
+  "id": "scratch-ch1",
+  "nameGu": "Scratch — Coding Basics 🐱",
+  "nameEn": "Scratch — Coding Basics",
+  "icon": "🐱",
+  "descGu": "Sprite, event, loop — real coding concepts!",
+  "descEn": "Sprite, events, loops — think like a coder!",
+  "xpReward": 80,
+  "trophy": {"icon": "🐱", "nameGu": "Scratch Coder", "nameEn": "Scratch Coder"},
+  "teacherGuide": {
+    "conceptGu": "Scratch = visual coding. Sprite = movable character (cat, robot). Event = 'when something happens' (flag click, key press). Loop = repeat. Condition = if/then. These 4 = foundation of ALL programming.",
+    "conceptEn": "Sprite=object, Event=trigger, Loop=repeat, Condition=if-then. These are universal programming concepts.",
+    "storyGu": "'Scratch cat = sprite. Click green flag = event! Cat moves 10 steps = action. Repeat 10 times = loop! IF touching wall THEN turn = condition! Real Python, JavaScript same ideas!'",
+    "scriptGu": "'Open scratch.mit.edu! Make cat walk. Click flag — what happens? Change number — see difference! You are programming!'",
+    "vocab": [
+      {"gu": "Sprite = movable character", "en": "Sprite"},
+      {"gu": "Event = trigger / ક્યારે", "en": "Event"},
+      {"gu": "Loop = repeat / ફરી ફરી", "en": "Loop"},
+      {"gu": "Condition = IF/THEN", "en": "Condition"},
+      {"gu": "Block = code piece", "en": "Code Block"},
+      {"gu": "Script = instructions set", "en": "Script"}
+    ],
+    "tipsGu": "💡 scratch.mit.edu — free, browser, no install! Make cat say 'Hello Yuval!' first. Then move. Then loop. Step by step!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · SPRITE",
+      "textGu": "Scratch માં movable character = ?",
+      "textEn": "In Scratch, a movable character is called a ___?",
+      "options": [
+        {"gu": "Block", "en": "Block"},
+        {"gu": "Sprite", "en": "Sprite"},
+        {"gu": "Loop", "en": "Loop"},
+        {"gu": "Script", "en": "Script"}
+      ],
+      "answer": 1,
+      "hintGu": "Cat, robot, ball — all sprites!",
+      "hintEn": "Any movable object in Scratch = Sprite!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · EVENT",
+      "textGu": "Green flag ☑ click = ___?",
+      "textEn": "Clicking the green flag in Scratch is an example of ___?",
+      "options": [
+        {"gu": "Loop", "en": "Loop"},
+        {"gu": "Sprite", "en": "Sprite"},
+        {"gu": "Event — trigger!", "en": "Event — a trigger!"},
+        {"gu": "Condition", "en": "Condition"}
+      ],
+      "answer": 2,
+      "hintGu": "Flag click = 'When this happens, do this' = Event!",
+      "hintEn": "Flag click triggers the program = Event!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 3 · LOOP",
+      "textGu": "'Move 10 steps' 5 times repeat = ___?",
+      "textEn": "Repeating 'Move 10 steps' 5 times is using a ___?",
+      "options": [
+        {"gu": "Sprite", "en": "Sprite"},
+        {"gu": "Loop — repeat block!", "en": "Loop — repeat block!"},
+        {"gu": "Event", "en": "Event"},
+        {"gu": "Variable", "en": "Variable"}
+      ],
+      "answer": 1,
+      "hintGu": "Repeat = Loop! UNO game loop = same turns repeat!",
+      "hintEn": "Repeating same action = Loop!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 4 · CODE ORDER",
+      "textGu": "Cat ને dance કરાવવા steps ક્રમ?",
+      "textEn": "Put these Scratch steps in order to make cat dance!",
+      "steps": [
+        {"icon": "🏁", "labelGu": "Flag click", "labelEn": "Click flag"},
+        {"icon": "🔄", "labelGu": "Loop start", "labelEn": "Start loop"},
+        {"icon": "👣", "labelGu": "Move steps", "labelEn": "Move steps"},
+        {"icon": "🔀", "labelGu": "Turn", "labelEn": "Turn"}
+      ],
+      "correctOrder": [0,1,2,3],
+      "hintGu": "Flag → Loop → Move → Turn!",
+      "hintEn": "Event first, then loop, then actions inside!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · CONDITION",
+      "textGu": "Cat wall touch કરે THEN bounce back = ___?",
+      "textEn": "IF cat touches wall THEN bounce — this is a ___?",
+      "options": [
+        {"gu": "Loop", "en": "Loop"},
+        {"gu": "Sprite", "en": "Sprite"},
+        {"gu": "Condition — IF/THEN!", "en": "Condition — IF/THEN!"},
+        {"gu": "Event", "en": "Event"}
+      ],
+      "answer": 2,
+      "hintGu": "IF something THEN do = Condition! AND gate ની જેમ!",
+      "hintEn": "IF...THEN = Condition — same as logic gates!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 6 · BIG PICTURE",
+      "textGu": "Scratch blocks = real coding ___?",
+      "textEn": "Scratch coloured blocks represent real coding ___?",
+      "options": [
+        {"gu": "Colours", "en": "Colours"},
+        {"gu": "Pictures", "en": "Pictures"},
+        {"gu": "Concepts — same ideas in Python!", "en": "Concepts — same ideas in Python!"},
+        {"gu": "Games only", "en": "Games only"}
+      ],
+      "answer": 2,
+      "hintGu": "Loop in Scratch = loop in Python = loop in any language!",
+      "hintEn": "Scratch teaches real programming concepts!"
+    }
+  ]
+}

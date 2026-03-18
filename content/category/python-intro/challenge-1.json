@@ -1,0 +1,132 @@
+{
+  "id": "python-ch1",
+  "nameGu": "Python — Hello World! 🐍",
+  "nameEn": "Python — Hello World!",
+  "icon": "🐍",
+  "descGu": "Real coding language! print(), variables, maths!",
+  "descEn": "Real programming! print(), variables, arithmetic!",
+  "xpReward": 90,
+  "trophy": {"icon": "🐍", "nameGu": "Python Beginner", "nameEn": "Python Beginner"},
+  "teacherGuide": {
+    "conceptGu": "Python = world's most popular programming language. AI, web, science — everywhere. print() = screen પર show. Variable = named box to store value. + - * / = same as maths. replit.com — browser Python, no install!",
+    "conceptEn": "Python: print() outputs text, variables store values, arithmetic works like maths. Use replit.com — no install needed.",
+    "storyGu": "'Yuval, ChatGPT = Python! Instagram = Python! YouTube recommendations = Python! print(\"Hello\") = first step of billion-dollar apps!'",
+    "scriptGu": "'Open replit.com. New Python file. Type: print(\"Hello Yuval!\"). Click Run. SEE IT APPEAR! That is real code running!'",
+    "vocab": [
+      {"gu": "print() = screen પર show", "en": "print()"},
+      {"gu": "Variable = named box", "en": "Variable"},
+      {"gu": "String = text in quotes", "en": "String"},
+      {"gu": "Integer = whole number", "en": "Integer"},
+      {"gu": "# = comment / note", "en": "Comment"},
+      {"gu": "= assign / save value", "en": "Assignment"}
+    ],
+    "tipsGu": "💡 replit.com — free, no login needed for basic use! Type together. Make it print his name. Make it do maths. Celebrate each output!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · PRINT",
+      "textGu": "Python screen પર text show = ?",
+      "textEn": "To show text on screen in Python, you use ___?",
+      "options": [
+        {"gu": "show()", "en": "show()"},
+        {"gu": "print()", "en": "print()"},
+        {"gu": "display()", "en": "display()"},
+        {"gu": "write()", "en": "write()"}
+      ],
+      "answer": 1,
+      "hintGu": "print() = Python ની superpower!",
+      "hintEn": "print() displays output in Python!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · STRING",
+      "textGu": "Python: print(\"Hello\") — quotes ની અંદર text = ?",
+      "textEn": "In Python, text inside quotes is called a ___?",
+      "options": [
+        {"gu": "Number", "en": "Number"},
+        {"gu": "Variable", "en": "Variable"},
+        {"gu": "String — text!", "en": "String — text!"},
+        {"gu": "Loop", "en": "Loop"}
+      ],
+      "answer": 2,
+      "hintGu": "Text in quotes = String! 'Hello' = string!",
+      "hintEn": "Text inside quotes = String!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 3 · VARIABLE",
+      "textGu": "age = 7 — 'age' = ?",
+      "textEn": "In Python: age = 7. What is 'age'?",
+      "options": [
+        {"gu": "A number", "en": "A number"},
+        {"gu": "Variable — named box!", "en": "Variable — named box!"},
+        {"gu": "A function", "en": "A function"},
+        {"gu": "A loop", "en": "A loop"}
+      ],
+      "answer": 1,
+      "hintGu": "Variable = named box. age box ની અંદર 7 save!",
+      "hintEn": "Variable stores a value — like a named box!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · ARITHMETIC",
+      "textGu": "Python: print(3 + 4) — output = ?",
+      "textEn": "What does Python print for: print(3 + 4)?",
+      "options": [
+        {"gu": "3 + 4", "en": "3 + 4"},
+        {"gu": "34", "en": "34"},
+        {"gu": "7", "en": "7"},
+        {"gu": "Error", "en": "Error"}
+      ],
+      "answer": 2,
+      "hintGu": "Python calculates 3+4=7 and prints 7!",
+      "hintEn": "Python calculates then prints the answer: 7!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · VARIABLE USE",
+      "textGu": "name = \"Yuval\" — print(name) — output = ?",
+      "textEn": "name = \"Yuval\". What does print(name) output?",
+      "options": [
+        {"gu": "name", "en": "name"},
+        {"gu": "\"Yuval\"", "en": "\"Yuval\""},
+        {"gu": "Yuval", "en": "Yuval"},
+        {"gu": "Error", "en": "Error"}
+      ],
+      "answer": 2,
+      "hintGu": "Variable print = value inside! name = Yuval → prints Yuval",
+      "hintEn": "Prints the VALUE stored: Yuval!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 6 · COMMENT",
+      "textGu": "# This is Python comment — computer ___?",
+      "textEn": "A line starting with # in Python — the computer ___?",
+      "options": [
+        {"gu": "Runs it", "en": "Runs it"},
+        {"gu": "Ignores it — human note only!", "en": "Ignores it — human note only!"},
+        {"gu": "Prints it", "en": "Prints it"},
+        {"gu": "Crashes", "en": "Crashes"}
+      ],
+      "answer": 1,
+      "hintGu": "# = comment. Computer ignore. Human reads!",
+      "hintEn": "# marks a comment — computer skips it!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 7 · CODE ORDER",
+      "textGu": "Python: Yuval ની age print કરવા steps?",
+      "textEn": "Put Python steps in order to print Yuval's age!",
+      "steps": [
+        {"icon": "📝", "labelGu": "age = 7", "labelEn": "age = 7"},
+        {"icon": "🖨️", "labelGu": "print(age)", "labelEn": "print(age)"},
+        {"icon": "👀", "labelGu": "See output", "labelEn": "See output"},
+        {"icon": "▶️", "labelGu": "Run code", "labelEn": "Run code"}
+      ],
+      "correctOrder": [0,1,3,2],
+      "hintGu": "First store value, then print, then run, then see!",
+      "hintEn": "Store → print → run → see output!"
+    }
+  ]
+}

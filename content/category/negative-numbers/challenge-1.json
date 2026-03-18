@@ -1,0 +1,109 @@
+{
+  "id": "negative-ch1",
+  "nameGu": "Negative Numbers — Zero ની નીચે! 🌡️",
+  "nameEn": "Negative Numbers — Below Zero!",
+  "icon": "🌡️",
+  "descGu": "Zero ની નીચે! Temperature, debt, floors!",
+  "descEn": "Below zero — temperature, lifts and debt!",
+  "xpReward": 85,
+  "trophy": {"icon": "❄️", "nameGu": "Below Zero Hero", "nameEn": "Below Zero Hero"},
+  "teacherGuide": {
+    "conceptGu": "Negative numbers = zero ની નીચે. -1, -2, -3... Temperature: Denmark winter = negative! Lift: basement = -1, -2. Bank: spend more = negative balance. Number line extends both sides of 0.",
+    "conceptEn": "Negative numbers go below zero. Real contexts: temperature, floors, bank balance.",
+    "storyGu": "'Denmark winter! 0°C = freezing. -5°C = colder! -10°C = very cold! Thermometer number line = negative numbers. Lift B1, B2 = -1, -2!'",
+    "scriptGu": "'Number line on floor with tape! 0 in centre. Right = positive. Left = negative. Walk left = go negative! Cold!'",
+    "vocab": [
+      {"gu": "Negative = zero ની નીચે / -", "en": "Negative"},
+      {"gu": "Positive = zero ની ઉપર / +", "en": "Positive"},
+      {"gu": "Zero = middle point", "en": "Zero"},
+      {"gu": "Number line = સંખ્યા રેખા", "en": "Number line"},
+      {"gu": "Temperature = તાપમાન", "en": "Temperature"}
+    ],
+    "tipsGu": "💡 Thermometer app show! Copenhagen winter temp = negative. Freezer = -18°C. Elevator basement = B1=-1. Real examples make it click!"
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "level": "LEVEL 1 · BELOW ZERO",
+      "textGu": "-5 temperature = 0 થી ___?",
+      "textEn": "A temperature of -5 means ___ degrees below zero?",
+      "options": [
+        {"gu": "5 ઉપર / above", "en": "5 above zero"},
+        {"gu": "5 નીચે / below", "en": "5 below zero"},
+        {"gu": "Same as 0", "en": "Same as 0"},
+        {"gu": "50 below", "en": "50 below"}
+      ],
+      "answer": 1,
+      "hintGu": "-5 = 5 degrees BELOW zero!",
+      "hintEn": "Minus means below zero!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 2 · COMPARE",
+      "textGu": "Which is colder: -3°C or -8°C?",
+      "textEn": "Which temperature is colder: -3°C or -8°C?",
+      "options": [
+        {"gu": "-3°C", "en": "-3°C"},
+        {"gu": "-8°C — more negative!", "en": "-8°C — more negative!"},
+        {"gu": "Same", "en": "Same"},
+        {"gu": "0°C", "en": "0°C"}
+      ],
+      "answer": 1,
+      "hintGu": "-8 < -3. More negative = colder!",
+      "hintEn": "-8 is further below zero = colder!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 3 · NUMBER LINE",
+      "textGu": "Number line: -3, -2, -1, 0, 1, 2, 3. -2 + 3 = ?",
+      "textEn": "Number line: -3,-2,-1,0,1,2,3. What is -2 + 3?",
+      "options": [
+        {"gu": "-5", "en": "-5"},
+        {"gu": "-1", "en": "-1"},
+        {"gu": "1", "en": "1"},
+        {"gu": "5", "en": "5"}
+      ],
+      "answer": 2,
+      "hintGu": "-2 પર start, 3 jump right = 1!",
+      "hintEn": "Start at -2, jump 3 right = 1!"},
+    {
+      "type": "input",
+      "level": "LEVEL 4 · CALCULATE",
+      "textGu": "0 - 4 = ?",
+      "textEn": "0 minus 4 = ?",
+      "answer": -4,
+      "hintGu": "0 ની નીચે 4 = -4!",
+      "hintEn": "4 below zero = -4!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · LIFT / ELEVATOR",
+      "textGu": "Lift: ground=0, basement=-1,-2. 3rd basement = ?",
+      "textEn": "Lift: Ground=0, Basement 1=-1. What floor is 3rd basement?",
+      "options": [
+        {"gu": "3", "en": "3"},
+        {"gu": "-3", "en": "-3"},
+        {"gu": "0", "en": "0"},
+        {"gu": "-1", "en": "-1"}
+      ],
+      "answer": 1,
+      "hintGu": "Ground=0, below ground = negative! -3!",
+      "hintEn": "Below ground = negative! 3rd basement = -3!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 6 · AI CONNECTION",
+      "textGu": "AI model training — loss value goes negative means ___?",
+      "textEn": "In coding, negative numbers are used for ___?",
+      "options": [
+        {"gu": "Errors only", "en": "Errors only"},
+        {"gu": "Direction, debt, temperature — real data!", "en": "Direction, debt, temperature — real data!"},
+        {"gu": "Nothing useful", "en": "Nothing useful"},
+        {"gu": "Only in maths class", "en": "Only in maths class"}
+      ],
+      "answer": 1,
+      "hintGu": "Negative = real world data! AI, physics, finance — everywhere!",
+      "hintEn": "Negative numbers appear everywhere in real code!"
+    }
+  ]
+}
