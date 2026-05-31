@@ -10,7 +10,7 @@
   "xpReward": 65,
   "trophy": {
     "icon": "🖐️",
-    "nameGu": "5x Champion",
+    "nameGu": "5x ચેમ્પિયન",
     "nameEn": "5x Champion",
     "nameDa": "5x-Mester"
   },
@@ -25,9 +25,21 @@
     "scriptEn": "High five! One hand = 5. Two hands = 10. Skip counting by 5s is fun!",
     "scriptDa": "High five! Én hånd = 5. To hænder = 10. Tre børn = 15 fingre! At tælle i 5-tabellen er let!",
     "vocab": [
-      {"gu": "Pattern = 0 or 5 end", "en": "Ends in 0 or 5", "da": "Slutter på 0 eller 5"},
-      {"gu": "Clock minutes = 5×", "en": "Clock connection", "da": "Urforbindelse"},
-      {"gu": "Count by 5s = 5,10,15...", "en": "Skip counting by 5", "da": "Tælle i 5-spring"}
+      {
+        "gu": "Pattern = 0 or 5 end",
+        "en": "Ends in 0 or 5",
+        "da": "Slutter på 0 eller 5"
+      },
+      {
+        "gu": "Clock minutes = 5×",
+        "en": "Clock connection",
+        "da": "Urforbindelse"
+      },
+      {
+        "gu": "Count by 5s = 5,10,15...",
+        "en": "Skip counting by 5",
+        "da": "Tælle i 5-spring"
+      }
     ],
     "tipsGu": "💡 Clock face practice: point to each number, multiply by 5. Always right!",
     "tipsEn": "💡 High-five skip counting. Highlight that 5x tables always end in 0 or 5.",
@@ -41,10 +53,26 @@
       "textEn": "5 × 3 = ?",
       "textDa": "5 × 3 = ?",
       "options": [
-        {"gu": "10", "en": "10", "da": "10"},
-        {"gu": "12", "en": "12", "da": "12"},
-        {"gu": "15", "en": "15", "da": "15"},
-        {"gu": "20", "en": "20", "da": "20"}
+        {
+          "gu": "10",
+          "en": "10",
+          "da": "10"
+        },
+        {
+          "gu": "12",
+          "en": "12",
+          "da": "12"
+        },
+        {
+          "gu": "15",
+          "en": "15",
+          "da": "15"
+        },
+        {
+          "gu": "20",
+          "en": "20",
+          "da": "20"
+        }
       ],
       "answer": 2,
       "hintGu": "5+5+5=15",
@@ -58,10 +86,26 @@
       "textEn": "5 × 6 = ?",
       "textDa": "5 × 6 = ?",
       "options": [
-        {"gu": "25", "en": "25", "da": "25"},
-        {"gu": "30", "en": "30", "da": "30"},
-        {"gu": "35", "en": "35", "da": "35"},
-        {"gu": "40", "en": "40", "da": "40"}
+        {
+          "gu": "25",
+          "en": "25",
+          "da": "25"
+        },
+        {
+          "gu": "30",
+          "en": "30",
+          "da": "30"
+        },
+        {
+          "gu": "35",
+          "en": "35",
+          "da": "35"
+        },
+        {
+          "gu": "40",
+          "en": "40",
+          "da": "40"
+        }
       ],
       "answer": 1,
       "hintGu": "5,10,15,20,25,30",

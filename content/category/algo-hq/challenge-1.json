@@ -1,6 +1,6 @@
 {
   "id": "algo-hq-challenge-1",
-  "nameGu": "Algorithm HQ — Steps! 🔀",
+  "nameGu": "અલ્ગોરિધમ HQ — પગલાં! 🔀",
   "nameEn": "Algorithm HQ Basics",
   "nameDa": "Algoritme HQ Basics",
   "icon": "🔀",
@@ -8,7 +8,12 @@
   "descEn": "Steps in order — how every robot thinks!",
   "descDa": "Trin for trin — præcis som en robot tænker!",
   "xpReward": 65,
-  "trophy": {"icon": "🤖", "nameGu": "Algorithm Ace", "nameEn": "Algorithm Ace", "nameDa": "Algoritme-es"},
+  "trophy": {
+    "icon": "🤖",
+    "nameGu": "અલ્ગોરિધમ એસ",
+    "nameEn": "Algorithm Ace",
+    "nameDa": "Algoritme-es"
+  },
   "teacherGuide": {
     "conceptGu": "Algorithm = exact steps in order. Sequence + loop + condition = every program. Order ખોટો = crash!",
     "conceptEn": "Algorithm = exact steps in order. Sequence + loop + condition = every program. Wrong order = crash!",
@@ -20,10 +25,26 @@
     "scriptEn": "'Minecraft house: floor → walls → roof → door. Reverse — roof without walls impossible!'",
     "scriptDa": "'Minecraft-hus: gulv → vægge → tag → dør. Tag uden vægge er umuligt!'",
     "vocab": [
-      {"gu": "Algorithm = steps recipe", "en": "Algorithm", "da": "Algoritme"},
-      {"gu": "Sequence = ક્રમ", "en": "Sequence", "da": "Sekvens / Rækkefølge"},
-      {"gu": "Loop = repeat", "en": "Loop", "da": "Loop / Gentagelse"},
-      {"gu": "Bug = ખોટો step", "en": "Bug", "da": "Bug / Fejl"}
+      {
+        "gu": "Algorithm = steps recipe",
+        "en": "Algorithm",
+        "da": "Algoritme"
+      },
+      {
+        "gu": "Sequence = ક્રમ",
+        "en": "Sequence",
+        "da": "Sekvens / Rækkefølge"
+      },
+      {
+        "gu": "Loop = repeat",
+        "en": "Loop",
+        "da": "Loop / Gentagelse"
+      },
+      {
+        "gu": "Bug = ખોટો step",
+        "en": "Bug",
+        "da": "Bug / Fejl"
+      }
     ],
     "tipsGu": "💡 Morning routine draw — wake→brush→eat→school. Mix up for fun — 'School first?!' 😂",
     "tipsEn": "💡 Draw a morning routine. Mix up the order for fun — 'School before waking up?!' 😂",
@@ -37,12 +58,37 @@
       "textEn": "Put sandwich steps in order!",
       "textDa": "Sæt sandwich-trin i rækkefølge!",
       "steps": [
-        {"icon": "🍞", "labelGu": "બ્રેડ (Bread)", "labelEn": "Bread", "labelDa": "Brød"},
-        {"icon": "🥬", "labelGu": "પૂરણ (Filling)", "labelEn": "Filling", "labelDa": "Fyld"},
-        {"icon": "🥪", "labelGu": "ઉપરનો ભાગ (Top)", "labelEn": "Top", "labelDa": "Top"},
-        {"icon": "😋", "labelGu": "ખાઓ! (Eat!)", "labelEn": "Eat!", "labelDa": "Spis!"}
+        {
+          "icon": "🍞",
+          "labelGu": "બ્રેડ (Bread)",
+          "labelEn": "Bread",
+          "labelDa": "Brød"
+        },
+        {
+          "icon": "🥬",
+          "labelGu": "પૂરણ (Filling)",
+          "labelEn": "Filling",
+          "labelDa": "Fyld"
+        },
+        {
+          "icon": "🥪",
+          "labelGu": "ઉપરનો ભાગ (Top)",
+          "labelEn": "Top",
+          "labelDa": "Top"
+        },
+        {
+          "icon": "😋",
+          "labelGu": "ખાઓ! (Eat!)",
+          "labelEn": "Eat!",
+          "labelDa": "Spis!"
+        }
       ],
-      "correctOrder": [0,1,2,3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "Bread → Filling → Top → Eat!",
       "hintEn": "Bread first, then filling, then top, then eat!",
       "hintDa": "Brød først, så fyld, så top, så spis!"
@@ -54,12 +100,37 @@
       "textEn": "Morning routine order!",
       "textDa": "Morgenrutine!",
       "steps": [
-        {"icon": "😴", "labelGu": "જાગો (Wake)", "labelEn": "Wake", "labelDa": "Vågn"},
-        {"icon": "🪥", "labelGu": "બ્રશ (Brush)", "labelEn": "Brush", "labelDa": "Børst"},
-        {"icon": "🍳", "labelGu": "નાસ્તો (Eat)", "labelEn": "Eat", "labelDa": "Spis"},
-        {"icon": "🎒", "labelGu": "શાળા (School)", "labelEn": "School", "labelDa": "Skole"}
+        {
+          "icon": "😴",
+          "labelGu": "જાગો (Wake)",
+          "labelEn": "Wake",
+          "labelDa": "Vågn"
+        },
+        {
+          "icon": "🪥",
+          "labelGu": "બ્રશ (Brush)",
+          "labelEn": "Brush",
+          "labelDa": "Børst"
+        },
+        {
+          "icon": "🍳",
+          "labelGu": "નાસ્તો (Eat)",
+          "labelEn": "Eat",
+          "labelDa": "Spis"
+        },
+        {
+          "icon": "🎒",
+          "labelGu": "શાળા (School)",
+          "labelEn": "School",
+          "labelDa": "Skole"
+        }
       ],
-      "correctOrder": [0,1,2,3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "Wake → Brush → Eat → School!",
       "hintEn": "Wake up first!",
       "hintDa": "Vågn op først!"
@@ -71,12 +142,37 @@
       "textEn": "Robot cleaning steps!",
       "textDa": "Robot rengøring trin!",
       "steps": [
-        {"icon": "🔍", "labelGu": "સ્કેન (Scan)", "labelEn": "Scan", "labelDa": "Scan"},
-        {"icon": "🎯", "labelGu": "કચરો શોધો (Find dirt)", "labelEn": "Find", "labelDa": "Find skidt"},
-        {"icon": "🧹", "labelGu": "સાફ કરો! (Clean)", "labelEn": "Clean", "labelDa": "Gør rent"},
-        {"icon": "🏠", "labelGu": "ઘર (Home)", "labelEn": "Home", "labelDa": "Hjem"}
+        {
+          "icon": "🔍",
+          "labelGu": "સ્કેન (Scan)",
+          "labelEn": "Scan",
+          "labelDa": "Scan"
+        },
+        {
+          "icon": "🎯",
+          "labelGu": "કચરો શોધો (Find dirt)",
+          "labelEn": "Find",
+          "labelDa": "Find skidt"
+        },
+        {
+          "icon": "🧹",
+          "labelGu": "સાફ કરો! (Clean)",
+          "labelEn": "Clean",
+          "labelDa": "Gør rent"
+        },
+        {
+          "icon": "🏠",
+          "labelGu": "ઘર (Home)",
+          "labelEn": "Home",
+          "labelDa": "Hjem"
+        }
       ],
-      "correctOrder": [0,1,2,3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "Scan → Find → Clean → Home!",
       "hintEn": "Scan first, then find, clean, go home!",
       "hintDa": "Scan først, så find, gør rent, gå hjem!"
@@ -88,10 +184,26 @@
       "textEn": "IF obstacle THEN ___?",
       "textDa": "Robot ser en forhindring. HVIS forhindring SÅ ___?",
       "options": [
-        {"gu": "ઝડપ વધારો (Speed up)", "en": "Speed up", "da": "Sæt farten op"},
-        {"gu": "ઊભા રહો અને વળો (Stop & Turn)", "en": "Stop and turn", "da": "Stop og drej"},
-        {"gu": "સૂઈ જાઓ (Sleep) 😴", "en": "Sleep", "da": "Sov"},
-        {"gu": "ધ્યાન ન આપો (Ignore)", "en": "Ignore", "da": "Ignorer"}
+        {
+          "gu": "ઝડપ વધારો (Speed up)",
+          "en": "Speed up",
+          "da": "Sæt farten op"
+        },
+        {
+          "gu": "ઊભા રહો અને વળો (Stop & Turn)",
+          "en": "Stop and turn",
+          "da": "Stop og drej"
+        },
+        {
+          "gu": "સૂઈ જાઓ (Sleep) 😴",
+          "en": "Sleep",
+          "da": "Sov"
+        },
+        {
+          "gu": "ધ્યાન ન આપો (Ignore)",
+          "en": "Ignore",
+          "da": "Ignorer"
+        }
       ],
       "answer": 1,
       "hintGu": "IF obstacle THEN stop and turn!",
@@ -105,10 +217,26 @@
       "textEn": "Same steps repeated 5 times = ___",
       "textDa": "Samme trin gentaget 5 gange = ___",
       "options": [
-        {"gu": "વાર્તા (Story)", "en": "Story", "da": "Historie"},
-        {"gu": "લૂપ - વારંવાર! (Loop)", "en": "Loop", "da": "Loop (Gentagelse)"},
-        {"gu": "પાસવર્ડ (Password)", "en": "Password", "da": "Kodeord"},
-        {"gu": "બાઈનરી (Binary)", "en": "Binary", "da": "Binær"}
+        {
+          "gu": "વાર્તા (Story)",
+          "en": "Story",
+          "da": "Historie"
+        },
+        {
+          "gu": "લૂપ - વારંવાર! (Loop)",
+          "en": "Loop",
+          "da": "Loop (Gentagelse)"
+        },
+        {
+          "gu": "પાસવર્ડ (Password)",
+          "en": "Password",
+          "da": "Kodeord"
+        },
+        {
+          "gu": "બાઈનરી (Binary)",
+          "en": "Binary",
+          "da": "Binær"
+        }
       ],
       "answer": 1,
       "hintGu": "Loop = repeat same action!",

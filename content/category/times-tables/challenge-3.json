@@ -10,7 +10,7 @@
   "xpReward": 65,
   "trophy": {
     "icon": "🔟",
-    "nameGu": "10x Master",
+    "nameGu": "10x માસ્ટર",
     "nameEn": "10x Master",
     "nameDa": "10x-Mester"
   },
@@ -25,9 +25,21 @@
     "scriptEn": "Magic trick! Any number times 10 is just the same number with a 0 at the end! 8 * 10 = 80, 15 * 10 = 150!",
     "scriptDa": "Trylletrick! Ethvert tal ganget med 10 er bare tallet selv med et 0 bagpå! 8 * 10 = 80, 15 * 10 = 150!",
     "vocab": [
-      {"gu": "Decimal = 10-base system", "en": "Decimal system", "da": "Titalssystemet"},
-      {"gu": "Place value = position value", "en": "Place value", "da": "Placering / Position"},
-      {"gu": "Zero = 0 add at end", "en": "Add zero", "da": "Tilføj nul"}
+      {
+        "gu": "Decimal = 10-base system",
+        "en": "Decimal system",
+        "da": "Titalssystemet"
+      },
+      {
+        "gu": "Place value = position value",
+        "en": "Place value",
+        "da": "Placering / Position"
+      },
+      {
+        "gu": "Zero = 0 add at end",
+        "en": "Add zero",
+        "da": "Tilføj nul"
+      }
     ],
     "tipsGu": "💡 Money counting: stack of 10 coins = 1 ten. 5 stacks = 50. Physical money! Also rupee notes × 10.",
     "tipsEn": "💡 Practice with 10-cent coins or 10-dollar bills. Show how digits slide left and a zero fills the gap.",
@@ -41,10 +53,26 @@
       "textEn": "10 × 3 = ?",
       "textDa": "10 × 3 = ?",
       "options": [
-        {"gu": "13", "en": "13", "da": "13"},
-        {"gu": "30", "en": "30", "da": "30"},
-        {"gu": "33", "en": "33", "da": "33"},
-        {"gu": "10", "en": "10", "da": "10"}
+        {
+          "gu": "13",
+          "en": "13",
+          "da": "13"
+        },
+        {
+          "gu": "30",
+          "en": "30",
+          "da": "30"
+        },
+        {
+          "gu": "33",
+          "en": "33",
+          "da": "33"
+        },
+        {
+          "gu": "10",
+          "en": "10",
+          "da": "10"
+        }
       ],
       "answer": 1,
       "hintGu": "3 with 0 = 30!",
@@ -58,10 +86,26 @@
       "textEn": "10 × 6 = ?",
       "textDa": "10 × 6 = ?",
       "options": [
-        {"gu": "16", "en": "16", "da": "16"},
-        {"gu": "50", "en": "50", "da": "50"},
-        {"gu": "60", "en": "60", "da": "60"},
-        {"gu": "66", "en": "66", "da": "66"}
+        {
+          "gu": "16",
+          "en": "16",
+          "da": "16"
+        },
+        {
+          "gu": "50",
+          "en": "50",
+          "da": "50"
+        },
+        {
+          "gu": "60",
+          "en": "60",
+          "da": "60"
+        },
+        {
+          "gu": "66",
+          "en": "66",
+          "da": "66"
+        }
       ],
       "answer": 2,
       "hintGu": "6 with 0 = 60!",

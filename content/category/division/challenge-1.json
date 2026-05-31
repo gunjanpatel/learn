@@ -10,7 +10,7 @@
   "xpReward": 75,
   "trophy": {
     "icon": "🍕",
-    "nameGu": "Fair Sharer",
+    "nameGu": "ન્યાયયુક્ત વહેંચણી",
     "nameEn": "Fair Sharer",
     "nameDa": "Mesterdeler"
   },
@@ -25,10 +25,26 @@
     "scriptEn": "Use 12 LEGO bricks and share them among 3 friends. Deal them out one by one and count the piles.",
     "scriptDa": "Tag 16 LEGO-klodser og del dem mellem 4 venner. Uddel dem én efter én, indtil der ikke er flere tilbage, og tæl hver bunke.",
     "vocab": [
-      {"gu": "ભાગ = share / divide", "en": "Divide", "da": "Dividere / Dele"},
-      {"gu": "÷ = division sign", "en": "Divide sign", "da": "Divisionstegn"},
-      {"gu": "Equal = સરખું", "en": "Equal", "da": "Ligeligt / Ens"},
-      {"gu": "Each = પ્રત્યેક", "en": "Each", "da": "Hver"}
+      {
+        "gu": "ભાગ = share / divide",
+        "en": "Divide",
+        "da": "Dividere / Dele"
+      },
+      {
+        "gu": "÷ = division sign",
+        "en": "Divide sign",
+        "da": "Divisionstegn"
+      },
+      {
+        "gu": "Equal = સરખું",
+        "en": "Equal",
+        "da": "Ligeligt / Ens"
+      },
+      {
+        "gu": "Each = પ્રત્યેક",
+        "en": "Each",
+        "da": "Hver"
+      }
     ],
     "tipsGu": "💡 Physical objects deal out — cards, coins, LEGO. See the equal groups. Then connect to ÷ symbol.",
     "tipsEn": "💡 Deal out physical objects like cards, coins, or LEGOs. See the equal groups, then connect to the division symbol.",
@@ -70,10 +86,26 @@
       "textEn": "18 ÷ 3 = ?",
       "textDa": "18 ÷ 3 = ?",
       "options": [
-        {"gu": "5", "en": "5", "da": "5"},
-        {"gu": "6", "en": "6", "da": "6"},
-        {"gu": "7", "en": "7", "da": "7"},
-        {"gu": "8", "en": "8", "da": "8"}
+        {
+          "gu": "5",
+          "en": "5",
+          "da": "5"
+        },
+        {
+          "gu": "6",
+          "en": "6",
+          "da": "6"
+        },
+        {
+          "gu": "7",
+          "en": "7",
+          "da": "7"
+        },
+        {
+          "gu": "8",
+          "en": "8",
+          "da": "8"
+        }
       ],
       "answer": 1,
       "hintGu": "18 ÷ 3 = 6",

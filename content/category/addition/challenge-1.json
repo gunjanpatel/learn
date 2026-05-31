@@ -8,7 +8,12 @@
   "descEn": "Add objects and count!",
   "descDa": "Læg objekter sammen og tæl!",
   "xpReward": 50,
-  "trophy": {"icon": "🍎", "nameGu": "Bronze Adder", "nameEn": "Bronze Adder", "nameDa": "Bronze Adder"},
+  "trophy": {
+    "icon": "🍎",
+    "nameGu": "બ્રોન્ઝ અડર",
+    "nameEn": "Bronze Adder",
+    "nameDa": "Bronze Adder"
+  },
   "teacherGuide": {
     "conceptGu": "સરવાળો = બે groups ભેગા કરવા. Objects touch કરીને count કરાવો.",
     "conceptEn": "Addition = combining two groups.",
@@ -20,10 +25,26 @@
     "scriptEn": "6 apples + 5 apples = ?",
     "scriptDa": "Her er 6 æbler. Nu får du 5 æbler mere. Hvor mange æbler er der i alt?",
     "vocab": [
-      {"gu": "સરવાળો = ઉમેરવું", "en": "Addition", "da": "Plus / Addition"},
-      {"gu": "+ = plus / ઉમેરો", "en": "Plus", "da": "Plus"},
-      {"gu": "= equals / બરાબર", "en": "Equals", "da": "Er lig med"},
-      {"gu": "Total = કુલ", "en": "Total", "da": "I alt"}
+      {
+        "gu": "સરવાળો = ઉમેરવું",
+        "en": "Addition",
+        "da": "Plus / Addition"
+      },
+      {
+        "gu": "+ = plus / ઉમેરો",
+        "en": "Plus",
+        "da": "Plus"
+      },
+      {
+        "gu": "= equals / બરાબર",
+        "en": "Equals",
+        "da": "Er lig med"
+      },
+      {
+        "gu": "Total = કુલ",
+        "en": "Total",
+        "da": "I alt"
+      }
     ],
     "tipsGu": "💡 Objects count, use fingers. Keep it fun!",
     "tipsEn": "💡 Encourage counting on from the larger number.",
@@ -36,8 +57,14 @@
       "textGu": "બધા ઉમેરો — total કેટલા?",
       "textEn": "Count them all — how many total?",
       "textDa": "Tæl dem alle — hvor mange i alt?",
-      "groupA": {"emoji": "🍎", "count": 6},
-      "groupB": {"emoji": "🍎", "count": 5},
+      "groupA": {
+        "emoji": "🍎",
+        "count": 6
+      },
+      "groupB": {
+        "emoji": "🍎",
+        "count": 5
+      },
       "answer": 11,
       "hintGu": "6 + 5 = 11",
       "hintEn": "6 + 5 = 11",
@@ -49,8 +76,14 @@
       "textGu": "Stars ભેગા — total?",
       "textEn": "Stars together — total?",
       "textDa": "Stjerner i alt — hvor mange?",
-      "groupA": {"emoji": "⭐", "count": 8},
-      "groupB": {"emoji": "⭐", "count": 7},
+      "groupA": {
+        "emoji": "⭐",
+        "count": 8
+      },
+      "groupB": {
+        "emoji": "⭐",
+        "count": 7
+      },
       "answer": 15,
       "hintGu": "8 + 7 = 15",
       "hintEn": "8 + 7 = 15",
@@ -62,7 +95,12 @@
       "textGu": "7 + 6 = ?",
       "textEn": "7 + 6 = ?",
       "textDa": "7 + 6 = ?",
-      "options": [11, 12, 13, 14],
+      "options": [
+        11,
+        12,
+        13,
+        14
+      ],
       "answer": 2,
       "hintGu": "7 + 6 = 13",
       "hintEn": "7 + 6 = 13",
@@ -74,7 +112,12 @@
       "textGu": "12 + 5 = ?",
       "textEn": "12 + 5 = ?",
       "textDa": "12 + 5 = ?",
-      "options": [15, 16, 17, 18],
+      "options": [
+        15,
+        16,
+        17,
+        18
+      ],
       "answer": 2,
       "hintGu": "12 + 5 = 17",
       "hintEn": "12 + 5 = 17",
@@ -121,9 +164,31 @@
       "textGu": "Numbers drag કરો — sum 15 બનાવો!",
       "textEn": "Drag two numbers that add up to 15!",
       "textDa": "Træk to tal, der giver 15 i alt!",
-      "numbers": [4, 5, 6, 7, 8, 9, 10, 11],
+      "numbers": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
       "target": 15,
-      "solutions": [[5,10],[6,9],[7,8]],
+      "solutions": [
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ],
       "hintGu": "7 + 8 = 15, or 6 + 9 = 15!",
       "hintEn": "Try 7+8 or 6+9!",
       "hintDa": "Prøv 7+8 eller 6+9!"

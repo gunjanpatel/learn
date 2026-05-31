@@ -8,7 +8,12 @@
   "descEn": "Answer fast! Timer is running!",
   "descDa": "Svar hurtigt! Tid løber!",
   "xpReward": 75,
-  "trophy": {"icon": "🥈", "nameGu": "Silver Adder", "nameEn": "Silver Adder", "nameDa": "Sølv Adder"},
+  "trophy": {
+    "icon": "🥈",
+    "nameGu": "સિલ્વર અડર",
+    "nameEn": "Silver Adder",
+    "nameDa": "Sølv Adder"
+  },
   "teacherGuide": {
     "conceptGu": "Speed round = fluency. Bigger numbers 10-20. Brain train karo!",
     "conceptEn": "Speed builds fluency with numbers up to 20.",
@@ -26,16 +31,56 @@
       "textDa": "10 spørgsmål — så hurtigt du kan! Tid: 60 sekunder",
       "timeLimit": 60,
       "sums": [
-        {"a": 7, "b": 5, "answer": 12},
-        {"a": 9, "b": 4, "answer": 13},
-        {"a": 6, "b": 8, "answer": 14},
-        {"a": 8, "b": 6, "answer": 14},
-        {"a": 9, "b": 6, "answer": 15},
-        {"a": 7, "b": 8, "answer": 15},
-        {"a": 8, "b": 8, "answer": 16},
-        {"a": 9, "b": 7, "answer": 16},
-        {"a": 8, "b": 9, "answer": 17},
-        {"a": 9, "b": 9, "answer": 18}
+        {
+          "a": 7,
+          "b": 5,
+          "answer": 12
+        },
+        {
+          "a": 9,
+          "b": 4,
+          "answer": 13
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "answer": 14
+        },
+        {
+          "a": 8,
+          "b": 6,
+          "answer": 14
+        },
+        {
+          "a": 9,
+          "b": 6,
+          "answer": 15
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "answer": 15
+        },
+        {
+          "a": 8,
+          "b": 8,
+          "answer": 16
+        },
+        {
+          "a": 9,
+          "b": 7,
+          "answer": 16
+        },
+        {
+          "a": 8,
+          "b": 9,
+          "answer": 17
+        },
+        {
+          "a": 9,
+          "b": 9,
+          "answer": 18
+        }
       ],
       "hintGu": "Fingers use OK! ઝડપ later આવશે.",
       "hintEn": "Use fingers if needed — speed comes with practice!",
@@ -47,8 +92,14 @@
       "textGu": "Cars count — total?",
       "textEn": "Count the cars — total?",
       "textDa": "Tæl bilerne — i alt?",
-      "groupA": {"emoji": "🚗", "count": 9},
-      "groupB": {"emoji": "🚕", "count": 8},
+      "groupA": {
+        "emoji": "🚗",
+        "count": 9
+      },
+      "groupB": {
+        "emoji": "🚕",
+        "count": 8
+      },
       "answer": 17,
       "hintGu": "9 + 8 = 17",
       "hintEn": "9 + 8 = 17",
@@ -60,7 +111,12 @@
       "textGu": "9 + 8 = ?",
       "textEn": "9 + 8 = ?",
       "textDa": "9 + 8 = ?",
-      "options": [15, 16, 17, 18],
+      "options": [
+        15,
+        16,
+        17,
+        18
+      ],
       "answer": 2,
       "hintGu": "9 + 8 = 17",
       "hintEn": "9 + 8 = 17",

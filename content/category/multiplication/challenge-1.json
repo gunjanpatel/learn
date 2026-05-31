@@ -8,7 +8,12 @@
   "descEn": "Adding same groups = multiplication!",
   "descDa": "Lægge samme grupper sammen = multiplikation!",
   "xpReward": 75,
-  "trophy": {"icon": "⭐", "nameGu": "Multiplier", "nameEn": "Multiplier", "nameDa": "Multiplikator"},
+  "trophy": {
+    "icon": "⭐",
+    "nameGu": "ગુણક",
+    "nameEn": "Multiplier",
+    "nameDa": "Multiplikator"
+  },
   "teacherGuide": {
     "conceptGu": "ગુણાકાર = same number ઘણી times. 3×4 = 4+4+4.",
     "conceptEn": "Multiplication is repeated addition. 3×4 = 4+4+4.",
@@ -51,7 +56,12 @@
       "textGu": "3 × 5 = ?",
       "textEn": "3 × 5 = ?",
       "textDa": "3 × 5 = ?",
-      "options": [12, 14, 15, 16],
+      "options": [
+        12,
+        14,
+        15,
+        16
+      ],
       "answer": 2,
       "hintGu": "5 + 5 + 5 = 15",
       "hintEn": "5 + 5 + 5 = 15",
@@ -63,7 +73,12 @@
       "textGu": "4 × 4 = ? (UNO players!)",
       "textEn": "4 × 4 = ? (4 players, 4 cards each!)",
       "textDa": "4 × 4 = ? (4 spillere, 4 kort hver!)",
-      "options": [12, 14, 16, 18],
+      "options": [
+        12,
+        14,
+        16,
+        18
+      ],
       "answer": 2,
       "hintGu": "4+4+4+4 = 16",
       "hintEn": "4+4+4+4 = 16",

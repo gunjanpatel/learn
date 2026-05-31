@@ -1,17 +1,17 @@
 {
   "id": "algo-hq-challenge-2",
   "challengeId": "algo-hq-2",
-  "nameGu": "ચિલેન્જ 2 · Algorithm Pro",
+  "nameGu": "ચેલેન્જ 2 · અલ્ગોરિધમ પ્રો",
   "nameEn": "Challenge 2 · Algorithm Pro",
   "nameDa": "Udfordring 2 · Algoritme Pro",
   "icon": "🎓",
-  "descGu": "Advanced algorithms! sequencing, conditionals, loops!",
+  "descGu": "આગળ વધેલ અલ્ગોરિધમ! ક્રમ, શરત (if/else), અને loop!",
   "descEn": "Advanced algorithms! sequencing, conditionals, loops!",
   "descDa": "Avancerede algoritmer! rækkefølge, if/else og loops!",
   "xpReward": 85,
   "trophy": {
     "icon": "🎓",
-    "nameGu": "Algorithm Pro",
+    "nameGu": "અલ્ગોરિધમ પ્રો",
     "nameEn": "Algorithm Pro",
     "nameDa": "Algoritme-Pro"
   },
@@ -30,12 +30,37 @@
       "textEn": "Put the pizza baking steps in order!",
       "textDa": "Sæt pizza-trin i rækkefølge!",
       "steps": [
-        {"icon": "🥖", "labelGu": "લોટ વણો (Roll dough)", "labelEn": "Roll dough", "labelDa": "Rul dej"},
-        {"icon": "🍅", "labelGu": "સોસ લગાવો (Spread sauce)", "labelEn": "Spread sauce", "labelDa": "Smør sovs på"},
-        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો (Add cheese)", "labelEn": "Add cheese", "labelDa": "Tilføj ost"},
-        {"icon": "🔥", "labelGu": "બેક કરો (Bake pizza)", "labelEn": "Bake pizza", "labelDa": "Bag pizza"}
+        {
+          "icon": "🥖",
+          "labelGu": "લોટ વણો (Roll dough)",
+          "labelEn": "Roll dough",
+          "labelDa": "Rul dej"
+        },
+        {
+          "icon": "🍅",
+          "labelGu": "સોસ લગાવો (Spread sauce)",
+          "labelEn": "Spread sauce",
+          "labelDa": "Smør sovs på"
+        },
+        {
+          "icon": "🧀",
+          "labelGu": "ચીઝ ભભરાવો (Add cheese)",
+          "labelEn": "Add cheese",
+          "labelDa": "Tilføj ost"
+        },
+        {
+          "icon": "🔥",
+          "labelGu": "બેક કરો (Bake pizza)",
+          "labelEn": "Bake pizza",
+          "labelDa": "Bag pizza"
+        }
       ],
-      "correctOrder": [0, 1, 2, 3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "લોટ → સોસ → ચીઝ → બેક!",
       "hintEn": "Roll dough first, then sauce, cheese, and bake!",
       "hintDa": "Rul dej først, så sovs, ost, og bag!"
@@ -47,12 +72,37 @@
       "textEn": "Grow a flower from seed in order!",
       "textDa": "Dyrk en blomst fra frø i rækkefølge!",
       "steps": [
-        {"icon": "🕳️", "labelGu": "ખાડો ખોદો (Dig a hole)", "labelEn": "Dig a hole", "labelDa": "Grav hul"},
-        {"icon": "🌱", "labelGu": "બીજ રોપો (Plant seed)", "labelEn": "Plant seed", "labelDa": "Plant frø"},
-        {"icon": "💧", "labelGu": "પાણી આપો (Water it)", "labelEn": "Water it", "labelDa": "Giv vand"},
-        {"icon": "☀️", "labelGu": "તડકો આપો (Sun shines)", "labelEn": "Sun shines", "labelDa": "Solskin"}
+        {
+          "icon": "🕳️",
+          "labelGu": "ખાડો ખોદો (Dig a hole)",
+          "labelEn": "Dig a hole",
+          "labelDa": "Grav hul"
+        },
+        {
+          "icon": "🌱",
+          "labelGu": "બીજ રોપો (Plant seed)",
+          "labelEn": "Plant seed",
+          "labelDa": "Plant frø"
+        },
+        {
+          "icon": "💧",
+          "labelGu": "પાણી આપો (Water it)",
+          "labelEn": "Water it",
+          "labelDa": "Giv vand"
+        },
+        {
+          "icon": "☀️",
+          "labelGu": "તડકો આપો (Sun shines)",
+          "labelEn": "Sun shines",
+          "labelDa": "Solskin"
+        }
       ],
-      "correctOrder": [0, 1, 2, 3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "ખાડો → બીજ → પાણી → તડકો!",
       "hintEn": "Dig a hole first, then plant seed, water, and sun!",
       "hintDa": "Grav hul først, plant frø, giv vand, og sol!"
@@ -64,12 +114,37 @@
       "textEn": "Safely cross the river in order!",
       "textDa": "Kryds floden sikkert i rækkefølge!",
       "steps": [
-        {"icon": "🪵", "labelGu": "લાકડા શોધો (Find logs)", "labelEn": "Find logs", "labelDa": "Find brænde"},
-        {"icon": "🪢", "labelGu": "દોરડું બાંધો (Tie rope)", "labelEn": "Tie rope", "labelDa": "Bind reb"},
-        {"icon": "🛶", "labelGu": "રાફ્ટ બનાવો (Build raft)", "labelEn": "Build raft", "labelDa": "Byg tømmerflåde"},
-        {"icon": "🌊", "labelGu": "નદી ઓળંગો (Cross river)", "labelEn": "Cross river", "labelDa": "Kryds flod"}
+        {
+          "icon": "🪵",
+          "labelGu": "લાકડા શોધો (Find logs)",
+          "labelEn": "Find logs",
+          "labelDa": "Find brænde"
+        },
+        {
+          "icon": "🪢",
+          "labelGu": "દોરડું બાંધો (Tie rope)",
+          "labelEn": "Tie rope",
+          "labelDa": "Bind reb"
+        },
+        {
+          "icon": "🛶",
+          "labelGu": "રાફ્ટ બનાવો (Build raft)",
+          "labelEn": "Build raft",
+          "labelDa": "Byg tømmerflåde"
+        },
+        {
+          "icon": "🌊",
+          "labelGu": "નદી ઓળંગો (Cross river)",
+          "labelEn": "Cross river",
+          "labelDa": "Kryds flod"
+        }
       ],
-      "correctOrder": [0, 1, 2, 3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "લાકડા → દોરડું → રાફ્ટ → નદી ઓળંગો!",
       "hintEn": "Find logs first, then tie rope, build raft, and cross!",
       "hintDa": "Find brænde først, bind reb, byg tømmerflåde, og kryds!"
@@ -81,10 +156,26 @@
       "textEn": "Robot crashed into the wall! Which step is a BUG?",
       "textDa": "Robotten kørte ind i muren! Hvilket trin er en FEJL?",
       "options": [
-        {"gu": "શરૂઆત (Start)", "en": "Start", "da": "Start"},
-        {"gu": "આગળ વધો (Move Forward)", "en": "Move Forward", "da": "Gå Frem"},
-        {"gu": "ડાબી બાજુ વળો (Turn Left)", "en": "Turn Left", "da": "Drej Venstre"},
-        {"gu": "દીવાલમાં અથડાવું 💥 (Move into Wall)", "en": "Move into Wall", "da": "Kør ind i Mur 💥"}
+        {
+          "gu": "શરૂઆત (Start)",
+          "en": "Start",
+          "da": "Start"
+        },
+        {
+          "gu": "આગળ વધો (Move Forward)",
+          "en": "Move Forward",
+          "da": "Gå Frem"
+        },
+        {
+          "gu": "ડાબી બાજુ વળો (Turn Left)",
+          "en": "Turn Left",
+          "da": "Drej Venstre"
+        },
+        {
+          "gu": "દીવાલમાં અથડાવું 💥 (Move into Wall)",
+          "en": "Move into Wall",
+          "da": "Kør ind i Mur 💥"
+        }
       ],
       "answer": 3,
       "hintGu": "દીવાલ સાથે અથડાવું એ BUG છે!",
@@ -98,10 +189,26 @@
       "textEn": "Clapping our hands 5 times is a ___?",
       "textDa": "At klappe i hænderne 5 gange er et ___?",
       "options": [
-        {"gu": "ખોટો સ્ટેપ (Bug)", "en": "Bug", "da": "Fejl (Bug)"},
-        {"gu": "પુનરાવર્તન (Loop)", "en": "Loop", "da": "Loop (Gentagelse)"},
-        {"gu": "નામ (Name)", "en": "Name", "da": "Navn"},
-        {"gu": "નંબર (Number)", "en": "Number", "da": "Nummer"}
+        {
+          "gu": "ખોટો સ્ટેપ (Bug)",
+          "en": "Bug",
+          "da": "Fejl (Bug)"
+        },
+        {
+          "gu": "પુનરાવર્તન (Loop)",
+          "en": "Loop",
+          "da": "Loop (Gentagelse)"
+        },
+        {
+          "gu": "નામ (Name)",
+          "en": "Name",
+          "da": "Navn"
+        },
+        {
+          "gu": "નંબર (Number)",
+          "en": "Number",
+          "da": "Nummer"
+        }
       ],
       "answer": 1,
       "hintGu": "એક જ ક્રિયા વારંવાર કરવી એટલે લૂપ!",

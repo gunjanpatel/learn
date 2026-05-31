@@ -1,6 +1,6 @@
 {
   "id": "python-ch2",
-  "nameGu": "Python — Loops & If! 🔁",
+  "nameGu": "પાયથોન — લૂપ & If! 🔁",
   "nameEn": "Python — Loops & Conditions",
   "nameDa": "Python — Loops & Betingelser 🔁",
   "icon": "🔁",
@@ -10,7 +10,7 @@
   "xpReward": 100,
   "trophy": {
     "icon": "⚙️",
-    "nameGu": "Python Looper",
+    "nameGu": "પાયથોન લૂપર",
     "nameEn": "Python Looper",
     "nameDa": "Python-Looper"
   },
@@ -25,12 +25,36 @@
     "scriptEn": "Write in Replit: for i in range(3): print(\"Hello!\"). Watch it print 3 times! Explain that the spaces before print() are mandatory in Python.",
     "scriptDa": "Prøv i Replit: for i in range(3): print(\"Hej!\"). Det udskrives 3 gange! Vis barnet, at indrykningen med TAB-tasten er obligatorisk i Python.",
     "vocab": [
-      {"gu": "for loop = repeat", "en": "for loop", "da": "for-loop"},
-      {"gu": "range() = number sequence", "en": "range()", "da": "range()"},
-      {"gu": "if = condition / IF", "en": "if statement", "da": "if-betingelse"},
-      {"gu": "else = otherwise / ELSE", "en": "else", "da": "else"},
-      {"gu": "indent = spaces = important!", "en": "Indentation", "da": "Indrykning (Spaces)"},
-      {"gu": "i = loop variable", "en": "Loop variable", "da": "Loop-variabel (i)"}
+      {
+        "gu": "for loop = repeat",
+        "en": "for loop",
+        "da": "for-loop"
+      },
+      {
+        "gu": "range() = number sequence",
+        "en": "range()",
+        "da": "range()"
+      },
+      {
+        "gu": "if = condition / IF",
+        "en": "if statement",
+        "da": "if-betingelse"
+      },
+      {
+        "gu": "else = otherwise / ELSE",
+        "en": "else",
+        "da": "else"
+      },
+      {
+        "gu": "indent = spaces = important!",
+        "en": "Indentation",
+        "da": "Indrykning (Spaces)"
+      },
+      {
+        "gu": "i = loop variable",
+        "en": "Loop variable",
+        "da": "Loop-variabel (i)"
+      }
     ],
     "tipsGu": "💡 replit.com — type for loop together! See output 3 times = wow moment! Indentation with TAB key — show it matters!",
     "tipsEn": "💡 Type a loop together. Show what happens if you forget to indent — Python raises an IndentationError. A perfect debugging lesson!",
@@ -44,10 +68,26 @@
       "textEn": "How many times does: for i in range(6) run?",
       "textDa": "Hvor mange gange kører: for i in range(6)?",
       "options": [
-        {"gu": "4", "en": "4", "da": "4"},
-        {"gu": "5", "en": "5", "da": "5"},
-        {"gu": "6", "en": "6", "da": "6"},
-        {"gu": "7", "en": "7", "da": "7"}
+        {
+          "gu": "4",
+          "en": "4",
+          "da": "4"
+        },
+        {
+          "gu": "5",
+          "en": "5",
+          "da": "5"
+        },
+        {
+          "gu": "6",
+          "en": "6",
+          "da": "6"
+        },
+        {
+          "gu": "7",
+          "en": "7",
+          "da": "7"
+        }
       ],
       "answer": 2,
       "hintGu": "range(6) = 0,1,2,3,4,5 — 6 times!",
@@ -61,10 +101,26 @@
       "textEn": "What numbers does range(8) produce?",
       "textDa": "Hvilke tal laver range(8)?",
       "options": [
-        {"gu": "1 to 8", "en": "1 to 8", "da": "1 til 8"},
-        {"gu": "0 to 7", "en": "0 to 7", "da": "0 til 7"},
-        {"gu": "0 to 8", "en": "0 to 8", "da": "0 til 8"},
-        {"gu": "8 to 1", "en": "8 to 1", "da": "8 til 1"}
+        {
+          "gu": "1 to 8",
+          "en": "1 to 8",
+          "da": "1 til 8"
+        },
+        {
+          "gu": "0 to 7",
+          "en": "0 to 7",
+          "da": "0 til 7"
+        },
+        {
+          "gu": "0 to 8",
+          "en": "0 to 8",
+          "da": "0 til 8"
+        },
+        {
+          "gu": "8 to 1",
+          "en": "8 to 1",
+          "da": "8 til 1"
+        }
       ],
       "answer": 1,
       "hintGu": "range(8) = 0 થી start, 8 BEFORE stop! 0 થી 7!",
@@ -78,10 +134,26 @@
       "textEn": "if score > 15: print(\"Win!\"). If score=12, what prints?",
       "textDa": "if score > 15: print(\"Vinder!\"). Hvis score=12, hvad udskrives?",
       "options": [
-        {"gu": "Win!", "en": "Win!", "da": "Vinder!"},
-        {"gu": "કંઈ પ્રિન્ટ થશે નહીં (Nothing prints)", "en": "Nothing prints", "da": "Intet udskrives"},
-        {"gu": "12", "en": "12", "da": "12"},
-        {"gu": "ભૂલ (Error)", "en": "Error", "da": "Fejl"}
+        {
+          "gu": "Win!",
+          "en": "Win!",
+          "da": "Vinder!"
+        },
+        {
+          "gu": "કંઈ પ્રિન્ટ થશે નહીં (Nothing prints)",
+          "en": "Nothing prints",
+          "da": "Intet udskrives"
+        },
+        {
+          "gu": "12",
+          "en": "12",
+          "da": "12"
+        },
+        {
+          "gu": "ભૂલ (Error)",
+          "en": "Error",
+          "da": "Fejl"
+        }
       ],
       "answer": 1,
       "hintGu": "12 > 15? No! So if block skip — nothing prints!",
@@ -95,10 +167,26 @@
       "textEn": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=17?",
       "textDa": "if age >= 18: print(\"Voksen\") else: print(\"Barn\"). Hvis age=17?",
       "options": [
-        {"gu": "Adult", "en": "Adult", "da": "Voksen"},
-        {"gu": "Child", "en": "Child", "da": "Barn"},
-        {"gu": "17", "en": "17", "da": "17"},
-        {"gu": "કંઈ નહીં (Nothing)", "en": "Nothing", "da": "Intet"}
+        {
+          "gu": "Adult",
+          "en": "Adult",
+          "da": "Voksen"
+        },
+        {
+          "gu": "Child",
+          "en": "Child",
+          "da": "Barn"
+        },
+        {
+          "gu": "17",
+          "en": "17",
+          "da": "17"
+        },
+        {
+          "gu": "કંઈ નહીં (Nothing)",
+          "en": "Nothing",
+          "da": "Intet"
+        }
       ],
       "answer": 1,
       "hintGu": "17 >= 18? No! So ELSE runs: Child!",
@@ -112,10 +200,26 @@
       "textEn": "for i in range(5): print(\"Hi!\"). How many lines print?",
       "textDa": "for i in range(5): print(\"Hej!\"). Hvor mange linjer udskrives?",
       "options": [
-        {"gu": "3", "en": "3", "da": "3"},
-        {"gu": "4", "en": "4", "da": "4"},
-        {"gu": "5", "en": "5", "da": "5"},
-        {"gu": "10", "en": "10", "da": "10"}
+        {
+          "gu": "3",
+          "en": "3",
+          "da": "3"
+        },
+        {
+          "gu": "4",
+          "en": "4",
+          "da": "4"
+        },
+        {
+          "gu": "5",
+          "en": "5",
+          "da": "5"
+        },
+        {
+          "gu": "10",
+          "en": "10",
+          "da": "10"
+        }
       ],
       "answer": 2,
       "hintGu": "range(5) = 5 times! Hi! Hi! Hi! Hi! Hi!",
@@ -129,10 +233,26 @@
       "textEn": "AI training loops over data. Training on 1000 images uses a ___?",
       "textDa": "AI-træning looper over data. Træning på 1000 billeder bruger et ___?",
       "options": [
-        {"gu": "if statement", "en": "if statement", "da": "if-betingelse"},
-        {"gu": "ફોર લૂપ - 1000 વખત! (for loop — 1000 times!)", "en": "for loop — 1000 times!", "da": "for-loop — 1000 gange!"},
-        {"gu": "print()", "en": "print()", "da": "print()"},
-        {"gu": "ચલ (Variable)", "en": "Variable", "da": "Variabel"}
+        {
+          "gu": "if statement",
+          "en": "if statement",
+          "da": "if-betingelse"
+        },
+        {
+          "gu": "ફોર લૂપ - 1000 વખત! (for loop — 1000 times!)",
+          "en": "for loop — 1000 times!",
+          "da": "for-loop — 1000 gange!"
+        },
+        {
+          "gu": "print()",
+          "en": "print()",
+          "da": "print()"
+        },
+        {
+          "gu": "ચલ (Variable)",
+          "en": "Variable",
+          "da": "Variabel"
+        }
       ],
       "answer": 1,
       "hintGu": "for image in dataset: train! Loop over all images = AI training!",

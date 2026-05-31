@@ -4,11 +4,16 @@
   "nameEn": "Multiplication Random Practice",
   "nameDa": "Multiplikation Tilfældig Øvelse 🎲",
   "icon": "⭐",
-  "descGu": "Random times tables! 1-6 tables practice.",
+  "descGu": "Random ગુણાકાર! 1-6 ના table practice.",
   "descEn": "Random multiplication — 1 to 6 times tables!",
   "descDa": "Tilfældig multiplikation — 1 til 6 gangetabel!",
   "xpReward": 90,
-  "trophy": {"icon": "✖️", "nameGu": "Times Table Hero", "nameEn": "Times Table Hero", "nameDa": "Gangetabel Helt"},
+  "trophy": {
+    "icon": "✖️",
+    "nameGu": "ટાઈમ્સ ટેબલ હીરો",
+    "nameEn": "Times Table Hero",
+    "nameDa": "Gangetabel Helt"
+  },
   "teacherGuide": {
     "conceptGu": "Times tables 1-6 random. UNO: 3 players × 4 cards = 12.",
     "conceptEn": "Random multiplication facts — 1 to 6 times tables.",
@@ -16,11 +21,77 @@
     "tipsDa": "💡 Syng gangetabellerne sammen — 2,4,6,8... rytme hjælper hukommelsen!"
   },
   "questions": [
-    {"type": "random-math", "level": "ROUND 1 · 1-2x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 2, "hintGu": "Double it!", "hintEn": "Double the number!", "hintDa": "Fordobl tallet!"},
-    {"type": "random-math", "level": "ROUND 2 · 1-3x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 3, "hintGu": "Add groups!", "hintEn": "Add the groups!", "hintDa": "Læg grupperne sammen!"},
-    {"type": "random-math", "level": "ROUND 3 · 1-4x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 4, "hintGu": "Count groups!", "hintEn": "Count the groups!", "hintDa": "Tæl grupperne!"},
-    {"type": "random-math", "level": "ROUND 4 · 1-5x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 5, "hintGu": "Groups of 5!", "hintEn": "Think in groups!", "hintDa": "Tænk i grupper!"},
-    {"type": "random-math", "level": "ROUND 5 🔥 · 1-6x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 6, "hintGu": "Add same number!", "hintEn": "Repeated addition!", "hintDa": "Gentaget addition!"},
-    {"type": "random-math", "level": "ROUND 6 🔥 · 1-6x", "textGu": "...", "textEn": "...", "textDa": "...", "op": "×", "maxFactor": 6, "hintGu": "Almost master!", "hintEn": "Nearly there!", "hintDa": "Næsten i mål!"}
+    {
+      "type": "random-math",
+      "level": "ROUND 1 · 1-2x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 2,
+      "hintGu": "Double it!",
+      "hintEn": "Double the number!",
+      "hintDa": "Fordobl tallet!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 2 · 1-3x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 3,
+      "hintGu": "Add groups!",
+      "hintEn": "Add the groups!",
+      "hintDa": "Læg grupperne sammen!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 3 · 1-4x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 4,
+      "hintGu": "Count groups!",
+      "hintEn": "Count the groups!",
+      "hintDa": "Tæl grupperne!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 4 · 1-5x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 5,
+      "hintGu": "Groups of 5!",
+      "hintEn": "Think in groups!",
+      "hintDa": "Tænk i grupper!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 5 🔥 · 1-6x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 6,
+      "hintGu": "Add same number!",
+      "hintEn": "Repeated addition!",
+      "hintDa": "Gentaget addition!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 6 🔥 · 1-6x",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "×",
+      "maxFactor": 6,
+      "hintGu": "Almost master!",
+      "hintEn": "Nearly there!",
+      "hintDa": "Næsten i mål!"
+    }
   ]
 }

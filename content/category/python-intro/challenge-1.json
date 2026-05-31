@@ -1,16 +1,16 @@
 {
   "id": "python-ch1",
-  "nameGu": "Python — Hello World! 🐍",
+  "nameGu": "પાયથોન — નમસ્તે વિશ્વ! 🐍",
   "nameEn": "Python — Hello World!",
   "nameDa": "Python — Hello World! 🐍",
   "icon": "🐍",
-  "descGu": "Real coding language! print(), variables, maths!",
+  "descGu": "સાચી coding ભાષા! print(), variables, ગણિત!",
   "descEn": "Real programming! print(), variables, arithmetic!",
   "descDa": "Rigtigt kodesprog! print(), variabler og matematik!",
   "xpReward": 90,
   "trophy": {
     "icon": "🐍",
-    "nameGu": "Python Beginner",
+    "nameGu": "પાયથોન બિગિનર",
     "nameEn": "Python Beginner",
     "nameDa": "Python-Begynder"
   },
@@ -25,12 +25,36 @@
     "scriptEn": "Go to replit.com, create a Python file, and type print(\"Hello Yuval!\"). Click Run and see your code execute in real-time!",
     "scriptDa": "Gå ind på replit.com, lav en Python-fil, og skriv print(\"Hej Yuval!\"). Klik på 'Run' og se din egen kode køre med det samme!",
     "vocab": [
-      {"gu": "print() = screen પર show", "en": "print()", "da": "print()"},
-      {"gu": "Variable = named box", "en": "Variable", "da": "Variabel"},
-      {"gu": "String = text in quotes", "en": "String", "da": "String (Tekst-streng)"},
-      {"gu": "Integer = whole number", "en": "Integer", "da": "Integer (Heltal)"},
-      {"gu": "# = comment / note", "en": "Comment", "da": "Kommentar (#)"},
-      {"gu": "= assign / save value", "en": "Assignment", "da": "Tildeling (=)"}
+      {
+        "gu": "print() = screen પર show",
+        "en": "print()",
+        "da": "print()"
+      },
+      {
+        "gu": "Variable = named box",
+        "en": "Variable",
+        "da": "Variabel"
+      },
+      {
+        "gu": "String = text in quotes",
+        "en": "String",
+        "da": "String (Tekst-streng)"
+      },
+      {
+        "gu": "Integer = whole number",
+        "en": "Integer",
+        "da": "Integer (Heltal)"
+      },
+      {
+        "gu": "# = comment / note",
+        "en": "Comment",
+        "da": "Kommentar (#)"
+      },
+      {
+        "gu": "= assign / save value",
+        "en": "Assignment",
+        "da": "Tildeling (=)"
+      }
     ],
     "tipsGu": "💡 replit.com — free, no login needed for basic use! Type together. Make it print his name. Make it do maths. Celebrate each output!",
     "tipsEn": "💡 Type print(\"Hello\") together. Do simple math like print(5 + 3). Celebrate each successful output!",
@@ -44,10 +68,26 @@
       "textEn": "To show text on screen in Python, you use ___?",
       "textDa": "Hvilken funktion bruger du til at vise tekst på skærmen i Python?",
       "options": [
-        {"gu": "show()", "en": "show()", "da": "show()"},
-        {"gu": "print()", "en": "print()", "da": "print()"},
-        {"gu": "display()", "en": "display()", "da": "display()"},
-        {"gu": "write()", "en": "write()", "da": "write()"}
+        {
+          "gu": "show()",
+          "en": "show()",
+          "da": "show()"
+        },
+        {
+          "gu": "print()",
+          "en": "print()",
+          "da": "print()"
+        },
+        {
+          "gu": "display()",
+          "en": "display()",
+          "da": "display()"
+        },
+        {
+          "gu": "write()",
+          "en": "write()",
+          "da": "write()"
+        }
       ],
       "answer": 1,
       "hintGu": "print() = Python ની superpower!",
@@ -61,10 +101,26 @@
       "textEn": "In Python, text inside quotes is called a ___?",
       "textDa": "Hvad kaldes tekst indeni citationstegn i Python?",
       "options": [
-        {"gu": "નંબર (Number)", "en": "Number", "da": "Tal (Number)"},
-        {"gu": "ચલ (Variable)", "en": "Variable", "da": "Variabel (Variable)"},
-        {"gu": "સ્ટ્રિંગ - ટેક્સ્ટ (String)", "en": "String — text!", "da": "String (Tekst-streng)!"},
-        {"gu": "લૂપ (Loop)", "en": "Loop", "da": "Gentagelse (Loop)"}
+        {
+          "gu": "નંબર (Number)",
+          "en": "Number",
+          "da": "Tal (Number)"
+        },
+        {
+          "gu": "ચલ (Variable)",
+          "en": "Variable",
+          "da": "Variabel (Variable)"
+        },
+        {
+          "gu": "સ્ટ્રિંગ - ટેક્સ્ટ (String)",
+          "en": "String — text!",
+          "da": "String (Tekst-streng)!"
+        },
+        {
+          "gu": "લૂપ (Loop)",
+          "en": "Loop",
+          "da": "Gentagelse (Loop)"
+        }
       ],
       "answer": 2,
       "hintGu": "Text in quotes = String! 'Hello' = string!",
@@ -78,10 +134,26 @@
       "textEn": "In Python: age = 7. What is 'age'?",
       "textDa": "I Python: age = 7. Hvad er 'age'?",
       "options": [
-        {"gu": "એક નંબર (Number)", "en": "A number", "da": "Et tal"},
-        {"gu": "ચલ - એક પેટી! (Variable)", "en": "Variable — named box!", "da": "Variabel — en navngivet kasse!"},
-        {"gu": "એક ફંક્શન (Function)", "en": "A function", "da": "En funktion"},
-        {"gu": "એક લૂપ (Loop)", "en": "A loop", "da": "Et loop"}
+        {
+          "gu": "એક નંબર (Number)",
+          "en": "A number",
+          "da": "Et tal"
+        },
+        {
+          "gu": "ચલ - એક પેટી! (Variable)",
+          "en": "Variable — named box!",
+          "da": "Variabel — en navngivet kasse!"
+        },
+        {
+          "gu": "એક ફંક્શન (Function)",
+          "en": "A function",
+          "da": "En funktion"
+        },
+        {
+          "gu": "એક લૂપ (Loop)",
+          "en": "A loop",
+          "da": "Et loop"
+        }
       ],
       "answer": 1,
       "hintGu": "Variable = named box. age box ની અંદર 7 save!",
@@ -95,10 +167,26 @@
       "textEn": "What does Python print for: print(6 + 8)?",
       "textDa": "Hvad udskriver Python for: print(6 + 8)?",
       "options": [
-        {"gu": "6 + 8", "en": "6 + 8", "da": "6 + 8"},
-        {"gu": "68", "en": "68", "da": "68"},
-        {"gu": "14", "en": "14", "da": "14"},
-        {"gu": "Error", "en": "Error", "da": "Fejlmeddelelser"}
+        {
+          "gu": "6 + 8",
+          "en": "6 + 8",
+          "da": "6 + 8"
+        },
+        {
+          "gu": "68",
+          "en": "68",
+          "da": "68"
+        },
+        {
+          "gu": "14",
+          "en": "14",
+          "da": "14"
+        },
+        {
+          "gu": "Error",
+          "en": "Error",
+          "da": "Fejlmeddelelser"
+        }
       ],
       "answer": 2,
       "hintGu": "Python calculates 6+8=14 and prints 14!",
@@ -112,10 +200,26 @@
       "textEn": "name = \"Yuval\". What does print(name) output?",
       "textDa": "name = \"Yuval\". Hvad udskriver print(name)?",
       "options": [
-        {"gu": "name", "en": "name", "da": "name"},
-        {"gu": "\"Yuval\"", "en": "\"Yuval\"", "da": "\"Yuval\""},
-        {"gu": "Yuval", "en": "Yuval", "da": "Yuval"},
-        {"gu": "Error", "en": "Error", "da": "Fejl"}
+        {
+          "gu": "name",
+          "en": "name",
+          "da": "name"
+        },
+        {
+          "gu": "\"Yuval\"",
+          "en": "\"Yuval\"",
+          "da": "\"Yuval\""
+        },
+        {
+          "gu": "Yuval",
+          "en": "Yuval",
+          "da": "Yuval"
+        },
+        {
+          "gu": "Error",
+          "en": "Error",
+          "da": "Fejl"
+        }
       ],
       "answer": 2,
       "hintGu": "Variable print = value inside! name = Yuval → prints Yuval",
@@ -129,10 +233,26 @@
       "textEn": "A line starting with # in Python — the computer ___?",
       "textDa": "En linje i Python, der starter med # — hvad gør computeren?",
       "options": [
-        {"gu": "તેને રન કરે (Runs it)", "en": "Runs it", "da": "Kører den"},
-        {"gu": "તેને ઇગ્નોર કરે! (Ignores it)", "en": "Ignores it — human note only!", "da": "Ignorerer den — kun en note til os mennesker!"},
-        {"gu": "તેને પ્રિન્ટ કરે (Prints it)", "en": "Prints it", "da": "Udskriver den"},
-        {"gu": "ક્રેશ થાય (Crashes)", "en": "Crashes", "da": "Crasher"}
+        {
+          "gu": "તેને રન કરે (Runs it)",
+          "en": "Runs it",
+          "da": "Kører den"
+        },
+        {
+          "gu": "તેને ઇગ્નોર કરે! (Ignores it)",
+          "en": "Ignores it — human note only!",
+          "da": "Ignorerer den — kun en note til os mennesker!"
+        },
+        {
+          "gu": "તેને પ્રિન્ટ કરે (Prints it)",
+          "en": "Prints it",
+          "da": "Udskriver den"
+        },
+        {
+          "gu": "ક્રેશ થાય (Crashes)",
+          "en": "Crashes",
+          "da": "Crasher"
+        }
       ],
       "answer": 1,
       "hintGu": "# = comment. Computer ignore. Human reads!",
@@ -146,12 +266,37 @@
       "textEn": "Put Python steps in order to print Yuval's age!",
       "textDa": "Sorter Python-trinene for at udskrive Yuvals alder!",
       "steps": [
-        {"icon": "📝", "labelGu": "age = 7", "labelEn": "age = 7", "labelDa": "age = 7"},
-        {"icon": "🖨️", "labelGu": "print(age)", "labelEn": "print(age)", "labelDa": "print(age)"},
-        {"icon": "👀", "labelGu": "આઉટપુટ જુઓ (See output)", "labelEn": "See output", "labelDa": "Se resultatet"},
-        {"icon": "▶️", "labelGu": "કોડ રન કરો (Run code)", "labelEn": "Run code", "labelDa": "Kør kode"}
+        {
+          "icon": "📝",
+          "labelGu": "age = 7",
+          "labelEn": "age = 7",
+          "labelDa": "age = 7"
+        },
+        {
+          "icon": "🖨️",
+          "labelGu": "print(age)",
+          "labelEn": "print(age)",
+          "labelDa": "print(age)"
+        },
+        {
+          "icon": "👀",
+          "labelGu": "આઉટપુટ જુઓ (See output)",
+          "labelEn": "See output",
+          "labelDa": "Se resultatet"
+        },
+        {
+          "icon": "▶️",
+          "labelGu": "કોડ રન કરો (Run code)",
+          "labelEn": "Run code",
+          "labelDa": "Kør kode"
+        }
       ],
-      "correctOrder": [0,1,3,2],
+      "correctOrder": [
+        0,
+        1,
+        3,
+        2
+      ],
       "hintGu": "First store value, then print, then run, then see!",
       "hintEn": "Store → print → run → see output!",
       "hintDa": "Gem værdi → udskriv → kør program → se resultatet!"

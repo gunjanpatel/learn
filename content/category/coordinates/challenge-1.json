@@ -1,6 +1,6 @@
 {
   "id": "coordinates-ch1",
-  "nameGu": "Coordinates — Map Grid 🗺️",
+  "nameGu": "કોઓર્ડિનેટ્સ — નકશો ગ્રિડ 🗺️",
   "nameEn": "Coordinates — Map Grid",
   "nameDa": "Koordinater — Landkort-Netværk 🗺️",
   "icon": "🗺️",
@@ -10,7 +10,7 @@
   "xpReward": 75,
   "trophy": {
     "icon": "🗺️",
-    "nameGu": "Grid Navigator",
+    "nameGu": "ગ્રિડ નેવિગેટર",
     "nameEn": "Grid Navigator",
     "nameDa": "Grid-Navigator"
   },
@@ -25,11 +25,31 @@
     "scriptEn": "Draw a grid map! Bottom-left is (0,0). X goes right, Y goes up. Hide a treasure chest at (5,4) and ask your child to find it!",
     "scriptDa": "Tegn et kort med netværk! Nederst til venstre er (0,0). X går til højre, Y går op. Gem en skat på (5,4) og lad dit barn finde den!",
     "vocab": [
-      {"gu": "X = આડો / horizontal", "en": "X axis", "da": "X-akse (Vandret)"},
-      {"gu": "Y = ઊભો / vertical", "en": "Y axis", "da": "Y-akse (Lodret)"},
-      {"gu": "Grid = ચોક્ઠા / squares", "en": "Grid", "da": "Gitter / Netværk"},
-      {"gu": "Origin = શરૂઆત / (0,0)", "en": "Origin", "da": "Origo (0,0)"},
-      {"gu": "Plot = mark કરવું", "en": "Plot", "da": "Indtegne / Afsætte"}
+      {
+        "gu": "X = આડો / horizontal",
+        "en": "X axis",
+        "da": "X-akse (Vandret)"
+      },
+      {
+        "gu": "Y = ઊભો / vertical",
+        "en": "Y axis",
+        "da": "Y-akse (Lodret)"
+      },
+      {
+        "gu": "Grid = ચોક્ઠા / squares",
+        "en": "Grid",
+        "da": "Gitter / Netværk"
+      },
+      {
+        "gu": "Origin = શરૂઆત / (0,0)",
+        "en": "Origin",
+        "da": "Origo (0,0)"
+      },
+      {
+        "gu": "Plot = mark કરવું",
+        "en": "Plot",
+        "da": "Indtegne / Afsætte"
+      }
     ],
     "tipsGu": "💡 Battleship game = coordinates! Chess board = coordinates with letters. Minecraft F3 = show real coordinates!",
     "tipsEn": "💡 Play a simplified game of Battleship. Use coordinates in Minecraft or board games like chess (e.g., e4).",
@@ -43,10 +63,26 @@
       "textEn": "In coordinate (x,y) — what does x tell us?",
       "textDa": "I koordinatet (x,y) — hvad fortæller x os?",
       "options": [
-        {"gu": "ઊભો / up-down", "en": "Up-down position", "da": "Op-ned position"},
-        {"gu": "આડો / left-right", "en": "Left-right position", "da": "Venstre-højre position"},
-        {"gu": "રંગ (Colour)", "en": "Colour", "da": "Farve"},
-        {"gu": "કદ (Size)", "en": "Size", "da": "Størrelse"}
+        {
+          "gu": "ઊભો / up-down",
+          "en": "Up-down position",
+          "da": "Op-ned position"
+        },
+        {
+          "gu": "આડો / left-right",
+          "en": "Left-right position",
+          "da": "Venstre-højre position"
+        },
+        {
+          "gu": "રંગ (Colour)",
+          "en": "Colour",
+          "da": "Farve"
+        },
+        {
+          "gu": "કદ (Size)",
+          "en": "Size",
+          "da": "Størrelse"
+        }
       ],
       "answer": 1,
       "hintGu": "X = horizontal = left-right!",
@@ -60,10 +96,26 @@
       "textEn": "At point (6, 8) — what is the X value?",
       "textDa": "I punktet (6, 8) — hvad er X-værdien?",
       "options": [
-        {"gu": "8", "en": "8", "da": "8"},
-        {"gu": "6", "en": "6", "da": "6"},
-        {"gu": "14", "en": "14", "da": "14"},
-        {"gu": "0", "en": "0", "da": "0"}
+        {
+          "gu": "8",
+          "en": "8",
+          "da": "8"
+        },
+        {
+          "gu": "6",
+          "en": "6",
+          "da": "6"
+        },
+        {
+          "gu": "14",
+          "en": "14",
+          "da": "14"
+        },
+        {
+          "gu": "0",
+          "en": "0",
+          "da": "0"
+        }
       ],
       "answer": 1,
       "hintGu": "(x, y) — first number = X = 6!",
@@ -77,10 +129,26 @@
       "textEn": "At point (4, 9) — what is the Y value?",
       "textDa": "I punktet (4, 9) — hvad er Y-værdien?",
       "options": [
-        {"gu": "4", "en": "4", "da": "4"},
-        {"gu": "13", "en": "13", "da": "13"},
-        {"gu": "9", "en": "9", "da": "9"},
-        {"gu": "0", "en": "0", "da": "0"}
+        {
+          "gu": "4",
+          "en": "4",
+          "da": "4"
+        },
+        {
+          "gu": "13",
+          "en": "13",
+          "da": "13"
+        },
+        {
+          "gu": "9",
+          "en": "9",
+          "da": "9"
+        },
+        {
+          "gu": "0",
+          "en": "0",
+          "da": "0"
+        }
       ],
       "answer": 2,
       "hintGu": "(x, y) — second number = Y = 9!",
@@ -94,10 +162,26 @@
       "textEn": "The starting point of a grid is called?",
       "textDa": "Hvad kaldes startpunktet i et koordinatsystem?",
       "options": [
-        {"gu": "(1, 1)", "en": "(1,1)", "da": "(1,1)"},
-        {"gu": "(0, 0) — Origin", "en": "(0,0) Origin", "da": "(0,0) Origo"},
-        {"gu": "(5, 5)", "en": "(5,5)", "da": "(5,5)"},
-        {"gu": "(10, 10)", "en": "(10,10)", "da": "(10,10)"}
+        {
+          "gu": "(1, 1)",
+          "en": "(1,1)",
+          "da": "(1,1)"
+        },
+        {
+          "gu": "(0, 0) — Origin",
+          "en": "(0,0) Origin",
+          "da": "(0,0) Origo"
+        },
+        {
+          "gu": "(5, 5)",
+          "en": "(5,5)",
+          "da": "(5,5)"
+        },
+        {
+          "gu": "(10, 10)",
+          "en": "(10,10)",
+          "da": "(10,10)"
+        }
       ],
       "answer": 1,
       "hintGu": "Origin = (0,0) — starting point!",
@@ -111,10 +195,26 @@
       "textEn": "Robot starts at (0,0). Moves 6 right, 4 up. Where is it?",
       "textDa": "Robotten starter i (0,0). Den går 6 til højre og 4 op. Hvor står den?",
       "options": [
-        {"gu": "(4, 6)", "en": "(4,6)", "da": "(4,6)"},
-        {"gu": "(6, 4)", "en": "(6,4)", "da": "(6,4)"},
-        {"gu": "(10, 0)", "en": "(10,0)", "da": "(10,0)"},
-        {"gu": "(0, 10)", "en": "(0,10)", "da": "(0,10)"}
+        {
+          "gu": "(4, 6)",
+          "en": "(4,6)",
+          "da": "(4,6)"
+        },
+        {
+          "gu": "(6, 4)",
+          "en": "(6,4)",
+          "da": "(6,4)"
+        },
+        {
+          "gu": "(10, 0)",
+          "en": "(10,0)",
+          "da": "(10,0)"
+        },
+        {
+          "gu": "(0, 10)",
+          "en": "(0,10)",
+          "da": "(0,10)"
+        }
       ],
       "answer": 1,
       "hintGu": "6 right = X=6, 4 up = Y=4 → (6,4)!",

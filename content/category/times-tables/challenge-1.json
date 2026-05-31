@@ -10,7 +10,7 @@
   "xpReward": 65,
   "trophy": {
     "icon": "✌️",
-    "nameGu": "2x Champion",
+    "nameGu": "2x ચેમ્પિયન",
     "nameEn": "2x Champion",
     "nameDa": "2x-Mester"
   },
@@ -25,10 +25,26 @@
     "scriptEn": "Clap pattern: 2, 4, 6, 8, 10! Hands up on even numbers. Counting by 2s is the 2 times table.",
     "scriptDa": "Klap-mønster: 2, 4, 6, 8, 10! Ræk hænderne op på lige tal. At tælle i 2-tabellen er super let!",
     "vocab": [
-      {"gu": "Double = બમણું", "en": "Double", "da": "Dobbelt / Fordoble"},
-      {"gu": "Times table = પહાડો", "en": "Times table", "da": "Tabel / Gange-tabel"},
-      {"gu": "Even numbers = જોડ", "en": "Even numbers", "da": "Lige tal"},
-      {"gu": "Multiply = ગુણ", "en": "Multiply", "da": "Gange"}
+      {
+        "gu": "Double = બમણું",
+        "en": "Double",
+        "da": "Dobbelt / Fordoble"
+      },
+      {
+        "gu": "Times table = પહાડો",
+        "en": "Times table",
+        "da": "Tabel / Gange-tabel"
+      },
+      {
+        "gu": "Even numbers = જોડ",
+        "en": "Even numbers",
+        "da": "Lige tal"
+      },
+      {
+        "gu": "Multiply = ગુણ",
+        "en": "Multiply",
+        "da": "Gange"
+      }
     ],
     "tipsGu": "💡 Chant together: 2,4,6,8,10,12,14,16,18,20! Count by 2s on fingers — 10 fingers = 20!",
     "tipsEn": "💡 Double numbers quickly up to 10. Chant: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20!",
@@ -42,10 +58,26 @@
       "textEn": "2 × 3 = ?",
       "textDa": "2 × 3 = ?",
       "options": [
-        {"gu": "4", "en": "4", "da": "4"},
-        {"gu": "5", "en": "5", "da": "5"},
-        {"gu": "6", "en": "6", "da": "6"},
-        {"gu": "7", "en": "7", "da": "7"}
+        {
+          "gu": "4",
+          "en": "4",
+          "da": "4"
+        },
+        {
+          "gu": "5",
+          "en": "5",
+          "da": "5"
+        },
+        {
+          "gu": "6",
+          "en": "6",
+          "da": "6"
+        },
+        {
+          "gu": "7",
+          "en": "7",
+          "da": "7"
+        }
       ],
       "answer": 2,
       "hintGu": "2+2+2 = 6",
@@ -59,10 +91,26 @@
       "textEn": "2 × 6 = ?",
       "textDa": "2 × 6 = ?",
       "options": [
-        {"gu": "10", "en": "10", "da": "10"},
-        {"gu": "12", "en": "12", "da": "12"},
-        {"gu": "14", "en": "14", "da": "14"},
-        {"gu": "16", "en": "16", "da": "16"}
+        {
+          "gu": "10",
+          "en": "10",
+          "da": "10"
+        },
+        {
+          "gu": "12",
+          "en": "12",
+          "da": "12"
+        },
+        {
+          "gu": "14",
+          "en": "14",
+          "da": "14"
+        },
+        {
+          "gu": "16",
+          "en": "16",
+          "da": "16"
+        }
       ],
       "answer": 1,
       "hintGu": "Count by 2s six times!",
@@ -76,10 +124,26 @@
       "textEn": "2 × 8 = ?",
       "textDa": "2 × 8 = ?",
       "options": [
-        {"gu": "14", "en": "14", "da": "14"},
-        {"gu": "16", "en": "16", "da": "16"},
-        {"gu": "18", "en": "18", "da": "18"},
-        {"gu": "20", "en": "20", "da": "20"}
+        {
+          "gu": "14",
+          "en": "14",
+          "da": "14"
+        },
+        {
+          "gu": "16",
+          "en": "16",
+          "da": "16"
+        },
+        {
+          "gu": "18",
+          "en": "18",
+          "da": "18"
+        },
+        {
+          "gu": "20",
+          "en": "20",
+          "da": "20"
+        }
       ],
       "answer": 1,
       "hintGu": "Count by 2s eight times!",

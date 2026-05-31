@@ -10,7 +10,7 @@
   "xpReward": 70,
   "trophy": {
     "icon": "🍕",
-    "nameGu": "Fraction Finder",
+    "nameGu": "અપૂર્ણાંક ફાઇન્ડર",
     "nameEn": "Fraction Finder",
     "nameDa": "Brøk-Finder"
   },
@@ -25,10 +25,26 @@
     "scriptEn": "Fold a paper in half to get 2 equal parts. Fold again to get 4 quarters. Unfold and explore.",
     "scriptDa": "Fold et stykke papir på midten for at få 2 lige store dele. Fold det igen for at få 4 kvardele (kvart-dele). Fold det ud og tæl dem.",
     "vocab": [
-      {"gu": "Half = અડધો / ½", "en": "Half", "da": "Halv (1/2)"},
-      {"gu": "Quarter = ચોથો ભાગ / ¼", "en": "Quarter", "da": "Kvart (1/4)"},
-      {"gu": "Whole = આખો / 1", "en": "Whole", "da": "Hel (1)"},
-      {"gu": "Equal parts = સરખા ભાગ", "en": "Equal parts", "da": "Lige store dele"}
+      {
+        "gu": "Half = અડધો / ½",
+        "en": "Half",
+        "da": "Halv (1/2)"
+      },
+      {
+        "gu": "Quarter = ચોથો ભાગ / ¼",
+        "en": "Quarter",
+        "da": "Kvart (1/4)"
+      },
+      {
+        "gu": "Whole = આખો / 1",
+        "en": "Whole",
+        "da": "Hel (1)"
+      },
+      {
+        "gu": "Equal parts = સરખા ભાગ",
+        "en": "Equal parts",
+        "da": "Lige store dele"
+      }
     ],
     "tipsGu": "💡 Chocolate bar break in half — count squares each side same? Paper fold and unfold — see equal parts. Apple cut! Physical = best.",
     "tipsEn": "💡 Break a chocolate bar or cut an apple to show halves. Fold paper to show quarters. Hands-on is best!",
@@ -42,10 +58,26 @@
       "textEn": "Pizza cut into 2 equal pieces. Take 1 piece = ?",
       "textDa": "En pizza skæres i 2 lige store dele. Hvad kaldes 1 del?",
       "options": [
-        {"gu": "આખો / Whole", "en": "Whole", "da": "Hel"},
-        {"gu": "Half / અડધો ½", "en": "Half ½", "da": "Halv ½"},
-        {"gu": "Quarter / ¼", "en": "Quarter ¼", "da": "Kvart ¼"},
-        {"gu": "Nothing", "en": "Nothing", "da": "Ingenting"}
+        {
+          "gu": "આખો / Whole",
+          "en": "Whole",
+          "da": "Hel"
+        },
+        {
+          "gu": "Half / અડધો ½",
+          "en": "Half ½",
+          "da": "Halv ½"
+        },
+        {
+          "gu": "Quarter / ¼",
+          "en": "Quarter ¼",
+          "da": "Kvart ¼"
+        },
+        {
+          "gu": "Nothing",
+          "en": "Nothing",
+          "da": "Ingenting"
+        }
       ],
       "answer": 1,
       "hintGu": "2 equal pieces માંથી 1 = Half!",
@@ -59,10 +91,26 @@
       "textEn": "Chocolate bar cut into 4 equal pieces. Take 1 = ?",
       "textDa": "En chokoladebar skæres i 4 lige store dele. Hvad kaldes 1 del?",
       "options": [
-        {"gu": "Half ½", "en": "Half", "da": "Halv ½"},
-        {"gu": "Quarter ¼", "en": "Quarter ¼", "da": "Kvart ¼"},
-        {"gu": "Three-quarters ¾", "en": "Three-quarters", "da": "Tre fjerdedele ¾"},
-        {"gu": "Whole", "en": "Whole", "da": "Hel"}
+        {
+          "gu": "Half ½",
+          "en": "Half",
+          "da": "Halv ½"
+        },
+        {
+          "gu": "Quarter ¼",
+          "en": "Quarter ¼",
+          "da": "Kvart ¼"
+        },
+        {
+          "gu": "Three-quarters ¾",
+          "en": "Three-quarters",
+          "da": "Tre fjerdedele ¾"
+        },
+        {
+          "gu": "Whole",
+          "en": "Whole",
+          "da": "Hel"
+        }
       ],
       "answer": 1,
       "hintGu": "4 equal pieces માંથી 1 = Quarter ¼!",
@@ -98,10 +146,26 @@
       "textEn": "Pizza has 4 slices. You eat 3. What fraction did you eat?",
       "textDa": "En pizza har 4 stykker. Du spiser 3 stykker. Hvor stor en brøkdel spiste du?",
       "options": [
-        {"gu": "Half ½", "en": "Half", "da": "Halv ½"},
-        {"gu": "Quarter ¼", "en": "Quarter", "da": "Kvart ¼"},
-        {"gu": "Three-quarters ¾", "en": "Three-quarters ¾", "da": "Tre fjerdedele ¾"},
-        {"gu": "Whole", "en": "Whole", "da": "Hel"}
+        {
+          "gu": "Half ½",
+          "en": "Half",
+          "da": "Halv ½"
+        },
+        {
+          "gu": "Quarter ¼",
+          "en": "Quarter",
+          "da": "Kvart ¼"
+        },
+        {
+          "gu": "Three-quarters ¾",
+          "en": "Three-quarters ¾",
+          "da": "Tre fjerdedele ¾"
+        },
+        {
+          "gu": "Whole",
+          "en": "Whole",
+          "da": "Hel"
+        }
       ],
       "answer": 2,
       "hintGu": "4 માંથી 3 = Three-quarters ¾!",

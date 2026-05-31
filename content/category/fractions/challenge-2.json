@@ -4,13 +4,13 @@
   "nameEn": "Fractions — Half Random Practice",
   "nameDa": "Brøker — Halveringstræning 🎲",
   "icon": "🎲",
-  "descGu": "Random numbers ના half! Practice makes perfect.",
+  "descGu": "Random numbers ના અડધા! Practice makes perfect.",
   "descEn": "Find half of random even numbers!",
   "descDa": "Find det halve af tilfældige lige tal!",
   "xpReward": 80,
   "trophy": {
     "icon": "✂️",
-    "nameGu": "Half Master",
+    "nameGu": "અડધો માસ્ટર",
     "nameEn": "Half Master",
     "nameDa": "Halveringsmester"
   },
@@ -25,20 +25,104 @@
     "scriptEn": "Half of a number is dividing it by 2. Let's practice rapid mental halving!",
     "scriptDa": "At halvere et tal er det samme som at dele det med 2. Lad os øve os i hurtig hovedregning!",
     "vocab": [
-      {"gu": "Halve = half કરવું", "en": "Halve", "da": "Halvere"},
-      {"gu": "Even number = જોડ સંખ્યા", "en": "Even number", "da": "Lige tal"},
-      {"gu": "Divide by 2 = 2 થી ભાગ", "en": "Divide by 2", "da": "Dividere med 2"}
+      {
+        "gu": "Halve = half કરવું",
+        "en": "Halve",
+        "da": "Halvere"
+      },
+      {
+        "gu": "Even number = જોડ સંખ્યા",
+        "en": "Even number",
+        "da": "Lige tal"
+      },
+      {
+        "gu": "Divide by 2 = 2 થી ભાગ",
+        "en": "Divide by 2",
+        "da": "Dividere med 2"
+      }
     ],
     "tipsGu": "💡 Even numbers only! 2,4,6,8,10,12,14,16,18,20. Pattern practice.",
     "tipsEn": "💡 Practice halving even numbers up to 30 to strengthen division base.",
     "tipsDa": "💡 Øv halvering af lige tal op til 30 for at opbygge et stærkt grundlag for division."
   },
   "questions": [
-    {"type": "random-math", "level": "ROUND 1", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 4, "max": 12, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"},
-    {"type": "random-math", "level": "ROUND 2", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 4, "max": 16, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"},
-    {"type": "random-math", "level": "ROUND 3", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 6, "max": 20, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"},
-    {"type": "random-math", "level": "ROUND 4", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 8, "max": 24, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"},
-    {"type": "random-math", "level": "ROUND 5 🔥", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 10, "max": 30, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"},
-    {"type": "random-math", "level": "ROUND 6 🔥", "textGu": "Half of ___?", "textEn": "Half of this number?", "textDa": "Det halve af tallet?", "op": "half", "min": 12, "max": 30, "hintGu": "÷ 2 !", "hintEn": "Divide by 2!", "hintDa": "Del med 2!"}
+    {
+      "type": "random-math",
+      "level": "ROUND 1",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 4,
+      "max": 12,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 2",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 4,
+      "max": 16,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 3",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 6,
+      "max": 20,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 4",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 8,
+      "max": 24,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 5 🔥",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 10,
+      "max": 30,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 6 🔥",
+      "textGu": "Half of ___?",
+      "textEn": "Half of this number?",
+      "textDa": "Det halve af tallet?",
+      "op": "half",
+      "min": 12,
+      "max": 30,
+      "hintGu": "÷ 2 !",
+      "hintEn": "Divide by 2!",
+      "hintDa": "Del med 2!"
+    }
   ]
 }

@@ -8,7 +8,12 @@
   "descEn": "New questions every time! Random subtraction.",
   "descDa": "Nye spørgsmål hver gang! Tilfældig subtraktion.",
   "xpReward": 80,
-  "trophy": {"icon": "➖", "nameGu": "Subtraction Star", "nameEn": "Subtraction Star", "nameDa": "Subtraktionsstjerne"},
+  "trophy": {
+    "icon": "➖",
+    "nameGu": "બાદબાકી સ્ટાર",
+    "nameEn": "Subtraction Star",
+    "nameDa": "Subtraktionsstjerne"
+  },
   "teacherGuide": {
     "conceptGu": "Random subtraction. Bigger minus smaller — always positive. Count back mentally.",
     "conceptEn": "Random subtraction — always positive results, up to 30.",
@@ -16,11 +21,83 @@
     "tipsDa": "💡 Nummerlinje — hop baglæns for at trække fra!"
   },
   "questions": [
-    {"type": "random-math", "level": "ROUND 1", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 3, "max": 12, "hintGu": "Count back!", "hintEn": "Count backwards!", "hintDa": "Tæl baglæns!"},
-    {"type": "random-math", "level": "ROUND 2", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 5, "max": 15, "hintGu": "Fingers!", "hintEn": "Use fingers to count back!", "hintDa": "Brug fingrene til at tælle baglæns!"},
-    {"type": "random-math", "level": "ROUND 3", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 6, "max": 18, "hintGu": "Bigger minus smaller!", "hintEn": "Bigger minus smaller!", "hintDa": "Størst minus mindst!"},
-    {"type": "random-math", "level": "ROUND 4", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 8, "max": 20, "hintGu": "Count back slowly!", "hintEn": "Count back carefully!", "hintDa": "Tæl forsigtigt baglæns!"},
-    {"type": "random-math", "level": "ROUND 5 🔥", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 10, "max": 25, "hintGu": "Take your time!", "hintEn": "Think it through!", "hintDa": "Tænk det igennem!"},
-    {"type": "random-math", "level": "ROUND 6 🔥", "textGu": "...", "textEn": "...", "textDa": "...", "op": "-", "min": 12, "max": 30, "hintGu": "Almost done!", "hintEn": "Nearly there!", "hintDa": "Næsten i mål!"}
+    {
+      "type": "random-math",
+      "level": "ROUND 1",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 3,
+      "max": 12,
+      "hintGu": "Count back!",
+      "hintEn": "Count backwards!",
+      "hintDa": "Tæl baglæns!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 2",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 5,
+      "max": 15,
+      "hintGu": "Fingers!",
+      "hintEn": "Use fingers to count back!",
+      "hintDa": "Brug fingrene til at tælle baglæns!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 3",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 6,
+      "max": 18,
+      "hintGu": "Bigger minus smaller!",
+      "hintEn": "Bigger minus smaller!",
+      "hintDa": "Størst minus mindst!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 4",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 8,
+      "max": 20,
+      "hintGu": "Count back slowly!",
+      "hintEn": "Count back carefully!",
+      "hintDa": "Tæl forsigtigt baglæns!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 5 🔥",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 10,
+      "max": 25,
+      "hintGu": "Take your time!",
+      "hintEn": "Think it through!",
+      "hintDa": "Tænk det igennem!"
+    },
+    {
+      "type": "random-math",
+      "level": "ROUND 6 🔥",
+      "textGu": "...",
+      "textEn": "...",
+      "textDa": "...",
+      "op": "-",
+      "min": 12,
+      "max": 30,
+      "hintGu": "Almost done!",
+      "hintEn": "Nearly there!",
+      "hintDa": "Næsten i mål!"
+    }
   ]
 }

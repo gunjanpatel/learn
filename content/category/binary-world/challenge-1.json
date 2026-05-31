@@ -1,6 +1,6 @@
 {
   "id": "binary-challenge-1",
-  "nameGu": "Binary — Basics 💡",
+  "nameGu": "બાઈનરી — શરૂઆત 💡",
   "nameEn": "Binary Basics",
   "nameDa": "Binære Tal — Basis 💡",
   "icon": "💡",
@@ -10,7 +10,7 @@
   "xpReward": 60,
   "trophy": {
     "icon": "💡",
-    "nameGu": "Bit Beginner",
+    "nameGu": "બિટ બિગિનર",
     "nameEn": "Bit Beginner",
     "nameDa": "Bit-Begynder"
   },
@@ -25,10 +25,26 @@
     "scriptEn": "Ready for secret code? 0110 = ? 4+2=6! You are a computer scientist now!",
     "scriptDa": "Er du klar til en hemmelig spionkode? 0110 = ? 4 + 2 = 6! Du tænker som en rigdig programmør!",
     "vocab": [
-      {"gu": "Bit = 1 switch", "en": "Bit", "da": "Bit"},
-      {"gu": "ON = 1 = electricity", "en": "Binary 1", "da": "1 / Tændt"},
-      {"gu": "OFF = 0 = no electricity", "en": "Binary 0", "da": "0 / Slukket"},
-      {"gu": "Binary = બે-base number", "en": "Binary", "da": "Binær"}
+      {
+        "gu": "Bit = 1 switch",
+        "en": "Bit",
+        "da": "Bit"
+      },
+      {
+        "gu": "ON = 1 = electricity",
+        "en": "Binary 1",
+        "da": "1 / Tændt"
+      },
+      {
+        "gu": "OFF = 0 = no electricity",
+        "en": "Binary 0",
+        "da": "0 / Slukket"
+      },
+      {
+        "gu": "Binary = બે-base number",
+        "en": "Binary",
+        "da": "Binær"
+      }
     ],
     "tipsGu": "💡 Light switches demo! 4 switches, assign values 8,4,2,1. Flip and calculate together physically!",
     "tipsEn": "💡 Tape down 4 squares on the floor: [8], [4], [2], [1]. Step in squares to add them up!",
@@ -42,10 +58,26 @@
       "textEn": "A computer only understands ___.",
       "textDa": "En computer forstår kun ___.",
       "options": [
-        {"gu": "A થી Z અક્ષરો (Letters)", "en": "Letters", "da": "Bogstaver"},
-        {"gu": "1 થી 10 (1 to 10)", "en": "1 to 10", "da": "Tal fra 1 til 10"},
-        {"gu": "ફક્ત 1 અને 0 (Only 1 and 0)", "en": "Only 1 and 0", "da": "Kun 1 og 0"},
-        {"gu": "રંગો (Colors)", "en": "Colors", "da": "Farver"}
+        {
+          "gu": "A થી Z અક્ષરો (Letters)",
+          "en": "Letters",
+          "da": "Bogstaver"
+        },
+        {
+          "gu": "1 થી 10 (1 to 10)",
+          "en": "1 to 10",
+          "da": "Tal fra 1 til 10"
+        },
+        {
+          "gu": "ફક્ત 1 અને 0 (Only 1 and 0)",
+          "en": "Only 1 and 0",
+          "da": "Kun 1 og 0"
+        },
+        {
+          "gu": "રંગો (Colors)",
+          "en": "Colors",
+          "da": "Farver"
+        }
       ],
       "answer": 2,
       "hintGu": "Electricity ON=1, OFF=0. ફક્ત બે!",
@@ -58,7 +90,12 @@
       "textGu": "Binary 0110 = decimal?",
       "textEn": "Binary 0110 = what decimal number?",
       "textDa": "Binær 0110 = hvilket tal?",
-      "bits": [0,1,1,0],
+      "bits": [
+        0,
+        1,
+        1,
+        0
+      ],
       "answer": 6,
       "hintGu": "4 + 2 = 6",
       "hintEn": "Bits worth 4 and 2 are ON. 4+2=6",
@@ -70,7 +107,12 @@
       "textGu": "Binary 1001 = decimal?",
       "textEn": "Binary 1001 = decimal?",
       "textDa": "Binær 1001 = hvilket tal?",
-      "bits": [1,0,0,1],
+      "bits": [
+        1,
+        0,
+        0,
+        1
+      ],
       "answer": 9,
       "hintGu": "8 + 1 = 9",
       "hintEn": "Bits worth 8 and 1 are ON. 8+1=9",

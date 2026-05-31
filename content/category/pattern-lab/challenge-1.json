@@ -1,6 +1,6 @@
 {
   "id": "pattern-lab-challenge-1",
-  "nameGu": "Pattern Lab — Basics 🔮",
+  "nameGu": "પેટર્ન લેબ — શરૂઆત 🔮",
   "nameEn": "Pattern Lab Basics",
   "nameDa": "Mønster-Laboratoriet 🔮",
   "icon": "🔮",
@@ -10,7 +10,7 @@
   "xpReward": 60,
   "trophy": {
     "icon": "🔮",
-    "nameGu": "Pattern Finder",
+    "nameGu": "પેટર્ન ફાઇન્ડર",
     "nameEn": "Pattern Finder",
     "nameDa": "Mønster-Finder"
   },
@@ -25,10 +25,26 @@
     "scriptEn": "Skip counting: 3, 6, 9... What's the rule? Add 3! AI finds patterns in what you watch to recommend new videos.",
     "scriptDa": "At tælle i 3-spring: 3, 6, 9... Hvad er reglen? Læg 3 til! AI finder mønstre i det, du ser, for at anbefale nye videoer.",
     "vocab": [
-      {"gu": "Pattern = Rule / નિયમ", "en": "Pattern", "da": "Mønster"},
-      {"gu": "Variable x = mystery number", "en": "Variable", "da": "Variabel x"},
-      {"gu": "Sequence = ક્રમ", "en": "Sequence", "da": "Rækkefølge / Sekvens"},
-      {"gu": "Predict = ભવિષ્ય ધારવું", "en": "Predict", "da": "Forudsige"}
+      {
+        "gu": "Pattern = Rule / નિયમ",
+        "en": "Pattern",
+        "da": "Mønster"
+      },
+      {
+        "gu": "Variable x = mystery number",
+        "en": "Variable",
+        "da": "Variabel x"
+      },
+      {
+        "gu": "Sequence = ક્રમ",
+        "en": "Sequence",
+        "da": "Rækkefølge / Sekvens"
+      },
+      {
+        "gu": "Predict = ભવિષ્ય ધારવું",
+        "en": "Predict",
+        "da": "Forudsige"
+      }
     ],
     "tipsGu": "💡 UNO: 4+4+4 = loop pattern! Birthday: 5,6,7,__ = +1/year!",
     "tipsEn": "💡 Spot patterns in daily routines or tile shapes. Show how loops in code repeat these patterns.",
@@ -41,7 +57,13 @@
       "textGu": "Rule શોધો — next?",
       "textEn": "Find the rule — what comes next?",
       "textDa": "Find reglen — hvad er det næste tal?",
-      "sequence": [3,6,9,12,"?"],
+      "sequence": [
+        3,
+        6,
+        9,
+        12,
+        "?"
+      ],
       "answer": 15,
       "hintGu": "+3 every time! 12+3=15",
       "hintEn": "Add 3 each time",
@@ -53,7 +75,13 @@
       "textGu": "Chess rice — double every box. Next?",
       "textEn": "Chess rice story — doubling. Next?",
       "textDa": "Skakbræt-fordobling. Hvad er det næste?",
-      "sequence": [2,4,8,16,"?"],
+      "sequence": [
+        2,
+        4,
+        8,
+        16,
+        "?"
+      ],
       "answer": 32,
       "hintGu": "Double! 16×2=32",
       "hintEn": "Double each time. 16×2=32",
@@ -65,7 +93,13 @@
       "textGu": "Count backwards — next?",
       "textEn": "Counting backwards — next?",
       "textDa": "Tæl baglæns — hvad er det næste?",
-      "sequence": [20,17,14,11,"?"],
+      "sequence": [
+        20,
+        17,
+        14,
+        11,
+        "?"
+      ],
       "answer": 8,
       "hintGu": "-3 every time! 11-3=8",
       "hintEn": "Subtract 3 each time",
@@ -78,10 +112,26 @@
       "textEn": "Mystery number x + 6 = 15. x = ?",
       "textDa": "Det hemmelige tal x + 6 = 15. Hvad er x?",
       "options": [
-        {"gu": "7", "en": "7", "da": "7"},
-        {"gu": "8", "en": "8", "da": "8"},
-        {"gu": "9", "en": "9", "da": "9"},
-        {"gu": "10", "en": "10", "da": "10"}
+        {
+          "gu": "7",
+          "en": "7",
+          "da": "7"
+        },
+        {
+          "gu": "8",
+          "en": "8",
+          "da": "8"
+        },
+        {
+          "gu": "9",
+          "en": "9",
+          "da": "9"
+        },
+        {
+          "gu": "10",
+          "en": "10",
+          "da": "10"
+        }
       ],
       "answer": 2,
       "hintGu": "9+6=15 ✓ x=9!",
@@ -95,10 +145,26 @@
       "textEn": "AI learns by finding _____ in data.",
       "textDa": "Kunstig intelligens (AI) lærer ved at finde ___ i data.",
       "options": [
-        {"gu": "રંગો (Colours)", "en": "Colours", "da": "Farver"},
-        {"gu": "પેટર્ન / નિયમો (Patterns)", "en": "Patterns", "da": "Mønstre"},
-        {"gu": "અટકળ (Random guesses)", "en": "Random guesses", "da": "Tilfældige gæt"},
-        {"gu": "પાસવર્ડ (Passwords)", "en": "Passwords", "da": "Adgangskoder"}
+        {
+          "gu": "રંગો (Colours)",
+          "en": "Colours",
+          "da": "Farver"
+        },
+        {
+          "gu": "પેટર્ન / નિયમો (Patterns)",
+          "en": "Patterns",
+          "da": "Mønstre"
+        },
+        {
+          "gu": "અટકળ (Random guesses)",
+          "en": "Random guesses",
+          "da": "Tilfældige gæt"
+        },
+        {
+          "gu": "પાસવર્ડ (Passwords)",
+          "en": "Passwords",
+          "da": "Adgangskoder"
+        }
       ],
       "answer": 1,
       "hintGu": "AI = pattern finding machine!",

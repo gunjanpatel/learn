@@ -1,16 +1,16 @@
 {
   "id": "scratch-ch1",
-  "nameGu": "Scratch — Coding Basics 🐱",
+  "nameGu": "સ્ક્રેચ — કોડિંગ શરૂઆત 🐱",
   "nameEn": "Scratch — Coding Basics",
   "nameDa": "Scratch — Kodningsbasis 🐱",
   "icon": "🐱",
-  "descGu": "Sprite, event, loop — real coding concepts!",
+  "descGu": "Sprite, event, loop — સાચા coding concepts!",
   "descEn": "Sprite, events, loops — think like a coder!",
   "descDa": "Sprite, events, loops — tænk som en programmør!",
   "xpReward": 80,
   "trophy": {
     "icon": "🐱",
-    "nameGu": "Scratch Coder",
+    "nameGu": "સ્ક્રેચ કોડર",
     "nameEn": "Scratch Coder",
     "nameDa": "Scratch-Programmør"
   },
@@ -25,12 +25,36 @@
     "scriptEn": "Visit scratch.mit.edu! Build a script to move the cat. Click the flag and watch it go! You are coding!",
     "scriptDa": "Åbn scratch.mit.edu! Få katten til at gå. Klik på flaget og se, hvad der sker! Prøv at ændre tallene — du koder allerede!",
     "vocab": [
-      {"gu": "Sprite = movable character", "en": "Sprite", "da": "Sprite / Figur"},
-      {"gu": "Event = trigger / ક્યારે", "en": "Event", "da": "Event / Hændelse"},
-      {"gu": "Loop = repeat / ફરી ફરી", "en": "Loop", "da": "Loop / Gentagelse"},
-      {"gu": "Condition = IF/THEN", "en": "Condition", "da": "Betingelse (Hvis/Så)"},
-      {"gu": "Block = code piece", "en": "Code Block", "da": "Kodeblok"},
-      {"gu": "Script = instructions set", "en": "Script", "da": "Script / Program"}
+      {
+        "gu": "Sprite = movable character",
+        "en": "Sprite",
+        "da": "Sprite / Figur"
+      },
+      {
+        "gu": "Event = trigger / ક્યારે",
+        "en": "Event",
+        "da": "Event / Hændelse"
+      },
+      {
+        "gu": "Loop = repeat / ફરી ફરી",
+        "en": "Loop",
+        "da": "Loop / Gentagelse"
+      },
+      {
+        "gu": "Condition = IF/THEN",
+        "en": "Condition",
+        "da": "Betingelse (Hvis/Så)"
+      },
+      {
+        "gu": "Block = code piece",
+        "en": "Code Block",
+        "da": "Kodeblok"
+      },
+      {
+        "gu": "Script = instructions set",
+        "en": "Script",
+        "da": "Script / Program"
+      }
     ],
     "tipsGu": "💡 scratch.mit.edu — free, browser, no install! Make cat say 'Hello Yuval!' first. Then move. Then loop. Step by step!",
     "tipsEn": "💡 scratch.mit.edu is free and runs in any browser! Start simple: make the cat speak, then move, then add loops.",
@@ -44,10 +68,26 @@
       "textEn": "In Scratch, a movable character is called a ___?",
       "textDa": "Hvad kalder man en figur, der kan bevæge sig i Scratch?",
       "options": [
-        {"gu": "બ્લોક (Block)", "en": "Block", "da": "Blok"},
-        {"gu": "સ્પ્રાઈટ (Sprite)", "en": "Sprite", "da": "Sprite / Figur"},
-        {"gu": "લૂપ (Loop)", "en": "Loop", "da": "Loop"},
-        {"gu": "સ્ક્રિપ્ટ (Script)", "en": "Script", "da": "Script"}
+        {
+          "gu": "બ્લોક (Block)",
+          "en": "Block",
+          "da": "Blok"
+        },
+        {
+          "gu": "સ્પ્રાઈટ (Sprite)",
+          "en": "Sprite",
+          "da": "Sprite / Figur"
+        },
+        {
+          "gu": "લૂપ (Loop)",
+          "en": "Loop",
+          "da": "Loop"
+        },
+        {
+          "gu": "સ્ક્રિપ્ટ (Script)",
+          "en": "Script",
+          "da": "Script"
+        }
       ],
       "answer": 1,
       "hintGu": "Cat, robot, ball — all sprites!",
@@ -61,10 +101,26 @@
       "textEn": "Clicking the green flag in Scratch is an example of ___?",
       "textDa": "At klikke på det grønne flag i Scratch er et eksempel på ___?",
       "options": [
-        {"gu": "લૂપ (Loop)", "en": "Loop", "da": "Loop"},
-        {"gu": "સ્પ્રાઈટ (Sprite)", "en": "Sprite", "da": "Sprite / Figur"},
-        {"gu": "ઈવેન્ટ (Event)", "en": "Event — a trigger!", "da": "Event / Hændelse!"},
-        {"gu": "શરત (Condition)", "en": "Condition", "da": "Betingelse"}
+        {
+          "gu": "લૂપ (Loop)",
+          "en": "Loop",
+          "da": "Loop"
+        },
+        {
+          "gu": "સ્પ્રાઈટ (Sprite)",
+          "en": "Sprite",
+          "da": "Sprite / Figur"
+        },
+        {
+          "gu": "ઈવેન્ટ (Event)",
+          "en": "Event — a trigger!",
+          "da": "Event / Hændelse!"
+        },
+        {
+          "gu": "શરત (Condition)",
+          "en": "Condition",
+          "da": "Betingelse"
+        }
       ],
       "answer": 2,
       "hintGu": "Flag click = 'When this happens, do this' = Event!",
@@ -78,10 +134,26 @@
       "textEn": "Repeating 'Move 10 steps' 12 times is using a ___?",
       "textDa": "At gentage 'Gå 10 skridt' 12 gange er at bruge et ___?",
       "options": [
-        {"gu": "સ્પ્રાઈટ (Sprite)", "en": "Sprite", "da": "Sprite / Figur"},
-        {"gu": "લૂપ - repeat block!", "en": "Loop — repeat block!", "da": "Loop — gentagelses-blok!"},
-        {"gu": "ઈવેન્ટ (Event)", "en": "Event", "da": "Event"},
-        {"gu": "ચલ (Variable)", "en": "Variable", "da": "Variabel"}
+        {
+          "gu": "સ્પ્રાઈટ (Sprite)",
+          "en": "Sprite",
+          "da": "Sprite / Figur"
+        },
+        {
+          "gu": "લૂપ - repeat block!",
+          "en": "Loop — repeat block!",
+          "da": "Loop — gentagelses-blok!"
+        },
+        {
+          "gu": "ઈવેન્ટ (Event)",
+          "en": "Event",
+          "da": "Event"
+        },
+        {
+          "gu": "ચલ (Variable)",
+          "en": "Variable",
+          "da": "Variabel"
+        }
       ],
       "answer": 1,
       "hintGu": "Repeat = Loop! UNO game loop = same turns repeat!",
@@ -95,12 +167,37 @@
       "textEn": "Put these Scratch steps in order to make the cat dance!",
       "textDa": "Sorter disse Scratch-trin for at få katten til at danse!",
       "steps": [
-        {"icon": "🏁", "labelGu": "ફ્લેગ ક્લિક", "labelEn": "Click flag", "labelDa": "Klik på flaget"},
-        {"icon": "🔄", "labelGu": "લૂપ શરૂ", "labelEn": "Start loop", "labelDa": "Start loop"},
-        {"icon": "👣", "labelGu": "આગળ ચાલો", "labelEn": "Move steps", "labelDa": "Gå skridt"},
-        {"icon": "🔀", "labelGu": "વળો", "labelEn": "Turn", "labelDa": "Drej om"}
+        {
+          "icon": "🏁",
+          "labelGu": "ફ્લેગ ક્લિક",
+          "labelEn": "Click flag",
+          "labelDa": "Klik på flaget"
+        },
+        {
+          "icon": "🔄",
+          "labelGu": "લૂપ શરૂ",
+          "labelEn": "Start loop",
+          "labelDa": "Start loop"
+        },
+        {
+          "icon": "👣",
+          "labelGu": "આગળ ચાલો",
+          "labelEn": "Move steps",
+          "labelDa": "Gå skridt"
+        },
+        {
+          "icon": "🔀",
+          "labelGu": "વળો",
+          "labelEn": "Turn",
+          "labelDa": "Drej om"
+        }
       ],
-      "correctOrder": [0,1,2,3],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
       "hintGu": "Flag → Loop → Move → Turn!",
       "hintEn": "Event first, then loop, then actions inside!",
       "hintDa": "Start med flaget, så loopet, derefter handlingerne indeni!"
@@ -112,10 +209,26 @@
       "textEn": "IF cat touches wall THEN bounce — this is a ___?",
       "textDa": "HVIS katten rører væggen, SÅ vend om — dette er en ___?",
       "options": [
-        {"gu": "લૂપ (Loop)", "en": "Loop", "da": "Loop"},
-        {"gu": "સ્પ્રાઈટ (Sprite)", "en": "Sprite", "da": "Sprite / Figur"},
-        {"gu": "શરત — IF/THEN!", "en": "Condition — IF/THEN!", "da": "Betingelse — HVIS/SÅ!"},
-        {"gu": "ઈવેન્ટ (Event)", "en": "Event", "da": "Event"}
+        {
+          "gu": "લૂપ (Loop)",
+          "en": "Loop",
+          "da": "Loop"
+        },
+        {
+          "gu": "સ્પ્રાઈટ (Sprite)",
+          "en": "Sprite",
+          "da": "Sprite / Figur"
+        },
+        {
+          "gu": "શરત — IF/THEN!",
+          "en": "Condition — IF/THEN!",
+          "da": "Betingelse — HVIS/SÅ!"
+        },
+        {
+          "gu": "ઈવેન્ટ (Event)",
+          "en": "Event",
+          "da": "Event"
+        }
       ],
       "answer": 2,
       "hintGu": "IF something THEN do = Condition! AND gate ની જેમ!",
@@ -129,10 +242,26 @@
       "textEn": "Scratch coloured blocks represent real coding ___?",
       "textDa": "Hvad repræsenterer de farvede blokke i Scratch?",
       "options": [
-        {"gu": "રંગો (Colours)", "en": "Colours", "da": "Farver"},
-        {"gu": "ચિત્રો (Pictures)", "en": "Pictures", "da": "Billeder"},
-        {"gu": "કન્સેપ્ટ — Python માં પણ આ જ છે!", "en": "Concepts — same ideas in Python!", "da": "Koncepter — samme idéer som i Python!"},
-        {"gu": "માત્ર ગેમ્સ (Games only)", "en": "Games only", "da": "Kun spil"}
+        {
+          "gu": "રંગો (Colours)",
+          "en": "Colours",
+          "da": "Farver"
+        },
+        {
+          "gu": "ચિત્રો (Pictures)",
+          "en": "Pictures",
+          "da": "Billeder"
+        },
+        {
+          "gu": "કન્સેપ્ટ — Python માં પણ આ જ છે!",
+          "en": "Concepts — same ideas in Python!",
+          "da": "Koncepter — samme idéer som i Python!"
+        },
+        {
+          "gu": "માત્ર ગેમ્સ (Games only)",
+          "en": "Games only",
+          "da": "Kun spil"
+        }
       ],
       "answer": 2,
       "hintGu": "Loop in Scratch = loop in Python = loop in any language!",

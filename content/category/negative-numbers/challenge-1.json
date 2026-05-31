@@ -1,6 +1,6 @@
 {
   "id": "negative-ch1",
-  "nameGu": "Negative Numbers — Zero ની નીચે! 🌡️",
+  "nameGu": "ઋણ સંખ્યા — ઝીરો ની નીચે! 🌡️",
   "nameEn": "Negative Numbers — Below Zero!",
   "nameDa": "Negative Tal — Under Nul! 🌡️",
   "icon": "🌡️",
@@ -10,7 +10,7 @@
   "xpReward": 85,
   "trophy": {
     "icon": "❄️",
-    "nameGu": "Below Zero Hero",
+    "nameGu": "ઝીરો નીચે હીરો",
     "nameEn": "Below Zero Hero",
     "nameDa": "Frost-Helt"
   },
@@ -25,11 +25,31 @@
     "scriptEn": "Tape a number line on the floor. Stand on 0. Jumps to the right are positive, jumps to the left are negative!",
     "scriptDa": "Lav en tallinje på gulvet. Nul er i midten. Gå til højre for plus, og gå til venstre for minus. Gå 3 skridt tilbage fra 0 — hvor står du nu?",
     "vocab": [
-      {"gu": "Negative = zero ની નીચે / -", "en": "Negative", "da": "Negativ / Minus"},
-      {"gu": "Positive = zero ની ઉપર / +", "en": "Positive", "da": "Positiv / Plus"},
-      {"gu": "Zero = middle point", "en": "Zero", "da": "Nul"},
-      {"gu": "Number line = સંખ્યા રેખા", "en": "Number line", "da": "Tallinje"},
-      {"gu": "Temperature = તાપમાન", "en": "Temperature", "da": "Temperatur"}
+      {
+        "gu": "Negative = zero ની નીચે / -",
+        "en": "Negative",
+        "da": "Negativ / Minus"
+      },
+      {
+        "gu": "Positive = zero ની ઉપર / +",
+        "en": "Positive",
+        "da": "Positiv / Plus"
+      },
+      {
+        "gu": "Zero = middle point",
+        "en": "Zero",
+        "da": "Nul"
+      },
+      {
+        "gu": "Number line = સંખ્યા રેખા",
+        "en": "Number line",
+        "da": "Tallinje"
+      },
+      {
+        "gu": "Temperature = તાપમાન",
+        "en": "Temperature",
+        "da": "Temperatur"
+      }
     ],
     "tipsGu": "💡 Thermometer app show! Copenhagen winter temp = negative. Freezer = -18°C. Elevator basement = B1=-1. Real examples make it click!",
     "tipsEn": "💡 Check a weather app or look at a freezer's thermometer showing -18°C. Real context helps immensely.",
@@ -43,10 +63,26 @@
       "textEn": "A temperature of -10 means ___ degrees below zero?",
       "textDa": "En temperatur på -10 betyder ___ grader under nul?",
       "options": [
-        {"gu": "10 ઉપર / above", "en": "10 above zero", "da": "10 over nul"},
-        {"gu": "10 નીચે / below", "en": "10 below zero", "da": "10 under nul"},
-        {"gu": "Same as 0", "en": "Same as 0", "da": "Det samme som nul"},
-        {"gu": "100 below", "en": "100 below", "da": "100 under nul"}
+        {
+          "gu": "10 ઉપર / above",
+          "en": "10 above zero",
+          "da": "10 over nul"
+        },
+        {
+          "gu": "10 નીચે / below",
+          "en": "10 below zero",
+          "da": "10 under nul"
+        },
+        {
+          "gu": "Same as 0",
+          "en": "Same as 0",
+          "da": "Det samme som nul"
+        },
+        {
+          "gu": "100 below",
+          "en": "100 below",
+          "da": "100 under nul"
+        }
       ],
       "answer": 1,
       "hintGu": "-10 = 10 degrees BELOW zero!",
@@ -60,10 +96,26 @@
       "textEn": "Which temperature is colder: -4°C or -12°C?",
       "textDa": "Hvilken temperatur er koldest: -4°C eller -12°C?",
       "options": [
-        {"gu": "-4°C", "en": "-4°C", "da": "-4°C"},
-        {"gu": "-12°C — more negative!", "en": "-12°C — more negative!", "da": "-12°C — mere negativt!"},
-        {"gu": "Same", "en": "Same", "da": "Det samme"},
-        {"gu": "0°C", "en": "0°C", "da": "0°C"}
+        {
+          "gu": "-4°C",
+          "en": "-4°C",
+          "da": "-4°C"
+        },
+        {
+          "gu": "-12°C — more negative!",
+          "en": "-12°C — more negative!",
+          "da": "-12°C — mere negativt!"
+        },
+        {
+          "gu": "Same",
+          "en": "Same",
+          "da": "Det samme"
+        },
+        {
+          "gu": "0°C",
+          "en": "0°C",
+          "da": "0°C"
+        }
       ],
       "answer": 1,
       "hintGu": "-12 < -4. More negative = colder!",
@@ -77,10 +129,26 @@
       "textEn": "Number line: -5 to 3. What is -3 + 5?",
       "textDa": "Tallinje: Hvad er -3 + 5?",
       "options": [
-        {"gu": "-8", "en": "-8", "da": "-8"},
-        {"gu": "-2", "en": "-2", "da": "-2"},
-        {"gu": "2", "en": "2", "da": "2"},
-        {"gu": "8", "en": "8", "da": "8"}
+        {
+          "gu": "-8",
+          "en": "-8",
+          "da": "-8"
+        },
+        {
+          "gu": "-2",
+          "en": "-2",
+          "da": "-2"
+        },
+        {
+          "gu": "2",
+          "en": "2",
+          "da": "2"
+        },
+        {
+          "gu": "8",
+          "en": "8",
+          "da": "8"
+        }
       ],
       "answer": 2,
       "hintGu": "-3 પર start, 5 jump right = 2!",
@@ -105,10 +173,26 @@
       "textEn": "Lift: Ground=0, Basement 1=-1. What floor is 5th basement?",
       "textDa": "Elevator: Stuen=0, Kælder 1=-1. Hvilken etage er den 5. kælder?",
       "options": [
-        {"gu": "5", "en": "5", "da": "5"},
-        {"gu": "-5", "en": "-5", "da": "-5"},
-        {"gu": "0", "en": "0", "da": "0"},
-        {"gu": "-2", "en": "-2", "da": "-2"}
+        {
+          "gu": "5",
+          "en": "5",
+          "da": "5"
+        },
+        {
+          "gu": "-5",
+          "en": "-5",
+          "da": "-5"
+        },
+        {
+          "gu": "0",
+          "en": "0",
+          "da": "0"
+        },
+        {
+          "gu": "-2",
+          "en": "-2",
+          "da": "-2"
+        }
       ],
       "answer": 1,
       "hintGu": "Ground=0, below ground = negative! -5!",
@@ -122,10 +206,26 @@
       "textEn": "In coding, negative numbers are used for ___?",
       "textDa": "I programmering bruges negative tal til ___?",
       "options": [
-        {"gu": "Errors only", "en": "Errors only", "da": "Kun fejlmeddelelser"},
-        {"gu": "Direction, debt, temperature — real data!", "en": "Direction, debt, temperature — real data!", "da": "Retning, gæld, temperatur — rigtige data!"},
-        {"gu": "Nothing useful", "en": "Nothing useful", "da": "Ingenting"},
-        {"gu": "Only in maths class", "en": "Only in maths class", "da": "Kun i matematiktimerne"}
+        {
+          "gu": "Errors only",
+          "en": "Errors only",
+          "da": "Kun fejlmeddelelser"
+        },
+        {
+          "gu": "Direction, debt, temperature — real data!",
+          "en": "Direction, debt, temperature — real data!",
+          "da": "Retning, gæld, temperatur — rigtige data!"
+        },
+        {
+          "gu": "Nothing useful",
+          "en": "Nothing useful",
+          "da": "Ingenting"
+        },
+        {
+          "gu": "Only in maths class",
+          "en": "Only in maths class",
+          "da": "Kun i matematiktimerne"
+        }
       ],
       "answer": 1,
       "hintGu": "Negative = real world data! AI, physics, finance — everywhere!",

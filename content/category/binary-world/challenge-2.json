@@ -1,16 +1,16 @@
 {
   "id": "binary-challenge-2",
-  "nameGu": "Binary — Advanced 🔥",
+  "nameGu": "બાઈનરી — આગળ 🔥",
   "nameEn": "Binary Advanced",
   "nameDa": "Binære Tal — Ekspert 🔥",
   "icon": "🔥",
-  "descGu": "Bigger numbers! Real computer thinking!",
+  "descGu": "મોટા numbers! Computer ખરેખર આ રીતે વિચારે.",
   "descEn": "Bigger binary numbers — like a real computer!",
   "descDa": "Større binære tal — tænk som en rigtig computer!",
   "xpReward": 90,
   "trophy": {
     "icon": "🖥️",
-    "nameGu": "Bit Master",
+    "nameGu": "બિટ માસ્ટર",
     "nameEn": "Bit Master",
     "nameDa": "Bit-Mester"
   },
@@ -25,9 +25,21 @@
     "scriptEn": "Ready to go further? What if we add a 5th bit? Value is 16! Doubling never stops in computer science.",
     "scriptDa": "Er du klar til at gå endnu længere? Hvis vi tilføjer en 5. bit, er dens værdi 16! Fordobling stopper aldrig i computerens verden.",
     "vocab": [
-      {"gu": "Byte = 8 bits ભેગા", "en": "Byte", "da": "Byte (8 bits)"},
-      {"gu": "Memory = bits stored", "en": "Memory", "da": "Hukommelse"},
-      {"gu": "Flip = ON→OFF change", "en": "Flip", "da": "Skifte / Vend bit"}
+      {
+        "gu": "Byte = 8 bits ભેગા",
+        "en": "Byte",
+        "da": "Byte (8 bits)"
+      },
+      {
+        "gu": "Memory = bits stored",
+        "en": "Memory",
+        "da": "Hukommelse"
+      },
+      {
+        "gu": "Flip = ON→OFF change",
+        "en": "Flip",
+        "da": "Skifte / Vend bit"
+      }
     ],
     "tipsGu": "💡 Count something big — how many bits needed? Age 7 = 3 bits. Age 100 needs 7 bits!",
     "tipsEn": "💡 Ask: How many bits to represent number 15? (4 bits: 1111). How about 16? (5 bits: 10000).",
@@ -40,7 +52,12 @@
       "textGu": "1011 = ?",
       "textEn": "Binary 1011 = decimal?",
       "textDa": "Binær 1011 = hvilket tal?",
-      "bits": [1,0,1,1],
+      "bits": [
+        1,
+        0,
+        1,
+        1
+      ],
       "answer": 11,
       "hintGu": "8 + 2 + 1 = 11",
       "hintEn": "8 + 2 + 1 = 11",
@@ -52,7 +69,12 @@
       "textGu": "1101 = ?",
       "textEn": "Binary 1101 = decimal?",
       "textDa": "Binær 1101 = hvilket tal?",
-      "bits": [1,1,0,1],
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
       "answer": 13,
       "hintGu": "8 + 4 + 1 = 13",
       "hintEn": "8 + 4 + 1 = 13",
@@ -87,10 +109,26 @@
       "textEn": "8 bits together = ___",
       "textDa": "Hvad kaldes 8 bits, der er lagt sammen?",
       "options": [
-        {"gu": "૧ પિક્સલ (1 Pixel)", "en": "1 Pixel", "da": "1 Pixel"},
-        {"gu": "૧ બાઈટ (1 Byte — memory unit!)", "en": "1 Byte", "da": "1 Byte — lagerenhed!"},
-        {"gu": "૧ ફોટો (1 Photo)", "en": "1 Photo", "da": "1 Foto"},
-        {"gu": "૧ સેકન્ડ (1 Second)", "en": "1 Second", "da": "1 Sekund"}
+        {
+          "gu": "૧ પિક્સલ (1 Pixel)",
+          "en": "1 Pixel",
+          "da": "1 Pixel"
+        },
+        {
+          "gu": "૧ બાઈટ (1 Byte — memory unit!)",
+          "en": "1 Byte",
+          "da": "1 Byte — lagerenhed!"
+        },
+        {
+          "gu": "૧ ફોટો (1 Photo)",
+          "en": "1 Photo",
+          "da": "1 Foto"
+        },
+        {
+          "gu": "૧ સેકન્ડ (1 Second)",
+          "en": "1 Second",
+          "da": "1 Sekund"
+        }
       ],
       "answer": 1,
       "hintGu": "8 bits = 1 Byte — smallest memory unit!",
