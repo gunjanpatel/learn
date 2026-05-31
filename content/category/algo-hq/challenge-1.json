@@ -2,22 +2,32 @@
   "id": "algo-hq-challenge-1",
   "nameGu": "Algorithm HQ — Steps! 🔀",
   "nameEn": "Algorithm HQ Basics",
+  "nameDa": "Algoritme HQ Basics",
   "icon": "🔀",
   "descGu": "Steps ક્રમ માં! Robot ઠીક આ રીતે think કરે.",
   "descEn": "Steps in order — how every robot thinks!",
+  "descDa": "Trin for trin — præcis som en robot tænker!",
   "xpReward": 65,
-  "trophy": {"icon": "🤖", "nameGu": "Algorithm Ace", "nameEn": "Algorithm Ace"},
+  "trophy": {"icon": "🤖", "nameGu": "Algorithm Ace", "nameEn": "Algorithm Ace", "nameDa": "Algoritme-es"},
   "teacherGuide": {
     "conceptGu": "Algorithm = exact steps in order. Sequence + loop + condition = every program. Order ખોટો = crash!",
+    "conceptEn": "Algorithm = exact steps in order. Sequence + loop + condition = every program. Wrong order = crash!",
+    "conceptDa": "En algoritme er præcise trin i rækkefølge. Forkert rækkefølge = fejl!",
     "storyGu": "'Pizza recipe ઉલટી — cheese first, dough after = disaster! Computer algorithm ઉલટો = crash!'",
+    "storyEn": "'Pizza recipe backwards — cheese first, dough after = disaster! Computer algorithm backwards = crash!'",
+    "storyDa": "'Pizzarækkefølge baglæns — ost først, dej bagefter = katastrofe! En algoritme skal følge rækkefølgen!'",
     "scriptGu": "'Minecraft house: floor → walls → roof → door. ઉલટું — roof without walls impossible!'",
+    "scriptEn": "'Minecraft house: floor → walls → roof → door. Reverse — roof without walls impossible!'",
+    "scriptDa": "'Minecraft-hus: gulv → vægge → tag → dør. Tag uden vægge er umuligt!'",
     "vocab": [
-      {"gu": "Algorithm = steps recipe", "en": "Algorithm"},
-      {"gu": "Sequence = ક્રમ", "en": "Sequence"},
-      {"gu": "Loop = repeat", "en": "Loop"},
-      {"gu": "Bug = ખોટો step", "en": "Bug"}
+      {"gu": "Algorithm = steps recipe", "en": "Algorithm", "da": "Algoritme"},
+      {"gu": "Sequence = ક્રમ", "en": "Sequence", "da": "Sekvens / Rækkefølge"},
+      {"gu": "Loop = repeat", "en": "Loop", "da": "Loop / Gentagelse"},
+      {"gu": "Bug = ખોટો step", "en": "Bug", "da": "Bug / Fejl"}
     ],
-    "tipsGu": "💡 Morning routine draw — wake→brush→eat→school. Mix up for fun — 'School first?!' 😂"
+    "tipsGu": "💡 Morning routine draw — wake→brush→eat→school. Mix up for fun — 'School first?!' 😂",
+    "tipsEn": "💡 Draw a morning routine. Mix up the order for fun — 'School before waking up?!' 😂",
+    "tipsDa": "💡 Tegn en morgenrutine. Byt rundt på rækkefølgen for sjov — 'Skole før man vågner?!' 😂"
   },
   "questions": [
     {
@@ -25,75 +35,85 @@
       "level": "LEVEL 1 · SANDWICH",
       "textGu": "Sandwich steps ક્રમ!",
       "textEn": "Put sandwich steps in order!",
+      "textDa": "Sæt sandwich-trin i rækkefølge!",
       "steps": [
-        {"icon": "🍞", "labelGu": "Bread", "labelEn": "Bread"},
-        {"icon": "🥬", "labelGu": "Filling", "labelEn": "Filling"},
-        {"icon": "🥪", "labelGu": "Top", "labelEn": "Top"},
-        {"icon": "😋", "labelGu": "Eat!", "labelEn": "Eat!"}
+        {"icon": "🍞", "labelGu": "Bread", "labelEn": "Bread", "labelDa": "Brød"},
+        {"icon": "🥬", "labelGu": "Filling", "labelEn": "Filling", "labelDa": "Fyld"},
+        {"icon": "🥪", "labelGu": "Top", "labelEn": "Top", "labelDa": "Top"},
+        {"icon": "😋", "labelGu": "Eat!", "labelEn": "Eat!", "labelDa": "Spis!"}
       ],
       "correctOrder": [0,1,2,3],
       "hintGu": "Bread → Filling → Top → Eat!",
-      "hintEn": "Bread first, then filling, then top, then eat!"
+      "hintEn": "Bread first, then filling, then top, then eat!",
+      "hintDa": "Brød først, så fyld, så top, så spis!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 2 · MORNING",
       "textGu": "સવારની routine!",
       "textEn": "Morning routine order!",
+      "textDa": "Morgenrutine!",
       "steps": [
-        {"icon": "😴", "labelGu": "ઉઠો", "labelEn": "Wake"},
-        {"icon": "🪥", "labelGu": "Brush", "labelEn": "Brush"},
-        {"icon": "🍳", "labelGu": "Breakfast", "labelEn": "Eat"},
-        {"icon": "🎒", "labelGu": "School", "labelEn": "School"}
+        {"icon": "😴", "labelGu": "ઉઠો", "labelEn": "Wake", "labelDa": "Vågn"},
+        {"icon": "🪥", "labelGu": "Brush", "labelEn": "Brush", "labelDa": "Børst"},
+        {"icon": "🍳", "labelGu": "Breakfast", "labelEn": "Eat", "labelDa": "Spis"},
+        {"icon": "🎒", "labelGu": "School", "labelEn": "School", "labelDa": "Skole"}
       ],
       "correctOrder": [0,1,2,3],
       "hintGu": "Wake → Brush → Eat → School!",
-      "hintEn": "Wake up first!"
+      "hintEn": "Wake up first!",
+      "hintDa": "Vågn op først!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 3 · ROBOT",
       "textGu": "Cleaning robot algorithm!",
       "textEn": "Robot cleaning steps!",
+      "textDa": "Robot rengøring trin!",
       "steps": [
-        {"icon": "🔍", "labelGu": "Scan", "labelEn": "Scan"},
-        {"icon": "🎯", "labelGu": "Find dirt", "labelEn": "Find"},
-        {"icon": "🧹", "labelGu": "Clean!", "labelEn": "Clean"},
-        {"icon": "🏠", "labelGu": "Home", "labelEn": "Home"}
+        {"icon": "🔍", "labelGu": "Scan", "labelEn": "Scan", "labelDa": "Scan"},
+        {"icon": "🎯", "labelGu": "Find dirt", "labelEn": "Find", "labelDa": "Find skidt"},
+        {"icon": "🧹", "labelGu": "Clean!", "labelEn": "Clean", "labelDa": "Gør rent"},
+        {"icon": "🏠", "labelGu": "Home", "labelEn": "Home", "labelDa": "Hjem"}
       ],
       "correctOrder": [0,1,2,3],
       "hintGu": "Scan → Find → Clean → Home!",
-      "hintEn": "Scan first, then find, clean, go home!"
+      "hintEn": "Scan first, then find, clean, go home!",
+      "hintDa": "Scan først, så find, gør rent, gå hjem!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 4 · IF/THEN",
       "textGu": "Robot obstacle જુએ. IF obstacle THEN ___?",
       "textEn": "IF obstacle THEN ___?",
+      "textDa": "Robot ser en forhindring. HVIS forhindring SÅ ___?",
       "options": [
-        {"gu": "ઝડપ વધારો", "en": "Speed up"},
-        {"gu": "Stop & Turn", "en": "Stop and turn"},
-        {"gu": "Sleep 😴", "en": "Sleep"},
-        {"gu": "Ignore", "en": "Ignore"}
+        {"gu": "ઝડપ વધારો", "en": "Speed up", "da": "Sæt farten op"},
+        {"gu": "Stop & Turn", "en": "Stop and turn", "da": "Stop og drej"},
+        {"gu": "Sleep 😴", "en": "Sleep", "da": "Sov"},
+        {"gu": "Ignore", "en": "Ignore", "da": "Ignorer"}
       ],
       "answer": 1,
       "hintGu": "IF obstacle THEN stop and turn!",
-      "hintEn": "Stop and turn to avoid it!"
+      "hintEn": "Stop and turn to avoid it!",
+      "hintDa": "Stop og drej for at undgå den!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · LOOP",
       "textGu": "Robot 5 rooms clean. Same steps 5 times = ___",
       "textEn": "Same steps repeated 5 times = ___",
+      "textDa": "Samme trin gentaget 5 gange = ___",
       "options": [
-        {"gu": "Story", "en": "Story"},
-        {"gu": "Loop — repeat!", "en": "Loop"},
-        {"gu": "Password", "en": "Password"},
-        {"gu": "Binary", "en": "Binary"}
+        {"gu": "Story", "en": "Story", "da": "Historie"},
+        {"gu": "Loop — repeat!", "en": "Loop", "da": "Loop (Gentagelse)"},
+        {"gu": "Password", "en": "Password", "da": "Kodeord"},
+        {"gu": "Binary", "en": "Binary", "da": "Binær"}
       ],
       "answer": 1,
       "hintGu": "Loop = repeat same action!",
-      "hintEn": "A loop repeats the same steps!"
+      "hintEn": "A loop repeats the same steps!",
+      "hintDa": "Et loop gentager de samme trin!"
     }
   ]
 }

@@ -28,75 +28,85 @@
       "level": "LEVEL 1 · PIZZA MAKER",
       "textGu": "પિઝા બનાવવાનો સાચો ક્રમ!",
       "textEn": "Put the pizza baking steps in order!",
+      "textDa": "Sæt pizza-trin i rækkefølge!",
       "steps": [
-        {"icon": "🥖", "labelGu": "લોટ વણો", "labelEn": "Roll dough"},
-        {"icon": "🍅", "labelGu": "સોસ લગાવો", "labelEn": "Spread sauce"},
-        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો", "labelEn": "Add cheese"},
-        {"icon": "🔥", "labelGu": "બેક કરો", "labelEn": "Bake pizza"}
+        {"icon": "🥖", "labelGu": "લોટ વણો", "labelEn": "Roll dough", "labelDa": "Rul dej"},
+        {"icon": "🍅", "labelGu": "સોસ લગાવો", "labelEn": "Spread sauce", "labelDa": "Smør sovs på"},
+        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો", "labelEn": "Add cheese", "labelDa": "Tilføj ost"},
+        {"icon": "🔥", "labelGu": "બેક કરો", "labelEn": "Bake pizza", "labelDa": "Bag pizza"}
       ],
       "correctOrder": [0, 1, 2, 3],
       "hintGu": "લોટ → સોસ → ચીઝ → બેક!",
-      "hintEn": "Roll dough first, then sauce, cheese, and bake!"
+      "hintEn": "Roll dough first, then sauce, cheese, and bake!",
+      "hintDa": "Rul dej først, så sovs, ost, og bag!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 2 · PLANT A SEED",
       "textGu": "બીજમાંથી સૂર્યમુખી ઉગાડો!",
       "textEn": "Grow a flower from seed in order!",
+      "textDa": "Dyrk en blomst fra frø i rækkefølge!",
       "steps": [
-        {"icon": "🕳️", "labelGu": "ખાડો ખોદો", "labelEn": "Dig a hole"},
-        {"icon": "🌱", "labelGu": "બીજ રોપો", "labelEn": "Plant seed"},
-        {"icon": "💧", "labelGu": "પાણી આપો", "labelEn": "Water it"},
-        {"icon": "☀️", "labelGu": "તડકો આપો", "labelEn": "Sun shines"}
+        {"icon": "🕳️", "labelGu": "ખાડો ખોદો", "labelEn": "Dig a hole", "labelDa": "Grav hul"},
+        {"icon": "🌱", "labelGu": "બીજ રોપો", "labelEn": "Plant seed", "labelDa": "Plant frø"},
+        {"icon": "💧", "labelGu": "પાણી આપો", "labelEn": "Water it", "labelDa": "Giv vand"},
+        {"icon": "☀️", "labelGu": "તડકો આપો", "labelEn": "Sun shines", "labelDa": "Solskin"}
       ],
       "correctOrder": [0, 1, 2, 3],
       "hintGu": "ખાડો → બીજ → પાણી → તડકો!",
-      "hintEn": "Dig a hole first, then plant seed, water, and sun!"
+      "hintEn": "Dig a hole first, then plant seed, water, and sun!",
+      "hintDa": "Grav hul først, plant frø, giv vand, og sol!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 3 · CROSS RIVER",
       "textGu": "નદી ઓળંગવાનો સલામત ક્રમ!",
       "textEn": "Safely cross the river in order!",
+      "textDa": "Kryds floden sikkert i rækkefølge!",
       "steps": [
-        {"icon": "👀", "labelGu": "જુઓ", "labelEn": "Look around"},
-        {"icon": "🪨", "labelGu": "પથ્થર પર પગ", "labelEn": "Step on stones"},
-        {"icon": "🚶", "labelGu": "ધીમે ચાલો", "labelEn": "Walk across"},
-        {"icon": "🎉", "labelGu": "નદી પાર", "labelEn": "Crossed!"}
+        {"icon": "🪵", "labelGu": "લાકડા શોધો", "labelEn": "Find logs", "labelDa": "Find brænde"},
+        {"icon": "🪢", "labelGu": "દોરડું બાંધો", "labelEn": "Tie rope", "labelDa": "Bind reb"},
+        {"icon": "🛶", "labelGu": "રાફ્ટ બનાવો", "labelEn": "Build raft", "labelDa": "Byg tømmerflåde"},
+        {"icon": "🌊", "labelGu": "નદી ઓળંગો", "labelEn": "Cross river", "labelDa": "Kryds flod"}
       ],
       "correctOrder": [0, 1, 2, 3],
-      "hintGu": "જુઓ → પથ્થર → ચાલો → પાર!",
-      "hintEn": "Look first, step carefully, walk, and celebrate!"
+      "hintGu": "લાકડા → દોરડું → રાફ્ટ → નદી ઓળંગો!",
+      "hintEn": "Find logs first, then tie rope, build raft, and cross!",
+      "hintDa": "Find brænde først, bind reb, byg tømmerflåde, og kryds!"
     },
     {
       "type": "mcq",
-      "level": "LEVEL 4 · IF/THEN",
-      "textGu": "IF બારી ખુલ્લી હોય અને વરસાદ આવે, THEN ___?",
-      "textEn": "IF window is open AND it rains, THEN ___?",
+      "level": "LEVEL 4 · BUG FINDER",
+      "textGu": "રોબોટ દીવાલ સાથે અથડાઈ ગયો! કયો step ખોટો છે?",
+      "textEn": "Robot crashed into the wall! Which step is a BUG?",
+      "textDa": "Robotten kørte ind i muren! Hvilket trin er en FEJL?",
       "options": [
-        {"gu": "બારી બંધ કરો 🔒", "en": "Close window"},
-        {"gu": "રમવા જાઓ ⚽", "en": "Go play outside"},
-        {"gu": "ટીવી જુઓ 📺", "en": "Watch TV"},
-        {"gu": "સૂઈ જાઓ 😴", "en": "Sleep"}
+        {"gu": "Start", "en": "Start", "da": "Start"},
+        {"gu": "Move Forward", "en": "Move Forward", "da": "Gå Frem"},
+        {"gu": "Turn Left", "en": "Turn Left", "da": "Drej Venstre"},
+        {"gu": "Move into Wall 💥", "en": "Move into Wall", "da": "Kør ind i Mur 💥"}
       ],
-      "answer": 0,
-      "hintGu": "વરસાદ આવે તો બારી બંધ કરવી પડે!",
-      "hintEn": "Close the window to keep the room dry!"
+      "answer": 3,
+      "hintGu": "દીવાલ સાથે અથડાવું એ BUG છે!",
+      "hintEn": "Crashing into a wall is the BUG!",
+      "hintDa": "At køre ind i en mur er FEJLEN!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · LOOPS",
       "textGu": "જ્યારે આપણે ૫ વખત તાળી પાડીએ, ત્યારે તે શું કહેવાય?",
       "textEn": "Clapping our hands 5 times is a ___?",
+      "textDa": "At klappe i hænderne 5 gange er et ___?",
       "options": [
-        {"gu": "ખોટો સ્ટેપ (Bug)", "en": "Bug"},
-        {"gu": "પુનરાવર્તન (Loop)", "en": "Loop"},
-        {"gu": "નામ (Name)", "en": "Name"},
-        {"gu": "નંબર (Number)", "en": "Number"}
+        {"gu": "ખોટો સ્ટેપ (Bug)", "en": "Bug", "da": "Fejl (Bug)"},
+        {"gu": "પુનરાવર્તન (Loop)", "en": "Loop", "da": "Loop (Gentagelse)"},
+        {"gu": "નામ (Name)", "en": "Name", "da": "Navn"},
+        {"gu": "નંબર (Number)", "en": "Number", "da": "Nummer"}
       ],
       "answer": 1,
       "hintGu": "એક જ ક્રિયા વારંવાર કરવી એટલે લૂપ!",
-      "hintEn": "Repeating the same action is a Loop!"
+      "hintEn": "Repeating the same action is a Loop!",
+      "hintDa": "At gentage den samme handling er et loop!"
     }
   ]
 }

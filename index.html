@@ -714,10 +714,13 @@ const S = {
 
 function txt(item, baseKey='text'){
   if(!item) return '';
-  if(S.daMode){
-    return item[baseKey+'Da'] || item[baseKey+'En'] || item[baseKey+'Gu'] || '';
-  }
-  return item[baseKey+'Gu'] || item[baseKey+'En'] || '';
+  const gu = item[baseKey+'Gu'] || item[baseKey+'gu'];
+  const en = item[baseKey+'En'] || item[baseKey+'en'];
+  return gu || en || '';
+}
+function txtDa(item, baseKey='text'){
+  if(!item || !S.daMode) return '';
+  return item[baseKey+'Da'] || item[baseKey+'da'] || '';
 }
 
 // ── ATTEMPTS ──
@@ -1102,6 +1105,7 @@ function openCategory(secId, catId){
       <div class="ch-num" style="background:rgba(${cat.colorRGB},.15);color:${color}">${locked?'🔒':ch.icon}</div>
       <div class="ch-info">
         <div class="ch-name-gu">${txt(ch, 'name')}</div>
+        ${S.daMode && txtDa(ch, 'name') ? `<div style="font-family:var(--font-en),sans-serif;font-size:0.75rem;color:var(--teal)">${txtDa(ch, 'name')}</div>` : ''}
         <div class="ch-name-en">${ch.nameEn}</div>
         <div class="ch-stars" style="color:${color}">${starStr}</div>
       </div>
@@ -1192,6 +1196,7 @@ function renderQ(){
   const col=`rgb(${currentCat?.colorRGB||'88,166,255'})`;
   let h=`<div class="ql" style="color:${col}">${q.level||''}</div>
     <div class="qt-gu">${txt(q, 'text')}</div>
+    ${S.daMode && txtDa(q, 'text') ? `<div class="qt-da" style="font-family:var(--font-en),sans-serif;font-size:0.85rem;color:var(--teal);margin-bottom:8px;text-align:center">${txtDa(q, 'text')}</div>` : ''}
     <div class="qt-en">${q.textEn||''}</div>`;
 
   // ── EMOJI COUNT (addition/multiplication visual) ──
@@ -1257,6 +1262,7 @@ function renderQ(){
     q.options.forEach((o,i)=>{
       h+=`<div class="opt" onclick="checkMCQ(${q.answer},${i})">
         <div class="opt-gu">${txt(o, '')}</div>
+        ${S.daMode && txtDa(o, '') ? `<div class="opt-da" style="font-family:var(--font-en),sans-serif;font-size:0.75rem;color:var(--teal);margin-top:4px">${txtDa(o, '')}</div>` : ''}
         <div class="opt-en">${o.en||''}</div>
       </div>`;
     });
@@ -1274,7 +1280,8 @@ function renderQ(){
     const opSym = q.op==='×'?'×' : q.op==='÷'?'÷' : q.subtract?'−' : '+';
     // The visual equation is self-explanatory — suppress duplicate text lines
     const hdrClear = `<div class="ql" style="color:${col}">${q.level||''}</div>
-    <div class="qt-gu" style="font-size:.85rem;opacity:.6">${q.textGu}</div>`;
+    <div class="qt-gu" style="font-size:.85rem;opacity:.6">${q.textGu}</div>
+    ${S.daMode && q.textDa ? `<div class="qt-da" style="font-family:var(--font-en),sans-serif;font-size:0.75rem;color:var(--teal);opacity:.8;margin-bottom:8px;text-align:center">${q.textDa}</div>` : ''}`;
     h = hdrClear;
     h+=`<div class="missing-wrap">
       <div class="missing-part">${q.partA}</div>
@@ -1306,7 +1313,10 @@ function renderQ(){
 
   // ── STORY PROBLEM ──
   else if(q.type==='story-problem'){
-    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${txt(q, 'text')}</div>`;
+    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">
+      <div>${txt(q, 'text')}</div>
+      ${S.daMode && txtDa(q, 'text') ? `<div style="font-family:var(--font-en),sans-serif;font-size:0.8rem;color:var(--teal);margin-top:8px;line-height:1.4">${txtDa(q, 'text')}</div>` : ''}
+    </div>`;
     h+=`<div style="font-family:var(--font-en),sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:8px">${q.textEn}</div>`;
     h+=inputHtml(q.answer);
   }
@@ -1320,7 +1330,10 @@ function renderQ(){
       const origIdx=q.steps.findIndex(x=>x.labelGu===s.labelGu);
       h+=`<div class="vsort-card" id="vsc${i}" data-orig="${origIdx}" onclick="vsortTap(${i})">
         <div class="vsort-icon">${s.icon}</div>
-        <div class="vsort-label">${txt(s, 'label')}</div>
+        <div class="vsort-label">
+          <div>${txt(s, 'label')}</div>
+          ${S.daMode && txtDa(s, 'label') ? `<div style="font-family:var(--font-en),sans-serif;font-size:0.6rem;color:var(--teal);margin-top:2px">${txtDa(s, 'label')}</div>` : ''}
+        </div>
       </div>`;
     });
     h+='</div>';
@@ -1380,7 +1393,10 @@ function renderQ(){
     </div>`;
     h+=`<div class="tap-grid">`;
     q.options.forEach((o,i)=>{
-      h+=`<div class="opt" onclick="checkGate(${q.answer},${i},'${o.gu}')">${o.gu}</div>`;
+      h+=`<div class="opt" onclick="checkGate(${q.answer},${i},'${o.gu}')">
+        <div>${o.gu}</div>
+        ${S.daMode && o.da ? `<div style="font-family:var(--font-en),sans-serif;font-size:0.65rem;color:var(--teal);margin-top:2px">${o.da}</div>` : ''}
+      </div>`;
     });
     h+='</div>';
   }
@@ -1402,7 +1418,8 @@ function renderQ(){
     h+=`<div class="mcq-grid">`;
     q.options.forEach((o,i)=>{
       h+=`<div class="opt" onclick="checkMCQ(${q.answer},${i})">
-        <div class="opt-gu">${o.gu}</div>
+        <div class="opt-gu">${txt(o, '')}</div>
+        ${S.daMode && txtDa(o, '') ? `<div class="opt-da" style="font-family:var(--font-en),sans-serif;font-size:0.75rem;color:var(--teal);margin-top:4px">${txtDa(o, '')}</div>` : ''}
         <div class="opt-en">${o.en||''}</div>
       </div>`;
     });
@@ -1650,7 +1667,7 @@ function vsortTap(cardIdx){
       vsortSlots[i]=origIdx;
       const slot=document.getElementById('vslot'+i);
       const step=q.steps[origIdx];
-      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700;text-align:center">${txt(step, 'label')}</div>`;
+      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700;text-align:center">${txt(step, 'label')}${S.daMode && txtDa(step, 'label') ? `<br><span style="color:var(--teal)">${txtDa(step, 'label')}</span>` : ''}</div>`;
       slot.classList.add('filled');
       card.classList.add('placed','selected');
       vsortSelected=null;
@@ -1837,19 +1854,28 @@ function showComplete(){
   recordXPEarned(xpEarned);
   if(stars>=3 && ch.trophy) S.addTrophy(ch.trophy);
 
+  let nextPath = null;
+  if(currentCat) {
+    const idx = currentCat.challenges.findIndex(c => challengeData[`content/category/${currentCat.id}/${c}.json`] === ch);
+    if(idx >= 0 && idx < currentCat.challenges.length - 1) {
+      nextPath = `content/category/${currentCat.id}/${currentCat.challenges[idx+1]}.json`;
+    }
+  }
+
   document.getElementById('gBody').style.display='none';
   const cs=document.getElementById('completeScreen');
   cs.className='complete show';
   cs.innerHTML=`
     <div class="c-big">${ch.icon}</div>
     <div class="c-stars" style="color:rgb(${currentCat?.colorRGB||'88,166,255'})">${'★'.repeat(stars)+'☆'.repeat(5-stars)}</div>
-    <div class="c-msg-gu">${ch.nameGu} — complete!</div>
+    <div class="c-msg-gu">${txt(ch, 'name')} — complete!</div>
     <div class="c-msg-en" lang="en">${ch.nameEn} complete! ${score}/${questions.length} correct.</div>
-    ${stars>=3&&ch.trophy?`<div class="c-trophy">${ch.trophy.icon}</div><div class="c-trophy-name">${ch.trophy.nameGu} Trophy earned!</div>`:''}
+    ${stars>=3&&ch.trophy?`<div class="c-trophy">${ch.trophy.icon}</div><div class="c-trophy-name">${txt(ch.trophy, 'name')} Trophy earned!</div>`:''}
     <div class="c-xp">+${xpEarned} XP</div>
     <div class="c-btns">
       <button class="c-btn secondary" onclick="exitGame()">← Back</button>
       <button class="c-btn primary" onclick="replayChallenge()">🔄 Again</button>
+      ${nextPath ? `<button class="c-btn primary" onclick="startChallenge('${nextPath}')">Next →</button>` : ''}
     </div>`;
   // Confetti density and shape vary by stars earned
   spawnConfetti(stars * 12 + 8, stars);
@@ -2015,14 +2041,27 @@ function updateSpeakBtn(){
   const btn = document.getElementById('replaySpeakBtn');
   if(!btn) return;
   if(!_voices.length){ btn.innerHTML = '🔊'; return; }
-  const gu = getBestVoice('gu');
-  const en = getBestVoice('en');
-  if(gu){
-    btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + gu.name + ' + ' + (en?en.name:'') + '</span>';
-  } else if(en){
-    btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + en.name + ' (' + en.lang + ')</span>';
+  
+  if (S.daMode) {
+    const da = getBestVoice('da');
+    const en = getBestVoice('en');
+    if(da){
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + da.name + ' + ' + (en?en.name:'') + '</span>';
+    } else if(en){
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + en.name + ' (' + en.lang + ')</span>';
+    } else {
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.5">no voice</span>';
+    }
   } else {
-    btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.5">no voice</span>';
+    const gu = getBestVoice('gu');
+    const en = getBestVoice('en');
+    if(gu){
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + gu.name + ' + ' + (en?en.name:'') + '</span>';
+    } else if(en){
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.7">' + en.name + ' (' + en.lang + ')</span>';
+    } else {
+      btn.innerHTML = '🔊 <span style="font-size:.65rem;opacity:.5">no voice</span>';
+    }
   }
 }
 
@@ -2054,10 +2093,17 @@ function getBestVoice(langCode){
 
 // Returns display string for active voice e.g. "Rishi (en-IN)"
 function getActiveVoiceName(){
-  const gu = getBestVoice('gu');
-  const en = getBestVoice('en');
-  if(gu) return gu.name + ' + ' + (en ? en.name : '');
-  if(en) return en.name + ' (' + en.lang + ')';
+  if (S.daMode) {
+    const da = getBestVoice('da');
+    const en = getBestVoice('en');
+    if(da) return da.name + ' + ' + (en ? en.name : '');
+    if(en) return en.name + ' (' + en.lang + ')';
+  } else {
+    const gu = getBestVoice('gu');
+    const en = getBestVoice('en');
+    if(gu) return gu.name + ' + ' + (en ? en.name : '');
+    if(en) return en.name + ' (' + en.lang + ')';
+  }
   return 'No voice';
 }
 
@@ -2153,6 +2199,7 @@ function toggleDaMode(){
   // Re-render home and welcome with new language
   updateWelcome();
   renderHome();
+  updateSpeakBtn();
 }
 function toggleLightMode(){
   S.lightMode = !S.lightMode;
