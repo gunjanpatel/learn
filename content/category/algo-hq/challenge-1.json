@@ -28,7 +28,7 @@
       "steps": [
         {"icon": "🍞", "labelGu": "Bread", "labelEn": "Bread"},
         {"icon": "🥬", "labelGu": "Filling", "labelEn": "Filling"},
-        {"icon": "🍞", "labelGu": "Top", "labelEn": "Top"},
+        {"icon": "🥪", "labelGu": "Top", "labelEn": "Top"},
         {"icon": "😋", "labelGu": "Eat!", "labelEn": "Eat!"}
       ],
       "correctOrder": [0,1,2,3],

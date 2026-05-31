@@ -1,0 +1,90 @@
+{
+  "challengeId": "algo-hq-2",
+  "nameGu": "ચિલેન્જ 2 · Algorithm Pro",
+  "nameEn": "Challenge 2 · Algorithm Pro",
+  "badge": "🎓",
+  "starsEarned": 0,
+  "teacherGuide": {
+    "goalsGu": "🎯 ક્રમિક વિચારસરણી (Sequencing), શરતી વિધાનો (Conditionals) અને પુનરાવર્તન (Loops) નો દ્રઢીકરણ.",
+    "goalsEn": "🎯 Reinforces logical sequencing, conditional statements (If/Then), and repeating concepts (Loops) for 7-year-olds.",
+    "tipsGu": "💡 પિઝા બનાવવાના અથવા બીજ રોપવાના રોજિંદા ઉદાહરણો દ્વારા ક્રમનું મહત્વ સમજાવો — 'પહેલા બેક કરાય કે લોટ વણાય?'",
+    "tipsEn": "💡 Connect sequencing to daily tasks. Ask: 'Can we bake the pizza before rolling the dough? Why does order matter?'"
+  },
+  "questions": [
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 1 · PIZZA MAKER",
+      "textGu": "પિઝા બનાવવાનો સાચો ક્રમ!",
+      "textEn": "Put the pizza baking steps in order!",
+      "steps": [
+        {"icon": "🥖", "labelGu": "લોટ વણો", "labelEn": "Roll dough"},
+        {"icon": "🍅", "labelGu": "સોસ લગાવો", "labelEn": "Spread sauce"},
+        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો", "labelEn": "Add cheese"},
+        {"icon": "🔥", "labelGu": "બેક કરો", "labelEn": "Bake pizza"}
+      ],
+      "correctOrder": [0, 1, 2, 3],
+      "hintGu": "લોટ → સોસ → ચીઝ → બેક!",
+      "hintEn": "Roll dough first, then sauce, cheese, and bake!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 2 · PLANT A SEED",
+      "textGu": "બીજમાંથી સૂર્યમુખી ઉગાડો!",
+      "textEn": "Grow a flower from seed in order!",
+      "steps": [
+        {"icon": "🕳️", "labelGu": "ખાડો ખોદો", "labelEn": "Dig a hole"},
+        {"icon": "🌱", "labelGu": "બીજ રોપો", "labelEn": "Plant seed"},
+        {"icon": "💧", "labelGu": "પાણી આપો", "labelEn": "Water it"},
+        {"icon": "☀️", "labelGu": "તડકો આપો", "labelEn": "Sun shines"}
+      ],
+      "correctOrder": [0, 1, 2, 3],
+      "hintGu": "ખાડો → બીજ → પાણી → તડકો!",
+      "hintEn": "Dig a hole first, then plant seed, water, and sun!"
+    },
+    {
+      "type": "visual-sort",
+      "level": "LEVEL 3 · CROSS RIVER",
+      "textGu": "નદી ઓળંગવાનો સલામત ક્રમ!",
+      "textEn": "Safely cross the river in order!",
+      "steps": [
+        {"icon": "👀", "labelGu": "જુઓ", "labelEn": "Look around"},
+        {"icon": "🪨", "labelGu": "પથ્થર પર પગ", "labelEn": "Step on stones"},
+        {"icon": "🚶", "labelGu": "ધીમે ચાલો", "labelEn": "Walk across"},
+        {"icon": "🎉", "labelGu": "નદી પાર", "labelEn": "Crossed!"}
+      ],
+      "correctOrder": [0, 1, 2, 3],
+      "hintGu": "જુઓ → પથ્થર → ચાલો → પાર!",
+      "hintEn": "Look first, step carefully, walk, and celebrate!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 4 · IF/THEN",
+      "textGu": "IF બારી ખુલ્લી હોય અને વરસાદ આવે, THEN ___?",
+      "textEn": "IF window is open AND it rains, THEN ___?",
+      "options": [
+        {"gu": "બારી બંધ કરો 🔒", "en": "Close window"},
+        {"gu": "રમવા જાઓ ⚽", "en": "Go play outside"},
+        {"gu": "ટીવી જુઓ 📺", "en": "Watch TV"},
+        {"gu": "સૂઈ જાઓ 😴", "en": "Sleep"}
+      ],
+      "answer": 0,
+      "hintGu": "વરસાદ આવે તો બારી બંધ કરવી પડે!",
+      "hintEn": "Close the window to keep the room dry!"
+    },
+    {
+      "type": "mcq",
+      "level": "LEVEL 5 · LOOPS",
+      "textGu": "જ્યારે આપણે ૫ વખત તાળી પાડીએ, ત્યારે તે શું કહેવાય?",
+      "textEn": "Clapping our hands 5 times is a ___?",
+      "options": [
+        {"gu": "ખોટો સ્ટેપ (Bug)", "en": "Bug"},
+        {"gu": "પુનરાવર્તન (Loop)", "en": "Loop"},
+        {"gu": "નામ (Name)", "en": "Name"},
+        {"gu": "નંબર (Number)", "en": "Number"}
+      ],
+      "answer": 1,
+      "hintGu": "એક જ ક્રિયા વારંવાર કરવી એટલે લૂપ!",
+      "hintEn": "Repeating the same action is a Loop!"
+    }
+  ]
+}

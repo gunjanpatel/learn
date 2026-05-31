@@ -186,12 +186,12 @@ body{font-family:var(--font-gu),sans-serif;display:flex;flex-direction:column}
 .vsort-card{width:72px;height:72px;background:var(--card2);border:2px solid var(--border);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
 .vsort-card:active{transform:scale(.9)}
 .vsort-card.selected{border-color:var(--yellow);background:rgba(240,192,64,.12)}
-.vsort-card.placed{opacity:.25;pointer-events:none}
+.vsort-card.placed{opacity:.25;}
 .vsort-icon{font-size:2rem}
 .vsort-label{font-size:.55rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700;margin-top:2px;text-align:center}
 .vsort-slots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:10px;border:2px dashed rgba(255,255,255,.1);border-radius:16px;min-height:88px;align-items:center;margin:8px 0}
 .vsort-slot{width:72px;height:72px;border:2px dashed rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.02)}
-.vsort-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.08)}
+.vsort-slot.filled{border-color:var(--purple);background:rgba(188,140,255,.08);cursor:pointer}
 .slot-num{font-size:.65rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700}
 /* binary */
 .binary-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}
@@ -1301,7 +1301,7 @@ function renderQ(){
     h+='</div>';
     h+=`<div class="vsort-slots" id="vsortSlots">`;
     q.steps.forEach((_,i)=>{
-      h+=`<div class="vsort-slot" id="vslot${i}"><div class="slot-num">${i+1}</div></div>`;
+      h+=`<div class="vsort-slot" id="vslot${i}" onclick="vsortSlotTap(${i})"><div class="slot-num">${i+1}</div></div>`;
     });
     h+=`</div>`;
     h+=`<button class="go-btn" style="margin:6px auto;display:block" onclick="checkVsort()">✓ Check</button>`;
@@ -1631,6 +1631,18 @@ function vsortTap(cardIdx){
       vsortSelected=null;
       return;
     }
+  }
+}
+function vsortSlotTap(slotIdx){
+  if(answered)return;
+  const origIdx = vsortSlots[slotIdx];
+  if(origIdx === null || origIdx === undefined) return;
+  const card = document.querySelector(`.vsort-card[data-orig="${origIdx}"]`);
+  if(card){
+    vsortSlots[slotIdx]=null;
+    const slot=document.getElementById('vslot'+slotIdx);
+    if(slot){ slot.innerHTML=`<div class="slot-num">${slotIdx+1}</div>`; slot.classList.remove('filled'); }
+    card.classList.remove('placed','selected');
   }
 }
 function checkVsort(){
