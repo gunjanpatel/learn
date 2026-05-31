@@ -45,8 +45,8 @@
       "options": [
         {"gu": "ઊભો / up-down", "en": "Up-down position", "da": "Op-ned position"},
         {"gu": "આડો / left-right", "en": "Left-right position", "da": "Venstre-højre position"},
-        {"gu": "Colour", "en": "Colour", "da": "Farve"},
-        {"gu": "Size", "en": "Size", "da": "Størrelse"}
+        {"gu": "રંગ (Colour)", "en": "Colour", "da": "Farve"},
+        {"gu": "કદ (Size)", "en": "Size", "da": "Størrelse"}
       ],
       "answer": 1,
       "hintGu": "X = horizontal = left-right!",

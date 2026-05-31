@@ -1380,15 +1380,15 @@ function renderQ(){
   else if(q.type==='logic-gate'){
     h+=`<div class="gate-row">
       <div class="gate-in${q.inputA?' on':''}">
-        <div class="gi-v">${q.inputA}</div><div class="gi-l">Input A</div>
+        <div class="gi-v">${q.inputA}</div><div class="gi-l">${S.daMode?'Indgang A':'ઇનપુટ A (Input A)'}</div>
       </div>
       <div class="gate-sym">${q.gate}</div>
       <div class="gate-in${q.inputB?' on':''}">
-        <div class="gi-v">${q.inputB}</div><div class="gi-l">Input B</div>
+        <div class="gi-v">${q.inputB}</div><div class="gi-l">${S.daMode?'Indgang B':'ઇનપુટ B (Input B)'}</div>
       </div>
       <div class="gate-arr">→</div>
       <div class="gate-out">
-        <div class="go-v" id="gOut">?</div><div class="go-l">Output</div>
+        <div class="go-v" id="gOut">?</div><div class="go-l">${S.daMode?'Udgang':'આઉટપુટ (Output)'}</div>
       </div>
     </div>`;
     h+=`<div class="tap-grid">`;

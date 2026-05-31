@@ -79,9 +79,9 @@
       "textDa": "if score > 15: print(\"Vinder!\"). Hvis score=12, hvad udskrives?",
       "options": [
         {"gu": "Win!", "en": "Win!", "da": "Vinder!"},
-        {"gu": "Nothing prints", "en": "Nothing prints", "da": "Intet udskrives"},
+        {"gu": "કંઈ પ્રિન્ટ થશે નહીં (Nothing prints)", "en": "Nothing prints", "da": "Intet udskrives"},
         {"gu": "12", "en": "12", "da": "12"},
-        {"gu": "Error", "en": "Error", "da": "Fejl"}
+        {"gu": "ભૂલ (Error)", "en": "Error", "da": "Fejl"}
       ],
       "answer": 1,
       "hintGu": "12 > 15? No! So if block skip — nothing prints!",
@@ -98,7 +98,7 @@
         {"gu": "Adult", "en": "Adult", "da": "Voksen"},
         {"gu": "Child", "en": "Child", "da": "Barn"},
         {"gu": "17", "en": "17", "da": "17"},
-        {"gu": "Nothing", "en": "Nothing", "da": "Intet"}
+        {"gu": "કંઈ નહીં (Nothing)", "en": "Nothing", "da": "Intet"}
       ],
       "answer": 1,
       "hintGu": "17 >= 18? No! So ELSE runs: Child!",
@@ -130,9 +130,9 @@
       "textDa": "AI-træning looper over data. Træning på 1000 billeder bruger et ___?",
       "options": [
         {"gu": "if statement", "en": "if statement", "da": "if-betingelse"},
-        {"gu": "for loop — 1000 times!", "en": "for loop — 1000 times!", "da": "for-loop — 1000 gange!"},
+        {"gu": "ફોર લૂપ - 1000 વખત! (for loop — 1000 times!)", "en": "for loop — 1000 times!", "da": "for-loop — 1000 gange!"},
         {"gu": "print()", "en": "print()", "da": "print()"},
-        {"gu": "Variable", "en": "Variable", "da": "Variabel"}
+        {"gu": "ચલ (Variable)", "en": "Variable", "da": "Variabel"}
       ],
       "answer": 1,
       "hintGu": "for image in dataset: train! Loop over all images = AI training!",

@@ -98,10 +98,10 @@
       "textEn": "NOT gate flips it. Input=0, output=?",
       "textDa": "En NOT-port vender signalet. Indgang=0, hvad er output?",
       "options": [
-        {"gu": "0 (same)", "en": "Still 0", "da": "Stadig 0"},
+        {"gu": "0 (એ જ રહે)", "en": "Still 0", "da": "Stadig 0"},
         {"gu": "1 (ઉલટું!)", "en": "1 — flipped!", "da": "1 — vendt om!"},
         {"gu": "2", "en": "2", "da": "2"},
-        {"gu": "Nothing", "en": "Nothing", "da": "Ingenting"}
+        {"gu": "કંઈ જ નહીં (Nothing)", "en": "Nothing", "da": "Ingenting"}
       ],
       "answer": 1,
       "hintGu": "NOT = flip! 1→0, 0→1",

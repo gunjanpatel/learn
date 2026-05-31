@@ -87,10 +87,10 @@
       "textEn": "8 bits together = ___",
       "textDa": "Hvad kaldes 8 bits, der er lagt sammen?",
       "options": [
-        {"gu": "1 Pixel", "en": "1 Pixel", "da": "1 Pixel"},
-        {"gu": "1 Byte — memory unit!", "en": "1 Byte", "da": "1 Byte — lagerenhed!"},
-        {"gu": "1 Photo", "en": "1 Photo", "da": "1 Foto"},
-        {"gu": "1 Second", "en": "1 Second", "da": "1 Sekund"}
+        {"gu": "૧ પિક્સલ (1 Pixel)", "en": "1 Pixel", "da": "1 Pixel"},
+        {"gu": "૧ બાઈટ (1 Byte — memory unit!)", "en": "1 Byte", "da": "1 Byte — lagerenhed!"},
+        {"gu": "૧ ફોટો (1 Photo)", "en": "1 Photo", "da": "1 Foto"},
+        {"gu": "૧ સેકન્ડ (1 Second)", "en": "1 Second", "da": "1 Sekund"}
       ],
       "answer": 1,
       "hintGu": "8 bits = 1 Byte — smallest memory unit!",

@@ -30,10 +30,10 @@
       "textEn": "Put the pizza baking steps in order!",
       "textDa": "Sæt pizza-trin i rækkefølge!",
       "steps": [
-        {"icon": "🥖", "labelGu": "લોટ વણો", "labelEn": "Roll dough", "labelDa": "Rul dej"},
-        {"icon": "🍅", "labelGu": "સોસ લગાવો", "labelEn": "Spread sauce", "labelDa": "Smør sovs på"},
-        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો", "labelEn": "Add cheese", "labelDa": "Tilføj ost"},
-        {"icon": "🔥", "labelGu": "બેક કરો", "labelEn": "Bake pizza", "labelDa": "Bag pizza"}
+        {"icon": "🥖", "labelGu": "લોટ વણો (Roll dough)", "labelEn": "Roll dough", "labelDa": "Rul dej"},
+        {"icon": "🍅", "labelGu": "સોસ લગાવો (Spread sauce)", "labelEn": "Spread sauce", "labelDa": "Smør sovs på"},
+        {"icon": "🧀", "labelGu": "ચીઝ ભભરાવો (Add cheese)", "labelEn": "Add cheese", "labelDa": "Tilføj ost"},
+        {"icon": "🔥", "labelGu": "બેક કરો (Bake pizza)", "labelEn": "Bake pizza", "labelDa": "Bag pizza"}
       ],
       "correctOrder": [0, 1, 2, 3],
       "hintGu": "લોટ → સોસ → ચીઝ → બેક!",
@@ -47,10 +47,10 @@
       "textEn": "Grow a flower from seed in order!",
       "textDa": "Dyrk en blomst fra frø i rækkefølge!",
       "steps": [
-        {"icon": "🕳️", "labelGu": "ખાડો ખોદો", "labelEn": "Dig a hole", "labelDa": "Grav hul"},
-        {"icon": "🌱", "labelGu": "બીજ રોપો", "labelEn": "Plant seed", "labelDa": "Plant frø"},
-        {"icon": "💧", "labelGu": "પાણી આપો", "labelEn": "Water it", "labelDa": "Giv vand"},
-        {"icon": "☀️", "labelGu": "તડકો આપો", "labelEn": "Sun shines", "labelDa": "Solskin"}
+        {"icon": "🕳️", "labelGu": "ખાડો ખોદો (Dig a hole)", "labelEn": "Dig a hole", "labelDa": "Grav hul"},
+        {"icon": "🌱", "labelGu": "બીજ રોપો (Plant seed)", "labelEn": "Plant seed", "labelDa": "Plant frø"},
+        {"icon": "💧", "labelGu": "પાણી આપો (Water it)", "labelEn": "Water it", "labelDa": "Giv vand"},
+        {"icon": "☀️", "labelGu": "તડકો આપો (Sun shines)", "labelEn": "Sun shines", "labelDa": "Solskin"}
       ],
       "correctOrder": [0, 1, 2, 3],
       "hintGu": "ખાડો → બીજ → પાણી → તડકો!",
@@ -64,10 +64,10 @@
       "textEn": "Safely cross the river in order!",
       "textDa": "Kryds floden sikkert i rækkefølge!",
       "steps": [
-        {"icon": "🪵", "labelGu": "લાકડા શોધો", "labelEn": "Find logs", "labelDa": "Find brænde"},
-        {"icon": "🪢", "labelGu": "દોરડું બાંધો", "labelEn": "Tie rope", "labelDa": "Bind reb"},
-        {"icon": "🛶", "labelGu": "રાફ્ટ બનાવો", "labelEn": "Build raft", "labelDa": "Byg tømmerflåde"},
-        {"icon": "🌊", "labelGu": "નદી ઓળંગો", "labelEn": "Cross river", "labelDa": "Kryds flod"}
+        {"icon": "🪵", "labelGu": "લાકડા શોધો (Find logs)", "labelEn": "Find logs", "labelDa": "Find brænde"},
+        {"icon": "🪢", "labelGu": "દોરડું બાંધો (Tie rope)", "labelEn": "Tie rope", "labelDa": "Bind reb"},
+        {"icon": "🛶", "labelGu": "રાફ્ટ બનાવો (Build raft)", "labelEn": "Build raft", "labelDa": "Byg tømmerflåde"},
+        {"icon": "🌊", "labelGu": "નદી ઓળંગો (Cross river)", "labelEn": "Cross river", "labelDa": "Kryds flod"}
       ],
       "correctOrder": [0, 1, 2, 3],
       "hintGu": "લાકડા → દોરડું → રાફ્ટ → નદી ઓળંગો!",
@@ -81,10 +81,10 @@
       "textEn": "Robot crashed into the wall! Which step is a BUG?",
       "textDa": "Robotten kørte ind i muren! Hvilket trin er en FEJL?",
       "options": [
-        {"gu": "Start", "en": "Start", "da": "Start"},
-        {"gu": "Move Forward", "en": "Move Forward", "da": "Gå Frem"},
-        {"gu": "Turn Left", "en": "Turn Left", "da": "Drej Venstre"},
-        {"gu": "Move into Wall 💥", "en": "Move into Wall", "da": "Kør ind i Mur 💥"}
+        {"gu": "શરૂઆત (Start)", "en": "Start", "da": "Start"},
+        {"gu": "આગળ વધો (Move Forward)", "en": "Move Forward", "da": "Gå Frem"},
+        {"gu": "ડાબી બાજુ વળો (Turn Left)", "en": "Turn Left", "da": "Drej Venstre"},
+        {"gu": "દીવાલમાં અથડાવું 💥 (Move into Wall)", "en": "Move into Wall", "da": "Kør ind i Mur 💥"}
       ],
       "answer": 3,
       "hintGu": "દીવાલ સાથે અથડાવું એ BUG છે!",

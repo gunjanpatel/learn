@@ -100,10 +100,10 @@
       "textEn": "Rain → umbrella sales go up. This is a ___.",
       "textDa": "Regnvejr gør, at der sælges flere paraplyer. Hvad kaldes dette?",
       "options": [
-        {"gu": "Accident", "en": "Accident", "da": "Et uheld / Tilfældighed"},
-        {"gu": "Pattern / Correlation", "en": "Pattern", "da": "Et mønster / Sammenhæng"},
-        {"gu": "Mistake", "en": "Mistake", "da": "En fejl"},
-        {"gu": "Magic", "en": "Magic", "da": "Magi"}
+        {"gu": "અકસ્માત (Accident)", "en": "Accident", "da": "Et uheld / Tilfældighed"},
+        {"gu": "પેટર્ન / સંબંધ (Pattern / Correlation)", "en": "Pattern", "da": "Et mønster / Sammenhæng"},
+        {"gu": "ભૂલ (Mistake)", "en": "Mistake", "da": "En fejl"},
+        {"gu": "જાદુ (Magic)", "en": "Magic", "da": "Magi"}
       ],
       "answer": 1,
       "hintGu": "Linked things = Pattern!",
@@ -117,10 +117,10 @@
       "textEn": "AI sees 1000 cat + 1000 dog photos → learns to ___",
       "textDa": "AI ser 1000 kattebillede og 1000 hundebilleder. Den lærer at ___",
       "options": [
-        {"gu": "Photos delete", "en": "Delete", "da": "Slette billeder"},
-        {"gu": "Cat/Dog ઓળખે — Training!", "en": "Recognise — Training!", "da": "Genkende dem — Træning!"},
-        {"gu": "Sleep 😴", "en": "Sleep", "da": "Sove"},
-        {"gu": "Random guess", "en": "Guess", "da": "Gætte tilfældigt"}
+        {"gu": "ફોટા ડિલીટ કરે (Photos delete)", "en": "Delete", "da": "Slette billeder"},
+        {"gu": "બિલાડી/કૂતરો ઓળખે — તાલીમ! (Recognise)", "en": "Recognise — Training!", "da": "Genkende dem — Træning!"},
+        {"gu": "સૂઈ જાય 😴 (Sleep)", "en": "Sleep", "da": "Sove"},
+        {"gu": "અટકળ લગાવે (Random guess)", "en": "Guess", "da": "Gætte tilfældigt"}
       ],
       "answer": 1,
       "hintGu": "AI trains on data — pattern find!",

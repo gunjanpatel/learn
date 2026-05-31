@@ -95,10 +95,10 @@
       "textEn": "AI learns by finding _____ in data.",
       "textDa": "Kunstig intelligens (AI) lærer ved at finde ___ i data.",
       "options": [
-        {"gu": "Colours", "en": "Colours", "da": "Farver"},
-        {"gu": "Patterns / નિયમો", "en": "Patterns", "da": "Mønstre"},
-        {"gu": "Random guesses", "en": "Random guesses", "da": "Tilfældige gæt"},
-        {"gu": "Passwords", "en": "Passwords", "da": "Adgangskoder"}
+        {"gu": "રંગો (Colours)", "en": "Colours", "da": "Farver"},
+        {"gu": "પેટર્ન / નિયમો (Patterns)", "en": "Patterns", "da": "Mønstre"},
+        {"gu": "અટકળ (Random guesses)", "en": "Random guesses", "da": "Tilfældige gæt"},
+        {"gu": "પાસવર્ડ (Passwords)", "en": "Passwords", "da": "Adgangskoder"}
       ],
       "answer": 1,
       "hintGu": "AI = pattern finding machine!",
