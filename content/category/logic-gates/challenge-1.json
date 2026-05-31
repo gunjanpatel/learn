@@ -2,22 +2,37 @@
   "id": "logic-gates-challenge-1",
   "nameGu": "Logic Gates — Basics ⚡",
   "nameEn": "Logic Gates Basics",
+  "nameDa": "Logiske Gates — Basis ⚡",
   "icon": "⚡",
   "descGu": "AND, OR, NOT — computer ના decision makers!",
   "descEn": "How computers make decisions!",
+  "descDa": "Hvordan computere tager beslutninger!",
   "xpReward": 60,
-  "trophy": {"icon": "⚡", "nameGu": "Gate Keeper", "nameEn": "Gate Keeper"},
+  "trophy": {
+    "icon": "⚡",
+    "nameGu": "Gate Keeper",
+    "nameEn": "Gate Keeper",
+    "nameDa": "Port-Vogter"
+  },
   "teacherGuide": {
     "conceptGu": "Logic gate = decision maker circuit. AND = બંને true. OR = ઓછામાં ઓછું એક. NOT = flip. CPU = billions of gates!",
+    "conceptEn": "Logic gate = decision maker circuit. AND = both true. OR = at least one. NOT = flip. CPU = billions of gates!",
+    "conceptDa": "Logiske porte (logic gates) er kredsløb, der tager beslutninger. AND = begge skal være sande (1). OR = mindst én skal være sand. NOT = vender signalet om (0 bliver 1, og 1 bliver 0). Processorer har milliarder af disse!",
     "storyGu": "'Phone unlock: face match AND correct angle — AND gate! Door: password OR fingerprint — OR gate!'",
+    "storyEn": "Unlock a phone: face matches AND you swipe up — AND gate! Open a door: use password OR fingerprint — OR gate!",
+    "storyDa": "Lås en iPad op: ansigtet genkendes AND du stryger op — AND gate! Lås en dør op: kode OR fingeraftryk — OR gate!",
     "scriptGu": "'Yuval, school bag ready? Book inside AND pencil inside? BOTH = yes = AND gate!'",
+    "scriptEn": "Yuval, going outside? Needs shoes AND jacket? Both are required, that's an AND gate!",
+    "scriptDa": "Yuval, skal vi ud? Du skal have sko på AND jakke på? Begge dele skal ske — det er en AND gate!",
     "vocab": [
-      {"gu": "AND = બંને TRUE", "en": "AND gate"},
-      {"gu": "OR = ઓછામાં ઓછું એક", "en": "OR gate"},
-      {"gu": "NOT = ઉલટું flip", "en": "NOT gate"},
-      {"gu": "Output = result", "en": "Output"}
+      {"gu": "AND = બંને TRUE", "en": "AND gate", "da": "AND-port (OG)"},
+      {"gu": "OR = ઓછામાં ઓછું એક", "en": "OR gate", "da": "OR-port (ELLER)"},
+      {"gu": "NOT = ઉલટું flip", "en": "NOT gate", "da": "NOT-port (IKKE)"},
+      {"gu": "Output = result", "en": "Output", "da": "Resultat / Output"}
     ],
-    "tipsGu": "💡 TV on: power AND remote = AND gate! Torch: press OR shake = OR gate!"
+    "tipsGu": "💡 TV on: power AND remote = AND gate! Torch: press OR shake = OR gate!",
+    "tipsEn": "💡 Everyday situations: TV is on if plugged in AND power is pressed. That is an AND gate!",
+    "tipsDa": "💡 Hverdagseksempler: Fjernsynet tænder kun, hvis stikket er i AND du trykker på tænd-knappen. Det er en AND-port!"
   },
   "questions": [
     {
@@ -25,63 +40,73 @@
       "level": "LEVEL 1 · AND GATE",
       "textGu": "AND gate: output 1 ત્યારે જ — ___",
       "textEn": "AND gate outputs 1 only when ___",
+      "textDa": "En AND-port giver kun signalet 1, når ___",
       "options": [
-        {"gu": "ફક્ત A = 1", "en": "Only A is 1"},
-        {"gu": "ફક્ત B = 1", "en": "Only B is 1"},
-        {"gu": "A AND B બંને = 1", "en": "BOTH A and B = 1"},
-        {"gu": "બંને = 0", "en": "Both = 0"}
+        {"gu": "ફક્ત A = 1", "en": "Only A is 1", "da": "Kun A er 1"},
+        {"gu": "ફક્ત B = 1", "en": "Only B is 1", "da": "Kun B er 1"},
+        {"gu": "A AND B બંને = 1", "en": "BOTH A and B = 1", "da": "BÅDE A og B er 1"},
+        {"gu": "બંને = 0", "en": "Both = 0", "da": "Begge er 0"}
       ],
       "answer": 2,
       "hintGu": "AND = BOTH! Book AND pencil — બંને જ!",
-      "hintEn": "AND means BOTH must be true!"
+      "hintEn": "AND means BOTH must be true!",
+      "hintDa": "AND betyder, at BÅDE A og B skal være 1!"
     },
     {
       "type": "logic-gate",
       "level": "LEVEL 2 · AND GATE",
       "textGu": "A=1, B=1. AND output?",
       "textEn": "A=1, B=1. AND output?",
+      "textDa": "A=1, B=1. Hvad er AND output?",
       "gate": "AND", "inputA": 1, "inputB": 1,
-      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "options": [{"gu": "0 (OFF)", "en": "0", "da": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "da": "1", "val": "1"}],
       "answer": 1,
       "hintGu": "1 AND 1 = 1!",
-      "hintEn": "Both are 1, so AND = 1"
+      "hintEn": "Both are 1, so AND = 1",
+      "hintDa": "Begge er tændt (1), så resultatet er 1!"
     },
     {
       "type": "logic-gate",
-      "level": "LEVEL 3 · AND GATE",
-      "textGu": "A=1, B=0. AND output?",
-      "textEn": "A=1, B=0. AND output?",
-      "gate": "AND", "inputA": 1, "inputB": 0,
-      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "level": "LEVEL 3 · OR GATE",
+      "textGu": "A=0, B=0. OR output?",
+      "textEn": "A=0, B=0. OR output?",
+      "textDa": "A=0, B=0. Hvad er OR output?",
+      "gate": "OR", "inputA": 0, "inputB": 0,
+      "options": [{"gu": "0 (OFF)", "en": "0", "da": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "da": "1", "val": "1"}],
       "answer": 0,
-      "hintGu": "B=0! AND ને BOTH ON જ જોઈએ!",
-      "hintEn": "B is 0 so AND = 0"
+      "hintGu": "બંને 0 છે! OR માટે એક તો 1 હોવો જોઈએ!",
+      "hintEn": "Both are 0 so OR = 0",
+      "hintDa": "Begge er slukket (0), så OR giver også 0!"
     },
     {
       "type": "logic-gate",
       "level": "LEVEL 4 · OR GATE",
-      "textGu": "OR gate: A=0, B=1. Output?",
-      "textEn": "OR gate: A=0, B=1. Output?",
-      "gate": "OR", "inputA": 0, "inputB": 1,
-      "options": [{"gu": "0 (OFF)", "en": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "val": "1"}],
+      "textGu": "OR gate: A=1, B=0. Output?",
+      "textEn": "OR gate: A=1, B=0. Output?",
+      "textDa": "OR-port: A=1, B=0. Hvad er output?",
+      "gate": "OR", "inputA": 1, "inputB": 0,
+      "options": [{"gu": "0 (OFF)", "en": "0", "da": "0", "val": "0"}, {"gu": "1 (ON)", "en": "1", "da": "1", "val": "1"}],
       "answer": 1,
-      "hintGu": "OR = at least one! B=1 = output 1!",
-      "hintEn": "OR needs at least one = 1"
+      "hintGu": "OR = at least one! A=1 = output 1!",
+      "hintEn": "OR needs at least one = 1",
+      "hintDa": "OR kræver kun, at mindst én er 1! A er 1, så output er 1!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · NOT GATE",
-      "textGu": "NOT gate: input=1. Output=?",
-      "textEn": "NOT gate flips it. Input=1, output=?",
+      "textGu": "NOT gate: input=0. Output=?",
+      "textEn": "NOT gate flips it. Input=0, output=?",
+      "textDa": "En NOT-port vender signalet. Indgang=0, hvad er output?",
       "options": [
-        {"gu": "1 (same)", "en": "Still 1"},
-        {"gu": "0 (ઉલટું!)", "en": "0 — flipped!"},
-        {"gu": "2", "en": "2"},
-        {"gu": "Nothing", "en": "Nothing"}
+        {"gu": "0 (same)", "en": "Still 0", "da": "Stadig 0"},
+        {"gu": "1 (ઉલટું!)", "en": "1 — flipped!", "da": "1 — vendt om!"},
+        {"gu": "2", "en": "2", "da": "2"},
+        {"gu": "Nothing", "en": "Nothing", "da": "Ingenting"}
       ],
       "answer": 1,
       "hintGu": "NOT = flip! 1→0, 0→1",
-      "hintEn": "NOT flips it. 1 becomes 0!"
+      "hintEn": "NOT flips it. 0 becomes 1!",
+      "hintDa": "NOT-porten vender det om. 0 bliver til 1!"
     }
   ]
 }

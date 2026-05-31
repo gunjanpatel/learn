@@ -2,23 +2,37 @@
   "id": "fractions-ch1",
   "nameGu": "અપૂર્ણાંક — Half & Quarter 🍕",
   "nameEn": "Fractions — Half & Quarter",
+  "nameDa": "Brøker — Halv & Kvart",
   "icon": "½",
   "descGu": "Pizza ના ટુકડા! Half, quarter શીખો.",
   "descEn": "Slice the pizza! Learn half and quarter.",
+  "descDa": "Skær pizzaen! Lær om halv og kvart.",
   "xpReward": 70,
-  "trophy": {"icon": "🍕", "nameGu": "Fraction Finder", "nameEn": "Fraction Finder"},
+  "trophy": {
+    "icon": "🍕",
+    "nameGu": "Fraction Finder",
+    "nameEn": "Fraction Finder",
+    "nameDa": "Brøk-Finder"
+  },
   "teacherGuide": {
     "conceptGu": "અપૂર્ણાંક = whole ના ભાગ. Half (½) = 2 equal pieces, 1 લો. Quarter (¼) = 4 equal pieces, 1 લો. Equal size = most important concept. Pizza, chocolate bar, paper fold — physical demonstration essential.",
     "conceptEn": "Fractions = equal parts of a whole. Half=1/2, Quarter=1/4. Equal size is key.",
+    "conceptDa": "Brøker er lige store dele af en helhed. Halv er 1 af 2 lige store dele (1/2), kvart er 1 af 4 lige store dele (1/4). Lige store størrelser er afgørende.",
     "storyGu": "'Yuval, pizza ના 2 equal slices — તમે 1 લો = half! 4 equal slices — 1 લો = quarter! Computer graphics, screen divide — same fraction math use!'",
+    "storyEn": "Yuval has a pizza with 2 equal slices. Taking 1 is a half! If 4 slices, taking 1 is a quarter.",
+    "storyDa": "Yuval deler en pizza i 4 lige store stykker. Han spiser 3 af stykkerne. Han har spist tre fjerdedele (3/4) af pizzaen!",
     "scriptGu": "'Paper fold! Half fold = 2 equal parts. Fold again = 4 equal parts = quarters. Open and see the lines!'",
+    "scriptEn": "Fold a paper in half to get 2 equal parts. Fold again to get 4 quarters. Unfold and explore.",
+    "scriptDa": "Fold et stykke papir på midten for at få 2 lige store dele. Fold det igen for at få 4 kvardele (kvart-dele). Fold det ud og tæl dem.",
     "vocab": [
-      {"gu": "Half = અડધો / ½", "en": "Half"},
-      {"gu": "Quarter = ચોથો ભાગ / ¼", "en": "Quarter"},
-      {"gu": "Whole = આખો / 1", "en": "Whole"},
-      {"gu": "Equal parts = સરખા ભાગ", "en": "Equal parts"}
+      {"gu": "Half = અડધો / ½", "en": "Half", "da": "Halv (1/2)"},
+      {"gu": "Quarter = ચોથો ભાગ / ¼", "en": "Quarter", "da": "Kvart (1/4)"},
+      {"gu": "Whole = આખો / 1", "en": "Whole", "da": "Hel (1)"},
+      {"gu": "Equal parts = સરખા ભાગ", "en": "Equal parts", "da": "Lige store dele"}
     ],
-    "tipsGu": "💡 Chocolate bar break in half — count squares each side same? Paper fold and unfold — see equal parts. Apple cut! Physical = best."
+    "tipsGu": "💡 Chocolate bar break in half — count squares each side same? Paper fold and unfold — see equal parts. Apple cut! Physical = best.",
+    "tipsEn": "💡 Break a chocolate bar or cut an apple to show halves. Fold paper to show quarters. Hands-on is best!",
+    "tipsDa": "💡 Knæk en chokoladebar i to eller skær et æble for at vise halvdele. Fold papir for at vise fjerdedele. Fysiske eksempler virker bedst!"
   },
   "questions": [
     {
@@ -26,72 +40,106 @@
       "level": "LEVEL 1 · WHAT IS HALF?",
       "textGu": "Pizza ના 2 equal pieces — 1 piece = ?",
       "textEn": "Pizza cut into 2 equal pieces. Take 1 piece = ?",
+      "textDa": "En pizza skæres i 2 lige store dele. Hvad kaldes 1 del?",
       "options": [
-        {"gu": "આખો / Whole", "en": "Whole"},
-        {"gu": "Half / અડધો ½", "en": "Half ½"},
-        {"gu": "Quarter / ¼", "en": "Quarter ¼"},
-        {"gu": "Nothing", "en": "Nothing"}
+        {"gu": "આખો / Whole", "en": "Whole", "da": "Hel"},
+        {"gu": "Half / અડધો ½", "en": "Half ½", "da": "Halv ½"},
+        {"gu": "Quarter / ¼", "en": "Quarter ¼", "da": "Kvart ¼"},
+        {"gu": "Nothing", "en": "Nothing", "da": "Ingenting"}
       ],
       "answer": 1,
       "hintGu": "2 equal pieces માંથી 1 = Half!",
-      "hintEn": "1 out of 2 equal pieces = Half!"
+      "hintEn": "1 out of 2 equal pieces = Half!",
+      "hintDa": "1 ud af 2 lige store dele kaldes en halv!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · WHAT IS QUARTER?",
       "textGu": "Chocolate 4 equal pieces — 1 piece = ?",
       "textEn": "Chocolate bar cut into 4 equal pieces. Take 1 = ?",
+      "textDa": "En chokoladebar skæres i 4 lige store dele. Hvad kaldes 1 del?",
       "options": [
-        {"gu": "Half ½", "en": "Half"},
-        {"gu": "Quarter ¼", "en": "Quarter ¼"},
-        {"gu": "Three-quarters ¾", "en": "Three-quarters"},
-        {"gu": "Whole", "en": "Whole"}
+        {"gu": "Half ½", "en": "Half", "da": "Halv ½"},
+        {"gu": "Quarter ¼", "en": "Quarter ¼", "da": "Kvart ¼"},
+        {"gu": "Three-quarters ¾", "en": "Three-quarters", "da": "Tre fjerdedele ¾"},
+        {"gu": "Whole", "en": "Whole", "da": "Hel"}
       ],
       "answer": 1,
       "hintGu": "4 equal pieces માંથી 1 = Quarter ¼!",
-      "hintEn": "1 out of 4 equal pieces = Quarter!"
+      "hintEn": "1 out of 4 equal pieces = Quarter!",
+      "hintDa": "1 ud af 4 lige store dele kaldes en kvart!"
     },
     {
       "type": "input",
       "level": "LEVEL 3 · HALF OF A NUMBER",
-      "textGu": "8 ના half = ?",
-      "textEn": "What is half of 8?",
-      "answer": 4,
-      "hintGu": "8 ÷ 2 = 4",
-      "hintEn": "8 divided by 2 = 4"
+      "textGu": "14 ના half = ?",
+      "textEn": "What is half of 14?",
+      "textDa": "Hvad er det halve af 14?",
+      "answer": 7,
+      "hintGu": "14 ÷ 2 = 7",
+      "hintEn": "14 divided by 2 = 7",
+      "hintDa": "14 delt med 2"
     },
     {
       "type": "input",
       "level": "LEVEL 4 · HALF OF A NUMBER",
-      "textGu": "10 ના half = ?",
-      "textEn": "What is half of 10?",
-      "answer": 5,
-      "hintGu": "10 ÷ 2 = 5",
-      "hintEn": "10 ÷ 2 = 5"
+      "textGu": "18 ના half = ?",
+      "textEn": "What is half of 18?",
+      "textDa": "Hvad er det halve af 18?",
+      "answer": 9,
+      "hintGu": "18 ÷ 2 = 9",
+      "hintEn": "18 ÷ 2 = 9",
+      "hintDa": "18 delt med 2"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · THREE-QUARTERS",
       "textGu": "4 slices — 3 slices ખાધા. ક્યો fraction?",
       "textEn": "Pizza has 4 slices. You eat 3. What fraction did you eat?",
+      "textDa": "En pizza har 4 stykker. Du spiser 3 stykker. Hvor stor en brøkdel spiste du?",
       "options": [
-        {"gu": "Half ½", "en": "Half"},
-        {"gu": "Quarter ¼", "en": "Quarter"},
-        {"gu": "Three-quarters ¾", "en": "Three-quarters ¾"},
-        {"gu": "Whole", "en": "Whole"}
+        {"gu": "Half ½", "en": "Half", "da": "Halv ½"},
+        {"gu": "Quarter ¼", "en": "Quarter", "da": "Kvart ¼"},
+        {"gu": "Three-quarters ¾", "en": "Three-quarters ¾", "da": "Tre fjerdedele ¾"},
+        {"gu": "Whole", "en": "Whole", "da": "Hel"}
       ],
       "answer": 2,
       "hintGu": "4 માંથી 3 = Three-quarters ¾!",
-      "hintEn": "3 out of 4 = Three-quarters!"
+      "hintEn": "3 out of 4 = Three-quarters!",
+      "hintDa": "3 ud af 4 dele kaldes tre fjerdedele!"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 6 · STORY",
-      "textGu": "🍫 Yuval ના 12 chocolates. Half friend ને આપ્યા. Yuval પાસે કેટલા?",
-      "textEn": "Yuval has 12 chocolates. Gives half to friend. How many does Yuval keep?",
-      "answer": 6,
-      "hintGu": "Half of 12 = 6",
-      "hintEn": "12 ÷ 2 = 6"
+      "textGu": "🍫 Yuval ના 16 chocolates. Half friend ને આપ્યા. Yuval પાસે કેટલા?",
+      "textEn": "Yuval has 16 chocolates. Gives half to a friend. How many does Yuval keep?",
+      "textDa": "Yuval har 16 chokolader. Han giver halvdelen til en ven. Hvor mange chokolader beholder Yuval?",
+      "answer": 8,
+      "hintGu": "Half of 16 = 8",
+      "hintEn": "16 ÷ 2 = 8",
+      "hintDa": "Det halve af 16"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 7 · QUARTER OF A NUMBER",
+      "textGu": "12 ના quarter = ?",
+      "textEn": "What is a quarter (1/4) of 12?",
+      "textDa": "Hvad er en fjerdedel (1/4) af 12?",
+      "answer": 3,
+      "hintGu": "12 ÷ 4 = 3",
+      "hintEn": "12 ÷ 4 = 3",
+      "hintDa": "Del 12 i 4 lige store dele."
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 8 · QUARTER OF A NUMBER",
+      "textGu": "20 ના quarter = ?",
+      "textEn": "What is a quarter (1/4) of 20?",
+      "textDa": "Hvad er en fjerdedel (1/4) af 20?",
+      "answer": 5,
+      "hintGu": "20 ÷ 4 = 5",
+      "hintEn": "20 ÷ 4 = 5",
+      "hintDa": "20 divideret med 4"
     }
   ]
 }

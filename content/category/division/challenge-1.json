@@ -2,76 +2,116 @@
   "id": "division-challenge-1",
   "nameGu": "ભાગાકાર — Share કરો!",
   "nameEn": "Division — Share Fairly",
+  "nameDa": "Division — Del Retfærdigt",
   "icon": "🍕",
   "descGu": "Fair share = ભાગાકાર! Pizza split!",
   "descEn": "Sharing fairly = division!",
+  "descDa": "At dele ligeligt = division!",
   "xpReward": 75,
-  "trophy": {"icon": "🍕", "nameGu": "Fair Sharer", "nameEn": "Fair Sharer"},
+  "trophy": {
+    "icon": "🍕",
+    "nameGu": "Fair Sharer",
+    "nameEn": "Fair Sharer",
+    "nameDa": "Mesterdeler"
+  },
   "teacherGuide": {
     "conceptGu": "ભાગાકાર = fair share. 12 cookies, 3 friends — each gets? Groups બનાવો physically. ÷ = split into equal groups. Multiplication reverse!",
     "conceptEn": "Division is sharing equally / splitting into groups. It's the reverse of multiplication.",
+    "conceptDa": "Division er at dele ligeligt eller opdele i lige store grupper. Det er det omvendte af multiplikation.",
     "storyGu": "'Pizza 8 slices — 4 friends share equally. Each gets? 8÷4=2. Robot distribute coins equally — same!'",
+    "storyEn": "Pizza 8 slices shared among 4 friends equally. Each gets 2. Splitting things up evenly!",
+    "storyDa": "En pizza med 12 stykker deles ligeligt mellem 4 venner. Hvor mange stykker får hver? 12 ÷ 4 = 3!",
     "scriptGu": "'12 LEGO bricks — 3 friends. Each friend same number. Deal out one by one — count each pile!'",
+    "scriptEn": "Use 12 LEGO bricks and share them among 3 friends. Deal them out one by one and count the piles.",
+    "scriptDa": "Tag 16 LEGO-klodser og del dem mellem 4 venner. Uddel dem én efter én, indtil der ikke er flere tilbage, og tæl hver bunke.",
     "vocab": [
-      {"gu": "ભાગ = share / divide", "en": "Divide"},
-      {"gu": "÷ = division sign", "en": "Divide sign"},
-      {"gu": "Equal = સરખું", "en": "Equal"},
-      {"gu": "Each = પ્રત્યેક", "en": "Each"}
+      {"gu": "ભાગ = share / divide", "en": "Divide", "da": "Dividere / Dele"},
+      {"gu": "÷ = division sign", "en": "Divide sign", "da": "Divisionstegn"},
+      {"gu": "Equal = સરખું", "en": "Equal", "da": "Ligeligt / Ens"},
+      {"gu": "Each = પ્રત્યેક", "en": "Each", "da": "Hver"}
     ],
-    "tipsGu": "💡 Physical objects deal out — cards, coins, LEGO. See the equal groups. Then connect to ÷ symbol."
+    "tipsGu": "💡 Physical objects deal out — cards, coins, LEGO. See the equal groups. Then connect to ÷ symbol.",
+    "tipsEn": "💡 Deal out physical objects like cards, coins, or LEGOs. See the equal groups, then connect to the division symbol.",
+    "tipsDa": "💡 Uddel fysiske ting som mønter eller LEGO-klodser. Vis dem de lige store grupper, før I introducerer divisionstegnet."
   },
   "questions": [
     {
       "type": "share-visual",
       "level": "LEVEL 1 · SHARE",
-      "textGu": "6 apples — 2 friends — each gets?",
-      "textEn": "6 apples shared between 2 friends — each gets?",
-      "total": 6,
-      "groups": 2,
+      "textGu": "12 apples — 3 friends — each gets?",
+      "textEn": "12 apples shared between 3 friends — each gets?",
+      "textDa": "12 æbler deles mellem 3 venner — hvor mange får hver?",
+      "total": 12,
+      "groups": 3,
       "emoji": "🍎",
-      "answer": 3,
-      "hintGu": "6 ÷ 2 = 3",
-      "hintEn": "6 ÷ 2 = 3"
+      "answer": 4,
+      "hintGu": "12 ÷ 3 = 4",
+      "hintEn": "12 ÷ 3 = 4",
+      "hintDa": "12 divideret med 3 er 4"
     },
     {
       "type": "share-visual",
       "level": "LEVEL 1 · SHARE",
-      "textGu": "8 🍕 slices — 4 friends — each gets?",
-      "textEn": "8 pizza slices — 4 friends — each gets?",
-      "total": 8,
+      "textGu": "16 🍕 slices — 4 friends — each gets?",
+      "textEn": "16 pizza slices — 4 friends — each gets?",
+      "textDa": "16 pizzastykker deles mellem 4 venner — hvor mange får hver?",
+      "total": 16,
       "groups": 4,
       "emoji": "🍕",
-      "answer": 2,
-      "hintGu": "8 ÷ 4 = 2",
-      "hintEn": "8 ÷ 4 = 2"
+      "answer": 4,
+      "hintGu": "16 ÷ 4 = 4",
+      "hintEn": "16 ÷ 4 = 4",
+      "hintDa": "16 divideret med 4 er 4"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "10 ÷ 2 = ?",
-      "textEn": "10 ÷ 2 = ?",
-      "options": [3, 4, 5, 6],
-      "answer": 2,
-      "hintGu": "10 ÷ 2 = 5",
-      "hintEn": "10 ÷ 2 = 5"
+      "textGu": "18 ÷ 3 = ?",
+      "textEn": "18 ÷ 3 = ?",
+      "textDa": "18 ÷ 3 = ?",
+      "options": [
+        {"gu": "5", "en": "5", "da": "5"},
+        {"gu": "6", "en": "6", "da": "6"},
+        {"gu": "7", "en": "7", "da": "7"},
+        {"gu": "8", "en": "8", "da": "8"}
+      ],
+      "answer": 1,
+      "hintGu": "18 ÷ 3 = 6",
+      "hintEn": "18 ÷ 3 = 6",
+      "hintDa": "3 gange hvad giver 18?"
     },
     {
       "type": "input",
       "level": "LEVEL 3",
-      "textGu": "12 ÷ 3 = ?",
-      "textEn": "12 ÷ 3 = ?",
-      "answer": 4,
-      "hintGu": "12 ÷ 3 = 4",
-      "hintEn": "12 ÷ 3 = 4"
+      "textGu": "20 ÷ 4 = ?",
+      "textEn": "20 ÷ 4 = ?",
+      "textDa": "20 ÷ 4 = ?",
+      "answer": 5,
+      "hintGu": "20 ÷ 4 = 5",
+      "hintEn": "20 ÷ 4 = 5",
+      "hintDa": "4 * 5 = 20"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 4 · STORY",
-      "textGu": "🤖 Robot ના 15 batteries — 3 robots share equally. Each gets?",
-      "textEn": "15 batteries shared equally between 3 robots. Each gets?",
-      "answer": 5,
-      "hintGu": "15 ÷ 3 = 5",
-      "hintEn": "15 ÷ 3 = 5"
+      "textGu": "🤖 Robot ના 24 batteries — 4 robots share equally. Each gets?",
+      "textEn": "24 batteries shared equally between 4 robots. Each gets?",
+      "textDa": "24 batterier deles ligeligt mellem 4 robotter. Hvor mange får hver?",
+      "answer": 6,
+      "hintGu": "24 ÷ 4 = 6",
+      "hintEn": "24 ÷ 4 = 6",
+      "hintDa": "24 divideret med 4"
+    },
+    {
+      "type": "input",
+      "level": "LEVEL 5 · CHALLENGE",
+      "textGu": "20 ÷ ___ = 5",
+      "textEn": "20 ÷ ___ = 5",
+      "textDa": "20 ÷ ___ = 5",
+      "answer": 4,
+      "hintGu": "20 ને કેટલા વડે ભાગતા 5 મળે?",
+      "hintEn": "20 divided by what equals 5?",
+      "hintDa": "20 divideret med hvad giver 5?"
     }
   ]
 }

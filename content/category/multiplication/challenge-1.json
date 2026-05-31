@@ -2,86 +2,108 @@
   "id": "multiplication-challenge-1",
   "nameGu": "ગુણાકાર — Groups!",
   "nameEn": "Multiplication — Groups",
+  "nameDa": "Multiplikation — Grupper!",
   "icon": "🧱",
   "descGu": "Same groups ઉમેરવા = ગુણાકાર! LEGO style!",
   "descEn": "Adding same groups = multiplication!",
+  "descDa": "Lægge samme grupper sammen = multiplikation!",
   "xpReward": 75,
-  "trophy": {"icon": "⭐", "nameGu": "Multiplier", "nameEn": "Multiplier"},
+  "trophy": {"icon": "⭐", "nameGu": "Multiplier", "nameEn": "Multiplier", "nameDa": "Multiplikator"},
   "teacherGuide": {
-    "conceptGu": "ગુણાકાર = same number ઘણી times ઉમેરવું. 3×4 = 4+4+4. UNO cards stack (Yuval already does this!). LEGO rows = perfect visual. Loop concept = 3 times add 4.",
+    "conceptGu": "ગુણાકાર = same number ઘણી times. 3×4 = 4+4+4.",
     "conceptEn": "Multiplication is repeated addition. 3×4 = 4+4+4.",
-    "storyGu": "'Yuval, UNO game — 3 players get 4 cards each. Total cards? 4+4+4 = 12! That is 3×4=12! ગુણાકાર = shortcut for adding same number again again!'",
-    "scriptGu": "'LEGO: 3 rows, each row 4 bricks. Total? Count: 4,8,12! Or 3×4=12. Same answer, faster!'",
-    "vocab": [
-      {"gu": "ગુણાકાર = multiply", "en": "Multiplication"},
-      {"gu": "× = times / ગુણ", "en": "Times"},
-      {"gu": "Groups = ટોળી", "en": "Groups"},
-      {"gu": "Rows = હરોળ", "en": "Rows"}
-    ],
-    "tipsGu": "💡 Always show physical objects first! 3 cups × 4 coins each. Count total. THEN show 3×4. Connection = aha moment!"
+    "conceptDa": "Multiplikation er gentaget addition. 3×4 = 4+4+4.",
+    "storyDa": "Yuval spiller UNO — 3 spillere får 4 kort hver. Samlet antal kort? 4+4+4 = 12! Det er 3×4=12! Multiplikation er en genvej!",
+    "tipsDa": "💡 Vis altid fysiske objekter først! 3 kopper × 4 mønter i hver. Tæl totalen. DEREFTER vis 3×4."
   },
   "questions": [
     {
       "type": "emoji-groups",
       "level": "LEVEL 1 · SEE THE GROUPS",
-      "textGu": "3 groups × 2 each = ?",
-      "textEn": "3 groups of 2 — how many total?",
+      "textGu": "3 groups × 3 each = ?",
+      "textEn": "3 groups of 3 — how many total?",
+      "textDa": "3 grupper af 3 — hvor mange i alt?",
       "groups": 3,
-      "perGroup": 2,
+      "perGroup": 3,
       "emoji": "🧱",
-      "answer": 6,
-      "hintGu": "2+2+2 = 6",
-      "hintEn": "2+2+2 = 6"
+      "answer": 9,
+      "hintGu": "3+3+3 = 9",
+      "hintEn": "3+3+3 = 9",
+      "hintDa": "3+3+3 = 9"
     },
     {
       "type": "emoji-groups",
       "level": "LEVEL 1 · SEE THE GROUPS",
-      "textGu": "4 groups × 3 each = ?",
-      "textEn": "4 groups of 3 — total?",
+      "textGu": "4 groups × 4 each = ?",
+      "textEn": "4 groups of 4 — total?",
+      "textDa": "4 grupper af 4 — i alt?",
       "groups": 4,
-      "perGroup": 3,
+      "perGroup": 4,
       "emoji": "⭐",
-      "answer": 12,
-      "hintGu": "3+3+3+3 = 12",
-      "hintEn": "3+3+3+3 = 12"
+      "answer": 16,
+      "hintGu": "4+4+4+4 = 16",
+      "hintEn": "4+4+4+4 = 16",
+      "hintDa": "4+4+4+4 = 16"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "2 × 5 = ?",
-      "textEn": "2 × 5 = ?",
-      "options": [8, 9, 10, 11],
+      "textGu": "3 × 5 = ?",
+      "textEn": "3 × 5 = ?",
+      "textDa": "3 × 5 = ?",
+      "options": [12, 14, 15, 16],
       "answer": 2,
-      "hintGu": "5 + 5 = 10",
-      "hintEn": "5 + 5 = 10"
+      "hintGu": "5 + 5 + 5 = 15",
+      "hintEn": "5 + 5 + 5 = 15",
+      "hintDa": "5 + 5 + 5 = 15"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "3 × 4 = ? (UNO cards!)",
-      "textEn": "3 × 4 = ? (3 players, 4 cards each!)",
-      "options": [10, 11, 12, 13],
+      "textGu": "4 × 4 = ? (UNO players!)",
+      "textEn": "4 × 4 = ? (4 players, 4 cards each!)",
+      "textDa": "4 × 4 = ? (4 spillere, 4 kort hver!)",
+      "options": [12, 14, 16, 18],
       "answer": 2,
-      "hintGu": "4+4+4 = 12",
-      "hintEn": "4+4+4 = 12"
+      "hintGu": "4+4+4+4 = 16",
+      "hintEn": "4+4+4+4 = 16",
+      "hintDa": "4+4+4+4 = 16"
     },
     {
       "type": "input",
       "level": "LEVEL 3",
-      "textGu": "5 × 2 = ?",
-      "textEn": "5 × 2 = ?",
-      "answer": 10,
-      "hintGu": "2+2+2+2+2 = 10",
-      "hintEn": "2+2+2+2+2 = 10"
+      "textGu": "5 × 4 = ?",
+      "textEn": "5 × 4 = ?",
+      "textDa": "5 × 4 = ?",
+      "answer": 20,
+      "hintGu": "4+4+4+4+4 = 20",
+      "hintEn": "4+4+4+4+4 = 20",
+      "hintDa": "4+4+4+4+4 = 20"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 4 · STORY",
-      "textGu": "🚌 Bus ની 2 sides — each side 4 wheels. Total wheels?",
-      "textEn": "Bus has 2 sides — 4 wheels each side. Total wheels?",
-      "answer": 8,
-      "hintGu": "2 × 4 = 8",
-      "hintEn": "2 × 4 = 8"
+      "textGu": "🚲 5 bikes — each bike 2 wheels. Total wheels?",
+      "textEn": "5 bikes — 2 wheels each. Total wheels?",
+      "textDa": "5 cykler — 2 hjul på hver. Hvor mange hjul i alt?",
+      "answer": 10,
+      "hintGu": "5 × 2 = 10",
+      "hintEn": "5 × 2 = 10",
+      "hintDa": "5 × 2 = 10"
+    },
+    {
+      "type": "missing-number",
+      "level": "LEVEL 5 · MISSING FACTOR",
+      "textGu": "3 × ___ = 12",
+      "textEn": "3 × ___ = 12",
+      "textDa": "3 × ___ = 12",
+      "partA": 3,
+      "total": 12,
+      "op": "×",
+      "answer": 4,
+      "hintGu": "12 ÷ 3 = 4",
+      "hintEn": "12 ÷ 3 = 4",
+      "hintDa": "12 ÷ 3 = 4"
     }
   ]
 }

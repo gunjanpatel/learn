@@ -2,135 +2,149 @@
   "id": "times-tables-ch1",
   "nameGu": "2× Table — Double Power! ✌️",
   "nameEn": "2 Times Table",
+  "nameDa": "2-Tabellen — Dobbelt Power! ✌️",
   "icon": "✌️",
   "descGu": "2 ના પહાડા! Double everything!",
   "descEn": "The 2 times table — doubling is powerful!",
+  "descDa": "2-tabellen — at fordoble er super smart!",
   "xpReward": 65,
   "trophy": {
     "icon": "✌️",
     "nameGu": "2x Champion",
-    "nameEn": "2x Champion"
+    "nameEn": "2x Champion",
+    "nameDa": "2x-Mester"
   },
   "teacherGuide": {
     "conceptGu": "2× table = doubling. Binary connection: 2,4,8,16,32... Chess rice story! Computer memory doubles: 1KB, 2KB, 4KB, 8KB. Doubling = computer science foundation.",
     "conceptEn": "2x table = doubling. Connects to binary, computer memory, exponential growth.",
+    "conceptDa": "2-tabellen handler om fordobling. Det hænger tæt sammen med binære tal, computerhukommelse og eksponentiel vækst.",
     "storyGu": "'Chess rice! 1,2,4,8,16,32... 2× table = chess doubling pattern! Computer memory: 1GB, 2GB, 4GB, 8GB — always doubling!'",
+    "storyEn": "Chess board doubling! 1,2,4,8,16... Computer memory matches the 2x table: 1GB, 2GB, 4GB, 8GB!",
+    "storyDa": "Fordobling på et skakbræt: 1, 2, 4, 8, 16... Computerhukommelse følger også 2-tabellen: 1 GB, 2 GB, 4 GB, 8 GB!",
     "scriptGu": "'Clap pattern: 2,4,6,8,10 — hands UP on even numbers! Count by 2s = 2× table!'",
+    "scriptEn": "Clap pattern: 2, 4, 6, 8, 10! Hands up on even numbers. Counting by 2s is the 2 times table.",
+    "scriptDa": "Klap-mønster: 2, 4, 6, 8, 10! Ræk hænderne op på lige tal. At tælle i 2-tabellen er super let!",
     "vocab": [
-      {
-        "gu": "Double = બમણું",
-        "en": "Double"
-      },
-      {
-        "gu": "Times table = પહાડો",
-        "en": "Times table"
-      },
-      {
-        "gu": "Even numbers = જોડ",
-        "en": "Even numbers"
-      },
-      {
-        "gu": "Multiply = ગુણ",
-        "en": "Multiply"
-      }
+      {"gu": "Double = બમણું", "en": "Double", "da": "Dobbelt / Fordoble"},
+      {"gu": "Times table = પહાડો", "en": "Times table", "da": "Tabel / Gange-tabel"},
+      {"gu": "Even numbers = જોડ", "en": "Even numbers", "da": "Lige tal"},
+      {"gu": "Multiply = ગુણ", "en": "Multiply", "da": "Gange"}
     ],
-    "tipsGu": "💡 Chant together: 2,4,6,8,10,12,14,16,18,20! Count by 2s on fingers — 10 fingers = 20!"
+    "tipsGu": "💡 Chant together: 2,4,6,8,10,12,14,16,18,20! Count by 2s on fingers — 10 fingers = 20!",
+    "tipsEn": "💡 Double numbers quickly up to 10. Chant: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20!",
+    "tipsDa": "💡 Øv jer i at fordoble tal op til 10 lynhurtigt. Rems op: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20!"
   },
   "questions": [
     {
       "type": "tap-answer",
       "level": "LEVEL 1",
-      "textGu": "2 × 1 = ?",
-      "textEn": "2 × 1 = ?",
+      "textGu": "2 × 3 = ?",
+      "textEn": "2 × 3 = ?",
+      "textDa": "2 × 3 = ?",
       "options": [
-        1,
-        2,
-        3,
-        4
+        {"gu": "4", "en": "4", "da": "4"},
+        {"gu": "5", "en": "5", "da": "5"},
+        {"gu": "6", "en": "6", "da": "6"},
+        {"gu": "7", "en": "7", "da": "7"}
       ],
-      "answer": 1,
-      "hintGu": "2 × 1 = 2",
-      "hintEn": "2 × 1 = 2"
+      "answer": 2,
+      "hintGu": "2+2+2 = 6",
+      "hintEn": "2+2+2 = 6",
+      "hintDa": "3 lagt sammen med sig selv"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "2 × 3 = ?",
-      "textEn": "2 × 3 = ?",
+      "textGu": "2 × 6 = ?",
+      "textEn": "2 × 6 = ?",
+      "textDa": "2 × 6 = ?",
       "options": [
-        4,
-        5,
-        6,
-        7
+        {"gu": "10", "en": "10", "da": "10"},
+        {"gu": "12", "en": "12", "da": "12"},
+        {"gu": "14", "en": "14", "da": "14"},
+        {"gu": "16", "en": "16", "da": "16"}
       ],
-      "answer": 2,
-      "hintGu": "2+2+2 = 6",
-      "hintEn": "2+2+2 = 6"
+      "answer": 1,
+      "hintGu": "Count by 2s six times!",
+      "hintEn": "Double of 6 is 12",
+      "hintDa": "Dobbelt så meget som 6"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 3",
-      "textGu": "2 × 5 = ?",
-      "textEn": "2 × 5 = ?",
+      "textGu": "2 × 8 = ?",
+      "textEn": "2 × 8 = ?",
+      "textDa": "2 × 8 = ?",
       "options": [
-        8,
-        9,
-        10,
-        11
+        {"gu": "14", "en": "14", "da": "14"},
+        {"gu": "16", "en": "16", "da": "16"},
+        {"gu": "18", "en": "18", "da": "18"},
+        {"gu": "20", "en": "20", "da": "20"}
       ],
-      "answer": 2,
-      "hintGu": "Count by 2s five times!",
-      "hintEn": "2+2+2+2+2 = 10"
+      "answer": 1,
+      "hintGu": "Count by 2s eight times!",
+      "hintEn": "Double of 8",
+      "hintDa": "Dobbelt så meget som 8"
     },
     {
       "type": "input",
       "level": "LEVEL 4",
-      "textGu": "2 × 7 = ?",
-      "textEn": "2 × 7 = ?",
-      "answer": 14,
-      "hintGu": "2×6=12, 2×7=12+2=14",
-      "hintEn": "2×6=12 then add 2 more"
+      "textGu": "2 × 9 = ?",
+      "textEn": "2 × 9 = ?",
+      "textDa": "2 × 9 = ?",
+      "answer": 18,
+      "hintGu": "2×8=16, 2×9=16+2=18",
+      "hintEn": "Double of 9",
+      "hintDa": "Dobbelt så meget som 9"
     },
     {
       "type": "input",
       "level": "LEVEL 5",
-      "textGu": "2 × 9 = ?",
-      "textEn": "2 × 9 = ?",
-      "answer": 18,
-      "hintGu": "2×8=16, +2=18",
-      "hintEn": "2×8=16, +2=18"
+      "textGu": "2 × 11 = ?",
+      "textEn": "2 × 11 = ?",
+      "textDa": "2 × 11 = ?",
+      "answer": 22,
+      "hintGu": "2×10=20, +2=22",
+      "hintEn": "Double of 11",
+      "hintDa": "Dobbelt så meget som 11"
     },
     {
       "type": "missing-number",
       "level": "LEVEL 6 · MISSING",
-      "textGu": "2 × ___ = 12",
-      "textEn": "2 × ___ = 12",
+      "textGu": "2 × ___ = 18",
+      "textEn": "2 × ___ = 18",
+      "textDa": "2 × ___ = 18",
       "partA": 2,
-      "total": 12,
-      "answer": 6,
-      "hintGu": "12 ÷ 2 = 6",
-      "hintEn": "12 ÷ 2 = 6",
+      "total": 18,
+      "answer": 9,
+      "hintGu": "18 ÷ 2 = 9",
+      "hintEn": "18 ÷ 2 = 9",
+      "hintDa": "Hvilket tal fordoblet giver 18?",
       "op": "×"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 7 · STORY",
-      "textGu": "🚌 2 buses, each has 8 wheels. Total wheels = ?",
-      "textEn": "2 buses, 8 wheels each. Total wheels?",
-      "answer": 16,
-      "hintGu": "2 × 8 = 16",
-      "hintEn": "2 × 8 = 16"
+      "textGu": "🚌 2 buses, each has 12 wheels. Total wheels = ?",
+      "textEn": "2 buses, 12 wheels each. Total wheels?",
+      "textDa": "2 busser med 12 hjul hver. Hvor mange hjul i alt?",
+      "answer": 24,
+      "hintGu": "2 × 12 = 24",
+      "hintEn": "Double of 12 = 24",
+      "hintDa": "Dobbelt af 12"
     },
     {
       "type": "random-math",
       "level": "SPEED · 2× DRILL ⚡",
       "textGu": "2 × ___ = ?",
       "textEn": "2 times table drill!",
+      "textDa": "2-tabellen hastighedstræning!",
       "op": "×",
-      "maxFactor": 2,
+      "maxFactor": 12,
       "fixedA": 2,
       "hintGu": "Double it!",
-      "hintEn": "Just double!"
+      "hintEn": "Just double!",
+      "hintDa": "Bare fordoble tallet!"
     }
   ]
 }

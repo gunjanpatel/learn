@@ -2,76 +2,100 @@
   "id": "binary-challenge-2",
   "nameGu": "Binary — Advanced 🔥",
   "nameEn": "Binary Advanced",
+  "nameDa": "Binære Tal — Ekspert 🔥",
   "icon": "🔥",
   "descGu": "Bigger numbers! Real computer thinking!",
   "descEn": "Bigger binary numbers — like a real computer!",
+  "descDa": "Større binære tal — tænk som en rigtig computer!",
   "xpReward": 90,
-  "trophy": {"icon": "🖥️", "nameGu": "Bit Master", "nameEn": "Bit Master"},
+  "trophy": {
+    "icon": "🖥️",
+    "nameGu": "Bit Master",
+    "nameEn": "Bit Master",
+    "nameDa": "Bit-Mester"
+  },
   "teacherGuide": {
     "conceptGu": "Advanced binary — bigger values. 8-bit thinking intro. Real computers use 8, 16, 32, 64 bits. Show connection: 8 bits = 1 byte = smallest unit of computer memory.",
     "conceptEn": "8-bit numbers, intro to bytes. Connect to real computer memory.",
+    "conceptDa": "Ekspert binær — større værdier. Introduktion til 8-bit tænkning. Rigtige computere bruger 8, 16, 32 eller 64 bit. 8 bit er lig med 1 byte, som er computerens mindste hukommelsesenhed.",
     "storyGu": "'Yuval, computer memory = billions of bits! 8 bits = 1 byte. 1 photo = millions of bytes! Chess story: doubling — 64 squares = 64 bits is huge number!'",
+    "storyEn": "Computers have billions of bits! 8 bits makes 1 byte. An image takes millions of bytes to store on a screen. Every pixel is made of bytes!",
+    "storyDa": "Computere har milliarder af små kontakter (bits)! 8 bits kaldes en Byte. Et billede på skærmen fylder millioner af bytes. Hver pixel er bygget af bytes!",
     "scriptGu": "'Big numbers same way — more boxes, more power. 10000 in binary = 16! Computer thinks fast because bits flip in nanoseconds!'",
+    "scriptEn": "Ready to go further? What if we add a 5th bit? Value is 16! Doubling never stops in computer science.",
+    "scriptDa": "Er du klar til at gå endnu længere? Hvis vi tilføjer en 5. bit, er dens værdi 16! Fordobling stopper aldrig i computerens verden.",
     "vocab": [
-      {"gu": "Byte = 8 bits ભેગા", "en": "Byte"},
-      {"gu": "Memory = bits stored", "en": "Memory"},
-      {"gu": "Flip = ON→OFF change", "en": "Flip"}
+      {"gu": "Byte = 8 bits ભેગા", "en": "Byte", "da": "Byte (8 bits)"},
+      {"gu": "Memory = bits stored", "en": "Memory", "da": "Hukommelse"},
+      {"gu": "Flip = ON→OFF change", "en": "Flip", "da": "Skifte / Vend bit"}
     ],
-    "tipsGu": "💡 Count something big — how many bits needed? Age 7 = 3 bits. Age 100 needs 7 bits!"
+    "tipsGu": "💡 Count something big — how many bits needed? Age 7 = 3 bits. Age 100 needs 7 bits!",
+    "tipsEn": "💡 Ask: How many bits to represent number 15? (4 bits: 1111). How about 16? (5 bits: 10000).",
+    "tipsDa": "💡 Spørg barnet: Hvor mange bits skal vi bruge for at lave tallet 15? (4 bits: 1111). Hvad med 16? (5 bits: 10000)."
   },
   "questions": [
     {
       "type": "binary-decode",
       "level": "LEVEL 1",
-      "textGu": "1010 = ?",
-      "textEn": "Binary 1010 = decimal?",
-      "bits": [1,0,1,0],
-      "answer": 10,
-      "hintGu": "8 + 2 = 10",
-      "hintEn": "8 + 2 = 10"
+      "textGu": "1011 = ?",
+      "textEn": "Binary 1011 = decimal?",
+      "textDa": "Binær 1011 = hvilket tal?",
+      "bits": [1,0,1,1],
+      "answer": 11,
+      "hintGu": "8 + 2 + 1 = 11",
+      "hintEn": "8 + 2 + 1 = 11",
+      "hintDa": "Læg 8, 2 og 1 sammen"
     },
     {
       "type": "binary-decode",
       "level": "LEVEL 2",
-      "textGu": "1100 = ?",
-      "textEn": "Binary 1100 = decimal?",
-      "bits": [1,1,0,0],
-      "answer": 12,
-      "hintGu": "8 + 4 = 12",
-      "hintEn": "8 + 4 = 12"
+      "textGu": "1101 = ?",
+      "textEn": "Binary 1101 = decimal?",
+      "textDa": "Binær 1101 = hvilket tal?",
+      "bits": [1,1,0,1],
+      "answer": 13,
+      "hintGu": "8 + 4 + 1 = 13",
+      "hintEn": "8 + 4 + 1 = 13",
+      "hintDa": "Læg 8, 4 og 1 sammen"
     },
     {
       "type": "binary-encode",
       "level": "LEVEL 3",
-      "textGu": "Number 10 binary માં!",
-      "textEn": "Make 10 in binary!",
-      "target": 10,
-      "hintGu": "10 = 8+2",
-      "hintEn": "10 = 8+2"
+      "textGu": "Number 11 binary માં!",
+      "textEn": "Make 11 in binary!",
+      "textDa": "Lav tallet 11 i binært!",
+      "target": 11,
+      "hintGu": "11 = 8+2+1",
+      "hintEn": "11 = 8+2+1",
+      "hintDa": "11 = 8 + 2 + 1. Tænd for disse tre pærer!"
     },
     {
       "type": "binary-encode",
       "level": "LEVEL 4",
-      "textGu": "Number 15 binary માં! (Max 4-bit!)",
-      "textEn": "Make 15 in binary — maximum 4-bit number!",
-      "target": 15,
-      "hintGu": "15 = 8+4+2+1. All 4 boxes ON!",
-      "hintEn": "15 = 8+4+2+1. All boxes ON!"
+      "textGu": "Number 14 binary માં!",
+      "textEn": "Make 14 in binary!",
+      "textDa": "Lav tallet 14 i binært!",
+      "target": 14,
+      "hintGu": "14 = 8+4+2. 8, 4, 2 boxes ON!",
+      "hintEn": "14 = 8+4+2. Three boxes ON!",
+      "hintDa": "14 = 8 + 4 + 2. Tænd for disse tre pærer!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · THINK",
       "textGu": "8 bits ભેગા = ___",
       "textEn": "8 bits together = ___",
+      "textDa": "Hvad kaldes 8 bits, der er lagt sammen?",
       "options": [
-        {"gu": "1 Pixel", "en": "1 Pixel"},
-        {"gu": "1 Byte — memory unit!", "en": "1 Byte"},
-        {"gu": "1 Photo", "en": "1 Photo"},
-        {"gu": "1 Second", "en": "1 Second"}
+        {"gu": "1 Pixel", "en": "1 Pixel", "da": "1 Pixel"},
+        {"gu": "1 Byte — memory unit!", "en": "1 Byte", "da": "1 Byte — lagerenhed!"},
+        {"gu": "1 Photo", "en": "1 Photo", "da": "1 Foto"},
+        {"gu": "1 Second", "en": "1 Second", "da": "1 Sekund"}
       ],
       "answer": 1,
       "hintGu": "8 bits = 1 Byte — smallest memory unit!",
-      "hintEn": "8 bits = 1 Byte — the building block of all computer memory!"
+      "hintEn": "8 bits = 1 Byte — the building block of all computer memory!",
+      "hintDa": "8 bits = 1 Byte. Det er byggestenen i al computerhukommelse!"
     }
   ]
 }

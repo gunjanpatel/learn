@@ -2,114 +2,129 @@
   "id": "times-tables-ch3",
   "nameGu": "10× Table — Power of Ten! 🔟",
   "nameEn": "10 Times Table",
+  "nameDa": "10-Tabellen — Ti-Tals-Power! 🔟",
   "icon": "🔟",
   "descGu": "10 ના પહાડા! Zero add કરો!",
   "descEn": "10 times table — just add a zero!",
+  "descDa": "10-tabellen — bare tilføj et nul!",
   "xpReward": 65,
   "trophy": {
     "icon": "🔟",
     "nameGu": "10x Master",
-    "nameEn": "10x Master"
+    "nameEn": "10x Master",
+    "nameDa": "10x-Mester"
   },
   "teacherGuide": {
     "conceptGu": "10× = easiest table! Always add 0. 10× connects to decimal system, money (10 paise, 10 rupees), metric system. Computer: 10-base numbers vs binary.",
     "conceptEn": "10x table: just add a zero. Foundation of decimal system, metric units.",
+    "conceptDa": "10-tabellen er den nemmeste! Du skal bare sætte et 0 bagefter tallet. Det er grundlaget for vores titalssystem.",
     "storyGu": "'Money: 1 ten-rupee note = 10 coins. 5 notes = 50 coins! 10× = money math! Also: 10 fingers × 10 = 100!'",
+    "storyEn": "Money notes! 1 ten-dollar bill = 10 dollars. 5 bills = 50 dollars. Counting in tens is money math!",
+    "storyDa": "Penge! Én 10-kroneseddel er 10 kroner. 5 sedler er 50 kroner. At tælle i tiere er super praktisk!",
     "scriptGu": "'Magic trick! Any number × 10 = same number with 0 at end! 7×10=70, 13×10=130! Show!'",
+    "scriptEn": "Magic trick! Any number times 10 is just the same number with a 0 at the end! 8 * 10 = 80, 15 * 10 = 150!",
+    "scriptDa": "Trylletrick! Ethvert tal ganget med 10 er bare tallet selv med et 0 bagpå! 8 * 10 = 80, 15 * 10 = 150!",
     "vocab": [
-      {
-        "gu": "Decimal = 10-base system",
-        "en": "Decimal system"
-      },
-      {
-        "gu": "Place value = position value",
-        "en": "Place value"
-      },
-      {
-        "gu": "Zero = 0 add at end",
-        "en": "Add zero"
-      }
+      {"gu": "Decimal = 10-base system", "en": "Decimal system", "da": "Titalssystemet"},
+      {"gu": "Place value = position value", "en": "Place value", "da": "Placering / Position"},
+      {"gu": "Zero = 0 add at end", "en": "Add zero", "da": "Tilføj nul"}
     ],
-    "tipsGu": "💡 Money counting: stack of 10 coins = 1 ten. 5 stacks = 50. Physical money! Also rupee notes × 10."
+    "tipsGu": "💡 Money counting: stack of 10 coins = 1 ten. 5 stacks = 50. Physical money! Also rupee notes × 10.",
+    "tipsEn": "💡 Practice with 10-cent coins or 10-dollar bills. Show how digits slide left and a zero fills the gap.",
+    "tipsDa": "💡 Leg butik med 10-kronemønter. Vis, hvordan tallene 'hopper' en plads til venstre, og der kommer et nul til sidst."
   },
   "questions": [
     {
       "type": "tap-answer",
       "level": "LEVEL 1",
-      "textGu": "10 × 2 = ?",
-      "textEn": "10 × 2 = ?",
+      "textGu": "10 × 3 = ?",
+      "textEn": "10 × 3 = ?",
+      "textDa": "10 × 3 = ?",
       "options": [
-        12,
-        20,
-        22,
-        10
+        {"gu": "13", "en": "13", "da": "13"},
+        {"gu": "30", "en": "30", "da": "30"},
+        {"gu": "33", "en": "33", "da": "33"},
+        {"gu": "10", "en": "10", "da": "10"}
       ],
       "answer": 1,
-      "hintGu": "2 with 0 = 20!",
-      "hintEn": "Just add a zero: 20!"
+      "hintGu": "3 with 0 = 30!",
+      "hintEn": "Just add a zero: 30!",
+      "hintDa": "3 med et nul bagpå: 30!"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "10 × 5 = ?",
-      "textEn": "10 × 5 = ?",
+      "textGu": "10 × 6 = ?",
+      "textEn": "10 × 6 = ?",
+      "textDa": "10 × 6 = ?",
       "options": [
-        15,
-        45,
-        50,
-        55
+        {"gu": "16", "en": "16", "da": "16"},
+        {"gu": "50", "en": "50", "da": "50"},
+        {"gu": "60", "en": "60", "da": "60"},
+        {"gu": "66", "en": "66", "da": "66"}
       ],
       "answer": 2,
-      "hintGu": "5 with 0 = 50!",
-      "hintEn": "5 with a zero = 50!"
+      "hintGu": "6 with 0 = 60!",
+      "hintEn": "6 with a zero = 60!",
+      "hintDa": "6 med et nul bagpå: 60!"
     },
     {
       "type": "input",
       "level": "LEVEL 3",
-      "textGu": "10 × 7 = ?",
-      "textEn": "10 × 7 = ?",
-      "answer": 70,
-      "hintGu": "7 + 0 = 70!",
-      "hintEn": "Just add zero: 70!"
+      "textGu": "10 × 8 = ?",
+      "textEn": "10 × 8 = ?",
+      "textDa": "10 × 8 = ?",
+      "answer": 80,
+      "hintGu": "8 + 0 = 80!",
+      "hintEn": "Just add zero: 80!",
+      "hintDa": "8 med et nul bagpå: 80!"
     },
     {
       "type": "input",
       "level": "LEVEL 4",
-      "textGu": "10 × 9 = ?",
-      "textEn": "10 × 9 = ?",
-      "answer": 90,
-      "hintGu": "9 + 0 = 90!",
-      "hintEn": "9 with a zero = 90!"
+      "textGu": "10 × 14 = ?",
+      "textEn": "10 × 14 = ?",
+      "textDa": "10 × 14 = ?",
+      "answer": 140,
+      "hintGu": "14 + 0 = 140!",
+      "hintEn": "14 with a zero = 140!",
+      "hintDa": "14 med et nul bagpå: 140!"
     },
     {
       "type": "input",
       "level": "LEVEL 5",
-      "textGu": "10 × 12 = ?",
-      "textEn": "10 × 12 = ?",
-      "answer": 120,
-      "hintGu": "12 + 0 = 120!",
-      "hintEn": "12 with a zero = 120!"
+      "textGu": "10 × 25 = ?",
+      "textEn": "10 × 25 = ?",
+      "textDa": "10 × 25 = ?",
+      "answer": 250,
+      "hintGu": "25 + 0 = 250!",
+      "hintEn": "25 with a zero = 250!",
+      "hintDa": "Det virker også på store tal! Sæt nul bag 25."
     },
     {
       "type": "missing-number",
       "level": "LEVEL 6 · MISSING",
-      "textGu": "10 × ___ = 80",
-      "textEn": "10 × ___ = 80",
+      "textGu": "10 × ___ = 110",
+      "textEn": "10 × ___ = 110",
+      "textDa": "10 × ___ = 110",
       "partA": 10,
-      "total": 80,
-      "answer": 8,
-      "hintGu": "80 ÷ 10 = 8",
-      "hintEn": "Remove the zero: 8!",
+      "total": 110,
+      "answer": 11,
+      "hintGu": "110 ÷ 10 = 11",
+      "hintEn": "Remove the zero: 11!",
+      "hintDa": "Fjern nullet!",
       "op": "×"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 7 · MONEY",
-      "textGu": "💰 7 ten-rupee notes. Total rupees = ?",
-      "textEn": "7 ten-rupee notes. Total amount?",
-      "answer": 70,
-      "hintGu": "7 × 10 = 70 rupees",
-      "hintEn": "7 × 10 = 70 rupees"
+      "textGu": "💰 15 ten-rupee notes. Total rupees = ?",
+      "textEn": "15 ten-rupee notes. Total amount?",
+      "textDa": "15 ti-kronesedler. Hvor mange kroner i alt?",
+      "answer": 150,
+      "hintGu": "15 × 10 = 150 rupees",
+      "hintEn": "15 × 10 = 150",
+      "hintDa": "15 gange 10"
     }
   ]
 }

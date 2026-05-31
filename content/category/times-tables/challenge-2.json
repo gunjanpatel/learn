@@ -2,116 +2,131 @@
   "id": "times-tables-ch2",
   "nameGu": "5× Table — High Five! 🖐️",
   "nameEn": "5 Times Table",
+  "nameDa": "5-Tabellen — High Five! 🖐️",
   "icon": "🖐️",
   "descGu": "5 ના પહાડા! Hands and clocks!",
   "descEn": "5 times table — clocks and hands!",
+  "descDa": "5-tabellen — hænder og ure!",
   "xpReward": 65,
   "trophy": {
     "icon": "🖐️",
     "nameGu": "5x Champion",
-    "nameEn": "5x Champion"
+    "nameEn": "5x Champion",
+    "nameDa": "5x-Mester"
   },
   "teacherGuide": {
     "conceptGu": "5× table = count by 5s. Always ends in 0 or 5. Clock connection: 5min marks. One hand = 5 fingers. Easy pattern to remember!",
     "conceptEn": "5x always ends in 0 or 5. Clock minutes use 5x table.",
+    "conceptDa": "5-tabellen slutter altid på 0 eller 5. Minutterne på uret tæller også i 5-tabellen.",
     "storyGu": "'Clock: 1 hour mark = 5 minutes! 2 marks = 10 minutes! 12 marks × 5 = 60 minutes = 1 hour! 5× table = clock math!'",
+    "storyEn": "Clock hands! 1 mark = 5 min, 2 marks = 10 min. 12 marks * 5 = 60 min = 1 hour! 5x is clock math!",
+    "storyDa": "Urets minutter! 1 markering = 5 min, 2 markeringer = 10 min. 12 markeringer * 5 = 60 min (1 time). 5-tabellen er urskivens hemmelighed!",
     "scriptGu": "'High five! One hand = 5. Two hands = 10. Three children = 15 fingers! Count by 5s!'",
+    "scriptEn": "High five! One hand = 5. Two hands = 10. Skip counting by 5s is fun!",
+    "scriptDa": "High five! Én hånd = 5. To hænder = 10. Tre børn = 15 fingre! At tælle i 5-tabellen er let!",
     "vocab": [
-      {
-        "gu": "Pattern = 0 or 5 end",
-        "en": "Ends in 0 or 5"
-      },
-      {
-        "gu": "Clock minutes = 5×",
-        "en": "Clock connection"
-      },
-      {
-        "gu": "Count by 5s = 5,10,15...",
-        "en": "Skip counting by 5"
-      }
+      {"gu": "Pattern = 0 or 5 end", "en": "Ends in 0 or 5", "da": "Slutter på 0 eller 5"},
+      {"gu": "Clock minutes = 5×", "en": "Clock connection", "da": "Urforbindelse"},
+      {"gu": "Count by 5s = 5,10,15...", "en": "Skip counting by 5", "da": "Tælle i 5-spring"}
     ],
-    "tipsGu": "💡 Clock face practice: point to each number, multiply by 5. Always right!"
+    "tipsGu": "💡 Clock face practice: point to each number, multiply by 5. Always right!",
+    "tipsEn": "💡 High-five skip counting. Highlight that 5x tables always end in 0 or 5.",
+    "tipsDa": "💡 Lav high-fives og tæl i 5-spring. Vis barnet, at alle svar i 5-tabellen ender på enten 0 eller 5."
   },
   "questions": [
     {
       "type": "tap-answer",
       "level": "LEVEL 1",
-      "textGu": "5 × 2 = ?",
-      "textEn": "5 × 2 = ?",
+      "textGu": "5 × 3 = ?",
+      "textEn": "5 × 3 = ?",
+      "textDa": "5 × 3 = ?",
       "options": [
-        8,
-        10,
-        12,
-        15
+        {"gu": "10", "en": "10", "da": "10"},
+        {"gu": "12", "en": "12", "da": "12"},
+        {"gu": "15", "en": "15", "da": "15"},
+        {"gu": "20", "en": "20", "da": "20"}
       ],
-      "answer": 1,
-      "hintGu": "5+5=10",
-      "hintEn": "5+5=10"
+      "answer": 2,
+      "hintGu": "5+5+5=15",
+      "hintEn": "5+5+5=15",
+      "hintDa": "Læg 5 sammen tre gange"
     },
     {
       "type": "tap-answer",
       "level": "LEVEL 2",
-      "textGu": "5 × 4 = ?",
-      "textEn": "5 × 4 = ?",
+      "textGu": "5 × 6 = ?",
+      "textEn": "5 × 6 = ?",
+      "textDa": "5 × 6 = ?",
       "options": [
-        15,
-        18,
-        20,
-        25
+        {"gu": "25", "en": "25", "da": "25"},
+        {"gu": "30", "en": "30", "da": "30"},
+        {"gu": "35", "en": "35", "da": "35"},
+        {"gu": "40", "en": "40", "da": "40"}
       ],
-      "answer": 2,
-      "hintGu": "5,10,15,20",
-      "hintEn": "Count: 5,10,15,20"
+      "answer": 1,
+      "hintGu": "5,10,15,20,25,30",
+      "hintEn": "Count by 5s six times",
+      "hintDa": "Tæl i 5-spring seks gange"
     },
     {
       "type": "input",
       "level": "LEVEL 3",
-      "textGu": "5 × 6 = ?",
-      "textEn": "5 × 6 = ?",
-      "answer": 30,
-      "hintGu": "5,10,15,20,25,30",
-      "hintEn": "Count by 5s six times"
+      "textGu": "5 × 7 = ?",
+      "textEn": "5 × 7 = ?",
+      "textDa": "5 × 7 = ?",
+      "answer": 35,
+      "hintGu": "5×6=30, +5=35",
+      "hintEn": "Count by 5s seven times",
+      "hintDa": "7 gange 5"
     },
     {
       "type": "input",
       "level": "LEVEL 4",
-      "textGu": "5 × 8 = ?",
-      "textEn": "5 × 8 = ?",
-      "answer": 40,
-      "hintGu": "5×7=35, +5=40",
-      "hintEn": "5×7=35, add 5 more"
+      "textGu": "5 × 9 = ?",
+      "textEn": "5 × 9 = ?",
+      "textDa": "5 × 9 = ?",
+      "answer": 45,
+      "hintGu": "5×8=40, +5=45",
+      "hintEn": "5×8=40, add 5 more",
+      "hintDa": "Lige under 50!"
     },
     {
       "type": "missing-number",
       "level": "LEVEL 5 · MISSING",
-      "textGu": "5 × ___ = 25",
-      "textEn": "5 × ___ = 25",
+      "textGu": "5 × ___ = 40",
+      "textEn": "5 × ___ = 40",
+      "textDa": "5 × ___ = 40",
       "partA": 5,
-      "total": 25,
-      "answer": 5,
-      "hintGu": "25 ÷ 5 = 5",
-      "hintEn": "25 ÷ 5 = 5",
+      "total": 40,
+      "answer": 8,
+      "hintGu": "40 ÷ 5 = 8",
+      "hintEn": "40 ÷ 5 = 8",
+      "hintDa": "Hvad skal du gange 5 med for at få 40?",
       "op": "×"
     },
     {
       "type": "story-problem",
       "level": "LEVEL 6 · CLOCK",
-      "textGu": "🕐 Clock ના 6 marks. Each = 5 min. Total minutes = ?",
-      "textEn": "Clock: 6 marks × 5 minutes each. Total minutes?",
-      "answer": 30,
-      "hintGu": "6 × 5 = 30",
-      "hintEn": "6 × 5 = 30 minutes"
+      "textGu": "🕐 Clock ના 9 marks. Each = 5 min. Total minutes = ?",
+      "textEn": "Clock: 9 marks × 5 minutes each. Total minutes?",
+      "textDa": "Et ur står på 9. Hver markering er 5 minutter. Hvor mange minutter i alt?",
+      "answer": 45,
+      "hintGu": "9 × 5 = 45",
+      "hintEn": "9 × 5 = 45 minutes",
+      "hintDa": "9 markeret med 5"
     },
     {
       "type": "random-math",
       "level": "SPEED · 5× DRILL ⚡",
       "textGu": "5 × ___ = ?",
       "textEn": "5 times table drill!",
+      "textDa": "5-tabellen hastighedstræning!",
       "op": "×",
-      "maxFactor": 5,
+      "maxFactor": 12,
       "fixedA": 5,
       "hintGu": "Count by 5s!",
-      "hintEn": "Count by 5s!"
+      "hintEn": "Count by 5s!",
+      "hintDa": "Tæl i 5-spring!"
     }
   ]
 }

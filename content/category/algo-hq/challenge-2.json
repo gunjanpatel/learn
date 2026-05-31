@@ -1,8 +1,20 @@
 {
+  "id": "algo-hq-challenge-2",
   "challengeId": "algo-hq-2",
   "nameGu": "ચિલેન્જ 2 · Algorithm Pro",
   "nameEn": "Challenge 2 · Algorithm Pro",
-  "badge": "🎓",
+  "nameDa": "Udfordring 2 · Algoritme Pro",
+  "icon": "🎓",
+  "descGu": "Advanced algorithms! sequencing, conditionals, loops!",
+  "descEn": "Advanced algorithms! sequencing, conditionals, loops!",
+  "descDa": "Avancerede algoritmer! rækkefølge, if/else og loops!",
+  "xpReward": 85,
+  "trophy": {
+    "icon": "🎓",
+    "nameGu": "Algorithm Pro",
+    "nameEn": "Algorithm Pro",
+    "nameDa": "Algoritme-Pro"
+  },
   "starsEarned": 0,
   "teacherGuide": {
     "goalsGu": "🎯 ક્રમિક વિચારસરણી (Sequencing), શરતી વિધાનો (Conditionals) અને પુનરાવર્તન (Loops) નો દ્રઢીકરણ.",

@@ -2,116 +2,142 @@
   "id": "python-ch2",
   "nameGu": "Python — Loops & If! 🔁",
   "nameEn": "Python — Loops & Conditions",
+  "nameDa": "Python — Loops & Betingelser 🔁",
   "icon": "🔁",
   "descGu": "for loop, if/else — real Python!",
   "descEn": "for loops and if/else — real Python power!",
+  "descDa": "for-loops og if/else — ægte Python-power!",
   "xpReward": 100,
-  "trophy": {"icon": "⚙️", "nameGu": "Python Looper", "nameEn": "Python Looper"},
+  "trophy": {
+    "icon": "⚙️",
+    "nameGu": "Python Looper",
+    "nameEn": "Python Looper",
+    "nameDa": "Python-Looper"
+  },
   "teacherGuide": {
     "conceptGu": "for loop = same action repeat. if/else = decision. range(5) = 0,1,2,3,4. Indentation = Python rule — spaces matter! Loop + condition = AI algorithm foundation.",
     "conceptEn": "for loop iterates, if/else decides. Indentation is Python syntax. These two concepts power almost all programs.",
+    "conceptDa": "Et for-loop gentager en handling. if/else træffer beslutninger. range(5) giver tallene 0,1,2,3,4. Indrykning (indentation) med mellemrum er super vigtigt i Python! Loops + betingelser er grundlaget for AI.",
     "storyGu": "'for i in range(5): print(i) = 0,1,2,3,4 print! Loop 5 times! Robot clean 5 rooms = for loop! if score > 10: print(\"Winner!\") = game logic!'",
+    "storyEn": "for i in range(5): print(i) prints 0, 1, 2, 3, 4. If a robot cleans 5 rooms, it runs a for-loop! if score > 10: print(\"Winner!\") is how games display high scores!",
+    "storyDa": "for i in range(5): print(i) udskriver 0, 1, 2, 3, 4. Hvis en robot skal støvsuge 5 værelser, bruger den et for-loop! if score > 10: print(\"Vinder!\") styrer highscores i spil!",
     "scriptGu": "'Try in replit: for i in range(3): print(\"Hello Yuval!\") — watch Hello print 3 times! Magic!'",
+    "scriptEn": "Write in Replit: for i in range(3): print(\"Hello!\"). Watch it print 3 times! Explain that the spaces before print() are mandatory in Python.",
+    "scriptDa": "Prøv i Replit: for i in range(3): print(\"Hej!\"). Det udskrives 3 gange! Vis barnet, at indrykningen med TAB-tasten er obligatorisk i Python.",
     "vocab": [
-      {"gu": "for loop = repeat", "en": "for loop"},
-      {"gu": "range() = number sequence", "en": "range()"},
-      {"gu": "if = condition / IF", "en": "if statement"},
-      {"gu": "else = otherwise / ELSE", "en": "else"},
-      {"gu": "indent = spaces = important!", "en": "Indentation"},
-      {"gu": "i = loop variable", "en": "Loop variable"}
+      {"gu": "for loop = repeat", "en": "for loop", "da": "for-loop"},
+      {"gu": "range() = number sequence", "en": "range()", "da": "range()"},
+      {"gu": "if = condition / IF", "en": "if statement", "da": "if-betingelse"},
+      {"gu": "else = otherwise / ELSE", "en": "else", "da": "else"},
+      {"gu": "indent = spaces = important!", "en": "Indentation", "da": "Indrykning (Spaces)"},
+      {"gu": "i = loop variable", "en": "Loop variable", "da": "Loop-variabel (i)"}
     ],
-    "tipsGu": "💡 replit.com — type for loop together! See output 3 times = wow moment! Indentation with TAB key — show it matters!"
+    "tipsGu": "💡 replit.com — type for loop together! See output 3 times = wow moment! Indentation with TAB key — show it matters!",
+    "tipsEn": "💡 Type a loop together. Show what happens if you forget to indent — Python raises an IndentationError. A perfect debugging lesson!",
+    "tipsDa": "💡 Skriv et loop sammen. Vis, hvad der sker, hvis man glemmer indrykningen — Python brokker sig med en IndentationError. Det lærer dem fejlfinding!"
   },
   "questions": [
     {
       "type": "mcq",
       "level": "LEVEL 1 · FOR LOOP",
-      "textGu": "for i in range(3): — loop _____ times run?",
-      "textEn": "How many times does: for i in range(3) run?",
+      "textGu": "for i in range(6): — loop _____ times run?",
+      "textEn": "How many times does: for i in range(6) run?",
+      "textDa": "Hvor mange gange kører: for i in range(6)?",
       "options": [
-        {"gu": "1", "en": "1"},
-        {"gu": "2", "en": "2"},
-        {"gu": "3", "en": "3"},
-        {"gu": "4", "en": "4"}
+        {"gu": "4", "en": "4", "da": "4"},
+        {"gu": "5", "en": "5", "da": "5"},
+        {"gu": "6", "en": "6", "da": "6"},
+        {"gu": "7", "en": "7", "da": "7"}
       ],
       "answer": 2,
-      "hintGu": "range(3) = 0,1,2 — 3 times!",
-      "hintEn": "range(3) gives 0,1,2 — that's 3 times!"
+      "hintGu": "range(6) = 0,1,2,3,4,5 — 6 times!",
+      "hintEn": "range(6) gives 0,1,2,3,4,5 — that's 6 times!",
+      "hintDa": "range(6) tæller fra 0 til 5 — det er 6 gange!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · RANGE",
-      "textGu": "range(5) = ?",
-      "textEn": "What numbers does range(5) produce?",
+      "textGu": "range(8) = ?",
+      "textEn": "What numbers does range(8) produce?",
+      "textDa": "Hvilke tal laver range(8)?",
       "options": [
-        {"gu": "1,2,3,4,5", "en": "1,2,3,4,5"},
-        {"gu": "0,1,2,3,4", "en": "0,1,2,3,4"},
-        {"gu": "0,1,2,3,4,5", "en": "0,1,2,3,4,5"},
-        {"gu": "5,4,3,2,1", "en": "5,4,3,2,1"}
+        {"gu": "1 to 8", "en": "1 to 8", "da": "1 til 8"},
+        {"gu": "0 to 7", "en": "0 to 7", "da": "0 til 7"},
+        {"gu": "0 to 8", "en": "0 to 8", "da": "0 til 8"},
+        {"gu": "8 to 1", "en": "8 to 1", "da": "8 til 1"}
       ],
       "answer": 1,
-      "hintGu": "range(5) = 0 થી start, 5 BEFORE stop! 0,1,2,3,4",
-      "hintEn": "range(5) starts at 0, stops before 5!"
+      "hintGu": "range(8) = 0 થી start, 8 BEFORE stop! 0 થી 7!",
+      "hintEn": "range(8) starts at 0, stops before 8 (so 0 to 7)!",
+      "hintDa": "range(8) starter altid ved 0 og stopper lige før 8 (så 0 til 7)!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 3 · IF STATEMENT",
-      "textGu": "if score > 10: print(\"Win!\") — score=8, output?",
-      "textEn": "if score > 10: print(\"Win!\"). If score=8, what prints?",
+      "textGu": "if score > 15: print(\"Win!\") — score=12, output?",
+      "textEn": "if score > 15: print(\"Win!\"). If score=12, what prints?",
+      "textDa": "if score > 15: print(\"Vinder!\"). Hvis score=12, hvad udskrives?",
       "options": [
-        {"gu": "Win!", "en": "Win!"},
-        {"gu": "Nothing prints", "en": "Nothing prints"},
-        {"gu": "8", "en": "8"},
-        {"gu": "Error", "en": "Error"}
+        {"gu": "Win!", "en": "Win!", "da": "Vinder!"},
+        {"gu": "Nothing prints", "en": "Nothing prints", "da": "Intet udskrives"},
+        {"gu": "12", "en": "12", "da": "12"},
+        {"gu": "Error", "en": "Error", "da": "Fejl"}
       ],
       "answer": 1,
-      "hintGu": "8 > 10? No! So if block skip — nothing prints!",
-      "hintEn": "8 is NOT greater than 10, so condition is False — nothing prints!"
+      "hintGu": "12 > 15? No! So if block skip — nothing prints!",
+      "hintEn": "12 is NOT greater than 15, so condition is False — nothing prints!",
+      "hintDa": "12 er ikke større end 15, så betingelsen er falsk — der udskrives intet!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 4 · IF/ELSE",
-      "textGu": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=7, output?",
-      "textEn": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=7?",
+      "textGu": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=17, output?",
+      "textEn": "if age >= 18: print(\"Adult\") else: print(\"Child\"). age=17?",
+      "textDa": "if age >= 18: print(\"Voksen\") else: print(\"Barn\"). Hvis age=17?",
       "options": [
-        {"gu": "Adult", "en": "Adult"},
-        {"gu": "Child", "en": "Child"},
-        {"gu": "7", "en": "7"},
-        {"gu": "Nothing", "en": "Nothing"}
+        {"gu": "Adult", "en": "Adult", "da": "Voksen"},
+        {"gu": "Child", "en": "Child", "da": "Barn"},
+        {"gu": "17", "en": "17", "da": "17"},
+        {"gu": "Nothing", "en": "Nothing", "da": "Intet"}
       ],
       "answer": 1,
-      "hintGu": "7 >= 18? No! So ELSE runs: Child!",
-      "hintEn": "7 is NOT >= 18, so else runs: Child!"
+      "hintGu": "17 >= 18? No! So ELSE runs: Child!",
+      "hintEn": "17 is NOT >= 18, so else runs: Child!",
+      "hintDa": "17 er mindre end 18, så 'else' kører: Barn!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · LOOP + PRINT",
-      "textGu": "for i in range(3): print(\"Hi!\") — total output lines?",
-      "textEn": "for i in range(3): print(\"Hi!\"). How many lines print?",
+      "textGu": "for i in range(5): print(\"Hi!\") — total output lines?",
+      "textEn": "for i in range(5): print(\"Hi!\"). How many lines print?",
+      "textDa": "for i in range(5): print(\"Hej!\"). Hvor mange linjer udskrives?",
       "options": [
-        {"gu": "1", "en": "1"},
-        {"gu": "2", "en": "2"},
-        {"gu": "3", "en": "3"},
-        {"gu": "0", "en": "0"}
+        {"gu": "3", "en": "3", "da": "3"},
+        {"gu": "4", "en": "4", "da": "4"},
+        {"gu": "5", "en": "5", "da": "5"},
+        {"gu": "10", "en": "10", "da": "10"}
       ],
       "answer": 2,
-      "hintGu": "range(3) = 3 times! Hi! Hi! Hi!",
-      "hintEn": "Loop runs 3 times: Hi! Hi! Hi!"
+      "hintGu": "range(5) = 5 times! Hi! Hi! Hi! Hi! Hi!",
+      "hintEn": "Loop runs 5 times: Hi! five times!",
+      "hintDa": "Loopet kører 5 gange!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 6 · AI CONNECTION",
       "textGu": "AI training = data ઉપર loop. 1000 images train = ?",
       "textEn": "AI training loops over data. Training on 1000 images uses a ___?",
+      "textDa": "AI-træning looper over data. Træning på 1000 billeder bruger et ___?",
       "options": [
-        {"gu": "if statement", "en": "if statement"},
-        {"gu": "for loop — 1000 times!", "en": "for loop — 1000 times!"},
-        {"gu": "print()", "en": "print()"},
-        {"gu": "Variable", "en": "Variable"}
+        {"gu": "if statement", "en": "if statement", "da": "if-betingelse"},
+        {"gu": "for loop — 1000 times!", "en": "for loop — 1000 times!", "da": "for-loop — 1000 gange!"},
+        {"gu": "print()", "en": "print()", "da": "print()"},
+        {"gu": "Variable", "en": "Variable", "da": "Variabel"}
       ],
       "answer": 1,
       "hintGu": "for image in dataset: train! Loop over all images = AI training!",
-      "hintEn": "for loop over all training data — that's how AI learns!"
+      "hintEn": "for loop over all training data — that's how AI learns!",
+      "hintDa": "for-loopet kører igennem alle billederne — det er sådan AI lærer!"
     }
   ]
 }

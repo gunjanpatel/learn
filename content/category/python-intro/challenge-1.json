@@ -2,25 +2,39 @@
   "id": "python-ch1",
   "nameGu": "Python — Hello World! 🐍",
   "nameEn": "Python — Hello World!",
+  "nameDa": "Python — Hello World! 🐍",
   "icon": "🐍",
   "descGu": "Real coding language! print(), variables, maths!",
   "descEn": "Real programming! print(), variables, arithmetic!",
+  "descDa": "Rigtigt kodesprog! print(), variabler og matematik!",
   "xpReward": 90,
-  "trophy": {"icon": "🐍", "nameGu": "Python Beginner", "nameEn": "Python Beginner"},
+  "trophy": {
+    "icon": "🐍",
+    "nameGu": "Python Beginner",
+    "nameEn": "Python Beginner",
+    "nameDa": "Python-Begynder"
+  },
   "teacherGuide": {
     "conceptGu": "Python = world's most popular programming language. AI, web, science — everywhere. print() = screen પર show. Variable = named box to store value. + - * / = same as maths. replit.com — browser Python, no install!",
     "conceptEn": "Python: print() outputs text, variables store values, arithmetic works like maths. Use replit.com — no install needed.",
+    "conceptDa": "Python er verdens mest populære kodesprog. Bruges til kunstig intelligens, apps og videnskab. print() viser tekst. Variabler gemmer værdier. Matematik symboler (+, -, *, /) virker præcis som i skolen.",
     "storyGu": "'Yuval, ChatGPT = Python! Instagram = Python! YouTube recommendations = Python! print(\"Hello\") = first step of billion-dollar apps!'",
+    "storyEn": "Yuval, ChatGPT is written in Python! Instagram and YouTube use Python to recommend videos. Writing print(\"Hello\") is the first step to building huge apps!",
+    "storyDa": "Yuval, ChatGPT er skrevet i Python! Instagram og YouTube bruger også Python til at foreslå videoer. At skrive print(\"Hello\") er det første skridt mod at bygge store apps!",
     "scriptGu": "'Open replit.com. New Python file. Type: print(\"Hello Yuval!\"). Click Run. SEE IT APPEAR! That is real code running!'",
+    "scriptEn": "Go to replit.com, create a Python file, and type print(\"Hello Yuval!\"). Click Run and see your code execute in real-time!",
+    "scriptDa": "Gå ind på replit.com, lav en Python-fil, og skriv print(\"Hej Yuval!\"). Klik på 'Run' og se din egen kode køre med det samme!",
     "vocab": [
-      {"gu": "print() = screen પર show", "en": "print()"},
-      {"gu": "Variable = named box", "en": "Variable"},
-      {"gu": "String = text in quotes", "en": "String"},
-      {"gu": "Integer = whole number", "en": "Integer"},
-      {"gu": "# = comment / note", "en": "Comment"},
-      {"gu": "= assign / save value", "en": "Assignment"}
+      {"gu": "print() = screen પર show", "en": "print()", "da": "print()"},
+      {"gu": "Variable = named box", "en": "Variable", "da": "Variabel"},
+      {"gu": "String = text in quotes", "en": "String", "da": "String (Tekst-streng)"},
+      {"gu": "Integer = whole number", "en": "Integer", "da": "Integer (Heltal)"},
+      {"gu": "# = comment / note", "en": "Comment", "da": "Kommentar (#)"},
+      {"gu": "= assign / save value", "en": "Assignment", "da": "Tildeling (=)"}
     ],
-    "tipsGu": "💡 replit.com — free, no login needed for basic use! Type together. Make it print his name. Make it do maths. Celebrate each output!"
+    "tipsGu": "💡 replit.com — free, no login needed for basic use! Type together. Make it print his name. Make it do maths. Celebrate each output!",
+    "tipsEn": "💡 Type print(\"Hello\") together. Do simple math like print(5 + 3). Celebrate each successful output!",
+    "tipsDa": "💡 Skriv koden sammen på replit.com. Lad computeren regne f.eks. print(5 + 3) eller udskrive barnets eget navn."
   },
   "questions": [
     {
@@ -28,105 +42,119 @@
       "level": "LEVEL 1 · PRINT",
       "textGu": "Python screen પર text show = ?",
       "textEn": "To show text on screen in Python, you use ___?",
+      "textDa": "Hvilken funktion bruger du til at vise tekst på skærmen i Python?",
       "options": [
-        {"gu": "show()", "en": "show()"},
-        {"gu": "print()", "en": "print()"},
-        {"gu": "display()", "en": "display()"},
-        {"gu": "write()", "en": "write()"}
+        {"gu": "show()", "en": "show()", "da": "show()"},
+        {"gu": "print()", "en": "print()", "da": "print()"},
+        {"gu": "display()", "en": "display()", "da": "display()"},
+        {"gu": "write()", "en": "write()", "da": "write()"}
       ],
       "answer": 1,
       "hintGu": "print() = Python ની superpower!",
-      "hintEn": "print() displays output in Python!"
+      "hintEn": "print() displays output in Python!",
+      "hintDa": "print() viser resultatet på skærmen!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · STRING",
       "textGu": "Python: print(\"Hello\") — quotes ની અંદર text = ?",
       "textEn": "In Python, text inside quotes is called a ___?",
+      "textDa": "Hvad kaldes tekst indeni citationstegn i Python?",
       "options": [
-        {"gu": "Number", "en": "Number"},
-        {"gu": "Variable", "en": "Variable"},
-        {"gu": "String — text!", "en": "String — text!"},
-        {"gu": "Loop", "en": "Loop"}
+        {"gu": "Number", "en": "Number", "da": "Tal (Number)"},
+        {"gu": "Variable", "en": "Variable", "da": "Variabel (Variable)"},
+        {"gu": "String — text!", "en": "String — text!", "da": "String (Tekst-streng)!"},
+        {"gu": "Loop", "en": "Loop", "da": "Gentagelse (Loop)"}
       ],
       "answer": 2,
       "hintGu": "Text in quotes = String! 'Hello' = string!",
-      "hintEn": "Text inside quotes = String!"
+      "hintEn": "Text inside quotes = String!",
+      "hintDa": "Tekst i citationstegn kaldes en 'String'!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 3 · VARIABLE",
       "textGu": "age = 7 — 'age' = ?",
       "textEn": "In Python: age = 7. What is 'age'?",
+      "textDa": "I Python: age = 7. Hvad er 'age'?",
       "options": [
-        {"gu": "A number", "en": "A number"},
-        {"gu": "Variable — named box!", "en": "Variable — named box!"},
-        {"gu": "A function", "en": "A function"},
-        {"gu": "A loop", "en": "A loop"}
+        {"gu": "A number", "en": "A number", "da": "Et tal"},
+        {"gu": "Variable — named box!", "en": "Variable — named box!", "da": "Variabel — en navngivet kasse!"},
+        {"gu": "A function", "en": "A function", "da": "En funktion"},
+        {"gu": "A loop", "en": "A loop", "da": "Et loop"}
       ],
       "answer": 1,
       "hintGu": "Variable = named box. age box ની અંદર 7 save!",
-      "hintEn": "Variable stores a value — like a named box!"
+      "hintEn": "Variable stores a value — like a named box!",
+      "hintDa": "Variabler gemmer en værdi — som en kasse med et navn udenpå!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 4 · ARITHMETIC",
-      "textGu": "Python: print(3 + 4) — output = ?",
-      "textEn": "What does Python print for: print(3 + 4)?",
+      "textGu": "Python: print(6 + 8) — output = ?",
+      "textEn": "What does Python print for: print(6 + 8)?",
+      "textDa": "Hvad udskriver Python for: print(6 + 8)?",
       "options": [
-        {"gu": "3 + 4", "en": "3 + 4"},
-        {"gu": "34", "en": "34"},
-        {"gu": "7", "en": "7"},
-        {"gu": "Error", "en": "Error"}
+        {"gu": "6 + 8", "en": "6 + 8", "da": "6 + 8"},
+        {"gu": "68", "en": "68", "da": "68"},
+        {"gu": "14", "en": "14", "da": "14"},
+        {"gu": "Error", "en": "Error", "da": "Fejlmeddelelser"}
       ],
       "answer": 2,
-      "hintGu": "Python calculates 3+4=7 and prints 7!",
-      "hintEn": "Python calculates then prints the answer: 7!"
+      "hintGu": "Python calculates 6+8=14 and prints 14!",
+      "hintEn": "Python calculates then prints the answer: 14!",
+      "hintDa": "Python regner det ud først: 6 + 8 = 14!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · VARIABLE USE",
       "textGu": "name = \"Yuval\" — print(name) — output = ?",
       "textEn": "name = \"Yuval\". What does print(name) output?",
+      "textDa": "name = \"Yuval\". Hvad udskriver print(name)?",
       "options": [
-        {"gu": "name", "en": "name"},
-        {"gu": "\"Yuval\"", "en": "\"Yuval\""},
-        {"gu": "Yuval", "en": "Yuval"},
-        {"gu": "Error", "en": "Error"}
+        {"gu": "name", "en": "name", "da": "name"},
+        {"gu": "\"Yuval\"", "en": "\"Yuval\"", "da": "\"Yuval\""},
+        {"gu": "Yuval", "en": "Yuval", "da": "Yuval"},
+        {"gu": "Error", "en": "Error", "da": "Fejl"}
       ],
       "answer": 2,
       "hintGu": "Variable print = value inside! name = Yuval → prints Yuval",
-      "hintEn": "Prints the VALUE stored: Yuval!"
+      "hintEn": "Prints the VALUE stored: Yuval!",
+      "hintDa": "Det udskriver VÆRDIEN i kassen: Yuval!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 6 · COMMENT",
       "textGu": "# This is Python comment — computer ___?",
       "textEn": "A line starting with # in Python — the computer ___?",
+      "textDa": "En linje i Python, der starter med # — hvad gør computeren?",
       "options": [
-        {"gu": "Runs it", "en": "Runs it"},
-        {"gu": "Ignores it — human note only!", "en": "Ignores it — human note only!"},
-        {"gu": "Prints it", "en": "Prints it"},
-        {"gu": "Crashes", "en": "Crashes"}
+        {"gu": "Runs it", "en": "Runs it", "da": "Kører den"},
+        {"gu": "Ignores it — human note only!", "en": "Ignores it — human note only!", "da": "Ignorerer den — kun en note til os mennesker!"},
+        {"gu": "Prints it", "en": "Prints it", "da": "Udskriver den"},
+        {"gu": "Crashes", "en": "Crashes", "da": "Crasher"}
       ],
       "answer": 1,
       "hintGu": "# = comment. Computer ignore. Human reads!",
-      "hintEn": "# marks a comment — computer skips it!"
+      "hintEn": "# marks a comment — computer skips it!",
+      "hintDa": "# markerer en kommentar. Computeren springer den over!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 7 · CODE ORDER",
       "textGu": "Python: Yuval ની age print કરવા steps?",
       "textEn": "Put Python steps in order to print Yuval's age!",
+      "textDa": "Sorter Python-trinene for at udskrive Yuvals alder!",
       "steps": [
-        {"icon": "📝", "labelGu": "age = 7", "labelEn": "age = 7"},
-        {"icon": "🖨️", "labelGu": "print(age)", "labelEn": "print(age)"},
-        {"icon": "👀", "labelGu": "See output", "labelEn": "See output"},
-        {"icon": "▶️", "labelGu": "Run code", "labelEn": "Run code"}
+        {"icon": "📝", "labelGu": "age = 7", "labelEn": "age = 7", "labelDa": "age = 7"},
+        {"icon": "🖨️", "labelGu": "print(age)", "labelEn": "print(age)", "labelDa": "print(age)"},
+        {"icon": "👀", "labelGu": "See output", "labelEn": "See output", "labelDa": "Se resultatet"},
+        {"icon": "▶️", "labelGu": "Run code", "labelEn": "Run code", "labelDa": "Kør kode"}
       ],
       "correctOrder": [0,1,3,2],
       "hintGu": "First store value, then print, then run, then see!",
-      "hintEn": "Store → print → run → see output!"
+      "hintEn": "Store → print → run → see output!",
+      "hintDa": "Gem værdi → udskriv → kør program → se resultatet!"
     }
   ]
 }

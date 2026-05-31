@@ -2,22 +2,37 @@
   "id": "data-detective-challenge-1",
   "nameGu": "Data Detective — Basics 📊",
   "nameEn": "Data Detective Basics",
+  "nameDa": "Data-Detektiv 📊",
   "icon": "📊",
   "descGu": "Data ના clues ઓળખો! AI ઠીક આ કરે.",
   "descEn": "Find clues in data — just like AI!",
+  "descDa": "Find spor i data — ligesom AI gør!",
   "xpReward": 65,
-  "trophy": {"icon": "🔍", "nameGu": "Data Detective", "nameEn": "Data Detective"},
+  "trophy": {
+    "icon": "🔍",
+    "nameGu": "Data Detective",
+    "nameEn": "Data Detective",
+    "nameDa": "Data-Detektiv"
+  },
   "teacherGuide": {
     "conceptGu": "Data = information numbers. Average = sum ÷ count. Correlation = linked things. AI = pattern in data find.",
+    "conceptEn": "Data = information in numbers. Average = sum divided by count. AI finds patterns in massive data sets.",
+    "conceptDa": "Data er information gemt som tal. Gennemsnit = sum delt med antal. AI finder mønstre i store mængder data.",
     "storyGu": "'Yuval game scores: 8,9,7,10,6. Average = 40÷5=8. Computer leaderboard same math!'",
+    "storyEn": "Yuval's game scores: 8, 9, 7, 10, 6. Sum = 40. Count = 5. Average = 40 / 5 = 8 points per game!",
+    "storyDa": "Yuvals spil-scorer: 8, 9, 7, 10, 6. Sum = 40. Antal = 5. Gennemsnit = 40 delt med 5 = 8 point per spil!",
     "scriptGu": "'Data = clues! Detective clues ભેગા → case solve. AI data ભેગા → pattern find → future predict!'",
+    "scriptEn": "Data is like clues for a detective. The more clues you gather, the better you solve the mystery. AI does this to make predictions!",
+    "scriptDa": "Data er ligesom spor for en detektiv. Jo flere spor du samler, jo nemmere løser du gåden. AI gør dette for at forudsige fremtiden!",
     "vocab": [
-      {"gu": "Data = numbers/information", "en": "Data"},
-      {"gu": "Average = middle value", "en": "Average"},
-      {"gu": "Pattern = hidden rule", "en": "Pattern"},
-      {"gu": "Predict = future guess", "en": "Predict"}
+      {"gu": "Data = numbers/information", "en": "Data", "da": "Data"},
+      {"gu": "Average = middle value", "en": "Average", "da": "Gennemsnit"},
+      {"gu": "Pattern = hidden rule", "en": "Pattern", "da": "Mønster / Regler"},
+      {"gu": "Predict = future guess", "en": "Predict", "da": "Forudsige"}
     ],
-    "tipsGu": "💡 Yuval game scores track! Average calculate together. YouTube history — AI tracked your pattern!"
+    "tipsGu": "💡 Yuval game scores track! Average calculate together. YouTube history — AI tracked your pattern!",
+    "tipsEn": "💡 Track some daily scores or weather degrees. Calculate the average together. Show how a weather chart plots data.",
+    "tipsDa": "💡 Mål temperaturer over 3 dage og beregn gennemsnittet sammen. Vis, hvordan søgehistorik bruges af AI til at foreslå videoer."
   },
   "questions": [
     {
@@ -25,82 +40,92 @@
       "level": "LEVEL 1 · READ CHART",
       "textGu": "Highest score ક્યો friend?",
       "textEn": "Which friend has the highest score?",
+      "textDa": "Hvilken ven har den højeste score?",
       "data": [
-        {"val": 7, "lbl": "Ali"},
-        {"val": 9, "lbl": "Mia"},
-        {"val": 5, "lbl": "Lev"},
-        {"val": 10, "lbl": "Yuval"},
-        {"val": 8, "lbl": "Sara"}
+        {"val": 9, "lbl": "Ali"},
+        {"val": 14, "lbl": "Mia"},
+        {"val": 6, "lbl": "Lev"},
+        {"val": 15, "lbl": "Yuval"},
+        {"val": 11, "lbl": "Sara"}
       ],
       "options": [
-        {"gu": "Ali — 7", "en": "Ali"},
-        {"gu": "Mia — 9", "en": "Mia"},
-        {"gu": "Yuval — 10 🏆", "en": "Yuval"},
-        {"gu": "Sara — 8", "en": "Sara"}
+        {"gu": "Ali — 9", "en": "Ali", "da": "Ali"},
+        {"gu": "Mia — 14", "en": "Mia", "da": "Mia"},
+        {"gu": "Yuval — 15 🏆", "en": "Yuval", "da": "Yuval"},
+        {"gu": "Sara — 11", "en": "Sara", "da": "Sara"}
       ],
       "answer": 2,
-      "hintGu": "Tallest bar = highest! Yuval = 10!",
-      "hintEn": "Tallest bar wins!"
+      "hintGu": "Tallest bar = highest! Yuval = 15!",
+      "hintEn": "Tallest bar wins!",
+      "hintDa": "Den højeste søjle vinder!"
     },
     {
       "type": "input",
       "level": "LEVEL 2 · AVERAGE",
-      "textGu": "Scores 4 and 6. ઉમેરો ÷ 2 = ?",
-      "textEn": "Scores 4 and 6. Add ÷ 2 = average?",
-      "answer": 5,
-      "hintGu": "4+6=10, 10÷2=5",
-      "hintEn": "4+6=10, then 10÷2=5"
+      "textGu": "Scores 6, 8, 10. Add ÷ 3 = ?",
+      "textEn": "Scores 6, 8, and 10. Add them and ÷ 3 = average?",
+      "textDa": "Scorerne 6, 8 og 10. Læg dem sammen og del med 3. Hvad er gennemsnittet?",
+      "answer": 8,
+      "hintGu": "6+8+10=24, 24÷3=8",
+      "hintEn": "6+8+10=24, then 24÷3=8",
+      "hintDa": "6+8+10 = 24. Del 24 med 3."
     },
     {
       "type": "data-bars",
       "level": "LEVEL 3 · COMPARE",
       "textGu": "Most rain ક્યો month?",
       "textEn": "Which month had most rain?",
+      "textDa": "Hvilken måned havde mest regn?",
       "data": [
-        {"val": 3, "lbl": "Jan"},
-        {"val": 8, "lbl": "Feb"},
-        {"val": 12, "lbl": "Mar"},
-        {"val": 6, "lbl": "Apr"}
+        {"val": 4, "lbl": "Jan"},
+        {"val": 11, "lbl": "Feb"},
+        {"val": 16, "lbl": "Mar"},
+        {"val": 9, "lbl": "Apr"}
       ],
       "options": [
-        {"gu": "January — 3", "en": "January"},
-        {"gu": "February — 8", "en": "February"},
-        {"gu": "March — 12 🌧️", "en": "March"},
-        {"gu": "April — 6", "en": "April"}
+        {"gu": "January — 4", "en": "January", "da": "Januar"},
+        {"gu": "February — 11", "en": "February", "da": "Februar"},
+        {"gu": "March — 16 🌧️", "en": "March", "da": "Marts"},
+        {"gu": "April — 9", "en": "April", "da": "April"}
       ],
       "answer": 2,
       "hintGu": "Tallest = most rain! March!",
-      "hintEn": "March has the tallest bar!"
+      "hintEn": "March has the tallest bar!",
+      "hintDa": "Marts har den højeste søjle!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 4 · PATTERN",
       "textGu": "Rain → umbrella sales UP. આ ___.",
       "textEn": "Rain → umbrella sales go up. This is a ___.",
+      "textDa": "Regnvejr gør, at der sælges flere paraplyer. Hvad kaldes dette?",
       "options": [
-        {"gu": "Accident", "en": "Accident"},
-        {"gu": "Pattern / Correlation", "en": "Pattern"},
-        {"gu": "Mistake", "en": "Mistake"},
-        {"gu": "Magic", "en": "Magic"}
+        {"gu": "Accident", "en": "Accident", "da": "Et uheld / Tilfældighed"},
+        {"gu": "Pattern / Correlation", "en": "Pattern", "da": "Et mønster / Sammenhæng"},
+        {"gu": "Mistake", "en": "Mistake", "da": "En fejl"},
+        {"gu": "Magic", "en": "Magic", "da": "Magi"}
       ],
       "answer": 1,
       "hintGu": "Linked things = Pattern!",
-      "hintEn": "Linked things = correlation!"
+      "hintEn": "Linked things = correlation!",
+      "hintDa": "To ting, der hænger sammen = et mønster!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · AI LEARNS",
       "textGu": "AI: 1000 🐱 + 1000 🐶 photos → learns to ___",
       "textEn": "AI sees 1000 cat + 1000 dog photos → learns to ___",
+      "textDa": "AI ser 1000 kattebillede og 1000 hundebilleder. Den lærer at ___",
       "options": [
-        {"gu": "Photos delete", "en": "Delete"},
-        {"gu": "Cat/Dog ઓળખે — Training!", "en": "Recognise — Training!"},
-        {"gu": "Sleep 😴", "en": "Sleep"},
-        {"gu": "Random guess", "en": "Guess"}
+        {"gu": "Photos delete", "en": "Delete", "da": "Slette billeder"},
+        {"gu": "Cat/Dog ઓળખે — Training!", "en": "Recognise — Training!", "da": "Genkende dem — Træning!"},
+        {"gu": "Sleep 😴", "en": "Sleep", "da": "Sove"},
+        {"gu": "Random guess", "en": "Guess", "da": "Gætte tilfældigt"}
       ],
       "answer": 1,
       "hintGu": "AI trains on data — pattern find!",
-      "hintEn": "AI trains on data — that's Machine Learning!"
+      "hintEn": "AI trains on data — that's Machine Learning!",
+      "hintDa": "AI træner på data for at lære at genkende mønstre!"
     }
   ]
 }

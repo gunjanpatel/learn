@@ -2,25 +2,39 @@
   "id": "scratch-ch1",
   "nameGu": "Scratch — Coding Basics 🐱",
   "nameEn": "Scratch — Coding Basics",
+  "nameDa": "Scratch — Kodningsbasis 🐱",
   "icon": "🐱",
   "descGu": "Sprite, event, loop — real coding concepts!",
   "descEn": "Sprite, events, loops — think like a coder!",
+  "descDa": "Sprite, events, loops — tænk som en programmør!",
   "xpReward": 80,
-  "trophy": {"icon": "🐱", "nameGu": "Scratch Coder", "nameEn": "Scratch Coder"},
+  "trophy": {
+    "icon": "🐱",
+    "nameGu": "Scratch Coder",
+    "nameEn": "Scratch Coder",
+    "nameDa": "Scratch-Programmør"
+  },
   "teacherGuide": {
     "conceptGu": "Scratch = visual coding. Sprite = movable character (cat, robot). Event = 'when something happens' (flag click, key press). Loop = repeat. Condition = if/then. These 4 = foundation of ALL programming.",
     "conceptEn": "Sprite=object, Event=trigger, Loop=repeat, Condition=if-then. These are universal programming concepts.",
+    "conceptDa": "Scratch er visuel kodning. Sprite = figur på skærmen. Event = trigger (f.eks. når der klikkes på det grønne flag). Loop = gentagelse. Betingelse = hvis/så (condition). Disse 4 ting er grundlaget for al programmering.",
     "storyGu": "'Scratch cat = sprite. Click green flag = event! Cat moves 10 steps = action. Repeat 10 times = loop! IF touching wall THEN turn = condition! Real Python, JavaScript same ideas!'",
+    "storyEn": "Scratch cat is a sprite. Clicking the green flag is an event. Steps are actions. Repeat block is a loop. If touching the wall, turn! Python and JavaScript use the exact same logic!",
+    "storyDa": "Katten i Scratch er en 'sprite'. At klikke på det grønne flag er en 'event'. Gentagelser er et 'loop'. Hvis den rører kanten, skal den vende om — det er en betingelse! Det er præcis sådan Python virker!",
     "scriptGu": "'Open scratch.mit.edu! Make cat walk. Click flag — what happens? Change number — see difference! You are programming!'",
+    "scriptEn": "Visit scratch.mit.edu! Build a script to move the cat. Click the flag and watch it go! You are coding!",
+    "scriptDa": "Åbn scratch.mit.edu! Få katten til at gå. Klik på flaget og se, hvad der sker! Prøv at ændre tallene — du koder allerede!",
     "vocab": [
-      {"gu": "Sprite = movable character", "en": "Sprite"},
-      {"gu": "Event = trigger / ક્યારે", "en": "Event"},
-      {"gu": "Loop = repeat / ફરી ફરી", "en": "Loop"},
-      {"gu": "Condition = IF/THEN", "en": "Condition"},
-      {"gu": "Block = code piece", "en": "Code Block"},
-      {"gu": "Script = instructions set", "en": "Script"}
+      {"gu": "Sprite = movable character", "en": "Sprite", "da": "Sprite / Figur"},
+      {"gu": "Event = trigger / ક્યારે", "en": "Event", "da": "Event / Hændelse"},
+      {"gu": "Loop = repeat / ફરી ફરી", "en": "Loop", "da": "Loop / Gentagelse"},
+      {"gu": "Condition = IF/THEN", "en": "Condition", "da": "Betingelse (Hvis/Så)"},
+      {"gu": "Block = code piece", "en": "Code Block", "da": "Kodeblok"},
+      {"gu": "Script = instructions set", "en": "Script", "da": "Script / Program"}
     ],
-    "tipsGu": "💡 scratch.mit.edu — free, browser, no install! Make cat say 'Hello Yuval!' first. Then move. Then loop. Step by step!"
+    "tipsGu": "💡 scratch.mit.edu — free, browser, no install! Make cat say 'Hello Yuval!' first. Then move. Then loop. Step by step!",
+    "tipsEn": "💡 scratch.mit.edu is free and runs in any browser! Start simple: make the cat speak, then move, then add loops.",
+    "tipsDa": "💡 scratch.mit.edu er gratis og kører i browseren. Start med at få katten til at sige noget, så bevæge sig, og tilføj derefter et loop."
   },
   "questions": [
     {
@@ -28,90 +42,102 @@
       "level": "LEVEL 1 · SPRITE",
       "textGu": "Scratch માં movable character = ?",
       "textEn": "In Scratch, a movable character is called a ___?",
+      "textDa": "Hvad kalder man en figur, der kan bevæge sig i Scratch?",
       "options": [
-        {"gu": "Block", "en": "Block"},
-        {"gu": "Sprite", "en": "Sprite"},
-        {"gu": "Loop", "en": "Loop"},
-        {"gu": "Script", "en": "Script"}
+        {"gu": "Block", "en": "Block", "da": "Blok"},
+        {"gu": "Sprite", "en": "Sprite", "da": "Sprite / Figur"},
+        {"gu": "Loop", "en": "Loop", "da": "Loop"},
+        {"gu": "Script", "en": "Script", "da": "Script"}
       ],
       "answer": 1,
       "hintGu": "Cat, robot, ball — all sprites!",
-      "hintEn": "Any movable object in Scratch = Sprite!"
+      "hintEn": "Any movable object in Scratch = Sprite!",
+      "hintDa": "Katten, robotten eller bolden er alle sprites!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · EVENT",
       "textGu": "Green flag ☑ click = ___?",
       "textEn": "Clicking the green flag in Scratch is an example of ___?",
+      "textDa": "At klikke på det grønne flag i Scratch er et eksempel på ___?",
       "options": [
-        {"gu": "Loop", "en": "Loop"},
-        {"gu": "Sprite", "en": "Sprite"},
-        {"gu": "Event — trigger!", "en": "Event — a trigger!"},
-        {"gu": "Condition", "en": "Condition"}
+        {"gu": "Loop", "en": "Loop", "da": "Loop"},
+        {"gu": "Sprite", "en": "Sprite", "da": "Sprite / Figur"},
+        {"gu": "Event — trigger!", "en": "Event — a trigger!", "da": "Event / Hændelse!"},
+        {"gu": "Condition", "en": "Condition", "da": "Betingelse"}
       ],
       "answer": 2,
       "hintGu": "Flag click = 'When this happens, do this' = Event!",
-      "hintEn": "Flag click triggers the program = Event!"
+      "hintEn": "Flag click triggers the program = Event!",
+      "hintDa": "Flag-klikket starter programmet = en event!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 3 · LOOP",
-      "textGu": "'Move 10 steps' 5 times repeat = ___?",
-      "textEn": "Repeating 'Move 10 steps' 5 times is using a ___?",
+      "textGu": "'Move 10 steps' 12 times repeat = ___?",
+      "textEn": "Repeating 'Move 10 steps' 12 times is using a ___?",
+      "textDa": "At gentage 'Gå 10 skridt' 12 gange er at bruge et ___?",
       "options": [
-        {"gu": "Sprite", "en": "Sprite"},
-        {"gu": "Loop — repeat block!", "en": "Loop — repeat block!"},
-        {"gu": "Event", "en": "Event"},
-        {"gu": "Variable", "en": "Variable"}
+        {"gu": "Sprite", "en": "Sprite", "da": "Sprite / Figur"},
+        {"gu": "Loop — repeat block!", "en": "Loop — repeat block!", "da": "Loop — gentagelses-blok!"},
+        {"gu": "Event", "en": "Event", "da": "Event"},
+        {"gu": "Variable", "en": "Variable", "da": "Variabel"}
       ],
       "answer": 1,
       "hintGu": "Repeat = Loop! UNO game loop = same turns repeat!",
-      "hintEn": "Repeating same action = Loop!"
+      "hintEn": "Repeating same action = Loop!",
+      "hintDa": "Gentagelse af en handling kaldes et loop!"
     },
     {
       "type": "visual-sort",
       "level": "LEVEL 4 · CODE ORDER",
       "textGu": "Cat ને dance કરાવવા steps ક્રમ?",
-      "textEn": "Put these Scratch steps in order to make cat dance!",
+      "textEn": "Put these Scratch steps in order to make the cat dance!",
+      "textDa": "Sorter disse Scratch-trin for at få katten til at danse!",
       "steps": [
-        {"icon": "🏁", "labelGu": "Flag click", "labelEn": "Click flag"},
-        {"icon": "🔄", "labelGu": "Loop start", "labelEn": "Start loop"},
-        {"icon": "👣", "labelGu": "Move steps", "labelEn": "Move steps"},
-        {"icon": "🔀", "labelGu": "Turn", "labelEn": "Turn"}
+        {"icon": "🏁", "labelGu": "Flag click", "labelEn": "Click flag", "labelDa": "Klik på flaget"},
+        {"icon": "🔄", "labelGu": "Loop start", "labelEn": "Start loop", "labelDa": "Start loop"},
+        {"icon": "👣", "labelGu": "Move steps", "labelEn": "Move steps", "labelDa": "Gå skridt"},
+        {"icon": "🔀", "labelGu": "Turn", "labelEn": "Turn", "labelDa": "Drej om"}
       ],
       "correctOrder": [0,1,2,3],
       "hintGu": "Flag → Loop → Move → Turn!",
-      "hintEn": "Event first, then loop, then actions inside!"
+      "hintEn": "Event first, then loop, then actions inside!",
+      "hintDa": "Start med flaget, så loopet, derefter handlingerne indeni!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · CONDITION",
       "textGu": "Cat wall touch કરે THEN bounce back = ___?",
       "textEn": "IF cat touches wall THEN bounce — this is a ___?",
+      "textDa": "HVIS katten rører væggen, SÅ vend om — dette er en ___?",
       "options": [
-        {"gu": "Loop", "en": "Loop"},
-        {"gu": "Sprite", "en": "Sprite"},
-        {"gu": "Condition — IF/THEN!", "en": "Condition — IF/THEN!"},
-        {"gu": "Event", "en": "Event"}
+        {"gu": "Loop", "en": "Loop", "da": "Loop"},
+        {"gu": "Sprite", "en": "Sprite", "da": "Sprite / Figur"},
+        {"gu": "Condition — IF/THEN!", "en": "Condition — IF/THEN!", "da": "Betingelse — HVIS/SÅ!"},
+        {"gu": "Event", "en": "Event", "da": "Event"}
       ],
       "answer": 2,
       "hintGu": "IF something THEN do = Condition! AND gate ની જેમ!",
-      "hintEn": "IF...THEN = Condition — same as logic gates!"
+      "hintEn": "IF...THEN = Condition — same as logic gates!",
+      "hintDa": "HVIS noget sker, SÅ gør dette = en betingelse!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 6 · BIG PICTURE",
       "textGu": "Scratch blocks = real coding ___?",
       "textEn": "Scratch coloured blocks represent real coding ___?",
+      "textDa": "Hvad repræsenterer de farvede blokke i Scratch?",
       "options": [
-        {"gu": "Colours", "en": "Colours"},
-        {"gu": "Pictures", "en": "Pictures"},
-        {"gu": "Concepts — same ideas in Python!", "en": "Concepts — same ideas in Python!"},
-        {"gu": "Games only", "en": "Games only"}
+        {"gu": "Colours", "en": "Colours", "da": "Farver"},
+        {"gu": "Pictures", "en": "Pictures", "da": "Billeder"},
+        {"gu": "Concepts — same ideas in Python!", "en": "Concepts — same ideas in Python!", "da": "Koncepter — samme idéer som i Python!"},
+        {"gu": "Games only", "en": "Games only", "da": "Kun spil"}
       ],
       "answer": 2,
       "hintGu": "Loop in Scratch = loop in Python = loop in any language!",
-      "hintEn": "Scratch teaches real programming concepts!"
+      "hintEn": "Scratch teaches real programming concepts!",
+      "hintDa": "Et loop i Scratch virker på præcis samme måde i Python!"
     }
   ]
 }

@@ -2,24 +2,38 @@
   "id": "coordinates-ch1",
   "nameGu": "Coordinates — Map Grid 🗺️",
   "nameEn": "Coordinates — Map Grid",
+  "nameDa": "Koordinater — Landkort-Netværk 🗺️",
   "icon": "🗺️",
   "descGu": "X અને Y — robot ને direction આપો!",
   "descEn": "X and Y — give the robot directions!",
+  "descDa": "X og Y — giv robotten kørselsvejledninger!",
   "xpReward": 75,
-  "trophy": {"icon": "🗺️", "nameGu": "Grid Navigator", "nameEn": "Grid Navigator"},
+  "trophy": {
+    "icon": "🗺️",
+    "nameGu": "Grid Navigator",
+    "nameEn": "Grid Navigator",
+    "nameDa": "Grid-Navigator"
+  },
   "teacherGuide": {
     "conceptGu": "Coordinates = location address. X = horizontal (right/left), Y = vertical (up/down). (x,y) format. Every pixel on screen has coordinates! Robot move, game character, Google Maps — all use coordinates.",
     "conceptEn": "x,y coordinates — horizontal then vertical. Foundation for all 2D graphics, games, maps.",
+    "conceptDa": "x,y-koordinater — vandret først, derefter lodret. Det er grundlaget for al 2D-grafik, spil og landkort.",
     "storyGu": "'Minecraft block place! F3 key = shows XYZ coordinates. Game character at (5,3) = 5 right, 3 up. Robot navigation = coordinates!'",
+    "storyEn": "Minecraft building! Press F3 to see coordinates. A character at (6,4) means 6 blocks right and 4 blocks up. GPS coordinates are exactly the same!",
+    "storyDa": "Minecraft-byggeri! Tryk på F3 for at se koordinater. En figur på (6,4) betyder 6 blokke til højre og 4 blokke op. GPS-koordinater i den virkelige verden er præcis det samme!",
     "scriptGu": "'Draw grid on paper! Bottom-left = (0,0). Right = X increases. Up = Y increases. Mark a treasure at (3,4)!'",
+    "scriptEn": "Draw a grid map! Bottom-left is (0,0). X goes right, Y goes up. Hide a treasure chest at (5,4) and ask your child to find it!",
+    "scriptDa": "Tegn et kort med netværk! Nederst til venstre er (0,0). X går til højre, Y går op. Gem en skat på (5,4) og lad dit barn finde den!",
     "vocab": [
-      {"gu": "X = આડો / horizontal", "en": "X axis"},
-      {"gu": "Y = ઊભો / vertical", "en": "Y axis"},
-      {"gu": "Grid = ચોક્ઠા / squares", "en": "Grid"},
-      {"gu": "Origin = શરૂઆત / (0,0)", "en": "Origin"},
-      {"gu": "Plot = mark કરવું", "en": "Plot"}
+      {"gu": "X = આડો / horizontal", "en": "X axis", "da": "X-akse (Vandret)"},
+      {"gu": "Y = ઊભો / vertical", "en": "Y axis", "da": "Y-akse (Lodret)"},
+      {"gu": "Grid = ચોક્ઠા / squares", "en": "Grid", "da": "Gitter / Netværk"},
+      {"gu": "Origin = શરૂઆત / (0,0)", "en": "Origin", "da": "Origo (0,0)"},
+      {"gu": "Plot = mark કરવું", "en": "Plot", "da": "Indtegne / Afsætte"}
     ],
-    "tipsGu": "💡 Battleship game = coordinates! Chess board = coordinates with letters. Minecraft F3 = show real coordinates!"
+    "tipsGu": "💡 Battleship game = coordinates! Chess board = coordinates with letters. Minecraft F3 = show real coordinates!",
+    "tipsEn": "💡 Play a simplified game of Battleship. Use coordinates in Minecraft or board games like chess (e.g., e4).",
+    "tipsDa": "💡 Spil en forenklet udgave af sænke slagskib. Vis dem koordinater i Minecraft, eller på et skakbræt (f.eks. e4)."
   },
   "questions": [
     {
@@ -27,84 +41,96 @@
       "level": "LEVEL 1 · WHAT IS X?",
       "textGu": "Coordinate (x,y) — x = ___?",
       "textEn": "In coordinate (x,y) — what does x tell us?",
+      "textDa": "I koordinatet (x,y) — hvad fortæller x os?",
       "options": [
-        {"gu": "ઊભો / up-down", "en": "Up-down position"},
-        {"gu": "આડો / left-right", "en": "Left-right position"},
-        {"gu": "Colour", "en": "Colour"},
-        {"gu": "Size", "en": "Size"}
+        {"gu": "ઊભો / up-down", "en": "Up-down position", "da": "Op-ned position"},
+        {"gu": "આડો / left-right", "en": "Left-right position", "da": "Venstre-højre position"},
+        {"gu": "Colour", "en": "Colour", "da": "Farve"},
+        {"gu": "Size", "en": "Size", "da": "Størrelse"}
       ],
       "answer": 1,
       "hintGu": "X = horizontal = left-right!",
-      "hintEn": "X = across = left-right position!"
+      "hintEn": "X = across = left-right position!",
+      "hintDa": "X går på tværs (vandret) = venstre-højre!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · READ COORDINATE",
-      "textGu": "Point (3, 5) — X value = ?",
-      "textEn": "At point (3, 5) — what is the X value?",
+      "textGu": "Point (6, 8) — X value = ?",
+      "textEn": "At point (6, 8) — what is the X value?",
+      "textDa": "I punktet (6, 8) — hvad er X-værdien?",
       "options": [
-        {"gu": "5", "en": "5"},
-        {"gu": "3", "en": "3"},
-        {"gu": "8", "en": "8"},
-        {"gu": "0", "en": "0"}
+        {"gu": "8", "en": "8", "da": "8"},
+        {"gu": "6", "en": "6", "da": "6"},
+        {"gu": "14", "en": "14", "da": "14"},
+        {"gu": "0", "en": "0", "da": "0"}
       ],
       "answer": 1,
-      "hintGu": "(x, y) — first number = X = 3!",
-      "hintEn": "First number in (x,y) is X = 3!"
+      "hintGu": "(x, y) — first number = X = 6!",
+      "hintEn": "First number in (x,y) is X = 6!",
+      "hintDa": "Det første tal i parentesen er X-værdien = 6!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 3 · READ Y",
-      "textGu": "Point (2, 7) — Y value = ?",
-      "textEn": "At point (2, 7) — what is the Y value?",
+      "textGu": "Point (4, 9) — Y value = ?",
+      "textEn": "At point (4, 9) — what is the Y value?",
+      "textDa": "I punktet (4, 9) — hvad er Y-værdien?",
       "options": [
-        {"gu": "2", "en": "2"},
-        {"gu": "9", "en": "9"},
-        {"gu": "7", "en": "7"},
-        {"gu": "0", "en": "0"}
+        {"gu": "4", "en": "4", "da": "4"},
+        {"gu": "13", "en": "13", "da": "13"},
+        {"gu": "9", "en": "9", "da": "9"},
+        {"gu": "0", "en": "0", "da": "0"}
       ],
       "answer": 2,
-      "hintGu": "(x, y) — second number = Y = 7!",
-      "hintEn": "Second number in (x,y) is Y = 7!"
+      "hintGu": "(x, y) — second number = Y = 9!",
+      "hintEn": "Second number in (x,y) is Y = 9!",
+      "hintDa": "Det andet tal i parentesen er Y-værdien = 9!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 4 · ORIGIN",
       "textGu": "Grid ની centre / start point = ?",
       "textEn": "The starting point of a grid is called?",
+      "textDa": "Hvad kaldes startpunktet i et koordinatsystem?",
       "options": [
-        {"gu": "(1, 1)", "en": "(1,1)"},
-        {"gu": "(0, 0) — Origin", "en": "(0,0) Origin"},
-        {"gu": "(5, 5)", "en": "(5,5)"},
-        {"gu": "(10, 10)", "en": "(10,10)"}
+        {"gu": "(1, 1)", "en": "(1,1)", "da": "(1,1)"},
+        {"gu": "(0, 0) — Origin", "en": "(0,0) Origin", "da": "(0,0) Origo"},
+        {"gu": "(5, 5)", "en": "(5,5)", "da": "(5,5)"},
+        {"gu": "(10, 10)", "en": "(10,10)", "da": "(10,10)"}
       ],
       "answer": 1,
       "hintGu": "Origin = (0,0) — starting point!",
-      "hintEn": "Origin is always (0,0)!"
+      "hintEn": "Origin is always (0,0)!",
+      "hintDa": "Origo startpunktet er altid (0,0)!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · REAL WORLD",
-      "textGu": "Robot (0,0) પર છે. 4 right, 3 up જાય. New position?",
-      "textEn": "Robot starts at (0,0). Moves 4 right, 3 up. Where is it?",
+      "textGu": "Robot (0,0) પર છે. 6 right, 4 up જાય. New position?",
+      "textEn": "Robot starts at (0,0). Moves 6 right, 4 up. Where is it?",
+      "textDa": "Robotten starter i (0,0). Den går 6 til højre og 4 op. Hvor står den?",
       "options": [
-        {"gu": "(3, 4)", "en": "(3,4)"},
-        {"gu": "(4, 3)", "en": "(4,3)"},
-        {"gu": "(7, 0)", "en": "(7,0)"},
-        {"gu": "(0, 7)", "en": "(0,7)"}
+        {"gu": "(4, 6)", "en": "(4,6)", "da": "(4,6)"},
+        {"gu": "(6, 4)", "en": "(6,4)", "da": "(6,4)"},
+        {"gu": "(10, 0)", "en": "(10,0)", "da": "(10,0)"},
+        {"gu": "(0, 10)", "en": "(0,10)", "da": "(0,10)"}
       ],
       "answer": 1,
-      "hintGu": "4 right = X=4, 3 up = Y=3 → (4,3)!",
-      "hintEn": "Right = X, Up = Y → (4,3)!"
+      "hintGu": "6 right = X=6, 4 up = Y=4 → (6,4)!",
+      "hintEn": "Right = X, Up = Y → (6,4)!",
+      "hintDa": "Højre = X, Op = Y → (6,4)!"
     },
     {
       "type": "input",
       "level": "LEVEL 6 · CALCULATE",
-      "textGu": "Robot (2,3) પર. 5 more right જાય. New X = ?",
-      "textEn": "Robot is at (2,3). Moves 5 more right. What is the new X?",
-      "answer": 7,
-      "hintGu": "2 + 5 = 7. X = 7!",
-      "hintEn": "X was 2, add 5 more = 7!"
+      "textGu": "Robot (5,4) પર. 7 more right જાય. New X = ?",
+      "textEn": "Robot is at (5,4). Moves 7 more right. What is the new X?",
+      "textDa": "Robotten er i (5,4). Den går 7 skridt mere til højre. Hvad er dens nye X?",
+      "answer": 12,
+      "hintGu": "5 + 7 = 12. X = 12!",
+      "hintEn": "X was 5, add 7 more = 12!",
+      "hintDa": "X-værdien var 5, læg 7 til = 12!"
     }
   ]
 }

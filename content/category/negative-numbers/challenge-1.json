@@ -2,108 +2,135 @@
   "id": "negative-ch1",
   "nameGu": "Negative Numbers — Zero ની નીચે! 🌡️",
   "nameEn": "Negative Numbers — Below Zero!",
+  "nameDa": "Negative Tal — Under Nul! 🌡️",
   "icon": "🌡️",
   "descGu": "Zero ની નીચે! Temperature, debt, floors!",
   "descEn": "Below zero — temperature, lifts and debt!",
+  "descDa": "Under nul — temperatur, elevatorer og gæld!",
   "xpReward": 85,
-  "trophy": {"icon": "❄️", "nameGu": "Below Zero Hero", "nameEn": "Below Zero Hero"},
+  "trophy": {
+    "icon": "❄️",
+    "nameGu": "Below Zero Hero",
+    "nameEn": "Below Zero Hero",
+    "nameDa": "Frost-Helt"
+  },
   "teacherGuide": {
     "conceptGu": "Negative numbers = zero ની નીચે. -1, -2, -3... Temperature: Denmark winter = negative! Lift: basement = -1, -2. Bank: spend more = negative balance. Number line extends both sides of 0.",
     "conceptEn": "Negative numbers go below zero. Real contexts: temperature, floors, bank balance.",
+    "conceptDa": "Negative tal går under nul. Vi bruger dem til temperaturer, kælderelevatorer eller hvis vi skylder penge. Tallinjen fortsætter til venstre for nul.",
     "storyGu": "'Denmark winter! 0°C = freezing. -5°C = colder! -10°C = very cold! Thermometer number line = negative numbers. Lift B1, B2 = -1, -2!'",
+    "storyEn": "Danish winter! 0°C is freezing, -5°C is freezing cold, and -10°C is absolute frost! Basements in buildings are -1 or -2.",
+    "storyDa": "Dansk vinter! 0°C er frysepunktet. -5°C er koldt, og -10°C er rigtig frostvejr! Kældere i stormagasiner hedder ofte -1 eller -2.",
     "scriptGu": "'Number line on floor with tape! 0 in centre. Right = positive. Left = negative. Walk left = go negative! Cold!'",
+    "scriptEn": "Tape a number line on the floor. Stand on 0. Jumps to the right are positive, jumps to the left are negative!",
+    "scriptDa": "Lav en tallinje på gulvet. Nul er i midten. Gå til højre for plus, og gå til venstre for minus. Gå 3 skridt tilbage fra 0 — hvor står du nu?",
     "vocab": [
-      {"gu": "Negative = zero ની નીચે / -", "en": "Negative"},
-      {"gu": "Positive = zero ની ઉપર / +", "en": "Positive"},
-      {"gu": "Zero = middle point", "en": "Zero"},
-      {"gu": "Number line = સંખ્યા રેખા", "en": "Number line"},
-      {"gu": "Temperature = તાપમાન", "en": "Temperature"}
+      {"gu": "Negative = zero ની નીચે / -", "en": "Negative", "da": "Negativ / Minus"},
+      {"gu": "Positive = zero ની ઉપર / +", "en": "Positive", "da": "Positiv / Plus"},
+      {"gu": "Zero = middle point", "en": "Zero", "da": "Nul"},
+      {"gu": "Number line = સંખ્યા રેખા", "en": "Number line", "da": "Tallinje"},
+      {"gu": "Temperature = તાપમાન", "en": "Temperature", "da": "Temperatur"}
     ],
-    "tipsGu": "💡 Thermometer app show! Copenhagen winter temp = negative. Freezer = -18°C. Elevator basement = B1=-1. Real examples make it click!"
+    "tipsGu": "💡 Thermometer app show! Copenhagen winter temp = negative. Freezer = -18°C. Elevator basement = B1=-1. Real examples make it click!",
+    "tipsEn": "💡 Check a weather app or look at a freezer's thermometer showing -18°C. Real context helps immensely.",
+    "tipsDa": "💡 Vis barnet en vejr-app med vintertemperaturer i København, eller kig på fryseren, der står på -18°C."
   },
   "questions": [
     {
       "type": "mcq",
       "level": "LEVEL 1 · BELOW ZERO",
-      "textGu": "-5 temperature = 0 થી ___?",
-      "textEn": "A temperature of -5 means ___ degrees below zero?",
+      "textGu": "-10 temperature = 0 થી ___?",
+      "textEn": "A temperature of -10 means ___ degrees below zero?",
+      "textDa": "En temperatur på -10 betyder ___ grader under nul?",
       "options": [
-        {"gu": "5 ઉપર / above", "en": "5 above zero"},
-        {"gu": "5 નીચે / below", "en": "5 below zero"},
-        {"gu": "Same as 0", "en": "Same as 0"},
-        {"gu": "50 below", "en": "50 below"}
+        {"gu": "10 ઉપર / above", "en": "10 above zero", "da": "10 over nul"},
+        {"gu": "10 નીચે / below", "en": "10 below zero", "da": "10 under nul"},
+        {"gu": "Same as 0", "en": "Same as 0", "da": "Det samme som nul"},
+        {"gu": "100 below", "en": "100 below", "da": "100 under nul"}
       ],
       "answer": 1,
-      "hintGu": "-5 = 5 degrees BELOW zero!",
-      "hintEn": "Minus means below zero!"
+      "hintGu": "-10 = 10 degrees BELOW zero!",
+      "hintEn": "Minus means below zero!",
+      "hintDa": "Minus foran tallet betyder under nul!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 2 · COMPARE",
-      "textGu": "Which is colder: -3°C or -8°C?",
-      "textEn": "Which temperature is colder: -3°C or -8°C?",
+      "textGu": "Which is colder: -4°C or -12°C?",
+      "textEn": "Which temperature is colder: -4°C or -12°C?",
+      "textDa": "Hvilken temperatur er koldest: -4°C eller -12°C?",
       "options": [
-        {"gu": "-3°C", "en": "-3°C"},
-        {"gu": "-8°C — more negative!", "en": "-8°C — more negative!"},
-        {"gu": "Same", "en": "Same"},
-        {"gu": "0°C", "en": "0°C"}
+        {"gu": "-4°C", "en": "-4°C", "da": "-4°C"},
+        {"gu": "-12°C — more negative!", "en": "-12°C — more negative!", "da": "-12°C — mere negativt!"},
+        {"gu": "Same", "en": "Same", "da": "Det samme"},
+        {"gu": "0°C", "en": "0°C", "da": "0°C"}
       ],
       "answer": 1,
-      "hintGu": "-8 < -3. More negative = colder!",
-      "hintEn": "-8 is further below zero = colder!"
+      "hintGu": "-12 < -4. More negative = colder!",
+      "hintEn": "-12 is further below zero = colder!",
+      "hintDa": "Jo længere under nul, jo koldere er det!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 3 · NUMBER LINE",
-      "textGu": "Number line: -3, -2, -1, 0, 1, 2, 3. -2 + 3 = ?",
-      "textEn": "Number line: -3,-2,-1,0,1,2,3. What is -2 + 3?",
+      "textGu": "Number line: -5, -4, -3, -2, -1, 0, 1, 2, 3. -3 + 5 = ?",
+      "textEn": "Number line: -5 to 3. What is -3 + 5?",
+      "textDa": "Tallinje: Hvad er -3 + 5?",
       "options": [
-        {"gu": "-5", "en": "-5"},
-        {"gu": "-1", "en": "-1"},
-        {"gu": "1", "en": "1"},
-        {"gu": "5", "en": "5"}
+        {"gu": "-8", "en": "-8", "da": "-8"},
+        {"gu": "-2", "en": "-2", "da": "-2"},
+        {"gu": "2", "en": "2", "da": "2"},
+        {"gu": "8", "en": "8", "da": "8"}
       ],
       "answer": 2,
-      "hintGu": "-2 પર start, 3 jump right = 1!",
-      "hintEn": "Start at -2, jump 3 right = 1!"},
+      "hintGu": "-3 પર start, 5 jump right = 2!",
+      "hintEn": "Start at -3, jump 5 right = 2!",
+      "hintDa": "Start på -3, hop 5 skridt til højre!"
+    },
     {
       "type": "input",
       "level": "LEVEL 4 · CALCULATE",
-      "textGu": "0 - 4 = ?",
-      "textEn": "0 minus 4 = ?",
-      "answer": -4,
-      "hintGu": "0 ની નીચે 4 = -4!",
-      "hintEn": "4 below zero = -4!"
+      "textGu": "0 - 7 = ?",
+      "textEn": "0 minus 7 = ?",
+      "textDa": "0 minus 7 = ?",
+      "answer": -7,
+      "hintGu": "0 ની નીચે 7 = -7!",
+      "hintEn": "7 below zero = -7!",
+      "hintDa": "7 skridt til venstre for nul!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 5 · LIFT / ELEVATOR",
-      "textGu": "Lift: ground=0, basement=-1,-2. 3rd basement = ?",
-      "textEn": "Lift: Ground=0, Basement 1=-1. What floor is 3rd basement?",
+      "textGu": "Lift: ground=0, basement=-1,-2. 5th basement = ?",
+      "textEn": "Lift: Ground=0, Basement 1=-1. What floor is 5th basement?",
+      "textDa": "Elevator: Stuen=0, Kælder 1=-1. Hvilken etage er den 5. kælder?",
       "options": [
-        {"gu": "3", "en": "3"},
-        {"gu": "-3", "en": "-3"},
-        {"gu": "0", "en": "0"},
-        {"gu": "-1", "en": "-1"}
+        {"gu": "5", "en": "5", "da": "5"},
+        {"gu": "-5", "en": "-5", "da": "-5"},
+        {"gu": "0", "en": "0", "da": "0"},
+        {"gu": "-2", "en": "-2", "da": "-2"}
       ],
       "answer": 1,
-      "hintGu": "Ground=0, below ground = negative! -3!",
-      "hintEn": "Below ground = negative! 3rd basement = -3!"
+      "hintGu": "Ground=0, below ground = negative! -5!",
+      "hintEn": "Below ground = negative! 5th basement = -5!",
+      "hintDa": "Kælderetager er negative tal!"
     },
     {
       "type": "mcq",
       "level": "LEVEL 6 · AI CONNECTION",
       "textGu": "AI model training — loss value goes negative means ___?",
       "textEn": "In coding, negative numbers are used for ___?",
+      "textDa": "I programmering bruges negative tal til ___?",
       "options": [
-        {"gu": "Errors only", "en": "Errors only"},
-        {"gu": "Direction, debt, temperature — real data!", "en": "Direction, debt, temperature — real data!"},
-        {"gu": "Nothing useful", "en": "Nothing useful"},
-        {"gu": "Only in maths class", "en": "Only in maths class"}
+        {"gu": "Errors only", "en": "Errors only", "da": "Kun fejlmeddelelser"},
+        {"gu": "Direction, debt, temperature — real data!", "en": "Direction, debt, temperature — real data!", "da": "Retning, gæld, temperatur — rigtige data!"},
+        {"gu": "Nothing useful", "en": "Nothing useful", "da": "Ingenting"},
+        {"gu": "Only in maths class", "en": "Only in maths class", "da": "Kun i matematiktimerne"}
       ],
       "answer": 1,
       "hintGu": "Negative = real world data! AI, physics, finance — everywhere!",
-      "hintEn": "Negative numbers appear everywhere in real code!"
+      "hintEn": "Negative numbers appear everywhere in real code!",
+      "hintDa": "Negative tal bruges hele tiden til spil, retninger og målinger!"
     }
   ]
 }

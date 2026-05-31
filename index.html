@@ -560,6 +560,12 @@ body.light-mode .theme-icon{transform:rotate(20deg)}
         </div>
         <button class="s-toggle on" id="speakEnToggle" onclick="toggleSpeakEn()" role="switch" aria-checked="true" aria-label="Toggle English speech"></button>
       </div>
+      <div class="s-row">
+        <div class="s-label">🇩🇰 Dansk sprog
+          <span class="s-label-en" lang="en">Enable Danish language (Dansk)</span>
+        </div>
+        <button class="s-toggle" id="daModeToggle" onclick="toggleDaMode()" role="switch" aria-checked="false" aria-label="Toggle Danish language"></button>
+      </div>
       <div class="s-row" style="margin-bottom:8px">
         <div class="s-label" style="font-size:.75rem">
           <span id="voiceStatus" lang="en" style="color:var(--muted);font-family:var(--font-en),sans-serif">Checking voices...</span>
@@ -702,11 +708,21 @@ const S = {
   set speakEn(v){ localStorage.setItem('yl2_speakEn',v) },
   get lightMode(){ return localStorage.getItem('yl2_lightMode')==='true' },
   set lightMode(v){ localStorage.setItem('yl2_lightMode',v) },
+  get daMode(){ return localStorage.getItem('yl2_daMode')==='true' },
+  set daMode(v){ localStorage.setItem('yl2_daMode',v) },
 };
+
+function txt(item, baseKey='text'){
+  if(!item) return '';
+  if(S.daMode){
+    return item[baseKey+'Da'] || item[baseKey+'En'] || item[baseKey+'Gu'] || '';
+  }
+  return item[baseKey+'Gu'] || item[baseKey+'En'] || '';
+}
 
 // ── ATTEMPTS ──
 let attemptsLeft = 2;
-let currentQText = {gu:'', en:''};
+let currentQText = {gu:'', en:'', da:''};
 
 let registry = null;
 let challengeData = {};  // path → data
@@ -981,8 +997,8 @@ function updateTopbar(){
   document.getElementById('logoTxt').textContent = S.name+"'s Lab";
 }
 function updateWelcome(){
-  document.getElementById('wGu').textContent = `નમસ્તે, ${S.name}! 👋`;
-  document.getElementById('wEn').textContent = `Hello ${S.name}! Ready to learn?`;
+  document.getElementById('wGu').textContent = S.daMode ? `Hej, ${S.name}! 👋` : `નમસ્તે, ${S.name}! 👋`;
+  document.getElementById('wEn').textContent = S.daMode ? `Hej ${S.name}! Klar til at lære?` : `Hello ${S.name}! Ready to learn?`;
 }
 
 // ══════════════════════════════════════
@@ -1003,7 +1019,7 @@ function renderHome(){
     let html = `<div class="section-wrap">
       <div class="section-head">
         <span class="section-icon">${sec.icon}</span>
-        <span class="section-name-gu">${sec.nameGu}</span>
+        <span class="section-name-gu">${txt(sec, 'name')}</span>
         <span class="section-name-en">${sec.nameEn}</span>
         <div class="section-line"></div>
         <span class="section-progress">${pct}%</span>
@@ -1023,10 +1039,10 @@ function renderHome(){
         onmouseleave="this.style.borderColor='rgba(${cat.colorRGB},.25)';this.style.boxShadow='none'"
         onclick="openCategory('${sec.id}','${cat.id}')">
         <div class="cat-icon">${cat.icon}</div>
-        <div class="cat-name-gu" style="color:${color}">${cat.nameGu}</div>
+        <div class="cat-name-gu" style="color:${color}">${txt(cat, 'name')}</div>
         <div class="cat-name-en">${cat.nameEn}</div>
         <div class="cat-prog-bar"><div class="cat-prog-fill" style="width:${cpct}%;background:${color}"></div></div>
-        <div class="cat-prog-label">${chDone}/${chCount} challenges</div>
+        <div class="cat-prog-label">${chDone}/${chCount} ${S.daMode ? 'udfordringer' : 'challenges'}</div>
       </div>`;
     });
 
@@ -1059,7 +1075,7 @@ function openCategory(secId, catId){
   currentCat = cat;
 
   document.getElementById('chCatIcon').textContent = cat.icon;
-  document.getElementById('chTitleGu').textContent = cat.nameGu;
+  document.getElementById('chTitleGu').textContent = txt(cat, 'name');
   document.getElementById('chTitleEn').textContent = cat.nameEn;
 
   const chDone = cat.challenges.filter(ch=>S.getStars(challengeData[`content/category/${cat.id}/${ch}.json`]?.id||'')>0).length;
@@ -1085,7 +1101,7 @@ function openCategory(secId, catId){
       onclick="${locked?'showLockedMsg()':'startChallenge(\''+path+'\')'}">
       <div class="ch-num" style="background:rgba(${cat.colorRGB},.15);color:${color}">${locked?'🔒':ch.icon}</div>
       <div class="ch-info">
-        <div class="ch-name-gu">${ch.nameGu}</div>
+        <div class="ch-name-gu">${txt(ch, 'name')}</div>
         <div class="ch-name-en">${ch.nameEn}</div>
         <div class="ch-stars" style="color:${color}">${starStr}</div>
       </div>
@@ -1097,7 +1113,7 @@ function openCategory(secId, catId){
 }
 
 function showLockedMsg(){
-  showToast('🔒 આ challenge lock છે! પહેલાની complete કરો.');
+  showToast(S.daMode ? '🔒 Denne udfordring er låst! Gennemfør den forrige først.' : '🔒 આ challenge lock છે! પહેલાની complete કરો.');
 }
 function backToHome(){
   showScreen('homeScreen');
@@ -1112,7 +1128,7 @@ function startChallenge(path){
   questions = currentChallenge.questions;
   qIdx=0; score=0; answered=false; wrongAnswers=[]; sessionStreak=0;
 
-  document.getElementById('gTitleGu').textContent = currentChallenge.nameGu;
+  document.getElementById('gTitleGu').textContent = txt(currentChallenge, 'name');
   document.getElementById('gTitleEn').textContent = currentChallenge.nameEn;
   updateSpeakBtn();
   buildDots();
@@ -1145,7 +1161,16 @@ function updateAttemptDots(){
 }
 function exitGame(){
   clearSpeedTimer();
-  showScreen('challengeScreen');
+  if (currentCat) {
+    const sec = registry.sections.find(s => s.categories.some(c => c.id === currentCat.id));
+    if (sec) {
+      openCategory(sec.id, currentCat.id);
+    } else {
+      showScreen('challengeScreen');
+    }
+  } else {
+    showScreen('challengeScreen');
+  }
 }
 
 // ══════════════════════════════════════
@@ -1166,7 +1191,7 @@ function renderQ(){
 
   const col=`rgb(${currentCat?.colorRGB||'88,166,255'})`;
   let h=`<div class="ql" style="color:${col}">${q.level||''}</div>
-    <div class="qt-gu">${q.textGu}</div>
+    <div class="qt-gu">${txt(q, 'text')}</div>
     <div class="qt-en">${q.textEn||''}</div>`;
 
   // ── EMOJI COUNT (addition/multiplication visual) ──
@@ -1231,7 +1256,7 @@ function renderQ(){
     h+=`<div class="mcq-grid">`;
     q.options.forEach((o,i)=>{
       h+=`<div class="opt" onclick="checkMCQ(${q.answer},${i})">
-        <div class="opt-gu">${o.gu}</div>
+        <div class="opt-gu">${txt(o, '')}</div>
         <div class="opt-en">${o.en||''}</div>
       </div>`;
     });
@@ -1281,7 +1306,7 @@ function renderQ(){
 
   // ── STORY PROBLEM ──
   else if(q.type==='story-problem'){
-    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${q.textGu}</div>`;
+    h+=`<div style="background:var(--card2);border-radius:14px;padding:14px;margin:10px 0;font-size:.9rem;line-height:1.8;border:1px solid var(--border)">${txt(q, 'text')}</div>`;
     h+=`<div style="font-family:var(--font-en),sans-serif;font-size:.75rem;color:var(--muted);margin-bottom:8px">${q.textEn}</div>`;
     h+=inputHtml(q.answer);
   }
@@ -1295,7 +1320,7 @@ function renderQ(){
       const origIdx=q.steps.findIndex(x=>x.labelGu===s.labelGu);
       h+=`<div class="vsort-card" id="vsc${i}" data-orig="${origIdx}" onclick="vsortTap(${i})">
         <div class="vsort-icon">${s.icon}</div>
-        <div class="vsort-label">${s.labelGu}</div>
+        <div class="vsort-label">${txt(s, 'label')}</div>
       </div>`;
     });
     h+='</div>';
@@ -1415,7 +1440,7 @@ function renderQ(){
   const si = card.querySelector('#spInp');
   if(si){ si.addEventListener('keydown',e=>{ if(e.key==='Enter') checkSpeedAnswer(q); }); si.focus(); }
   // store current text for speech
-  currentQText = {gu: q.textGu||'', en: q.textEn||''};
+  currentQText = {gu: q.textGu||'', en: q.textEn||'', da: q.textDa||''};
   updateAttemptDots();
   // auto-speak if enabled
   if(S.autoSpeak && q.type!=='speed-round') setTimeout(()=>speakCurrent(), 400);
@@ -1625,7 +1650,7 @@ function vsortTap(cardIdx){
       vsortSlots[i]=origIdx;
       const slot=document.getElementById('vslot'+i);
       const step=q.steps[origIdx];
-      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700;text-align:center">${step.labelGu}</div>`;
+      slot.innerHTML=`<div style="font-size:1.8rem">${step.icon}</div><div style="font-size:.55rem;color:var(--muted);font-family:var(--font-en),sans-serif;font-weight:700;text-align:center">${txt(step, 'label')}</div>`;
       slot.classList.add('filled');
       card.classList.add('placed','selected');
       vsortSelected=null;
@@ -1710,8 +1735,8 @@ const _okMsgs=['🎉 શાબ્બાશ! Perfect!','⚡ Brilliant! Computer s
 function randOK(){ return _okMsgs[~~(Math.random()*_okMsgs.length)]; }
 function hintMsg(){
   const q=questions[qIdx];
-  const h = q.hintGu||'ફરી try!';
-  const he = q.hintEn||'';
+  const h = txt(q, 'hint') || (S.daMode ? 'Prøv igen!' : 'ફરી try!');
+  const he = q?.hintEn||'';
   return h + (he ? ' — '+he : '');
 }
 
@@ -1746,7 +1771,7 @@ function showFB(ok, ansOrMsg){
     fb.className = 'fb show ok';
     fb.innerHTML = `<span class="fb-gu">${ansOrMsg}</span>`;
     nb.className = 'nxt-btn show';
-    nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
+    nb.textContent = qIdx < questions.length-1 ? (S.daMode ? 'Næste → Next →' : 'આગળ → Next →') : (S.daMode ? '🏆 Afslut!' : '🏆 Finish!');
     score++; S.xp += 20; updateTopbar(); playCorrect();
     recordXPEarned(20);
     updateAttemptDots();
@@ -1759,15 +1784,14 @@ function showFB(ok, ansOrMsg){
     sessionStreak = 0; // break the combo
     attemptsLeft--;
     updateAttemptDots();
-    const hint = q?.hintGu || '';
+    const hint = txt(q, 'hint') || '';
     const hintEn = q?.hintEn || '';
 
     if(!isSpeedRound && attemptsLeft > 0){
       // First wrong — warn, clear input, keep going
       fb.className = 'fb show warning';
       const hintDisplay = (hintEn && hintEn !== hint) ? `${hint} — ${hintEn}` : hint;
-      fb.innerHTML = `⚠️ ફરી try કરો! — Try again!
-        <span class="fb-en">${hintDisplay}</span>`;
+      fb.innerHTML = S.daMode ? `⚠️ Prøv igen! — Try again! <span class="fb-en">${hintDisplay}</span>` : `⚠️ ફરી try કરો! — Try again! <span class="fb-en">${hintDisplay}</span>`;
       // Clear input and refocus
       const inp = document.querySelector('.ans-inp');
       if(inp){ inp.value = ''; inp.disabled = false; setTimeout(()=>inp.focus(), 100); }
@@ -1777,10 +1801,9 @@ function showFB(ok, ansOrMsg){
       // Second wrong (or speed round end) — show answer, next button
       answered = true;
       fb.className = 'fb show bad';
-      fb.innerHTML = `❌ જવાબ છે: <strong>${ansOrMsg}</strong>
-        <span class="fb-en">Answer is ${ansOrMsg}. ${hintEn}</span>`;
+      fb.innerHTML = S.daMode ? `❌ Svaret er: <strong>${ansOrMsg}</strong> <span class="fb-en">Answer is ${ansOrMsg}. ${hintEn}</span>` : `❌ જવાબ છે: <strong>${ansOrMsg}</strong> <span class="fb-en">Answer is ${ansOrMsg}. ${hintEn}</span>`;
       nb.className = 'nxt-btn show';
-      nb.textContent = qIdx < questions.length-1 ? 'આગળ → Next →' : '🏆 Finish!';
+      nb.textContent = qIdx < questions.length-1 ? (S.daMode ? 'Næste → Next →' : 'આગળ → Next →') : (S.daMode ? '🏆 Afslut!' : '🏆 Finish!');
       playWrong();
       // Track for review (but not speed rounds — they have their own summary)
       if(!isSpeedRound) trackWrong(q, '?', ansOrMsg);
@@ -2049,20 +2072,27 @@ async function speakCurrent(){
     await loadVoices();
   }
 
-  const guVoice = getBestVoice('gu');  // null if no real Gujarati voice
-  const enVoice = getBestVoice('en');  // always found
+  const daVoice = getBestVoice('da');
+  const guVoice = getBestVoice('gu');
+  const enVoice = getBestVoice('en');
 
-  const hasGujarati = guVoice !== null;
+  const hasPrimary = S.daMode ? (daVoice !== null) : (guVoice !== null);
 
   // Build queue — never use wrong-language voice
   const queue = [];
-  if(currentQText.gu && hasGujarati){
-    // Only speak Gujarati if device actually has Gujarati voice
-    queue.push({text: currentQText.gu, voice: guVoice, rate: 0.78, lang:'gu-IN'});
+  if(S.daMode){
+    if(currentQText.da && daVoice){
+      queue.push({text: currentQText.da, voice: daVoice, rate: 0.82, lang:'da-DK'});
+    }
+  } else {
+    if(currentQText.gu && guVoice){
+      queue.push({text: currentQText.gu, voice: guVoice, rate: 0.78, lang:'gu-IN'});
+    }
   }
+
   if(currentQText.en){
-    // Speak English: always if no Gujarati, or if speakEn setting on
-    if(!hasGujarati || S.speakEn){
+    // Speak English if daMode/speakEn setting on, or if no primary voice found
+    if(!hasPrimary || S.speakEn){
       queue.push({text: currentQText.en, voice: enVoice, rate: 0.85, lang:'en-IN'});
     }
   }
@@ -2116,6 +2146,14 @@ function toggleSpeakEn(){
   const el=document.getElementById('speakEnToggle');
   if(el){ el.className='s-toggle'+(S.speakEn?' on':''); el.setAttribute('aria-checked', String(S.speakEn)); }
 }
+function toggleDaMode(){
+  S.daMode = !S.daMode;
+  const el=document.getElementById('daModeToggle');
+  if(el){ el.className='s-toggle'+(S.daMode?' on':''); el.setAttribute('aria-checked', String(S.daMode)); }
+  // Re-render home and welcome with new language
+  updateWelcome();
+  renderHome();
+}
 function toggleLightMode(){
   S.lightMode = !S.lightMode;
   document.body.classList.toggle('light-mode', S.lightMode);
@@ -2128,7 +2166,7 @@ function closeResetConfirm(){ document.getElementById('resetModal').classList.re
 function confirmReset(){
   // Wipe all stored progress
   ['yl2_xp','yl2_streak','yl2_trophies','yl2_lastDay','yl2_xphist'].forEach(k=>localStorage.removeItem(k));
-  S.fs=1.0; S.autoSpeak=true; S.speakEn=true; S.lightMode=false;
+  S.fs=1.0; S.autoSpeak=true; S.speakEn=true; S.lightMode=false; S.daMode=false;
   document.body.classList.remove('light-mode');
   applyFS(1.0, false);
   updateTopbar(); updateWelcome(); renderHome();
@@ -2160,12 +2198,21 @@ async function checkVoices(){
   const voices = await loadVoices();
   if(!voices.length){ if(el) el.textContent='⏳ No voices found — try again'; return; }
   const gu = voices.filter(v=>v.lang.toLowerCase().startsWith('gu'));
+  const da = voices.filter(v=>v.lang.toLowerCase().startsWith('da'));
   const en = voices.filter(v=>v.lang.toLowerCase().startsWith('en'));
   const parts = [];
-  if(gu.length){
-    parts.push('✅ Gujarati ×'+gu.length+' — will speak Gujarati!');
+  if(S.daMode){
+    if(da.length){
+      parts.push('✅ Danish ×'+da.length+' — will speak Danish!');
+    } else {
+      parts.push('❌ No Danish voice — English only');
+    }
   } else {
-    parts.push('❌ No Gujarati voice — English only');
+    if(gu.length){
+      parts.push('✅ Gujarati ×'+gu.length+' — will speak Gujarati!');
+    } else {
+      parts.push('❌ No Gujarati voice — English only');
+    }
   }
   if(en.length) parts.push('🔊 English ×'+en.length);
   parts.push('📦 '+voices.length+' total');
